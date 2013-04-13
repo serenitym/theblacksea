@@ -1,0 +1,47 @@
+# O incercare de a opri cachingul paginii pentru fisierele
+#   care se pot schimba relativ des
+#
+# Intai descriem fisierele tinta:
+<filesMatch "\.(html|htm|js|css)$">
+    FileETag None
+
+    # exista modulul headers?
+    <ifModule mod_headers.c>
+        Header unset ETag
+        # acum anuleaza cache pe cat posibil
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+    </ifModule>
+</filesMatch>
+
+AddDefaultCharset UTF-8
+
+# NOTE: This is doomed to fail if mod_rewrite not installed and active
+# After rewrite module's installation, type as root:
+# a2enmod rewrite
+# service apache2 reload
+# English section over :-)
+
+# Activam citirea de URL-uri dubioase
+
+RewriteEngine On
+
+#RewriteBase /
+
+RewriteRule ^myProfile$      /index.php?idT=89&idC=89 [L,NC]
+RewriteRule ^Partners$     /index.php?idT=2&idC=2 [L,NC]
+RewriteRule ^About$     /index.php?idT=3&idC=3 [L,NC]
+RewriteRule ^Contact$      /index.php?idT=4&idC=4 [L,NC]
+RewriteRule ^Home$       /index.php?idT=85&idC=85 [L,NC]
+
+#==============================================================================
+
+# Anularea modulului rewrite pentru anumite tipuri de fisiere
+#RewriteRule ^(.+)\.php$ $1.php [L,NC]
+#RewriteRule ^(fw|GENERAL|MODULES|MODELS)/(.*) $1/$2 [L,NC]
+#RewriteRule ^(GENERAL|css|cms|js|lib|produse_img|img|images) - [L,NC]
+
+# Rescriere pentru pagini simple (idT + idC)
+RewriteRule ^([0-9]+)-([0-9]+) index.php?idT=$1&idC=$2 [L,NC]
+

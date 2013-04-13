@@ -1,0 +1,435 @@
+29 mar 2013
+Acum teoretic ar trebui sa parcurg core ca sa vedem cum s-ar
+comporta la o astfel de structura si ce impedimente ar putea intervenii
+
+mods : [GENERAL, MODELS, PLUGINS]
+
+models: [names]
+plugins: [names]
+general: [names]
+
+default_PLUGINS etc
+
+SET_OBJ_mod
+    - ex: inchPath[GENERAL]
+    - ex: inchPath[PLUGINS]
+    - ex: inchPath[MODELS]
+
+
+and the shearch continues
+
+**- as vea mai multe chestii
+    » parcurgerea acestui scrach si desprinderea anumitor taskuri
+    » crearea unui config cu locatii ale elementelor in cadrul folderelor
+
+
+
+28 mar 2013
+
+departajarea frameworkului esentiala de chestii personalizate , preferentiale
+
+1. - problema pozitionarii confingului .php
+2. toate clasele ar trebui sa stea remote , partea de protected
+3.
+
+hai sa incercam alta varianta
+
+specials
+    # protected
+        » config.php - pozitionarea lui
+        » etc
+
+        » public / assets custom ex: myAssets ???
+        » public /RES
+        » public /MODELS si PLUGINS in cazul in care se declara alte
+        teme
+        desi probabil o sa fie probleme la url-uri
+        src-uri???
+
+
+remote
+     » index.php content pus remote , apoi creat
+      un index.php public care sa il includa
+     » toata partea de protected (GENERAL, MODELS, PLUGINS)
+     » partea de public/ GENERAL
+     » assets
+     » tot public
+
+
+
+
+
+23 mar 2013
+
+= feeling like overwellm??
+
+-- you can try to let it go...and don't care
+-- or you can answare the question. Will i be able to do it...
+a plan might convice you that you will...
+a retrospectiv might convince you that your capable
+
+- acum revenind la problemele realea ale acestei zii...
+parca parca imi e ceva foame dar intai voi aranja taskurile
+
+10 Mar 2013
+- trebuia sa imi notez la cat am inceput sa lucrez
+poate maine am sa fac si asta
+
+/**
+ * Config ex:
+ * ~~~~~~~~~~~~~~~~~
+
+ *  elemName_ex: {
+ *            addBt: {
+ *                name: 'un nume',
+ *                style : 'oric',
+ *                class : '',
+ *                status: '',
+ *                async : new asyncConf({
+ *                                moduleName: 'modulename',
+ *                                methName: 'methName',
+ *                                parsePOSTfile : 'filePath.php' ,
+ *                                callBack_fn : (typeof fnName != 'undefined'  ? fnName : ''),
+ *                                restoreCore : false
+ *                            })
+ *                },
+ *            deleteBt:{},
+ *            edit: {},
+ *            saveBt:{}
+ *       },
+ *
+ * Utilizarea configului
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ *  bttConf[elemName].add['name']
+ *
+ *  bttConf[elemName].add['async']
+ *      .  fnload( jQobj, sendData, callBack_fn)
+ *      .  fnpost( sendData, callBack_fn)
+ *      .  allProperties
+ */
+
+
+26 feb 2013
+- astazi probabil ar trebui sa ma ocup de partea de commenturi
+*** - rezolvarea requesturilor asincrone din editMODE
+
+acum as vrea sa fac faza cu popUp pe poze
+
+1. trebuie sa aiba urmatoarele optiuni
+    * optiuni pentru returnarea JSonului cu pozele si detaliile lor via
+        - 1. un script apelat prin procesSCRIPT (path)
+        - 2. o variabila (nume + value) care sa fie interpretata de
+            o metoda de controlReq_async
+
+        - 3. - modelName, methName => astfel se va accesa direct obiectul si metoda ceruta
+            fara ca sa mai treaca prin controler
+                - avantaj de performanta pentru ca nu mai trebuie un controler
+                - aici trebuie lucrat la procesScript
+
+
+    * elementul pe care se face bind
+
+25 feb 2013
+acum ca am acces la core din procesScript
+as vrea sa fac un trigger automat
+poate un wakeup? let's see
+
+maibe some post request named
+
+asincReq_action ?? looks good
+
+21 feb 2013
+
+procesSCRIPT.php
+
+
+!!! redeschiderean aceeasi sesiuni
+=> o sa am obiectele deja formate...
+
+conexiune la DB - if requested...
+
+acum in legatura cu fisierele care interactioneaza cu DB
+- poate ca ar fii totusi o idee sa fac un yml cu workingDB exemplu:
+
+sa zicem ca formul meu are un
+hidden
+    name = modelName
+    value = numele Modelului care it's handling the stuff
+
+    ???
+    name = scriptReq / routReq
+    value = numele scriptului de inclus din cadrul lui modelName daca nu este in sesiunea curenta
+
+    name = workingDB
+    value = numele variabilei din yml care descrie modelul de working
+
+    name = actionDB
+    value = add /update /delete
+
+    *** deci teoretic nu o sa mai am nevoie de yml daca se face redeschiderea
+    sesiunii , deoarece am toate datele acestea in obiectul meu
+
+    like
+     workingDB :
+        - SET_picManager :[DB_table:name, DB_extKey_name]
+        + other stuff that i might need
+
+ acum...obiectul meu sau scriptul meu va citi .yml -ul / configul modulului meu
+ si va stii ce anume sa faca mai departe
+
+
+ Deci aici am nevoie de o ducxumentatie in ceeea ce priveste logica
+ workingului cu requesturi asincrone pt scripturi php care interactioneaza cu DB.
+
+
+
+
+===============================================================================================
+1. templateurile
+2. scripturile de save and stuff..
+3. revazut popUP-ul..
+
+
+mda si acum este vorba de cum trimit
+DB_extKey_name
+DB_extKey_value
+DB_table
+
+editMODE - ar putea sa trimita si un  $_POST['dbAction']= add/ delete/update
+
+
+
+vreau sa lucrez azi la galeria de imagini
+deci dupa cum ziceam
+
+1. as vrea ca scriptul sa fie scalabil.. si aci vorbim de
+    - tabelul din care se doreste extragerea pozelor
+
+
+
+() paranteze:
+ - ar fii oare ok sa bag chestia asta in modulul de picManager ?
+ si daca da ce ar implica acest lucru?
+ - interesant este faptul ca CpicManager este facut pentru a fii extensibil
+ insa js-ul care se ocupa cu faza asta...mmmdea...
+
+
+ - ex: save, delete sunt procedurale ...not so..good..
+ scripturile ar putea sa ramana ca denumire ...dar ar fii bine
+ daca ar folosi un obiect
+
+ - sau poate ar trebui sa nu mai ocolesc atata problema si sa o rezolv
+ direct in CpicManager
+
+- revenind....
+- ok..deci o sa fac pe obiect asta...
+si o sa schimb si faza cu templateurile...
+pasi
+
+
+
+defapt aici e o chestiune si de securitate probabil...
+si de faptul ca s-ar impune niste reguli, constrainturi..
+cu care nu stiu daca vreau sa am deaface
+
+
+
+16 feb 2013
+thinking to much is not allways a good thing
+lets see the hour is 14:23
+
+
+
+12 feb 2013
+ioana started at 4:00 dim , work time 5h
+
+pauze:
+- 05:22 - 06:40
+- 08:42 - 11:26
+- 12:30 - 13:21
+- 13:41
+- next day
+- 06:35 - 08:30
+
+04:00 - 05:22 = 1:22
+06:40 - 08:42 = 2h
+11:26 - 12:30 = 1h
+4:30
+== 5h:30
+
+
+
+
+time 04:09  - victor lucru  10 min - 04:20  / ioana 30 min 04:40
+
+work time victor 5h from 04:22
+against:
+
+he will break down after 2h - facebook, ranspunsuri la mailuri....or just finding smthing inmteresting
+that is not reletatat with what he is doing
+
+pauze:
+
+
+09 feb 2013
+
+same old, same...old...
+my mind is preat stuck right now...
+
+Table:
+comm_picManager
+
+idPic
+idExt_name
+picUrl
+picTitle
+picAuth
+picLoc
+picDescr
+picDate
+
+blogComments
+
+Table:
+idComm
+comment
+
+Intrebari:
+
+1. Citirea unui comment de tip commGalery
+in ideea de relatie 1->n intre blogComments & comm_picManager ?
+
+2. administrare picManager
+
+and all sorts of things...
+
+problema defapt la joinul pt modelComm...
+
+mda...deci pentru ProcessComments
+ar trebui sa overwrite this method and integrate in it the picManager
+I see no other way
+aaaand
+aparebt joinul respectiv este funcky pentru ca...
+ce se intampla daca sa zicem am un modelCerut de commenturi..
+si...eu nu am tabelul care se presupune ca ar exista in baza de date
+atunci o sa am eroare in query.,,,,
+kkkkkk.,...
+
+
+
+
+
+
+
+
+
+06 feb 2013
+
+Transmite si obiectul la Display_items
+pentru a te putea referi la ED direct cu o->
+
+
+mda...la un moment dat s-ar putea sa doresc sa trec tot blog-ul pe noua metoda
+de randare a templateurilor
+
+dar deocamdata parca as vrea sa ma focusez pe comments
+si pe templateurile lor
+cum ar fii nenorocirea aia de adaugare de poze...
+care sincera sa fiu nu am o idee prea buna despre cum ar trebui sa fie
+
+atentie ca anumit variabile de config sunt utilizate pentru
+interactiunea cu DB
+
+
+27 ian 2013
+a doua zii - 20:01
+
+- ne-am hotarat sa mai ramanem vreo 2 zile pe aici
+din terte motive
+
+suntem in buzau iar eu sunt foarte camflata in diverse paturi, pilota...etc.
+de lucrat am lucrat putin
+ma simt sincer destul de confortabil avand calculatoarele la noi
+nu simt lipsa filelistului pentru ca exista televizorul
+mancarea este destul de buna...
+iar eu scriu aici doar asa de chestie
+singurul lucru care ma ingrijoreaza este ca o sa mi se termine painea
+imi e sete si e cam greu sa ma ridic...
+ia sa vad eu...
+
+15 ian 2013
+ora 08:48
+- dragii mosului ...oboseala mea este mai mult psihica...
+- as vrea sa gasesc niste energie mica sa mai lucru ceva...
+
+ora - 00:00
+buna ziua compatrioti
+astazi vreau sa fiu mai lejera
+pe ziua de azi:
+ [ ] sa mai limpezesc de prin alerturi
+ [ ] putin css?
+ [ ] poate niste featururi mici...
+
+ lejer
+ plutim usor pe ape...pescuind intr-un mic golfuletz
+ azi nu vreau sa ma aventurez pe ape repezi, prin mocirle ...
+ azi suntem lejeri
+ va doresc un work placut si linistit tuturor
+
+
+
+
+14 ian 2013 - dimineatza la ora 12:40
+ATENTIUNI SPECIALE
+- probleme de css la pozele cu detalii
+
+- daca se mai poate numii dimineata
+- jurnalul de bord al capitanului
+- astazi comunicam ca am obosit si nu este indicat sa mai navigam in aceste vremuri tulburi
+cu oscioarele obosita si ochii impaienjeniti
+maine ne asteptam la o zii mai senina si  o minte mai limpede pentru a naviga
+marinari , piloti si totzi compatriotii mei ne vedem maine
+acum va dau liber la bautura si desmatz. iar pentru aceia care nu au chef nici de astea
+va urez un somn usor
+
+
+14 jan 2013
+
+o problema noua se asterne in fata mea
+si nu stiu cum sa o abordez
+problema pozelor detaliate care as vrea sa o abordez la salvarea continutului
+dar cum?
+1.as putea poate sa incarc un script in ckeditor care imi pune detaliile unei poze
+2. la salvarea scriptului as putea sa caut toate pozele
+    - dar daca le gasesc ce fac dupa aceea?
+    - sa pun dupa poza detaliile ei?via regexpuri...
+    - asa pare cel mai putin consuming, cum as face asta...
+    dificil de spus
+    - totusi..faza cu scriptul pare cea mai buna..
+    pentru ca e mai usoara decat regexpurile
+    - urosr apdatabila..
+    doar deschizi ckeditorul...and pa pam
+
+ - acum alta paranteza ar fii ca scriptul meu nu cred ca are vedere inafara iframeului
+ deci...probabil ar trebui sa ceara unui script pozele...
+
+ ok this is good..but my problem is another now..
+ problema este ca javascriptul meu se va referi doar la obiectele existente
+trebuie sa fie o metoda mai eleganta decat modificatul image.js
+cum cum?
+this is sooo..shity...
+la cat ar trebui sa mananc 23:26 + 3h = 2:26 deci peste ~ 1h
+bun..revennind...
+PROOOOBLEMEEE...multe proble?...
+totul parea atat de simplu la un moment dat..
+si acum nu mai pare deloc..
+acum totul a luat o intorsatura tampita efectiv...
+oare m-am chinuit degeaba la pic-managerul meu>?
+Imi dau seama acum ca este foarte foarte posibil sa o fi facut
+poate ca nu a fost abordarea corecta..
+indoieli....
+i realy dont have time for this kind of things
+i must do somenthing easy
+and the get a better integration
+

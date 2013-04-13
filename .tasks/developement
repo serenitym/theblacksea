@@ -1,0 +1,41 @@
+
+### acest fisier este destinat ideilor pentru developement - pentru poiect in particular
+
+26 feb 2013
+
+
+acum as vrea sa fac faza cu ==[ popUp pe poze ]===
+
+1. trebuie sa aiba urmatoarele optiuni
+    * elementul pe care se face bind
+
+    * optiuni pentru returnarea JSonului cu pozele si detaliile lor via
+        - 1. un script apelat prin procesSCRIPT (path)
+        - 2. o variabila (nume + value) care sa fie interpretata de
+            o metoda de controlReq_async
+
+        - 3. - modelName, methName => astfel se va accesa direct obiectul si metoda ceruta
+            fara ca sa mai treaca prin controler
+                - avantaj de performanta pentru ca nu mai trebuie un controler
+                - aici trebuie lucrat la procesScript
+
+    * functie declansare gallery -> procesarea Jsonului
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    - totusi trebuie sa spun ca mi se pare doar putin dubios , nu prea pot sa imi imaginez
+    - deci momentan stiu ca as vrea sa fie un obiect
+    - intrebarea este cum creez acest obiect, cine il instantiaza???
+
+    - daca se instantiaza
+        - la un event
+        - sau se instantiaza la un moment dat si apoi ii vor fii folosite datele
+
+    - prima  varianta pare mai buna
+
+    dar daca se instantiaza la un event atunci va trebui sa aiba si un destroy or smth
+    pentru a putea fii reinstantiat...
+
+    am sa caut de curiozitate pe net cum sa extind obiectul jquery(dupa ce ma duc la wc..brb)
+
+

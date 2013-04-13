@@ -1,0 +1,53 @@
+
+=====================[ DONE STUFF ]=====================================================================
+========================================================================================================
+
+~~~~~~~~~~~~[PHP]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+» nr comentariilor sunt vazute chiar daca feedback view = disable
+» deasemenea userul cu permisiuni ar trebui sa poata vedea comentariile chiar daca sunt disable
+» vazut ce se intampla cu recordHome pentru administrare
+
+
+» - probleme de concept in carousel la editarea pozelor
+  - nu prea merge sa ai sa zicem un single si in el sa ai ents...kk....
+
+» prioritizarea feedbackurilor
+
+» comments ar trebui sa fie randate prin noul template daca nu sunt deja....
+
+
+»[18.02]
+   comments
+    - trebuie testat daca nu cumva exista permiusiuni pe record
+    si daca da => nu mai este nevoie de atentionarea
+    "Your comment must be approved by a moderator..."
+    vezi - comments/tmpl/o.comm_add.html
+
+» [ 26.02] - wakeup CORE !!!
+    - serializare core in LOG
+    - procesSCRIPT - deserializare si utilizare core
+
+~~~~~~~~~~~~[DB]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+» tabelul de prioritati pe commenturi cheie externa idComm cu tb de comments
+
+» thumbs
+    - mutat pe tabelul blogComments_thumbs
+    - mutat pe noul templating
+    - clean code
+
+~~~~~~~~~~~~[JS]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~[CSS]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+» css homePage
+
+
+~~~~~~~~~~~~[concept]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~[learning]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~[documentation]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~[cleand Code]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
