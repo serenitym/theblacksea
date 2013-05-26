@@ -19,9 +19,9 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.25814536">
+    <splitter split-orientation="horizontal" split-proportion="0.33294255">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.80167013">
+        <splitter split-orientation="vertical" split-proportion="0.82006204">
           <split-first>
             <leaf>
               <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
@@ -36,16 +36,16 @@
               <file leaf-file-name="Ccore.php" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/protected/fw/GENERAL/core/Ccore.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="869" column="42" selection-start="27819" selection-end="27819" vertical-scroll-proportion="0.0">
+                    <state line="873" column="42" selection-start="27930" selection-end="27930" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="listEvents1.html" pinned="false" current="false" current-in-tab="true">
+              <file leaf-file-name="listEvents1.html" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/listEvents1.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="40" column="31" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.6415929">
+                    <state line="20" column="7" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
                       <folding />
                     </state>
                   </provider>
@@ -64,6 +64,15 @@
                 <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/AlistEvents1.html">
                   <provider selected="true" editor-type-id="text-editor">
                     <state line="28" column="47" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="workshops.html" pinned="false" current="true" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/workshops.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="37" column="0" selection-start="980" selection-end="981" vertical-scroll-proportion="0.7894737">
                       <folding />
                     </state>
                   </provider>
@@ -103,16 +112,7 @@
               <file leaf-file-name="events.yml" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/protected/etc/LOCALS/events/events.yml">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="2" column="45" selection-start="67" selection-end="67" vertical-scroll-proportion="0.11627907">
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="sitePrez.yml" pinned="false" current="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/protected/etc/LOCALS/sitePrez/sitePrez.yml">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+                    <state line="2" column="45" selection-start="67" selection-end="67" vertical-scroll-proportion="0.23809524">
                       <folding />
                     </state>
                   </provider>
@@ -132,24 +132,15 @@
         </splitter>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.34793186">
+        <splitter split-orientation="horizontal" split-proportion="0.45126948">
           <split-first>
-            <splitter split-orientation="vertical" split-proportion="0.6242171">
+            <splitter split-orientation="vertical" split-proportion="0.39874738">
               <split-first>
                 <leaf>
-                  <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/public/index.php">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="15" column="31" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="CmethDB.php" pinned="false" current="false" current-in-tab="false">
+                  <file leaf-file-name="CmethDB.php" pinned="false" current="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/protected/fw/GENERAL/core/CmethDB.php">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                        <state line="4" column="35" selection-start="57" selection-end="57" vertical-scroll-proportion="0.05033557">
                           <folding />
                         </state>
                       </provider>
@@ -164,10 +155,19 @@
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="events.html" pinned="false" current="false" current-in-tab="true">
+                  <file leaf-file-name="events.html" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/events.html">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="34" column="0" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.029469548">
+                        <state line="45" column="6" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="sampleModule.yml" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/frameworkDev/fmw_etcSample/sampleModule/sampleModule.yml">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
@@ -186,10 +186,19 @@
               </split-first>
               <split-second>
                 <leaf>
-                  <file leaf-file-name="events.css" pinned="false" current="false" current-in-tab="true">
+                  <file leaf-file-name="events.css" pinned="false" current="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/css/events.css">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="58" column="44" selection-start="921" selection-end="921" vertical-scroll-proportion="0.05033557">
+                        <state line="68" column="18" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.0">
+                          <folding />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file leaf-file-name="sampleMod.js" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/public/fw/GENERAL/sampleModule/js/sampleMod.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state line="16" column="2" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
@@ -204,19 +213,19 @@
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="workshops.html" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/workshops.html">
+                  <file leaf-file-name="sitePrez_home.css" pinned="false" current="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/sitePrez/tmpl_tribalFestHome/css/sitePrez_home.css">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="12" column="7" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
+                        <state line="41" column="17" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
                           <folding />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file leaf-file-name="sitePrez_home.css" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/sitePrez/tmpl_tribalFestHome/css/sitePrez_home.css">
+                  <file leaf-file-name="events.js" pinned="false" current="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/js/events.js">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state line="41" column="17" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
+                        <state line="5" column="9" selection-start="92" selection-end="92" vertical-scroll-proportion="0.14478764">
                           <folding />
                         </state>
                       </provider>
@@ -227,68 +236,51 @@
             </splitter>
           </split-first>
           <split-second>
-            <splitter split-orientation="vertical" split-proportion="0.7494781">
-              <split-first>
-                <leaf>
-                  <file leaf-file-name="CmethDB.php" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/protected/fw/GENERAL/core/CmethDB.php">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="86" column="0" selection-start="3516" selection-end="3516" vertical-scroll-proportion="0.0">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="CrenderTmpl.php" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/protected/fw/GENERAL/core/CrenderTmpl.php">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="20" column="39" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="Cevents.php" pinned="false" current="true" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/protected/fw/LOCALS/events/Cevents.php">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="140" column="0" selection-start="4180" selection-end="4180" vertical-scroll-proportion="0.521148">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                </leaf>
-              </split-first>
-              <split-second>
-                <leaf>
-                  <file leaf-file-name="EDITmode.js" pinned="false" current="false" current-in-tab="false">
-                    <entry file="file://$PROJECT_DIR$/public/fw/GENERAL/EDITmode/ADMIN/js/EDITmode.js">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="234" column="65" selection-start="8104" selection-end="8104" vertical-scroll-proportion="0.0">
-                          <folding />
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                  <file leaf-file-name="events.js" pinned="false" current="false" current-in-tab="true">
-                    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/js/events.js">
-                      <provider selected="true" editor-type-id="text-editor">
-                        <state line="17" column="0" selection-start="609" selection-end="609" vertical-scroll-proportion="1.275">
-                          <folding>
-                            <element signature="e#188#313#0" expanded="true" />
-                            <element signature="e#392#473#0" expanded="true" />
-                            <element signature="e#527#606#0" expanded="true" />
-                            <element signature="e#652#767#0" expanded="true" />
-                            <element signature="e#804#919#0" expanded="true" />
-                            <element signature="e#954#988#0" expanded="true" />
-                          </folding>
-                        </state>
-                      </provider>
-                    </entry>
-                  </file>
-                </leaf>
-              </split-second>
-            </splitter>
+            <leaf>
+              <file leaf-file-name="CmethDB.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/protected/fw/GENERAL/core/CmethDB.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="86" column="0" selection-start="3516" selection-end="3516" vertical-scroll-proportion="-0.65217394">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="CrenderTmpl.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/protected/fw/GENERAL/core/CrenderTmpl.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="20" column="39" selection-start="442" selection-end="442" vertical-scroll-proportion="-0.65217394">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="Cevents.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/protected/fw/LOCALS/events/Cevents.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="163" column="1" selection-start="4621" selection-end="4621" vertical-scroll-proportion="-20.217392">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="EDITmode.js" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/public/fw/GENERAL/EDITmode/ADMIN/js/EDITmode.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="58" column="64" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.5334052">
+                      <folding>
+                        <element signature="e#7095#8184#0" expanded="true" />
+                        <marker date="1369549829250" expanded="true" signature="25158:25172" placeholder="..." />
+                        <element signature="e#25889#37452#0" expanded="true" />
+                        <element signature="e#25948#29929#0" expanded="true" />
+                        <marker date="1369549829250" expanded="true" signature="53170:53184" placeholder="..." />
+                        <marker date="1369549829250" expanded="true" signature="55201:55215" placeholder="..." />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
           </split-second>
         </splitter>
       </split-second>
@@ -302,8 +294,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/fw/LOCALS/sitePrez/tmpl_tribalFestHome/tmpl/sitePrez.html" />
-        <option value="$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/instructor.html" />
         <option value="$PROJECT_DIR$/protected/fw/LOCALS/events/events.sql" />
         <option value="$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/workshops.html" />
         <option value="$PROJECT_DIR$/protected/etc/LOCALS/events/events.yml" />
@@ -313,19 +303,21 @@
         <option value="$PROJECT_DIR$/protected/fw/LOCALS/events/Cevents.php" />
         <option value="$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/Ainstructor.html" />
         <option value="$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/events.html" />
-        <option value="$PROJECT_DIR$/public/fw/GENERAL/EDITmode/ADMIN/js/EDITmode.js" />
         <option value="$PROJECT_DIR$/public/fw/LOCALS/sitePrez/tmpl_tribalFest/css/tribalFest.css" />
         <option value="$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/listEvents1.html" />
         <option value="$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/css/events.css" />
+        <option value="$PROJECT_DIR$/protected/etc/LOCALS/sitePrez/sitePrez.yml" />
+        <option value="$PROJECT_DIR$/protected/fw/GENERAL/core/scripts/hardLog.php" />
         <option value="$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/js/events.js" />
+        <option value="$PROJECT_DIR$/public/fw/GENERAL/EDITmode/ADMIN/js/EDITmode.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="25" />
-    <option name="width" value="1912" />
-    <option name="height" value="1046" />
+    <option name="width" value="1920" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -496,6 +488,122 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PLUGINS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ivyMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmpl_superfishTbf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampleProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tbf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PLUGINS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ivyMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmpl_superfishTbf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampleProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tbf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PLUGINS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ivyMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampleProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tbf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampleProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tbf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOCALS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitePrez" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -693,6 +801,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sampleModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampleProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tbf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GENERAL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampleModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampleProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tbf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GENERAL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -724,6 +888,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampleProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tbf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampleProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tbf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoverIntent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -877,133 +1081,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="etc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sampleProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tbf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="etc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PLUGINS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sampleProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tbf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="etc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PLUGINS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ivyMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sampleProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tbf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="etc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOCALS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sitePrez" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sampleProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tbf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="etc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOCALS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sampleProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tbf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="etc" />
+              <option name="myItemId" value="fw" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GENERAL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1085,9 +1167,9 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="preferences.intentionPowerPack" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.splitter.details.proportions" value="0.3970297" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.3970297" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -1129,14 +1211,14 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -1169,7 +1251,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1912" height="1046" extended-state="0" />
+    <frame x="0" y="25" width="1920" height="1055" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1177,7 +1259,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16264428" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10867294" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1246,113 +1328,111 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/fw/GENERAL/core/tmpl/header.php">
+    <entry file="file://$PROJECT_DIR$/protected/etc/LOCALS/sitePrez/sitePrez.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="4" column="48" selection-start="91" selection-end="91" vertical-scroll-proportion="0.10928962" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/etc/LOCALS/events/events.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="45" selection-start="67" selection-end="67" vertical-scroll-proportion="0.11627907">
+        <state line="2" column="45" selection-start="67" selection-end="67" vertical-scroll-proportion="0.23809524">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/AlistEvents1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="47" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/fw/GENERAL/core/css/core.css">
+    <entry file="file://$PROJECT_DIR$/protected/etc/hardLogKey.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/Ainstructor.html">
+    <entry file="file://$PROJECT_DIR$/protected/fw/GENERAL/core/scripts/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="24" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frameworkDev/fmw_etcSample/sampleModule/sampleModule.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/etc/PLUGINS/ivyMenu/ivyMenu.yml">
+    <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" />
+        <state line="15" column="31" selection-start="773" selection-end="773" vertical-scroll-proportion="0.44204322" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/signup_workshop.html">
+    <entry file="file://$PROJECT_DIR$/protected/fw/GENERAL/core/scripts/hardLog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="7" column="2" selection-start="167" selection-end="167" vertical-scroll-proportion="0.17470881" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/fw/LOCALS/sitePrez/CsitePrez.php">
+    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/listEvents1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="1" selection-start="2472" selection-end="2472" vertical-scroll-proportion="-9.130435" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/sitePrez/tmpl_tribalFest/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="20" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/fw/GENERAL/EDITmode/ADMIN/js/EDITmode.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="234" column="65" selection-start="8104" selection-end="8104" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/sitePrez/tmpl_tribalFest/css/tribalFest.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="17" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/events.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.029469548">
+        <state line="20" column="7" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/css/events.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="44" selection-start="921" selection-end="921" vertical-scroll-proportion="0.05033557">
+        <state line="68" column="18" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/listEvents1.html">
+    <entry file="file://$PROJECT_DIR$/public/fw/GENERAL/sampleModule/js/sampleMod.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="31" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.6415929">
+        <state line="16" column="2" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/js/events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="609" selection-end="609" vertical-scroll-proportion="1.275">
-          <folding>
-            <element signature="e#188#313#0" expanded="true" />
-            <element signature="e#392#473#0" expanded="true" />
-            <element signature="e#527#606#0" expanded="true" />
-            <element signature="e#652#767#0" expanded="true" />
-            <element signature="e#804#919#0" expanded="true" />
-            <element signature="e#954#988#0" expanded="true" />
-          </folding>
+        <state line="5" column="9" selection-start="92" selection-end="92" vertical-scroll-proportion="0.14478764">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/fw/GENERAL/core/CmethDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="35" selection-start="57" selection-end="57" vertical-scroll-proportion="0.05033557">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/fw/GENERAL/core/CrenderTmpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="39" selection-start="442" selection-end="442" vertical-scroll-proportion="-0.65217394">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/fw/LOCALS/events/Cevents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="0" selection-start="4180" selection-end="4180" vertical-scroll-proportion="0.521148">
+        <state line="163" column="1" selection-start="4621" selection-end="4621" vertical-scroll-proportion="-20.217392">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/fw/GENERAL/EDITmode/ADMIN/js/EDITmode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="64" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.5334052">
+          <folding>
+            <element signature="e#7095#8184#0" expanded="true" />
+            <marker date="1369549829250" expanded="true" signature="25158:25172" placeholder="..." />
+            <element signature="e#25889#37452#0" expanded="true" />
+            <element signature="e#25948#29929#0" expanded="true" />
+            <marker date="1369549829250" expanded="true" signature="53170:53184" placeholder="..." />
+            <marker date="1369549829250" expanded="true" signature="55201:55215" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/fw/LOCALS/events/tmpl_tribalFest/tmpl/workshops.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="980" selection-end="981" vertical-scroll-proportion="0.7894737">
           <folding />
         </state>
       </provider>

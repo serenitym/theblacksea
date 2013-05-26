@@ -1,1 +1,5 @@
 template: tribalFestHome
+
+assetsINC:
+  js:
+    -"/assets/hoverIntent/hoverIntent.minified.js"
