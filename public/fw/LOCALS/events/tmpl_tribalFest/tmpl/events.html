@@ -1,0 +1,141 @@
+<div id='cont-mainPage'>
+
+    <!-- =============================[Worklshops ]====================-->
+    <!--
+        ev_name
+        ev_description
+        ev_date
+        ev_hour
+        ev_price
+        ev_managers_emails
+        ev_formType
+    -->
+
+       <!--<div class='allENTS evs' id='ev_en'>-->
+       <div class='allENTS evs' id='ev_{$this->lang}'>
+           <!--<div class='ENT ev' id='ev_1_en'>-->
+           ".$this->renderDisplay_Items( $o->events[0]->listEvents,
+                "
+                    <div class='ENT ev' id='ev_{~ao->idEv}_en'>
+
+                           <div class='EDtxt title title3 ev_name'>  {~ao->ev_name}   </div>
+
+
+
+                            <div class='EDtxa ev_description'> {~ao->ev_description}</div>
+
+                            <div class='ATmpl cont-managers'>
+                                <span><b>Managers</b></span>
+                                <div class='EDtxa ev_managersEmails'> {~ao->ev_managersEmails}</div>
+                            </div>
+
+                            <!--============================[trial]=========================-->
+                            <span class='title'>prices </span>&nbsp;&nbsp;
+                            <span class='varPrices noATmpl' id='varPrices_en'>
+
+                                <span class='vprice'>
+                                    <span class=' v_name' >duo</span>
+                                    <span class=' v_price'>30</span>
+                                </span>
+
+                                <span class='vprice'>
+                                    <span class='v_name' >trio</span>
+                                    <span class='v_price'>60</span>
+                                </span>
+
+                            </span>
+                            <span class='cont-var-prices ATmpl-inline'>
+                                <div class='EDtxt var_prices'>
+                                    duo = 30, trio = 60
+                                </div>
+                            </span>
+
+                            <!--============================[END - trial]=========================-->
+
+                            <div class='ev-details'>
+
+                                <div class='detail'>
+                                    <span class='title'> date</span>
+                                    <span class='EDtxt ev_date'> {~ao->ev_date} </span>
+                                </div>
+                                <div class='detail'>
+                                    <span class='title'> hour</span>
+                                    <span class='EDtxt ev_hour'> {~ao->ev_hour} </span>
+
+                                </div>
+                                <div class='detail'>
+                                    <span class='title'> location</span>
+                                    <span class='EDtxt ev_location'> {~ao->ev_location} </span>
+
+                                </div>
+                                <div class='detail cont-signUp'>
+                                    <input type='button' name='go_signup_ev' value='signUp'  class='signUp'
+                                            onclick=\`ivyMods.events.show_sgup('ev_{~ao->idEv}_en');  \`>
+
+                                </div>
+
+                            </div>
+
+
+
+                    </div>
+
+                    <!-- Sign Up form  * poate nu ar fii o idee rea sa il luam cu js-ul vedem-->
+
+                   <div class='signup-ev' id='sgup_ev_{~ao->idEv}_en'>
+
+
+                       <div class='cont-frm well'>
+
+                           <div class='sg-close'>
+                               <button onclick=\`ivyMods.events.close_sgup('ev_{~ao->idEv}_en')\`> close </button>
+                           </div>
+
+                           <form action='' method='post'>
+                               <div class='frm-left'>
+                                   <input type='text' name='usr_name' value=''  placeholder='Name' />
+                                   <input type='text' name='usr_email' value=''  placeholder='E-mail' />
+                                   <input type='text' name='usr_adress' value=''  placeholder='Adress' />
+                                   <textarea  name='usr_more'   placeholder='More about you' ></textarea>
+
+                               </div>
+                               <div class='frm-right'>
+                                   <div class='cont-captcha'>
+                                       <img class='captcha' src='assets/securimage/securimage_show.php' alt='CAPTCHA Image' />
+                                       <br />
+                                       <input type='text' name='captcha_code' size='10' maxlength='6' tabindex='4' />
+                                       <a href='#' title=' Regenerate' class='captcha_reset' onclick='ivyMods.events.regenerateCaptcha(); return false;'>
+
+                                           Regenerate
+                                       </a>
+
+                                   </div>
+                                   <div class='upload-files'>
+                                       <input name='upload' type='file' />
+                                   </div>
+                                   <input type='submit' name='signup_ws' value='signUp'  class='signUp' >
+
+
+
+                                   <input type='hidden' name='ev_price' value='{~ao->ev_price}'>
+                                   <input type='hidden' name='ev_name' value='{~ao->ev_name}'>
+                                   <input type='hidden' name='ev_description' value='{~ao->ev_description}'>
+                                   <input type='hidden' name='ev_location' value='{~ao->ev_location}'>
+                                   <input type='hidden' name='ev_date' value='{~ao->ev_date}'>
+                                   <input type='hidden' name='ev_hour' value='{~ao->ev_hour}'>
+
+                               </div>
+                           </form>
+                       </div>
+
+                   </div>
+
+                ",
+                '',$o
+
+           )."
+
+       </div>
+    <div class='clearfix'></div>
+
+</div>

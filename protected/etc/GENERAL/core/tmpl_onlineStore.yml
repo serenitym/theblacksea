@@ -1,0 +1,17 @@
+---
+# modelele instantiate automat
+default_PLUGINS:
+  - MENUhorizontal
+  - menuPROD
+
+# numele modelelor pentru meniuri
+# key = table.MENUS - col.idM
+menus:
+  1: MENUhorizontal
+  2: MENUhorizontalv
+  3: menuPROD
+
+
+# typeul / modelul default cand se intra
+type: products
+type_MOD: MODELS

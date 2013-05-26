@@ -1,0 +1,66 @@
+<!-- =============================[Worklshops ]====================-->
+<!--
+    ev_name
+    ev_description
+    ev_date
+    ev_hour
+    ev_price
+    ev_managers_emails
+    ev_formType
+-->
+
+   <!--<div class='allENTS evs' id='ev_en'>-->
+   <div class='evs_ws' id='ev_{$this->lang}'>
+       <!--<div class='ENT ev' id='ev_1_en'>-->
+       ".$this->renderDisplay_Items( $o->listEvents,
+            "
+                <div class='ev' id='ev_{~ao->idEv}_en'>
+
+                        <div class='ev-title well-light'>
+                            <span class='ev_name'>  {~ao->ev_name}   </span>
+                            <div class='price-container'>
+                                price   <span class='ev_price'> {~ao->ev_price} </span>  ron
+                            </div>
+                        </div>
+
+
+                        <div class='ev-fullDescription well'>
+
+                            <div class='ev_description'> {~ao->ev_description}</div>
+
+                            <div class='ev-details'>
+
+                                <div class='detail'>
+                                    <span class='title'> date</span>
+                                    <span class='ev_date'> {~ao->ev_date} </span>
+                                </div>
+                                <div class='detail'>
+                                    <span class='title'> hour</span>
+                                    <span class='ev_hour'> {~ao->ev_hour} </span>
+
+                                </div>
+                                <div class='detail'>
+                                    <span class='title'> location</span>
+                                    <span class='ev_location'> {~ao->ev_location} </span>
+
+                                </div>
+                                <div class='detail cont-signUp'>
+                                    <form action='' method='post'>
+                                        <input type='hidden' name='idEv' value='{~ao->idEv}'>
+                                        <input type='hidden' name='idM' value='{~o->idM}'>
+                                        <input type='submit' name='go_signup_ws' value='signUp'  class='signUp' >
+                                    </form>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                </div>
+            ",
+            '',$o
+
+       )."
+
+   </div>

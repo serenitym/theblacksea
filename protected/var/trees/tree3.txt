@@ -1,0 +1,1 @@
+a:1:{i:3;O:4:"item":12:{s:2:"id";s:1:"3";s:4:"p_id";s:0:"";s:3:"idT";s:1:"3";s:5:"level";i:0;s:8:"children";N;s:7:"name_ro";s:13:"Dance Contest";s:7:"name_en";s:13:"Dance Contest";s:4:"name";s:13:"Dance Contest";s:5:"nameF";s:13:"Dance_Contest";s:4:"type";s:6:"events";s:3:"new";N;s:9:"disp_cont";i:1;}}

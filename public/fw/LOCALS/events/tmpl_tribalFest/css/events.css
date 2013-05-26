@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+
+.membrs{
+    margin: 0px auto;
+    width: 840px;
+}
+
+ .membr{
+    margin-bottom: 35px;
+ }
+ .membr:last-child {
+     margin-bottom: 0px;
+
+ }
+ .admMembr{
+     margin-bottom: 0px !important;
+ }
+
+     .membr .left{
+        width: 200px;
+        display: inline-block;
+        margin-right: 30px;
+
+    }
+
+    .membr .right{
+        display: inline-block;
+        vertical-align: top;
+
+    }
+
+
+/*==========================================[Workshops]======================================*/
+
+.membr .right,
+.evs_ws,
+.evs_ws .ev{
+    width: 600px;
+
+}
+
+
+
+.evs_ws {    float: right;    }
+
+    .ev {  margin-bottom: 20px; clear: both;  }
+
+         .well{   padding-bottom: 25px;   }
+
+
+         .well-light{
+             margin-bottom: -5px;
+             width: 582px;
+             font-weight: bold;
+             z-index: 27;
+             position: relative;
+        }
+        .evs_ws  .well-light{cursor: pointer;}
+
+        .ev .price-container{
+            float: right;
+
+        }
+
+
+.evs_ws .ev-fullDescription{
+   /* margin-top: 20px;*/
+    display: none;
+}
+
+.ev_name{
+    width: 200px;
+}
+.ev_price{
+    width: 40px
+}
+
+.ev_description{
+    clear: both;
+    width: 580px;
+    min-height: 30px;
+    margin-bottom: 10px;
+}
+
+.ev-details{ height: 25px;}
+.ev-details > *{
+    float: left;
+    margin-right: 20px;
+}
+    .ev-details input[type="text"]{
+        width: 80px;
+    }
+    .ev-details .cont-signUp{
+        float: right;
+    }
+
+
+.cont-managers{
+    margin: 10px 0px;
+}
+
+    .ev_managersEmails {
+        width: 250px;
+        min-height: 25px !important;
+        vertical-align: top;
+
+    }
+
+
+/*==========================[events]=========================*/
+
+.evs,
+.evs .ev_description{
+    width: 840px;
+}
+
+.varPrices{
+    height:30px;
+    display: inline-block;
+}
+
+    .vprice{ margin-right: 10px; display: inline-block; font-weight: bold;}
+        .v_name {font-size: 13px;}
+
+.cont-var-prices {   height: 30px; }
+    .var_prices{   width: 200px; }
+
+
+/*==========================[workshop-signUp]=========================*/
+
+.signup-ws
+{
+    width: 600px;
+    margin: 0px auto;
+}
+
+.signup-ev {width: 600px; float: right; margin-bottom: 40px; display: none; }
+
+    .sg-close{
+        position: relative;
+        height: 12px;
+    }
+        .signup-ev  .sg-close button{
+            padding: 5px 9px;
+            border-radius: 11px;
+            background: #21190e;
+            font-weight: bold;
+            border: 0px;
+            cursor: pointer;
+            position: absolute;
+            right: -17px;
+            top: -33px;
+            color: rgb(7, 4, 1);
+            font-size: 15px;
+        }
+        .signup-ev  .sg-close button:hover{
+            color: #6a5d4c;
+        }
+
+
+    .cont-frm .cont-signUp{
+        visibility: hidden;
+    }
+
+
+
+ .cont-frm{
+    clear: both;
+
+}
+
+    .cont-frm .frm-left,
+    .cont-frm .frm-right{
+        display: inline-block;
+    }
+
+    .cont-frm .frm-left input[type="text"] ,
+    .cont-frm .frm-left textarea
+    {
+        margin-bottom: 13px;
+        display: block;
+        width: 280px;
+    }
+
+    .cont-frm .frm-right input[type="text"]{
+         margin-bottom: 13px;
+         display: inline-block;
+
+         background: rgb(170, 159, 144);
+         padding: 4px 10px;
+         border-radius: 8px;
+         width: 120px;
+    }
+
+    .cont-frm .frm-left textarea{ height: 70px;}
+
+
+
+    .cont-frm .frm-left input[type="text"]:last-child,
+    .cont-frm .frm-right input[type="text"]:last-child{
+        margin-bottom: 0px;
+    }
+
+
+    .cont-frm .frm-left { width: 350px; vertical-align: top;}
+    .cont-frm .frm-right {
+        width: 210px;
+        text-align: right;
+    }
+
+
+
+.ELMcontent input[type="text"],
+.ELMcontent textarea{
+    border-radius: 2px;
+    border: 0px;
+    outline: 0px;
+}
+
+.ELMcontent input[type="text"]:hover,
+.ELMcontent textarea:hover {
+    outline: 0px;
+}
+
+

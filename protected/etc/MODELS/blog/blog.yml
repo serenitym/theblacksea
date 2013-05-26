@@ -1,0 +1,96 @@
+---
+HTMLmessage_record : ""
+HTMLmessage_Records: ""
+record_mainPic_src: ""          # HTML src_img main picture - luata din cadrul record-content
+record_mainPic: ""              # HTML img main picture - luata din cadrul record-content
+total_nrComments: "0"
+
+# nume de tipuri de recorduri existente
+blogModels:
+  - blog
+  - articles
+
+#   array cu numele variabilelor dorite din CsetINI
+#   sau dintr-un anumit model ex model: nume variabila  sau model:[var1, var2]
+objREQ:
+  0: simpleHref_history
+  user: uid
+
+
+template_file: blogRecords
+
+#======================================================================================================================
+
+template_vars:
+
+  # __________________ [ MANs ] __________________________________________________________________________
+  - contentTemplate_file
+  - current_modelBlog
+  - LG
+  - ED
+  - uid                  # userID-ul
+  - simpleHref_history
+  - HTMLmessage_Records
+
+
+  - pagination
+  - Rating
+  - ReadMore_link
+  - record_href
+
+  - comments              # array cu commneturi pt TMPL blogRecord_[blogModel]
+  - records               # array cu recorduri  pt TMPL blogRecords
+  - tagsName
+
+  - fullName              # numele autorului
+  - total_nrComments
+
+  # __________________ nonEDITABLE[ blogRecords ] ___________________________________________________________
+  - idRecord
+  - nrRates
+  - ratingTotal
+  - publishDate
+  - entryDate
+
+blogRecords_vars:
+  #___________________ EDITABLE[ blogRecords ] _______________________________________________________________
+  - uidRec
+  - title
+  - content
+  - lead
+
+
+
+blogRecords_settings_vars:
+  # _________________ EDITABLE[ blogRecords_settings ] _______________________________________________________________
+
+  - modelBlog_name    # numele modelului de record / blog
+  - modelComm_name    # numele modelului de comment
+  - commentsStat      # enable / disable - (nu) se mai pot posta commenturi
+  - commentsApprov    # enable / disable - commenturile (nu) trebuie intai aprobate
+  - commentsView      # enable / disable - commenturile se (nu)pot vedea
+  - SEO
+
+
+Atemplate_vars:
+  #__________________ [ var necesare pentru tmplADMIN ] _________________________________________________
+
+  - commView_true     # commentsView - true = checked / -
+  - commView_false
+
+  - commStat_true
+  - commStat_false
+
+  - commApprov_true
+  - commApprov_false
+
+  - blogModels
+  - pubPermss         # permisiuni de publicare
+  - webmPermss        # permisiuni de prioritizare a unui record
+
+  - HTMLmessage_record
+
+template_homePrior_vars:
+  #________________________[ array-uri cu recorduri prioritizate pt pagina de home]
+  - priorLevel_1
+  - priorLevel_2

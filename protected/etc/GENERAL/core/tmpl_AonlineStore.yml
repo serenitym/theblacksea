@@ -1,0 +1,8 @@
+---
+#modelele care pot fii admistrabile deci care au o clasa AC[model]
+admin_MOD:
+  products: 1
+  page: 1
+  blog: 1
+  articles: 1
+  comments: 1

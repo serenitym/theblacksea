@@ -1,0 +1,47 @@
+<div id='cont-mainPage'>
+
+    <div class='SING admMembr membr' id='membr_{$o->idM}_{$this->lang}'>
+
+        <div class='img-med2Pic left'>
+            <img  class='EDpic mbr_picUrl' src='{$o->mbr_picUrl}'>
+        </div>
+
+        <div class='right'>
+                <!--
+                    mbr_name
+                    mbr_picUrl
+                    mbr_description
+                    mbr_websiteLink
+
+
+                    ev_name
+                    ev_description
+                    ev_date
+                    ev_hour
+                    ev_price
+                    ev_managers_emails
+                    ev_formType
+                -->
+
+                <div class='EDtxt title title3 mbr_name'>
+                    <a>
+                        {$o->mbr_name}
+                    </a>
+                </div>
+                <div class='EDeditor mbr_description'>
+                    {$o->mbr_description}
+                </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- =============================[Worklshops ]====================-->
+
+    ".$this->renderDisplay_fromObj($o->events[$o->idM],'', $o->modType.'/events/tmpl_'.$o->template.'/tmpl/AlistEvents1.html')."
+
+    <div class='clearfix'></div>
+
+</div>
+

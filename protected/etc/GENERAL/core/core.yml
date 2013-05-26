@@ -1,0 +1,91 @@
+---
+
+#========================================
+# CONFIG MAIN template - template pentru instanta curenta de fw
+#========================================
+
+
+mainTemplate: tribalFest
+mainModel: sitePrez
+
+
+#========================================
+# tipuri de module existente
+#========================================
+mods: [PLUGINS, MODELS, GENERAL, LOCALS]
+
+#nu imi e foarte clar la ce sunt bune urmatoarele
+models: [contact,  single, gallery]
+
+plugins: [toolbar, ivyMenu, feedback]
+
+general: [TOOLbar, GEN_edit, EDITmode]
+
+locals: [ events, members, sitePrez ]
+
+#========================================
+# modulele instantiate automat
+#========================================
+
+default_LOCALS: []
+
+default_GENERAL: []
+  #- authManager
+  #- user
+
+default_MODELS: []
+#  - mainPOPup
+
+default_PLUGINS: [LANG, ivyMenu, feedback]
+
+
+#=========================================
+# tree stuff
+#=========================================
+
+tree: []
+
+# typeul / modelul default cand se intra
+type: single
+type_MOD: MODELS
+
+id: 1
+idT: 1
+idC: 1
+
+
+
+#========================================
+# other settings
+#========================================
+
+INC_css: ''
+INC_js: ''
+admin: false
+# DB: pointer la baza de date
+
+
+# numele modelelor pentru meniuri
+# exlicatii necesare
+# key = table.MENUS - col.idM
+menus:
+  1: ivyMenu
+
+
+
+#==========================================
+# language
+#==========================================
+lang: en
+lang2: ro
+langs:
+  - en
+
+
+#===========================================
+# other stuff
+#============================================
+history: []
+history_HREF: ''
+history_TITLE: ''
+history_TITLE_keywords: ''
