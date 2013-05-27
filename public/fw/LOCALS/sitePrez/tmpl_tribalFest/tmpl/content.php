@@ -12,7 +12,7 @@
 
 </div>
 
-<div class="container-main" >
+<div class="containerMain" >
 
     <div id="mainPage" class='container_12 clearfix'>
 

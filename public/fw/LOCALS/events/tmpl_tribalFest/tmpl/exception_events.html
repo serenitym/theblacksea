@@ -1,0 +1,92 @@
+<div class='cont-mainPage'>
+
+    <!-- =============================[Worklshops ]====================-->
+    <!--
+        ev_name
+        ev_description
+        ev_date
+        ev_hour
+        ev_price
+        ev_managers_emails
+        ev_formType
+    -->
+
+       <!--<div class='allENTS evs' id='ev_en'>-->
+       <div class='allENTS evs-exception evs' id='ev_{$this->lang}'>
+           <!--<div class='ENT ev' id='ev_1_en'>-->
+           ".$this->renderDisplay_Items( $o->events[0]->listEvents,
+                "
+                    <div class='ENT ev' id='ev_{~ao->idEv}_en'>
+
+                            <div class='ATmpl'>
+                                <br>
+
+                                Atentie acest eveniment este o exceptie in cadrul workshopurilor si nu ar trebui deletat !!!
+                                <br>
+                                <br>
+                            </div>
+                            <div class='ev-title  well-light'>
+
+                                <span class='EDtxt  ev_name'>  {~ao->ev_name}   </span>
+                                <div class='price-container'>
+                                       price   <span class='EDtxt ev_price'> {~ao->ev_price} </span>  ron
+                                 </div>
+                            </div>
+
+
+                            <div class='ev-fullDescription well'>
+
+                                    <div class='EDtxa ev_description'> {~ao->ev_description}</div>
+
+                                    <div class='ATmpl cont-managers'>
+                                        <span><b>Managers</b></span>
+                                        <div class='EDtxa ev_managersEmails'> {~ao->ev_managersEmails}</div>
+                                    </div>
+
+
+
+
+
+                                    <!--============================[END - trial]=========================-->
+
+                                    <div class='ev-details'>
+
+                                        <!--<div class='detail'>
+                                            <span class='title'> date</span>
+                                            <span class='EDtxt ev_date'> {~ao->ev_date} </span>
+                                        </div>
+                                        <div class='detail'>
+                                            <span class='title'> hour</span>
+                                            <span class='EDtxt ev_hour'> {~ao->ev_hour} </span>
+
+                                        </div>
+                                        <div class='detail'>
+                                            <span class='title'> location</span>
+                                            <span class='EDtxt ev_location'> {~ao->ev_location} </span>
+
+                                        </div>-->
+                                        <div class='detail cont-signUp'>
+                                            <input type='button' name='go_signup_ev' value='signUp'  class='signUp'
+                                                    onclick=\`ivyMods.events.show_sgup('ev_{~ao->idEv}_en');  \`>
+
+                                        </div>
+
+                                    </div>
+
+                            </div>
+
+                    </div>
+                    `.~this->renderDisplay_fromObj(~ao
+                        ,'',
+                        ~o->modType.'/events/tmpl_'.~o->template.'/tmpl/exception_signup_events.html').`
+
+
+                ",
+                '',$o
+
+           )."
+
+       </div>
+    <div class='clearfix'></div>
+
+</div>

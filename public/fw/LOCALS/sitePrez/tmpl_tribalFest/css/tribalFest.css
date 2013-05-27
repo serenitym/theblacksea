@@ -62,7 +62,7 @@ body{
         }
 
 
-.container-main{
+.containerMain{
 
     background-image: url("img/img-noise-200x200.png");
 
@@ -77,10 +77,17 @@ body{
      /*  position: relative;*/
     }
 
-        #cont-mainPage{
+        #cont-mainPage,
+        .cont-mainPage{
             width: 840px;
             margin: 0px auto;
        /*     position: relative;*/
+            height: 100%;
+        }
+
+        .single{
+            width: 840px !important;
+            margin: 0px auto;
             height: 100%;
         }
 

@@ -5,5 +5,5 @@ templates:
   2: workshops
   3: events
   idPers: Ainstructor
-  go_signup_ws: signup_workshop
+  go_signup_ws: signupPage_workshop
   go_signup_ev: signup_events

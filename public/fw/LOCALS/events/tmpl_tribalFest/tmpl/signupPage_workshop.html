@@ -1,0 +1,17 @@
+<div class='signup-ws'>
+
+     <div class='title title3 mbr_name'>
+        <a>
+            {$o->mbr_name}
+        </a>
+     </div>
+    ".$this->renderDisplay_fromObj(
+        $o->events[$o->idM],'',
+        $o->modType.'/events/tmpl_'.$o->template.'/tmpl/listEvents1.html')."
+
+    ".$this->renderDisplay_fromObj(
+        $o,'',
+        $o->modType.'/events/tmpl_'.$o->template.'/tmpl/signup_workshops.html'
+    )."
+
+</div>

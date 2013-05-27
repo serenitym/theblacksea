@@ -38,7 +38,7 @@
 }
 
     .festDetails .details{
-        height: 50px;
+        min-height: 50px;
         width: 840px;
         font-size: 13px;
     }

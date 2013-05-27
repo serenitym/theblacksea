@@ -2,37 +2,41 @@
 
     <div id='home-gallery'>
         <div id='container-gallery'>
-            <img src='fw/LOCALS/sitePrez/tmpl_tribalFestHome/css/gallery_pics/Picture4.jpg'>
+            ".$this->ctrlDisplay_fromObj($this->gallery)."
         </div>
     </div>
 </div>
 <div class='container-home'>
     <div class = 'SING row1 festDetails'  id='festDetails_0_en'>
         <div class='EDeditor details'>
-            When: Nov1 - Nov 3 2013 <br>
-            Where: ArCub Hall
-            Batiştei str. # 14, sector 2, Bucharest, Romania<br>
-            What to expect:
-            Cutting edge workshops, Contest for professional and semi-professional dancers,
-            Open stage, Bazaar & Gala Show
+
+            <!--/var/www/tbf/public/RES/LOCALS/sitePrez/en_festDetails.html -->
+            ".$this->ctrlDisplay_fromObjRes($o, 'festDetails')."
+
+
         </div>
     </div>
-    <div class = 'row2'>
-        <div class='instructorPrev'>
-            <div class='img-smallPic img-container'>
-                <img src='fw/LOCALS/sitePrez/tmpl_tribalFestHome/css/instructor/ins1.jpg'>
-            </div>
-            <div class='ins-details'>
-                <div class='ins-name title'>Nume Prenume</div>
-                <div class='bio'>
 
-                    In addition to her Bachelor of Music in Vocal Performance, Ashley López is a world known performer, instructor (her online instructional videos may be found at Datura Online.), and ever-evolving student of tribal fusion bellydance.  Ashley holds Level I & II certifications from Rachel Brice’s 8 Elements as well as the Tribal Massive Advanced/Professional Certification Program for 2011 & 2012. She is a certified Group Fitness Instructor through the American Council on Exercise, a Registered Yoga Teacher through Yoga Alliance, holds Pilates certifications Balanced Body University, the Aerobics and Fitness Association of America.
-                     An active soloist and group performer, her most recent dance collaborations include performances with Beats Antique, Zoe Jakes and her Bhoomi Project as well as Rachel Brice’s performance group for Tribal Fest 2012.
+    <div class = 'row2'>
+
+        ".$this->renderDisplay_Items($o->members,
+            "
+                <div class='instructorPrev'>
+                    <div class='img-smallPic img-container'>
+                        <img src='{~ao->mbr_picUrl}'>
+                    </div>
+                    <div class='ins-details'>
+                        <div class='ins-name title'> {~ao->mbr_name} </div>
+                        <div class='bio'>
+
+                            {~ao->mbr_description}
+
+                        </div>
+                    </div>
 
                 </div>
-            </div>
-
-        </div>
+            "
+        )."
 
 
 

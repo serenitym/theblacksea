@@ -35,19 +35,28 @@
 
 .membr .right,
 .evs_ws,
-.evs_ws .ev{
-    width: 600px;
+.evs_ws .ew,
+.evs_ws .ev,
+
+.evs-exception,
+.evs-exception .ev
+
+{
+    width: 600px !important;
 
 }
 
 
 
-.evs_ws {    float: right;    }
+.evs_ws,
+.evs-exception{    float: right;    }
 
-    .ev {  margin-bottom: 20px; clear: both;  }
+    .ev {  margin-bottom: 45px; clear: both;  }
+    .ws { margin-bottom: 20px; clear: both;}
 
          .well{   padding-bottom: 25px;   }
 
+         .evs-exception .well{ padding-bottom: 5px;}
 
          .well-light{
              margin-bottom: -5px;
@@ -56,24 +65,35 @@
              z-index: 27;
              position: relative;
         }
-        .evs_ws  .well-light{cursor: pointer;}
+        .well-light{cursor: pointer;}
+        .well-light:hover{ background: rgb(133, 121, 101); }
 
-        .ev .price-container{
+        .ws .price-container,
+        .ev .price-container
+        {
             float: right;
 
         }
 
 
-.evs_ws .ev-fullDescription{
+.usrView-evs_ws .ev-fullDescription{
    /* margin-top: 20px;*/
     display: none;
 }
 
 .ev_name{
-    width: 200px;
+    width: 250px;
 }
 .ev_price{
-    width: 40px
+    width: 40px;
+
+}
+
+.var_name{
+    margin-right: 4px;
+}
+.var_price {
+    font-size: 15px;
 }
 
 .ev_description{
@@ -81,6 +101,9 @@
     width: 580px;
     min-height: 30px;
     margin-bottom: 10px;
+}
+.evs-exception .ev_description{
+    width: 580px !important;
 }
 
 .ev-details{ height: 25px;}
@@ -142,17 +165,17 @@
         height: 12px;
     }
         .signup-ev  .sg-close button{
-            padding: 5px 9px;
-            border-radius: 11px;
+            padding: 3px 9px;
+            border-radius: 6px;
             background: #21190e;
             font-weight: bold;
             border: 0px;
             cursor: pointer;
             position: absolute;
             right: -17px;
-            top: -33px;
+            top: -31px;
             color: rgb(7, 4, 1);
-            font-size: 15px;
+            font-size: 12px;
         }
         .signup-ev  .sg-close button:hover{
             color: #6a5d4c;
@@ -223,4 +246,18 @@
     outline: 0px;
 }
 
+.radio-varPrices{
+    width: 212px;
+    text-align: left;
+}
+
+
+
+/*=======================[ ADMIN - addForm]=======================================*/
+
+.cont-addMember{
+
+    margin-bottom: 30px;
+    text-align: right;
+}
 

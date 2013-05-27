@@ -6,6 +6,11 @@
        mbr_description
        mbr_websiteLink
    -->
+    ".($this->admin
+        ? $this->renderDisplay_fromObj($this, '',
+            $o->modType.'/events/tmpl_'.$o->template.'/tmpl/ADMIN/addMember.html')
+        :""
+    )."
 
     <!--<div class='ENT membr' id='membr_1_en'>-->
 
@@ -20,7 +25,7 @@
             <div class='right'>
                     <div class='title title3 mbr_name'>
                         <a href='{~ao->mbr_href} '>
-                            Nume Prenume
+                            {~ao->mbr_name}
                         </a>
                     </div>
 
@@ -34,5 +39,9 @@
       ,"",$o
     )."
 
-
 </div>
+
+".$o->get_events(0,6,'')."
+
+".$this->renderDisplay_fromObj($o, '',
+       $o->modType.'/events/tmpl_'.$o->template.'/tmpl/exception_events.html')."
