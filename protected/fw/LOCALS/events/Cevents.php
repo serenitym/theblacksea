@@ -1,6 +1,7 @@
 <?php
 
-class Cevents{
+class Cevents extends eventRegister
+{
 
 
     var $members,
@@ -154,6 +155,8 @@ class Cevents{
             }
 
         }
+
+        if (isset($_POST['action'])) $this->setOrderData($_POST['action']);
     }
    /* function DISPLAY(){
 

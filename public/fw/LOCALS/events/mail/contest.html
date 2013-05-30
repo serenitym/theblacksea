@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>TFB :: Dance contest subscription</title>
+    </head>
+<body>
+    <h4>Dance contest sign up form</h4>
+    <b>From: </b> <span>".$o->name." (<a href='mailto:".$o->mail."'>".$o->mail."</a>)</span>
+    <p><b>Address:</b> ".$o->address."</p>
+    <p>Details:
+        <blockquote>
+            ".nl2br($o->message)."
+        </blockquote>
+    </p>
+</body>
+</html>

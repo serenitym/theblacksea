@@ -1,5 +1,9 @@
 template: tribalFest
 
+coordinator:
+    name: "Victor Nițu"
+    email: "victor@debian.org.ro"
+
 # de forma idC = 2 => template_file = workshops
 templates:
   2: workshops

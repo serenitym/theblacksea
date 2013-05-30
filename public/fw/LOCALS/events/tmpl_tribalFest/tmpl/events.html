@@ -93,10 +93,10 @@
 
                            <form action='' method='post'>
                                <div class='frm-left'>
-                                   <input type='text' name='usr_name' value=''  placeholder='Name' />
-                                   <input type='text' name='usr_email' value=''  placeholder='E-mail' />
-                                   <input type='text' name='usr_adress' value=''  placeholder='Adress' />
-                                   <textarea  name='usr_more'   placeholder='More about you' ></textarea>
+                                   <input type='text' name='name' value=''  placeholder='Name' />
+                                   <input type='text' name='email' value=''  placeholder='E-mail' />
+                                   <input type='text' name='address' value=''  placeholder='Adress' />
+                                   <textarea  name='message'   placeholder='More about you' ></textarea>
 
                                </div>
                                <div class='frm-right'>
@@ -123,6 +123,7 @@
                                    <input type='hidden' name='ev_location' value='{~ao->ev_location}'>
                                    <input type='hidden' name='ev_date' value='{~ao->ev_date}'>
                                    <input type='hidden' name='ev_hour' value='{~ao->ev_hour}'>
+                                   <input type='hidden' name='action' value='contest'>
 
                                </div>
                            </form>
