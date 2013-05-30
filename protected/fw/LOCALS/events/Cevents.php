@@ -11,11 +11,7 @@ class Cevents{
 
         // daca nu are un pretz setat , atunci cauta in events_vars
 
-        $event['ev_date_atmpl'] = $event['ev_date'] ? "" : "ATmpl";
-        $event['ev_hour_atmpl'] = $event['ev_hour'] ? "" : "ATmpl";
-        $event['ev_location_atmpl'] = $event['ev_location'] ? "" : "ATmpl";
-
-        if(!$event['price'])
+        if(!$event['ev_price'])
         {
             $query_prices = "SELECT * from events_vars WHERE idEv = {$event['idEv']}";
             $event['prices'] = $this->C->GET_objProperties($this, $query_prices,'',false);
@@ -33,6 +29,14 @@ class Cevents{
         }
 
 
+        $event['ev_date_atmpl'] = $event['ev_date'] ? "" : "ATmpl";
+        $event['ev_hour_atmpl'] = $event['ev_hour'] ? "" : "ATmpl";
+        $event['ev_location_atmpl'] = $event['ev_location'] ? "" : "ATmpl";
+        $event['ev_price_atmpl'] = $event['ev_price'] ? "" : "ATmpl";
+        $event['ev_prices_atmpl'] = $event['prices'] ? "" : "ATmpl";
+
+
+
         return $event;
     }
     function get_events($idM = 0, $idEv = '', $exception = " AND idEv != 6 " ){
@@ -46,6 +50,7 @@ class Cevents{
         $this->events[$idM]->listEvents = $this->C->GET_objProperties($this, $query_events,'process_event');
 
 
+
         return "";
     }
 
@@ -53,7 +58,7 @@ class Cevents{
 
         $idM = $member['idM'];
 
-        $member['mbr_href'] = $this->admin && !isset($_GET['idPers']) ? "?idc={$this->idC}&idT={$this->idT}&idPers={$idM}" : "#";
+        $member['mbr_href'] =/* $this->admin && */!isset($_GET['idPers']) ? "?idc={$this->idC}&idT={$this->idT}&idPers={$idM}" : "#";
         $this->get_events($idM);
 
         return $member;

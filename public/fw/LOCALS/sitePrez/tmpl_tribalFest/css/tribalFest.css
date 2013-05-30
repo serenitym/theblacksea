@@ -12,6 +12,7 @@ a, a:hover{
 }
 a:hover{
     color: #72633b;
+    text-decoration: underline;
 
 }
 
@@ -123,7 +124,7 @@ footer {
 /* medium pic*/
 .img-medPic{
     width: 200px;
-    height: 215px;
+    height: 200px;
     overflow-y: hidden;
 }
 
@@ -219,14 +220,21 @@ textarea:focus{
 }
 
 .well-light{
-    background: #6f6450;
-    color: #21190e ;
+    /*background: #6f6450;*/
+    /*background: rgb(97, 85, 63);*/
+   /* background: rgb(80, 68, 46);*/
+   /* background: #21190e;*/
+    background: rgb(29, 21, 12);
+   /* color: #21190e ;*/
+    color: #6f6450;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
 
-
+.well-light:hover{
+    color: #21190e;
+}
 
 
 
