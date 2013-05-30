@@ -215,7 +215,8 @@ textarea:focus{
 
 .well{
     border-radius: 7px;
-    background: #21190e;
+   /* background: #21190e;*/
+    background: rgb(37, 28, 19);;
     padding: 15px;
 }
 

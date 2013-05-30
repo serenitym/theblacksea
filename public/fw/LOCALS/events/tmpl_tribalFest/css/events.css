@@ -5,7 +5,9 @@
     /*margin: 0px auto;
     width: 840px;*/
 }
-
+.membrs .well{
+    background: rgb(33, 25, 15);
+}
 
  .membr{
 
@@ -15,7 +17,7 @@
  }
 
 .membrs .membr:hover{
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.08);
 
 }
 .mbr-container {
