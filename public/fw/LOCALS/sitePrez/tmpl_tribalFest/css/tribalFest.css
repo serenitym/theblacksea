@@ -32,6 +32,8 @@ body{
   /*  position: relative;*/
 }
 
+.highligth-color {color : #8E5F1F !important;}
+
 #header {
     background-color: #f5a62d;
    /* background-image: url("img/logoTribal.png") no-repeat;*/
@@ -43,14 +45,15 @@ body{
 }
 
     #navBar {
-        width: 960px;
+        width: 1000px;
         margin: 0px auto;
     }
         #navbar-menu{
-            background: url("img/tribalFest-logo.png");
+            background: url("img/tribalFest-logo22.png");
             background-repeat: no-repeat;
             height: 65px;
-            background-position: -5px 10px;
+          /*  background-position: -30px -4px;*/
+            background-position: -7px -13px;
         }
 
         #navBar ul li  a{
@@ -91,6 +94,7 @@ body{
             margin: 0px auto;
        /*     position: relative;*/
             height: 100%;
+            margin-bottom: 50px;
         }
 
         .single{
