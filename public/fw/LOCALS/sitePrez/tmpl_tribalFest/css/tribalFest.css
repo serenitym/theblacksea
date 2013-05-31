@@ -46,15 +46,22 @@ body{
         width: 960px;
         margin: 0px auto;
     }
+        #navbar-menu{
+            background: url("img/tribalFest-logo.png");
+            background-repeat: no-repeat;
+            height: 65px;
+            background-position: -5px 10px;
+        }
 
         #navBar ul li  a{
-            line-height: 75px;
+            line-height: 67px;
             color: #3d2c12;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
             text-transform: uppercase;
             font-family: "Helvetica","Open Sans";
-            padding: 0px 24px;
+            padding: 0px 20px;
+            margin-top: 10px;
         }
         #navBar ul li  a:hover{
 
@@ -115,6 +122,7 @@ footer {
     width: 120px;
     height: 130px;
     overflow-y: hidden;
+    border-radius: 3px;
 }
 
     .img-smallPic img{
@@ -126,6 +134,7 @@ footer {
     width: 200px;
     height: 200px;
     overflow-y: hidden;
+    border-radius: 3px;
 }
 
     .img-medPic img{
@@ -135,6 +144,7 @@ footer {
     width: 200px;
     height: 200px;
     overflow-y: hidden;
+    border-radius: 3px;
 }
 
     .img-med2Pic img{
@@ -146,6 +156,7 @@ footer {
     width: 200px;
     height: 300px;
     overflow-y: hidden;
+    border-radius: 3px;
 }
 
     .img-bigPic img{
