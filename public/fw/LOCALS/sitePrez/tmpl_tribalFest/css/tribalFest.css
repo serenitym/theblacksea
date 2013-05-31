@@ -31,7 +31,9 @@ body{
     margin: 0px ;
   /*  position: relative;*/
 }
-/* highlith color : #8E5F1F*/
+
+.highligth-color {color : #8E5F1F !important;}
+
 #header {
     background-color: #f5a62d;
    /* background-image: url("img/logoTribal.png") no-repeat;*/
