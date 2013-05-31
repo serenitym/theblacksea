@@ -88,6 +88,9 @@
 
 .evs_ws,
 .evs-exception{    float: right;    }
+.evs-exception{
+    margin-top: -45px;
+}
 
     .ev {  margin-bottom: 45px; clear: both;  }
     .ws { margin-bottom: 20px; clear: both;}
