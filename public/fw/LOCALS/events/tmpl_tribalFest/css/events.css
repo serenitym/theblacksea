@@ -2,15 +2,50 @@
 
 
 .membrs{
-    margin: 0px auto;
-    width: 840px;
+    /*margin: 0px auto;
+    width: 840px;*/
+}
+.membrs .well{
+    background: rgb(33, 25, 15);
 }
 
  .membr{
-    margin-bottom: 35px;
+
+    margin-bottom: 40px;
+    position: relative;
+     padding: 30px 0px;
  }
+
+/*.membrs .membr:hover{
+    background: rgba(255,255,255,0.08);
+
+}*/
+.mbr-container {
+    width: 840px;
+    margin: 0px auto;
+
+}
+
+
+
+ /*.mbr-container {z-index: 3;}
+ .mbr-container:hover + .overlayMember{display: block;}
+ .overlayMember{
+     display: none;
+     position: absolute;
+     top: 0px;
+     left: -60px;
+     width: 960px;
+     height: 205px;
+     background: rgba(255,255,255,0.1);
+     cursor: pointer;
+     z-index: 2;
+ }*/
+
+
+
  .membr:last-child {
-     margin-bottom: 0px;
+     margin-bottom: 50px;
 
  }
  .admMembr{
@@ -29,7 +64,10 @@
         vertical-align: top;
 
     }
+    .mbr_description {margin-bottom: 30px; float: right; width: 590px;}
+    .ELMcontent .mbr_description{  min-height: 90px;  }
 
+    .img-bigPic{ float: left;}
 
 /*==========================================[Workshops]======================================*/
 
@@ -50,6 +88,9 @@
 
 .evs_ws,
 .evs-exception{    float: right;    }
+.evs-exception{
+    margin-top: -45px;
+}
 
     .ev {  margin-bottom: 45px; clear: both;  }
     .ws { margin-bottom: 20px; clear: both;}
@@ -60,7 +101,7 @@
 
          .well-light{
              margin-bottom: -5px;
-             width: 582px;
+             width: 580px;
              font-weight: bold;
              z-index: 27;
              position: relative;
@@ -82,7 +123,7 @@
 }
 
 .ev_name{
-    width: 250px;
+    width: 400px;
 }
 .ev_price{
     width: 40px;
@@ -99,9 +140,20 @@
 .ev_description{
     clear: both;
     width: 580px;
-    min-height: 30px;
+   /* min-height: 50px;*/
     margin-bottom: 10px;
 }
+
+.evs .ELMcontent .ev_description{
+    min-height: 70px;
+}
+
+.evs_ws .ELMcontent .ev_description{
+    min-height: 30px;
+}
+
+.evs .addForm .ev_description{height: 200px;}
+
 .evs-exception .ev_description{
     width: 580px !important;
 }
@@ -136,6 +188,10 @@
 .evs,
 .evs .ev_description{
     width: 840px;
+}
+
+.ev_location {
+    width: 150px !important;
 }
 
 .varPrices{

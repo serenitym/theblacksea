@@ -2,8 +2,12 @@
 
     <div class='SING admMembr membr sgMbr' id='sgMbr_{$o->idM}_{$this->lang}'>
 
-        <div class='img-med2Pic left'>
-            <img  class='EDpic mbr_picUrl' src='{$o->mbr_picUrl}'>
+        <div class='img-bigPic left'>
+            ".( $o->mbr_picUrl
+                ?  "<img  class='EDpic mbr_picUrl' src='{$o->mbr_picUrl}'>"
+                :  "<img  class='EDpic mbr_picUrl' src='http://placehold.it/200x200'>"
+
+            )."
         </div>
 
         <div class='right'>
@@ -39,7 +43,13 @@
 
     <!-- =============================[Worklshops ]====================-->
 
-    ".$this->renderDisplay_fromObj($o->events[$o->idM],'', $o->modType.'/events/tmpl_'.$o->template.'/tmpl/AlistEvents1.html')."
+    ".(count($o->events[$o->idM]->listEvents) == 0
+
+        ?   $this->renderDisplay_fromObj($o,'', $o->modType.'/events/tmpl_'.$o->template.'/tmpl/ADMIN/add_wsEvent.html')
+
+
+        :   $this->renderDisplay_fromObj($o->events[$o->idM],'', $o->modType.'/events/tmpl_'.$o->template.'/tmpl/AlistEvents1.html')
+    )."
 
     <div class='clearfix'></div>
 

@@ -22,25 +22,32 @@
 
 
 
-                            <div class='EDtxa ev_description'> {~ao->ev_description}</div>
+                            <div class='EDeditor ev_description'> {~ao->ev_description}</div>
 
-                            <div class='ATmpl cont-managers'>
-                                <span><b>Managers</b></span>
-                                <div class='EDtxa ev_managersEmails'> {~ao->ev_managersEmails}</div>
+                            `.(!~this->admin ? '' :
+                                `<div class='ATmpl cont-managers'>
+                                    <span><b>Managers</b></span>
+                                    <div class='EDtxa ev_managersEmails'> {~ao->ev_managersEmails}</div>
+                                    <span><i> ex: manager1@domain.ro , manager2@domain.ro </i></span>
+                                </div>
+                                `
+                             ).`
+
+
+
+
+
+                            <div class='pricesContainer  {~ao->ev_prices_atmpl}'>
+                                `.  ~this->renderDisplay_fromObj(~ao
+                                       ,'',
+                                    ~o->modType.'/events/tmpl_'.~o->template.'/tmpl/varPrices.html').`
+
                             </div>
 
-
-
-                            `.( !~ao->ev_price
-                                ?   ~this->renderDisplay_fromObj(~ao
-                                           ,'',
-                                        ~o->modType.'/events/tmpl_'.~o->template.'/tmpl/varPrices.html')
-
-                                :   `<div class='priceContainer'>
-                                           price   <span class='ev_price'> {~ao->ev_price} </span>  ron
-                                     </div>`
-
-                            ).`
+                            <div class='priceContainer {~ao->ev_price_atmpl}'>
+                                  <span class='title'>  price </span> &nbsp;&nbsp;
+                                  <span class='EDtxt title title2 ev_price'> {~ao->ev_price} </span>  €
+                             </div>
 
                             <!--============================[END - trial]=========================-->
 

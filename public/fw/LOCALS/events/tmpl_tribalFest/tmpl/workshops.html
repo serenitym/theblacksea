@@ -18,21 +18,27 @@
        "
         <div class='ENT membr' id='membr_{~ao->idM}_en'>
 
-            <div class='img-medPic left'>
-                <img  class='mbr_picUrl' src='{~ao->mbr_picUrl}'>
-            </div>
-
-            <div class='right'>
-                    <div class='title title3 mbr_name'>
-                        <a href='{~ao->mbr_href} '>
-                            {~ao->mbr_name}
-                        </a>
+            <div class='mbr-container'>
+                    <div class='img-medPic left'>
+                        <img  class='mbr_picUrl' src='{~ao->mbr_picUrl}'>
                     </div>
 
-                    <!--  LOCALS/events/tmpl_tribalFest/tmpl/listEvents1.html -->
-                    `.~this->renderDisplay_fromObj(~o->events[~ao->idM],'', ~o->modType.'/events/tmpl_'.~o->template.'/tmpl/listEvents1.html').`
+                    <div class='right'>
+                        <div class='title title3 mbr_name'>
+                            <a href='{~ao->mbr_href} '>
+                                {~ao->mbr_name}
+                            </a>
+                        </div>
 
+                        <!--  LOCALS/events/tmpl_tribalFest/tmpl/listEvents1.html -->
+                        `.~this->renderDisplay_fromObj(~o->events[~ao->idM],'', ~o->modType.'/events/tmpl_'.~o->template.'/tmpl/listEvents1.html').`
+
+                    </div>
             </div>
+
+
+
+
         </div>
 
        "
@@ -45,3 +51,4 @@
 
 ".$this->renderDisplay_fromObj($o, '',
        $o->modType.'/events/tmpl_'.$o->template.'/tmpl/exception_events.html')."
+
