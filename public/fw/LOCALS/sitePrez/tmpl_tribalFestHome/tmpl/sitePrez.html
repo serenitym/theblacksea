@@ -2,96 +2,41 @@
 
     <div id='home-gallery'>
         <div id='container-gallery'>
-            <img src='fw/LOCALS/sitePrez/tmpl_tribalFestHome/css/gallery_pics/Picture4.jpg'>
+            ".$this->ctrlDisplay_fromObj($this->gallery)."
         </div>
     </div>
 </div>
 <div class='container-home'>
     <div class = 'SING row1 festDetails'  id='festDetails_0_en'>
         <div class='EDeditor details'>
-            When: Nov1 - Nov 3 2013 <br>
-            Where: ArCub Hall
-            Batiştei str. # 14, sector 2, Bucharest, Romania<br>
-            What to expect:
-            Cutting edge workshops, Contest for professional and semi-professional dancers,
-            Open stage, Bazaar & Gala Show
+
+            <!--/var/www/tbf/public/RES/LOCALS/sitePrez/en_festDetails.html -->
+            ".$this->ctrlDisplay_fromObjRes($o, 'festDetails')."
+
+
         </div>
     </div>
+
     <div class = 'row2'>
-        <div class='instructorPrev'>
-            <div class='img-smallPic img-container'>
-                <img src='fw/LOCALS/sitePrez/tmpl_tribalFestHome/css/instructor/ins1.jpg'>
-            </div>
-            <div class='ins-details'>
-                <div class='ins-name title'>Nume Prenume</div>
-                <div class='bio'>
 
-                    In addition to her Bachelor of Music in Vocal Performance, Ashley López is a world known performer, instructor (her online instructional videos may be found at Datura Online.), and ever-evolving student of tribal fusion bellydance.  Ashley holds Level I & II certifications from Rachel Brice’s 8 Elements as well as the Tribal Massive Advanced/Professional Certification Program for 2011 & 2012. She is a certified Group Fitness Instructor through the American Council on Exercise, a Registered Yoga Teacher through Yoga Alliance, holds Pilates certifications Balanced Body University, the Aerobics and Fitness Association of America.
-                     An active soloist and group performer, her most recent dance collaborations include performances with Beats Antique, Zoe Jakes and her Bhoomi Project as well as Rachel Brice’s performance group for Tribal Fest 2012.
+        ".$this->renderDisplay_Items($o->members,
+            "
+                <div class='instructorPrev'>
+                    <div class='img-med2Pic img-container'>
+                        <img src='{~ao->mbr_picUrl}'>
+                    </div>
+                    <div class='ins-details'>
+                        <div class='ins-name title title2 '> {~ao->mbr_name} </div>
+                        <div class='bio'>
+
+                            {~ao->mbr_description}
+
+                        </div>
+                    </div>
 
                 </div>
-            </div>
-
-        </div>
-
-
-
-<!--==============================================================[repetition]=======================================-->
-        <div class='instructorPrev'>
-            <div class='img-smallPic img-container'>
-                <img src='fw/LOCALS/sitePrez/tmpl_tribalFestHome/css/instructor/ins2.jpg'>
-            </div>
-            <div class='ins-details'>
-                <div class='ins-name title'>Nume Prenume</div>
-                <div class='bio'>
-
-Tjarda is a true pioneer of Tribal Fusion Bellydance in The Netherlands. She's a genuine dancer with a broad-minded curiosity towards fusing bellydance and well-known for her innovative choreographies. Since 2005 she is the inventive force behind award-winning troupe The Uzumé Dance Company.
-Tjarda performs solo, with The Uzumé, The Amano Project, as an honorary member in UNMATA or you can spot her in some new collaborations with Samantha Emanuel/Hasthorpe (BDSS) and Anasma which will be showcased at various festivals.
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class='instructorPrev'>
-            <div class='img-smallPic img-container'>
-                <img src='fw/LOCALS/sitePrez/tmpl_tribalFestHome/css/instructor/ins3.jpg'>
-            </div>
-            <div class='ins-details'>
-                <div class='ins-name title'>Nume Prenume</div>
-                <div class='bio'>
-
-Manca Pavli is a Slovenian dancer specializing in Tribal style belly dance and Oriental dance technique, teaching dance and performing all over the world.
-For the past four years, Manca has been the teaching assistant for Rachel Brice at the annual Belly Dance Yoga Retreat in Costa Rica. Manca credits Rachel Brice as an important influence on her own teaching techniques and dance style. She is also a Suhaila Salimpour Level 2 certified dancer.
-She was also a guest tribal dancer of the Bellydance Superstars on their Fall 2009 European tour of England, France and Morocco.
-Manca is the artistic director and choreographer of the Amaya Dance Company which last toured Europe with the Infusion Project show.
-For workshops, classes and other information please check out:
-WWW.BELLYDANCE-FUSION.COM
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class='instructorPrev'>
-            <div class='img-smallPic img-container'>
-                <img src='fw/LOCALS/sitePrez/tmpl_tribalFestHome/css/instructor/ins4.jpg'>
-            </div>
-            <div class='ins-details'>
-                <div class='ins-name title'>Nume Prenume</div>
-                <div class='bio'>
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-
-<!--=====================================================[END - repetition]==========================================-->
-
-
+            "
+        )."
 
     </div>
 </div>

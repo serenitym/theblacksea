@@ -38,7 +38,7 @@
 }
 
     .festDetails .details{
-        height: 50px;
+        min-height: 50px;
         width: 840px;
         font-size: 13px;
     }
@@ -46,7 +46,7 @@
 
 
 .container-home .instructorPrev{
-    margin-bottom: 30px;
+    margin-bottom: 55px;
 }
 
 .container-home .instructorPrev .img-container{
@@ -57,7 +57,7 @@
 .container-home .instructorPrev .ins-details{
     display: inline-block;
     vertical-align: top;
-    width: 740px;
+    width: 650px;
 }
 
 

@@ -8,25 +8,58 @@ class Cevents extends eventRegister
         $events,
         $member;
 
-    function get_events($idM = 0, $idEv = ''){
+    function process_event($event){
+
+        // daca nu are un pretz setat , atunci cauta in events_vars
+
+        if(!$event['ev_price'])
+        {
+            $query_prices = "SELECT * from events_vars WHERE idEv = {$event['idEv']}";
+            $event['prices'] = $this->C->GET_objProperties($this, $query_prices,'',false);
+
+
+            $prices = array();
+            foreach($event['prices'] AS $priceVar){
+                array_push($prices, $priceVar['ev_nameVar'].'='.$priceVar['ev_price']);
+            }
+            $event['pricesStr'] = implode(' , ',$prices);
+
+            //echo "for {$event['idEv']} we have {$event['pricesStr']} <br>";
+            //var_dump($event['prices']);
+
+        }
+
+
+        $event['ev_date_atmpl'] = $event['ev_date'] ? "" : "ATmpl";
+        $event['ev_hour_atmpl'] = $event['ev_hour'] ? "" : "ATmpl";
+        $event['ev_location_atmpl'] = $event['ev_location'] ? "" : "ATmpl";
+        $event['ev_price_atmpl'] = $event['ev_price'] ? "" : "ATmpl";
+        $event['ev_prices_atmpl'] = $event['prices'] ? "" : "ATmpl";
+
+
+
+        return $event;
+    }
+    function get_events($idM = 0, $idEv = '', $exception = " AND idEv != 6 " ){
 
         $where = $idEv ? " AND idEv = $idEv " : "";
 
 
-        $query_events = "SELECT * from events WHERE idExt = $idM  {$where} ";
+        $query_events = "SELECT * from events WHERE idExt = $idM  {$where}  {$exception} ";
         $this->events[$idM] = new stdClass();
         $this->events[$idM]->idM = $idM;
-        $this->events[$idM]->listEvents = $this->C->GET_objProperties($this, $query_events);
+        $this->events[$idM]->listEvents = $this->C->GET_objProperties($this, $query_events,'process_event');
 
 
 
+        return "";
     }
 
     function process_member($member){
 
         $idM = $member['idM'];
 
-        $member['mbr_href'] = $this->admin && !isset($_GET['idPers']) ? "?idc={$this->idC}&idT={$this->idT}&idPers={$idM}" : "#";
+        $member['mbr_href'] =/* $this->admin && */!isset($_GET['idPers']) ? "?idc={$this->idC}&idT={$this->idT}&idPers={$idM}" : "#";
         $this->get_events($idM);
 
         return $member;
@@ -163,5 +196,9 @@ class Cevents extends eventRegister
         return 'Acesta ar trebui sa fie events';
     }*/
 
-    function __construct(&$C){}
+    function __construct(&$C){
+
+
+    }
+
 }

@@ -56,13 +56,29 @@ class CsitePrez{
      * Apelata imediat dupa instantierea modulului
      * like a second __construct()
      */
-    function _setINI(){
+
+
+    function save_festDetails(){
+
+        $this->resPath = $this->C->get_resPath_forObj($this, 'festDetails');
+
+        file_put_contents($this->resPath, trim($_POST['details_en']));
 
     }
-    /*function DISPLAY(){
 
-        return 'Acesta ar trebui sa fie un sitePrez';
-    }*/
+    function get_members(){
+
+        $query_members = "SELECT * from members";
+        $this->members = $this->C->GET_objProperties($this, $query_members);
+
+    }
+    function _setINI(){
+
+        $this->get_members();
+        $this->C->SET_general_mod('gallery','MODELS');
+
+    }
+
 
     function __construct(&$C){}
 }

@@ -12,6 +12,7 @@ a, a:hover{
 }
 a:hover{
     color: #72633b;
+    text-decoration: underline;
 
 }
 
@@ -31,6 +32,8 @@ body{
   /*  position: relative;*/
 }
 
+.highligth-color {color : #8E5F1F !important;}
+
 #header {
     background-color: #f5a62d;
    /* background-image: url("img/logoTribal.png") no-repeat;*/
@@ -42,18 +45,26 @@ body{
 }
 
     #navBar {
-        width: 960px;
+        width: 1000px;
         margin: 0px auto;
     }
+        #navbar-menu{
+            background: url("img/tribalFest-logo22.png");
+            background-repeat: no-repeat;
+            height: 65px;
+          /*  background-position: -30px -4px;*/
+            background-position: -7px -13px;
+        }
 
         #navBar ul li  a{
-            line-height: 75px;
+            line-height: 67px;
             color: #3d2c12;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
             text-transform: uppercase;
             font-family: "Helvetica","Open Sans";
-            padding: 0px 24px;
+            padding: 0px 20px;
+            margin-top: 10px;
         }
         #navBar ul li  a:hover{
 
@@ -62,7 +73,7 @@ body{
         }
 
 
-.container-main{
+.containerMain{
 
     background-image: url("img/img-noise-200x200.png");
 
@@ -77,10 +88,18 @@ body{
      /*  position: relative;*/
     }
 
-        #cont-mainPage{
+        #cont-mainPage,
+        .cont-mainPage{
             width: 840px;
             margin: 0px auto;
        /*     position: relative;*/
+            height: 100%;
+            margin-bottom: 50px;
+        }
+
+        .single{
+            width: 840px !important;
+            margin: 0px auto;
             height: 100%;
         }
 
@@ -107,6 +126,7 @@ footer {
     width: 120px;
     height: 130px;
     overflow-y: hidden;
+    border-radius: 3px;
 }
 
     .img-smallPic img{
@@ -116,8 +136,9 @@ footer {
 /* medium pic*/
 .img-medPic{
     width: 200px;
-    height: 215px;
+    height: 200px;
     overflow-y: hidden;
+    border-radius: 3px;
 }
 
     .img-medPic img{
@@ -127,6 +148,7 @@ footer {
     width: 200px;
     height: 200px;
     overflow-y: hidden;
+    border-radius: 3px;
 }
 
     .img-med2Pic img{
@@ -138,6 +160,7 @@ footer {
     width: 200px;
     height: 300px;
     overflow-y: hidden;
+    border-radius: 3px;
 }
 
     .img-bigPic img{
@@ -207,19 +230,27 @@ textarea:focus{
 
 .well{
     border-radius: 7px;
-    background: #21190e;
+   /* background: #21190e;*/
+    background: rgb(37, 28, 19);;
     padding: 15px;
 }
 
 .well-light{
-    background: #6f6450;
-    color: #21190e ;
+    /*background: #6f6450;*/
+    /*background: rgb(97, 85, 63);*/
+   /* background: rgb(80, 68, 46);*/
+   /* background: #21190e;*/
+    background: rgb(29, 21, 12);
+   /* color: #21190e ;*/
+    color: #6f6450;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
 
-
+.well-light:hover{
+    color: #21190e;
+}
 
 
 
