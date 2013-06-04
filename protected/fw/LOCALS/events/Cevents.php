@@ -8,6 +8,77 @@ class Cevents extends eventRegister
         $events,
         $member;
 
+    function valid_signupForm(){
+
+        $_POST['usr_name']    = trim(strip_tags($_POST['usr_name']   ));
+        $_POST['usr_email']   = trim(strip_tags($_POST['usr_email']  ));
+        $_POST['usr_address'] = trim(strip_tags($_POST['usr_address']));
+
+        $feedback = "";
+
+        $feedback .= $_POST['usr_name'] ? "" : "<p class='highligth-color'> Name field is empty </p>";
+        $feedback .= $_POST['usr_email'] ? "" : "<p class='highligth-color'> Email field is empty </p>";
+
+
+        if($feedback){
+
+            $feedback = "<p class='highligth-color b'> Errors: </p>".$feedback;
+            echo $feedback;
+
+        } else {
+            $query = "SELECT FROM events_registrations
+                            WHERE usr_email = '".$_POST['usr_name']."'  AND idEv = {$_POST['idEv']} ";
+            $this->DB->query($query);
+
+            if($this->DB->num_rows > 0)
+            {
+                $feedback =  "<p class='highligth-color b'> Warning: </p>"."You have already singedup to this event!!!";
+                echo $feedback;
+
+            }
+
+        }
+
+
+    }
+
+    function eventSignup(){
+       // var_dump($_POST);
+
+       /**
+        * aici ar trebui sa accesez mailerul
+       */
+
+        //events_signup_posts
+
+       /* $opsts = new CgetPosts($this->events_signup_posts);
+        $opsts->set_psts('strict');
+        var_dump($opsts->psts);*/
+
+        $this->psts = new stdClass();
+        CgetPosts::set_allPsts($this->psts);
+       // var_dump($this->psts);
+
+
+        $usr_name    = $_POST['usr_name']   ;
+        $usr_email   = $_POST['usr_email']  ;
+        $usr_address = $_POST['usr_address'];
+
+        $queryEv = "INSERT into events_registrations
+                                            (idEv, ev_price, usr_name, usr_email, usr_address)
+                                     values ({$_POST['idEv']},
+                                             {$_POST['ev_price']},
+                                            '{$usr_name}' ,
+                                            '{$usr_email}' ,
+                                            '{$usr_address}'  )";
+
+        $this->DB->query($queryEv);
+
+        unset($_POST);
+
+        //echo ' eventSignup '.$queryEv;
+    }
+
     function process_event($event){
 
         // daca nu are un pretz setat , atunci cauta in events_vars
@@ -30,11 +101,11 @@ class Cevents extends eventRegister
         }
 
 
-        $event['ev_date_atmpl'] = $event['ev_date'] ? "" : "ATmpl";
-        $event['ev_hour_atmpl'] = $event['ev_hour'] ? "" : "ATmpl";
-        $event['ev_location_atmpl'] = $event['ev_location'] ? "" : "ATmpl";
-        $event['ev_price_atmpl'] = $event['ev_price'] ? "" : "ATmpl";
-        $event['ev_prices_atmpl'] = $event['prices'] ? "" : "ATmpl";
+        $event['ev_date_atmpl']     =   $event['ev_date'] ? "" : "ATmpl";
+        $event['ev_hour_atmpl']     =   $event['ev_hour'] ? "" : "ATmpl";
+        $event['ev_location_atmpl'] =   $event['ev_location'] ? "" : "ATmpl";
+        $event['ev_price_atmpl']    =   $event['ev_price'] ? "" : "ATmpl";
+        $event['ev_prices_atmpl']   =   $event['prices'] ? "" : "ATmpl";
 
 
 
@@ -50,8 +121,6 @@ class Cevents extends eventRegister
         $this->events[$idM]->idM = $idM;
         $this->events[$idM]->listEvents = $this->C->GET_objProperties($this, $query_events,'process_event');
 
-
-
         return "";
     }
 
@@ -59,7 +128,8 @@ class Cevents extends eventRegister
 
         $idM = $member['idM'];
 
-        $member['mbr_href'] =/* $this->admin && */!isset($_GET['idPers']) ? "?idc={$this->idC}&idT={$this->idT}&idPers={$idM}" : "#";
+        $idPers_str = $this->admin ? "aidPers" : "idPers";
+        $member['mbr_href'] = !isset($_GET['idPers']) ? "?idc={$this->idC}&idT={$this->idT}&{$idPers_str}={$idM}" : "#";
         $this->get_events($idM);
 
         return $member;
@@ -84,16 +154,17 @@ class Cevents extends eventRegister
     function get_workshops(){
 
         //mai mult pentru partea de admin
-        if(isset($_GET['idPers']))
-        {
-            $this->set_template('idPers');
-            $this->get_members($_GET['idPers']);
-        }
-        elseif(isset($_POST['go_signup_ws'])){
+        if(isset($_POST['go_signup_ws'])){
 
             $this->set_template('go_signup_ws');
             $this->get_evMbr($_POST['idM'], $_POST['idEv']);
         }
+        elseif(isset($_GET['idPers']))
+        {
+            $this->set_template('idPers');
+            $this->get_members($_GET['idPers']);
+        }
+
         else{
             $this->get_members();
         }
@@ -175,9 +246,11 @@ class Cevents extends eventRegister
 
     function _setINI(){
 
-
-
-        if(isset($this->templates))
+        if(isset($_POST['methName']) && $_POST['methName'] == 'eventSignup')
+        {
+            $this->template_file = 'signup_feedback';
+        }
+        elseif(isset($this->templates))
         {
             $tmplFile_stat = $this->set_template($this->idC);
 
