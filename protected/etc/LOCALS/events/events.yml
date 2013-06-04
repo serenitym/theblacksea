@@ -4,7 +4,8 @@ template: tribalFest
 templates:
   2: workshops
   3: events
-  idPers: Ainstructor
+  idPers: instructor
+  aidPers: Ainstructor
   go_signup_ws: signupPage_workshop
   go_signup_ev: signup_events
 
@@ -18,3 +19,21 @@ events_posts:
   ev_hour: ""
   ev_location: ""
   ev_managersEmails: ""
+
+events_signup_posts:
+  usr_name: ""
+  usr_email: ""
+  usr_address: ""
+  usr_more: ""
+  captcha_code: ""
+
+  ev_name: ""
+  ev_price: ""
+  ev_description: ""
+  ev_date: ""
+  ev_hour: ""
+  ev_location: ""
+
+
+
+

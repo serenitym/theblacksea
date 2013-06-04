@@ -56,3 +56,16 @@ CREATE TABLE IF NOT EXISTS `events_vars` (
 --
 ALTER TABLE `events_vars`
   ADD CONSTRAINT `events_vars_ibfk_1` FOREIGN KEY (`idEv`) REFERENCES `events` (`idEv`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- trebuie sa rescriu asta events_registrations
+
+|------
+|Field|Type|Null|Default
+|------
+|//**idUsr**//|int(5)|No|
+|idEv|int(3)|No|
+|ev_price|int(3)|No|
+|usr_name|varchar(200)|No|
+|usr_email|text|No|
+|usr_address|text|Yes|NULL
+|usr_status|int(1)|No|0
