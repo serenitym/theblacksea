@@ -57,15 +57,31 @@ CREATE TABLE IF NOT EXISTS `events_vars` (
 ALTER TABLE `events_vars`
   ADD CONSTRAINT `events_vars_ibfk_1` FOREIGN KEY (`idEv`) REFERENCES `events` (`idEv`) ON DELETE CASCADE ON UPDATE CASCADE;
 
--- trebuie sa rescriu asta events_registrations
 
-|------
-|Field|Type|Null|Default
-|------
-|//**idUsr**//|int(5)|No|
-|idEv|int(3)|No|
-|ev_price|int(3)|No|
-|usr_name|varchar(200)|No|
-|usr_email|text|No|
-|usr_address|text|Yes|NULL
-|usr_status|int(1)|No|0
+
+--
+-- Table structure for table `events_registrations`
+--
+
+CREATE TABLE IF NOT EXISTS `events_registrations` (
+  `idUsr` int(5) NOT NULL AUTO_INCREMENT,
+  `idEv` int(3) NOT NULL,
+  `ev_price` int(3) NOT NULL,
+  `usr_name` varchar(200) NOT NULL,
+  `usr_email` text NOT NULL,
+  `usr_address` text,
+  `usr_status` int(1) DEFAULT '0',
+  `sub_date` date DEFAULT NULL,
+  PRIMARY KEY (`idUsr`),
+  KEY `idEv` (`idEv`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `events_registrations`
+--
+ALTER TABLE `events_registrations`
+  ADD CONSTRAINT `events_registrations_ibfk_1` FOREIGN KEY (`idEv`) REFERENCES `events` (`idEv`) ON DELETE CASCADE ON UPDATE CASCADE;

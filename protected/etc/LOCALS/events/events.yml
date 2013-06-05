@@ -37,6 +37,7 @@ events_signup_posts:
   ev_date: ""
   ev_hour: ""
   ev_location: ""
+  ev_managersEmails: ""
 
 
 

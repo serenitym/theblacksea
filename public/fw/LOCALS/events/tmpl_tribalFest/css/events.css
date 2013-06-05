@@ -95,6 +95,7 @@
 }
 
     .ev {  margin-bottom: 45px; clear: both;  }
+    .evs .ev {  margin-bottom: 70px; clear: both;  }
     .ws { margin-bottom: 20px; clear: both;}
 
          .well{   padding-bottom: 25px;   }

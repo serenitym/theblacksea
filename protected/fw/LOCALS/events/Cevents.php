@@ -14,10 +14,18 @@ class Cevents extends eventRegister
         $_POST['usr_email']   = trim(strip_tags($_POST['usr_email']  ));
         $_POST['usr_address'] = trim(strip_tags($_POST['usr_address']));
 
+        require "./assets/securimage/securimage.php";
+        $securimage = new Securimage();
+
+        //$this->env = new Envelope($this->envelopeData);
+
         $feedback = "";
 
         $feedback .= $_POST['usr_name'] ? "" : "<p class='highligth-color'> Name field is empty </p>";
         $feedback .= $_POST['usr_email'] ? "" : "<p class='highligth-color'> Email field is empty </p>";
+        $feedback .= $securimage->check($_POST['captcha_code']) == TRUE
+            ? ""
+            : "<p class='highligth-color'> Wrong CAPTCHA code </p>";
 
 
         if($feedback){
@@ -42,38 +50,102 @@ class Cevents extends eventRegister
 
     }
 
+    function check_promoWs(){
+
+        // daca s-a facut signup pentru workshop
+
+        if(isset($_POST['evType'])){
+
+
+
+            $stat_deal = strpos($this->psts->ev_name, 'deal');
+
+            /**
+             * daca workshopul nu este un deal
+             *
+             * - testeaza daca este data curenta la care s-a facut signup este
+             * mai mica de 1 sept 2013
+             * - daca da fa un discount la pret de 10%
+             */
+
+            if($stat_deal === false && $stat_deal){
+              //  echo "Este un workshop {$stat_deal} <br> ";
+
+                $curr_timeStamp = time();
+                $endPromo_timeStamp =  mktime(0, 0, 0, 9, 1, 2013);
+
+                if($curr_timeStamp <= $endPromo_timeStamp)
+                    $this->psts->ev_price -= $this->psts->ev_price * 0.1;
+            }
+
+        }
+
+
+    }
+
     function eventSignup(){
        // var_dump($_POST);
+       //events_signup_posts
 
        /**
-        * aici ar trebui sa accesez mailerul
-        */
-        $this->processContest();
-
-        //events_signup_posts
-
-       /* $opsts = new CgetPosts($this->events_signup_posts);
+        * $opsts = new CgetPosts($this->events_signup_posts);
         $opsts->set_psts('strict');
         var_dump($opsts->psts);*/
 
-        $this->psts = new stdClass();
-        CgetPosts::set_allPsts($this->psts);
+
+       /**
+        * USE :
+        *
+        * $this->psts->
+        *
+           events_signup_posts:
+             usr_name: ""
+             usr_email: ""
+             usr_address: ""
+             usr_more: ""
+             captcha_code: ""
+
+             ev_name: ""
+             ev_price: ""
+             ev_description: ""
+             ev_date: ""
+             ev_hour: ""
+             ev_location: ""
+             ev_managersEmails: ""
+
+       */
+
+
+
+       $this->psts = new stdClass();
+       CgetPosts::set_allPsts($this->psts);
        // var_dump($this->psts);
 
+       $this->check_promoWs();
+       // daca sunt setati managerii la care sa se trimita mailuri
+       $this->psts->managers = explode(',', $this->psts->ev_managersEmails);
+       if(count($this->psts->managers) > 0)
+       {
 
-        $usr_name    = $_POST['usr_name']   ;
-        $usr_email   = $_POST['usr_email']  ;
-        $usr_address = $_POST['usr_address'];
+            $this->mailSignup_managers();
+            $this->mailSignup_subscriber();
+       }
+
+
+        // retine datele subscriberului in BD
 
         $queryEv = "INSERT into events_registrations
-                                            (idEv, ev_price, usr_name, usr_email, usr_address)
-                                     values ({$_POST['idEv']},
-                                             {$_POST['ev_price']},
-                                            '{$usr_name}' ,
-                                            '{$usr_email}' ,
-                                            '{$usr_address}'  )";
+                                            (idEv, ev_price, usr_name, usr_email, usr_address, sub_date )
+                                     values ({$this->psts->idEv},
+                                             {$this->psts->ev_price},
+                                            '{$this->psts->usr_name}' ,
+                                            '{$this->psts->usr_email}' ,
+                                            '{$this->psts->usr_address}',
+                                             NOW()
+                                              )";
 
         $this->DB->query($queryEv);
+
 
         unset($_POST);
 
@@ -129,8 +201,8 @@ class Cevents extends eventRegister
 
         $idM = $member['idM'];
 
-        $idPers_str = $this->admin ? "aidPers" : "idPers";
-        $member['mbr_href'] = !isset($_GET['idPers']) ? "?idc={$this->idC}&idT={$this->idT}&{$idPers_str}={$idM}" : "#";
+       // $idPers_str = $this->admin ? "aidPers" : "idPers";
+        $member['mbr_href'] = !isset($_GET['idPers']) ? "?idc={$this->idC}&idT={$this->idT}&idPers={$idM}" : "#";
         $this->get_events($idM);
 
         return $member;
@@ -162,7 +234,8 @@ class Cevents extends eventRegister
         }
         elseif(isset($_GET['idPers']))
         {
-            $this->set_template('idPers');
+            $idPers_str = $this->admin ? "aidPers" : "idPers";
+            $this->set_template($idPers_str);
             $this->get_members($_GET['idPers']);
         }
 
