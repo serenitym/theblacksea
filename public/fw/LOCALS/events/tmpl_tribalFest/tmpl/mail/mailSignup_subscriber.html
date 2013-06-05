@@ -1,15 +1,23 @@
 <b>
     TFB ::
-    <a href='".$_SERVER['REQUEST_URI']."'>
+    <a href='http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']."'>
         {$o->psts->ev_name}
     </a>
     subscription
 </b>
+<br>
 
 <b>From: Tribal Fest Bucharest</b>
+<br>
 
 Hello {$o->psts->usr_name},
+<br>
 
 Thanks for signingup to {$o->psts->ev_name}.
-Please confirm your payment of {$o->psts->ev_price} € here.
+Please
+    <a href='http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']."&idEv={$o->psts->idEv}&idSub={$o->psts->idSub}'>
+        confirm
+    </a>
+    your payment of {$o->psts->ev_price} € here.
 
+<br>

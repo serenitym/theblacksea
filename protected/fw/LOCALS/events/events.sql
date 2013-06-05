@@ -64,7 +64,7 @@ ALTER TABLE `events_vars`
 --
 
 CREATE TABLE IF NOT EXISTS `events_registrations` (
-  `idUsr` int(5) NOT NULL AUTO_INCREMENT,
+  `idSub` int(5) NOT NULL AUTO_INCREMENT,
   `idEv` int(3) NOT NULL,
   `ev_price` int(3) NOT NULL,
   `usr_name` varchar(200) NOT NULL,

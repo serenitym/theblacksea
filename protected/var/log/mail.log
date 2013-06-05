@@ -2,11 +2,11 @@ MIME-Version: 1.0
 From: "Tribal Fest" <victor@serenitymedia.ro>
 To: ioana@serenitymedia.ro
 Subject: TFB :: Fusion Dance Competion subscription
-Date: Wed, 05 Jun 2013 19:32:20 +0300
-Content-type: multipart/alternative; boundary="PHP-alt-2bd9eab3a47413502f6254f627b06084"
+Date: Wed, 05 Jun 2013 19:54:32 +0300
+Content-type: multipart/alternative; boundary="PHP-alt-9ebe13411e446f1316d35a5d7c200009"
 
 
---PHP-alt-2bd9eab3a47413502f6254f627b06084
+--PHP-alt-9ebe13411e446f1316d35a5d7c200009
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
@@ -14,7 +14,7 @@ TFB :: Fusion Dance Competion subscription
 
 From: Tribal Fest Bucharest
 
-Hello iodanc adasd,
+Hello WORKS fine,
 
 Thanks for signingup to Fusion Dance Competion.
 Please confirm your payment of 20 € here.
@@ -22,27 +22,35 @@ Please confirm your payment of 20 € here.
 
 
 
---PHP-alt-2bd9eab3a47413502f6254f627b06084
+--PHP-alt-9ebe13411e446f1316d35a5d7c200009
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
 <b>
     TFB ::
-    <a href='/?idT=3&idC=3'>
+    <a href='http://zero.tribalfest.ro/?idT=3&idC=3&idEv=4&idSub='>
         Fusion Dance Competion
     </a>
     subscription
 </b>
+<br>
 
 <b>From: Tribal Fest Bucharest</b>
+<br>
 
-Hello iodanc adasd,
+Hello WORKS fine,
+<br>
 
 Thanks for signingup to Fusion Dance Competion.
-Please confirm your payment of 20 € here.
+Please
+    <a href='http://zero.tribalfest.ro/?idT=3&idC=3&idEv=4&idSub=&idEv=4&idSub=88'>
+        confirm
+    </a>
+    your payment of 20 € here.
+
+<br>
 
 
-
---PHP-alt-2bd9eab3a47413502f6254f627b06084--
+--PHP-alt-9ebe13411e446f1316d35a5d7c200009--
 
 .

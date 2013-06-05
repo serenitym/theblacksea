@@ -125,33 +125,33 @@ class Cevents extends eventRegister
        // var_dump($this->psts);
 
        $this->check_promoWs();
-       // daca sunt setati managerii la care sa se trimita mailuri
        $this->psts->managers = explode(',', $this->psts->ev_managersEmails);
+
+
+       // retine datele subscriberului in BD
+       $queryEv = "INSERT into events_registrations
+                                           (idEv, ev_price, usr_name, usr_email, usr_address, sub_date )
+                                    values ({$this->psts->idEv},
+                                            {$this->psts->ev_price},
+                                           '{$this->psts->usr_name}' ,
+                                           '{$this->psts->usr_email}' ,
+                                           '{$this->psts->usr_address}',
+                                            NOW()
+                                             )";
+
+       $this->DB->query($queryEv);
+       $this->psts->idSub = $this->DB->insert_id;
+
+
+
+       // daca sunt setati managerii la care sa se trimita mailuri
        if(count($this->psts->managers) > 0)
        {
-
-
             $this->mailSignup_managers();
             $this->mailSignup_subscriber();
        }
 
-
-        // retine datele subscriberului in BD
-
-        $queryEv = "INSERT into events_registrations
-                                            (idEv, ev_price, usr_name, usr_email, usr_address, sub_date )
-                                     values ({$this->psts->idEv},
-                                             {$this->psts->ev_price},
-                                            '{$this->psts->usr_name}' ,
-                                            '{$this->psts->usr_email}' ,
-                                            '{$this->psts->usr_address}',
-                                             NOW()
-                                              )";
-
-        $this->DB->query($queryEv);
-
-
-        unset($_POST);
+       unset($_POST);
 
         //echo ' eventSignup '.$queryEv;
     }
