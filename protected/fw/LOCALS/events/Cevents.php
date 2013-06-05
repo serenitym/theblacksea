@@ -61,7 +61,7 @@ class Cevents extends eventRegister
              */
 
             if($stat_deal === false && $stat_deal){
-              //  echo "Este un workshop {$stat_deal} <br> ";
+                //  echo "Este un workshop {$stat_deal} <br> ";
 
                 $curr_timeStamp = time();
                 $endPromo_timeStamp =  mktime(0, 0, 0, 9, 1, 2013);
@@ -117,7 +117,6 @@ class Cevents extends eventRegister
        $this->psts->managers = explode(',', $this->psts->ev_managersEmails);
        if(count($this->psts->managers) > 0)
        {
-
             //$this->mailSignup_managers();
             //$this->mailSignup_subscriber();
        }
@@ -192,11 +191,12 @@ class Cevents extends eventRegister
 
         $idM = $member['idM'];
 
-       // $idPers_str = $this->admin ? "aidPers" : "idPers";
+        // $idPers_str = $this->admin ? "aidPers" : "idPers";
         $member['mbr_href'] = !isset($_GET['idPers']) ? "?idc={$this->idC}&idT={$this->idT}&idPers={$idM}" : "#";
         $this->get_events($idM);
 
         return $member;
+
 
     }
     function get_members($idM = '', $processMeth = 'process_member'){
