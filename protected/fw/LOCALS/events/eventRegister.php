@@ -17,7 +17,8 @@ class eventRegister
         return null;
     }
 
-    protected function mailSignup_managers() {
+    protected function mailSignup_managers()
+    {
 
 
         /**
@@ -60,33 +61,38 @@ class eventRegister
         $mail->username = smtpUser;
         $mail->password = smtpPass;
 
+        $tmplTxt  = "{$this->modType}/{$this->modName}/tmpl_{$this->template}"
+                  . "/tmpl/mail/mailSignup_managers.txt";
+        $tmplHtml = "{$this->modType}/{$this->modName}/tmpl_{$this->template}"
+                  . "/tmpl/mail/mailSignup_managers.html";
 
-        //=====================================================================================
+        $messageTxt = $this->C->renderDisplay_fromObj($this, '', $tmplTxt);
+        $messageHtml = $this->C->renderDisplay_fromObj($this, '', $tmplHtml);
+
+        //======================================================================
 
         // from first mail defined
         $mail->setFrom(trim($this->psts->managers[0]), 'Tribal Fest');
 
 
         // from rest of mails
-        foreach($this->psts->managers AS $key => $mail)
-        {
-            $mail->addTo(trim($mail) );
+        foreach ($this->psts->managers AS $key => $address) {
+            $mail->addTo(trim($address));
         }
 
 
         $mail->setSubject('TFB :: '.$this->psts->ev_name.' subscription');
 
-        $tmplTxt = "{$this->modType}/{$this->modName}/tmpl_{$this->template}/tmpl/mail/mailSignup_managers.txt";
-        $message = $this->C->renderDisplay_fromObj($this, '', $tmplTxt);
-
-        $mail->defineText($message);
+        $mail->defineText($messageTxt);
+        $mail->defineHtml($messageHtml);
 
         $mail->send();
 
 
     }
 
-    protected function mailSignup_subscriber() {
+    protected function mailSignup_subscriber()
+    {
 
 
             /**
@@ -122,18 +128,19 @@ class eventRegister
             $mail->password = smtpPass;
 
 
-            //=====================================================================================
+            //==================================================================
 
             // from first mail defined
             $mail->setFrom(trim($this->psts->managers[0]), 'Tribal Fest');
 
 
             // from rest of mails
-            $mail->addTo( $this->psts->usr_email );
+            $mail->addTo($this->psts->usr_email);
 
             $mail->setSubject('TFB :: '.$this->psts->ev_name.' subscription');
 
-            $tmplTxt = "{$this->modType}/{$this->modName}/tmpl_{$this->template}/tmpl/mail/mailSignup_subscriber.txt";
+            $tmplTxt = "{$this->modType}/{$this->modName}/tmpl_"
+                     . "{$this->template}/tmpl/mail/mailSignup_subscriber.txt";
             $message = $this->C->renderDisplay_fromObj($this, '', $tmplTxt);
 
             $mail->defineText($message);
@@ -141,7 +148,7 @@ class eventRegister
             $mail->send();
 
 
-        }
+    }
 
 
 

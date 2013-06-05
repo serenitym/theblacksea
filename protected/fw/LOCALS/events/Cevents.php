@@ -14,10 +14,18 @@ class Cevents extends eventRegister
         $_POST['usr_email']   = trim(strip_tags($_POST['usr_email']  ));
         $_POST['usr_address'] = trim(strip_tags($_POST['usr_address']));
 
+        require "./assets/securimage/securimage.php";
+        $securimage = new Securimage();
+
+        //$this->env = new Envelope($this->envelopeData);
+
         $feedback = "";
 
         $feedback .= $_POST['usr_name'] ? "" : "<p class='highligth-color'> Name field is empty </p>";
         $feedback .= $_POST['usr_email'] ? "" : "<p class='highligth-color'> Email field is empty </p>";
+        $feedback .= $securimage->check($_POST['captcha_code']) == TRUE
+            ? ""
+            : "<p class='highligth-color'> Wrong CAPTCHA code </p>";
 
 
         if($feedback){
@@ -84,6 +92,7 @@ class Cevents extends eventRegister
         $opsts->set_psts('strict');
         var_dump($opsts->psts);*/
 
+
        /**
         * USE :
         *
@@ -117,8 +126,10 @@ class Cevents extends eventRegister
        $this->psts->managers = explode(',', $this->psts->ev_managersEmails);
        if(count($this->psts->managers) > 0)
        {
-            //$this->mailSignup_managers();
-            //$this->mailSignup_subscriber();
+
+
+            $this->mailSignup_managers();
+            $this->mailSignup_subscriber();
        }
 
 

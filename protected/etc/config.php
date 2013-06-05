@@ -28,6 +28,7 @@ define('fw_pubURL', publicURL.'fw/');
 define('fw_incPath',incPath.'fw/');
 
 define('varPath',incPath.'var/');
+define('logPath',varPath.'log/');
 define('resPath',publicPath.'RES/');
 define('resURL',publicURL.'RES/');
 
