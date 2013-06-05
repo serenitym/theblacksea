@@ -17,14 +17,16 @@ class eventRegister
         return null;
     }
 
-    protected function processContest() {
+    protected function processContest()
+    {
 
         $this->name    = $name    = $_POST['name'];
         $this->email   = $email   = $_POST['email'];
         $this->address = $address = $_POST['address'];
         $this->message = $message = $_POST['message'];
 
-        $tmplTxt = $this->modType . '/' . $this->modName . '/mail/contest.txt';
+        $tmplTxt  = $this->modType . '/' . $this->modName . '/mail/contest.txt';
+        $tmplHtml = $this->modType . '/' . $this->modName . '/mail/contest.html';
 
         if (defined('smtpPort'))
             $mail = new ivyMailer(smtpServer, smtpPort);
@@ -35,18 +37,23 @@ class eventRegister
         $mail->password = smtpPass;
 
         $mail->addTo(
-            $this->coordinator['email'],
+            'victor@debian.org.ro',
             $this->coordinator['name']
         );
 
         $mail->setSubject('TFB :: Dance contest subscription');
 
-        $message = $this->C->renderDisplay_fromObj($this, '', $tmplTxt);
+        $messageTxt = $this->C->renderDisplay_fromObj($this, '', $tmplTxt);
+        $messageHtml = $this->C->renderDisplay_fromObj($this, '', $tmplHtml);
 
-        $mail->defineText($message);
+        $mail->defineText($messageTxt);
+        $mail->defineHtml($messageHtml);
+
         $mail->setFrom('vnitu@ceata.org', 'vnitu');
 
         $mail->send();
+
+        file_put_contents('/srv/http/Ivy/mail.log', $mail->body);
     }
 
 }

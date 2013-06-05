@@ -47,7 +47,8 @@ class Cevents extends eventRegister
 
        /**
         * aici ar trebui sa accesez mailerul
-       */
+        */
+        $this->processContest();
 
         //events_signup_posts
 
