@@ -30,7 +30,7 @@ class Cevents extends eventRegister
 
         if($feedback){
 
-            $feedback = "<p class='highligth-color b'> Errors: </p>".$feedback;
+            $feedback = "<div class='formFBK'> <p class='highligth-color b'> Errors: </p> $feedback </div>";
             echo $feedback;
 
         } else {
@@ -40,7 +40,10 @@ class Cevents extends eventRegister
 
             if($this->DB->num_rows > 0)
             {
-                $feedback =  "<p class='highligth-color b'> Warning: </p>"."You have already singedup to this event!!!";
+                $feedback =  "<div class='formFBK'>
+                                <p class='highligth-color b'> Warning: </p>
+                                You have already singedup to this event!!!
+                              </div>";
                 echo $feedback;
 
             }

@@ -88,6 +88,7 @@ ivyMods.events = {
 
                       if(typeof data != 'undefined' && data!='')
                       {
+                          form.find('.formFBK').remove();
                           form.append(data);
                           //alert("here not valid data");
                       }

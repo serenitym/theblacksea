@@ -63,6 +63,7 @@ class eventRegister
 
         $tmplTxt  = "{$this->modType}/{$this->modName}/tmpl_{$this->template}"
                   . "/tmpl/mail/mailSignup_managers.txt";
+
         $tmplHtml = "{$this->modType}/{$this->modName}/tmpl_{$this->template}"
                   . "/tmpl/mail/mailSignup_managers.html";
 
@@ -93,8 +94,6 @@ class eventRegister
 
     protected function mailSignup_subscriber()
     {
-
-
             /**
              * USE :
              *
@@ -116,7 +115,6 @@ class eventRegister
                   ev_managersEmails: ""
 
             */
-
 
 
             if (defined('smtpPort'))
@@ -141,9 +139,15 @@ class eventRegister
 
             $tmplTxt = "{$this->modType}/{$this->modName}/tmpl_"
                      . "{$this->template}/tmpl/mail/mailSignup_subscriber.txt";
-            $message = $this->C->renderDisplay_fromObj($this, '', $tmplTxt);
 
-            $mail->defineText($message);
+            $tmplHtml = "{$this->modType}/{$this->modName}/tmpl_"
+                     . "{$this->template}/tmpl/mail/mailSignup_subscriber.html";
+
+            $messageTxt = $this->C->renderDisplay_fromObj($this, '', $tmplTxt);
+            $messageHtml = $this->C->renderDisplay_fromObj($this, '', $tmplHtml);
+
+            $mail->defineText($messageTxt);
+            $mail->defineHtml($messageHtml);
 
             $mail->send();
 
