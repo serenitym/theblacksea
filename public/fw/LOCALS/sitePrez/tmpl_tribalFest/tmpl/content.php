@@ -17,7 +17,6 @@
     <div id="mainPage" class='container_12 clearfix'>
 
         <?php
-         //echo $core->ctrlDisplay_fromObj($core->feedback);
 
         # echo $core->$ob_name->modType."<br>";
          $obName = $core->type;
@@ -33,7 +32,19 @@
 
 <footer>
     <div id="footer-content">
-            sponsor
+            <ul>
+                <li>
+                    <a href="http://www.arcub.ro/" target="_blank">
+                        <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/logo_arcub.gif">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.ambasada.ro/ambasada/2/274/slovenia.html" target="_blank">
+                        <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/ASR.jpg"> Ambasada Sloveniei
+                    </a>
+                </li>
+
+            </ul>
     </div>
 </footer>
 

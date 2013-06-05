@@ -1,0 +1,12 @@
+TFB :: {$o->psts->ev_name} subscription
+
+From: {$o->psts->usr_name} ( {$o->psts->usr_email} )
+{$o->psts->usr_address}
+
+".(isset($o->psts->usr_more) && $o->psts->usr_more
+    ? "Message:{$o->psts->usr_more}"
+    : ""
+)."
+
+
+

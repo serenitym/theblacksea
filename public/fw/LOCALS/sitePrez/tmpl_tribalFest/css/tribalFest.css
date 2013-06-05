@@ -92,7 +92,6 @@ body{
         .cont-mainPage{
             width: 840px;
             margin: 0px auto;
-       /*     position: relative;*/
             height: 100%;
             margin-bottom: 50px;
         }
@@ -100,11 +99,11 @@ body{
         .single{
             width: 840px !important;
             margin: 0px auto;
+            margin-bottom: 50px;
             height: 100%;
         }
 
 footer {
-  /*  background-color: #140d07;*/
     background-color: rgb(15, 8, 5);
     height: 75px;
     border-top: 2px solid rgb(22, 13, 10);
@@ -118,6 +117,23 @@ footer {
     #footer-content{
         width: 960px;
         margin: 0px auto;
+    }
+
+    #footer-content ul{
+        list-style: none;
+        padding-bottom: 31px;
+        height: 52px;
+    }
+
+    #footer-content ul li{
+        float: left;
+        margin: 0px 35px 0px 0px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    #footer-content ul li img{
+        height: 40px;
     }
 
 

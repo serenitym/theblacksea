@@ -1,0 +1,9 @@
+TFB :: {$o->psts->ev_name} subscription
+
+From: Tribal Fest Bucharest
+
+Hello {$o->psts->usr_name},
+
+Thanks for signingup to {$o->psts->ev_name}.
+Please confirm your payment of {$o->psts->ev_price} € here.
+

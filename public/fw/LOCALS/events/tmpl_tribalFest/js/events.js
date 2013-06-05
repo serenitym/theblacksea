@@ -38,6 +38,7 @@ ivyMods.set_iEdit.events = function(){
 
 ivyMods.events = {
 
+    validForm_ev: false,
 
     showAddMember: function(){
 
@@ -65,11 +66,47 @@ ivyMods.events = {
         $(this).find('*[class^=ev-fullDescription]').slideUp();
 
     },
+
     binds : function(){
 
         $('.usrView-evs_ws .ws').hoverIntent({
             over: ivyMods.events.show_ws,
             out: ivyMods.events.hide_ws
+        });
+
+        $('input[name=signup_ev] , input[name=signup_ws]').on('click',function(event){
+
+                var form =  $(this).parents('form.form-ev_signup');
+
+                var sendData = form.collectData();
+                    sendData['methName']    = "valid_signupForm";
+                    sendData['restoreCore'] = true;
+
+                event.preventDefault();
+
+                $.post('procesSCRIPT.php', sendData, function(data){
+
+                      if(typeof data != 'undefined' && data!='')
+                      {
+                          form.find('.formFBK').remove();
+                          form.append(data);
+                          //alert("here not valid data");
+                      }
+                      else {
+                          form.submit();
+                      }
+
+                      // console.log('data = ' + data + 'typeof = ' + (typeof data) + ' validForm = ' + validForm);
+                });
+
+
+
+            });
+
+        //$('*[class$=radio-varPrices] .radio-btn').first().attr('checked','checked');
+
+        $('*[class$=radio-varPrices]').map(function(){
+            $(this).find('.radio-btn').first().attr('checked','checked');
         });
 
     }

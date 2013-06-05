@@ -28,6 +28,7 @@ define('fw_pubURL', publicURL.'fw/');
 define('fw_incPath',incPath.'fw/');
 
 define('varPath',incPath.'var/');
+define('logPath',varPath.'log/');
 define('resPath',publicPath.'RES/');
 define('resURL',publicURL.'RES/');
 
@@ -44,8 +45,9 @@ define('dbroUser', '');
 define('dbroPass', '');
 
 # pt mail
-define('smtpServer','');
-define('smtpUser','');
-define('smtpPass','');
+define('smtpServer','mail.serenitymedia.ro');
+define('smtpUser','noreply@serenitymedia.ro');
+define('smtpPass','donotreply');
+define('smtpPort',587);
 
 

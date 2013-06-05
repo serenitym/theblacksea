@@ -16,10 +16,8 @@
      padding: 30px 0px;
  }
 
-/*.membrs .membr:hover{
-    background: rgba(255,255,255,0.08);
+ .cont-instructor .membr{ margin-bottom: 0px; padding-bottom: 0px;}
 
-}*/
 .mbr-container {
     width: 840px;
     margin: 0px auto;
@@ -59,6 +57,9 @@
 
     }
 
+    .cont-instructor .membr .left{ margin-right: 10px; width: 220px;}
+    .cont-instructor .membr .left img {width: 220px; }
+
     .membr .right{
         display: inline-block;
         vertical-align: top;
@@ -67,6 +68,7 @@
     .mbr_description {margin-bottom: 30px; float: right; width: 590px;}
     .ELMcontent .mbr_description{  min-height: 90px;  }
 
+    .membr .mbr_name{ padding-left: 10px;}
     .img-bigPic{ float: left;}
 
 /*==========================================[Workshops]======================================*/
@@ -93,6 +95,7 @@
 }
 
     .ev {  margin-bottom: 45px; clear: both;  }
+    .evs .ev {  margin-bottom: 70px; clear: both;  }
     .ws { margin-bottom: 20px; clear: both;}
 
          .well{   padding-bottom: 25px;   }
@@ -117,10 +120,7 @@
         }
 
 
-.usrView-evs_ws .ev-fullDescription{
-   /* margin-top: 20px;*/
-    display: none;
-}
+.usrView-evs_ws .ev-fullDescription{     display: none; }
 
 .ev_name{
     width: 400px;
@@ -317,3 +317,14 @@
     text-align: right;
 }
 
+
+
+
+
+/*signup - feedback*/
+.signup-fbk{
+    margin: 0px auto;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 100px;
+}
