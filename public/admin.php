@@ -12,26 +12,42 @@
 
 	<meta name="generator" content="Geany 0.20" />
 
-		<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="fw/GENERAL/core/css/core.css"/>
 
 </head>
+<style>
+    html{
+        background-color: #f5a62d;
+        font-family: "Open Sans","arial";
+    }
+    fieldset{
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 3px;
+        padding: 10px; text-align: center;
+    }
 
+    legend{
+        color: #ffffff;
+        font-size: 11pt;
+        font-weight: bold;
+    }
+</style>
 
 
 <body>
-<div style=" width:918px; height:559px; background-image:url(GENERAL/css/img/siteNovaFood.jpg); background-repeat:no-repeat; margin:auto;">
+<div style=" width:918px; height:559px; margin:auto;">
 
 	<div style="width: 300px; height: 100px; position: absolute; left:50%; margin-left: -150px; top:200px;">
 
 		<form action="/" method="post">
 
-		<fieldset style="padding: 10px; text-align: center; border-color: #452517;">
+		<fieldset>
 
-		<legend style="font: sans; font-size: 11pt;">novafood.ro CMS</legend>
+		<legend >ADMIN CMS</legend>
 
-			<input type="password" name="password" />
+			<input type="password" name="password" class="ivy-light" />
 
-			<input type="submit" value="Log me in!" />
+			<input type="submit" value="Log me in!" class="ivy-light" />
 
 		</fieldset>
 

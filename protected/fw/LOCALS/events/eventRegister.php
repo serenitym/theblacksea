@@ -17,14 +17,40 @@ class eventRegister
         return null;
     }
 
-    protected function processContest() {
+    protected function mailSignup_managers() {
 
-        $this->name    = $name    = $_POST['name'];
-        $this->email   = $email   = $_POST['email'];
-        $this->address = $address = $_POST['address'];
-        $this->message = $message = $_POST['message'];
 
-        $tmplTxt = $this->modType . '/' . $this->modName . '/mail/contest.txt';
+        /**
+         * USE :
+         *
+         * $this->psts->
+         *
+            events_signup_posts:
+              usr_name: ""
+              usr_email: ""
+              usr_address: ""
+              usr_more: ""
+              captcha_code: ""
+
+              ev_name: ""
+              ev_price: ""
+              ev_description: ""
+              ev_date: ""
+              ev_hour: ""
+              ev_location: ""
+              ev_managersEmails: ""
+
+        */
+
+        /**
+         * $mail->addTo(
+            $this->coordinator['email'],
+            $this->coordinator['name']
+           );
+
+           $mail->setFrom('vnitu@ceata.org', 'vnitu');
+
+        */
 
         if (defined('smtpPort'))
             $mail = new ivyMailer(smtpServer, smtpPort);
@@ -34,19 +60,90 @@ class eventRegister
         $mail->username = smtpUser;
         $mail->password = smtpPass;
 
-        $mail->addTo(
-            $this->coordinator['email'],
-            $this->coordinator['name']
-        );
 
-        $mail->setSubject('TFB :: Dance contest subscription');
+        //=====================================================================================
 
+        // from first mail defined
+        $mail->setFrom(trim($this->psts->managers[0]), 'Tribal Fest');
+
+
+        // from rest of mails
+        foreach($this->psts->managers AS $key => $mail)
+        {
+            $mail->addTo(trim($mail) );
+        }
+
+
+        $mail->setSubject('TFB :: '.$this->psts->ev_name.' subscription');
+
+        $tmplTxt = "{$this->modType}/{$this->modName}/tmpl_{$this->template}/tmpl/mail/mailSignup_managers.txt";
         $message = $this->C->renderDisplay_fromObj($this, '', $tmplTxt);
 
         $mail->defineText($message);
-        $mail->setFrom('vnitu@ceata.org', 'vnitu');
 
         $mail->send();
+
+
     }
+
+    protected function mailSignup_subscriber() {
+
+
+            /**
+             * USE :
+             *
+             * $this->psts->
+             *
+                events_signup_posts:
+                  usr_name: ""
+                  usr_email: ""
+                  usr_address: ""
+                  usr_more: ""
+                  captcha_code: ""
+
+                  ev_name: ""
+                  ev_price: ""
+                  ev_description: ""
+                  ev_date: ""
+                  ev_hour: ""
+                  ev_location: ""
+                  ev_managersEmails: ""
+
+            */
+
+
+
+            if (defined('smtpPort'))
+                $mail = new ivyMailer(smtpServer, smtpPort);
+            else
+                $mail = new ivyMailer(smtpServer);
+
+            $mail->username = smtpUser;
+            $mail->password = smtpPass;
+
+
+            //=====================================================================================
+
+            // from first mail defined
+            $mail->setFrom(trim($this->psts->managers[0]), 'Tribal Fest');
+
+
+            // from rest of mails
+            $mail->addTo( $this->psts->usr_email );
+
+            $mail->setSubject('TFB :: '.$this->psts->ev_name.' subscription');
+
+            $tmplTxt = "{$this->modType}/{$this->modName}/tmpl_{$this->template}/tmpl/mail/mailSignup_subscriber.txt";
+            $message = $this->C->renderDisplay_fromObj($this, '', $tmplTxt);
+
+            $mail->defineText($message);
+
+            $mail->send();
+
+
+        }
+
+
+
 
 }

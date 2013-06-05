@@ -35,7 +35,7 @@
 
 
                   <!-- Captcha secure code -->
-                  <div class='cont-captcha'>
+                  <div class='cont-captcha' style='margin-bottom: 40px;'>
                       <img class='captcha' src='assets/securimage/securimage_show.php' alt='CAPTCHA Image' />
                       <br />
                       <input type='text' name='captcha_code' size='10' maxlength='6' tabindex='4' />
@@ -45,10 +45,8 @@
                       </a>
 
                   </div>
-                  <!-- Upload Files -->
-                  <div class='upload-files'>
-                      <input name='upload' type='file' />
-                  </div>
+
+
                   <input type='submit' name='signup_ev' value='signUp'  class='signUp' >
 
 
@@ -60,6 +58,8 @@
                   <input type='hidden' name='ev_location' value='{$o->ev_location}'>
                   <input type='hidden' name='ev_date' value='{$o->ev_date}'>
                   <input type='hidden' name='ev_hour' value='{$o->ev_hour}'>
+                  <input type='hidden' name='ev_managersEmails' value='{$o->ev_managersEmails}'>
+
 
                   <input type='hidden' name='moduleName' value='events'>
                   <input type='hidden' name='methName' value='eventSignup'>

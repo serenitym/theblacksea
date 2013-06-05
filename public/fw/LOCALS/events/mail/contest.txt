@@ -1,7 +1,0 @@
-TFB :: Dance contest subscription
-
-From: {$o->name} ({$o->mail})
-Address: {$o->address}
-
-Message:
-{$o->message}
