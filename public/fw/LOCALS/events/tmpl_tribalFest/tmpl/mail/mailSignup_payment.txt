@@ -1,0 +1,11 @@
+TFB ::  {$o->subEvent->ev_name}    payment confirmation
+
+From: {$o->subEvent->usr_name} ( {$o->subEvent->usr_email} )
+
+
+{$o->subEvent->usr_address}
+{$o->subEvent->ev_price}
+
+
+go to 'http://".$_SERVER['SERVER_NAME'].'/admin.php?'.$_SERVER['QUERY_STRING']."&confirm=true'
+to confirm payment

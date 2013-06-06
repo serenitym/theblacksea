@@ -8,6 +8,45 @@ class Cevents extends eventRegister
         $events,
         $member;
 
+    function payment_confirmation(){
+
+        $query = "UPDATE events_registrations SET usr_status = 1 WHERE idSub = {$_GET['idSub']}";
+        $this->DB->query($query);
+
+        //echo $query;
+    }
+
+    function payment_feedback(){
+
+        $query = " SELECT events.idEv,
+                          events.ev_name,
+                          events.ev_managersEmails,
+
+                          events_registrations.idSub,
+                          events_registrations.ev_price,
+                          events_registrations.usr_name,
+                          events_registrations.usr_email,
+                          events_registrations.usr_address,
+                          events_registrations.sub_date
+
+                          FROM events JOIN events_registrations ON (events.idEv = events_registrations.idEv)
+
+                           WHERE events.idEv = {$_GET['idEv']} && idSub = {$_GET['idSub']}
+                          ";
+
+        $this->subEvent = new stdClass();
+        $this->C->GET_objProperties($this->subEvent, $query);
+
+        $this->psts = &$this->subEvent;
+        $this->psts->managers = explode(',', $this->psts->ev_managersEmails);
+
+        $this->mailSignup_managers('mailSignup_payment', ' payment confirmation ');
+        //var_dump($this->subEvent);
+        //var_dump($this->subEvents);
+       // echo $query;
+
+    }
+
     function valid_signupForm(){
 
         $_POST['usr_name']    = trim(strip_tags($_POST['usr_name']   ));
@@ -155,6 +194,9 @@ class Cevents extends eventRegister
 
         //echo ' eventSignup '.$queryEv;
     }
+
+
+
 
     function process_event($event){
 
@@ -325,10 +367,31 @@ class Cevents extends eventRegister
 
     function _setINI(){
 
+        // ADMISNISTARRE ACTIUNI
+        // daca se face singup
         if(isset($_POST['methName']) && $_POST['methName'] == 'eventSignup')
         {
             $this->template_file = 'signup_feedback';
+
         }
+        // daca se doreste o confirmare de paymentt
+        elseif( isset($_GET['idEv']) && isset($_GET['idSub']) ){
+
+            // - 1 - din partea managerilor
+            if($this->admin && isset($_GET['confirm'])){
+
+                $this->template_file = 'payment_confirmation';
+                $this->payment_confirmation();
+            }
+            // -2 - din partea subscriberului
+            else{
+                $this->template_file = 'payment_feedback';
+                $this->payment_feedback();
+            }
+
+        }
+
+        // progresare in paginile administrate de Cevents
         elseif(isset($this->templates))
         {
             $tmplFile_stat = $this->set_template($this->idC);
@@ -341,12 +404,9 @@ class Cevents extends eventRegister
 
         }
 
-        if (isset($_POST['action'])) $this->setOrderData($_POST['action']);
-    }
-   /* function DISPLAY(){
 
-        return 'Acesta ar trebui sa fie events';
-    }*/
+    }
+
 
     function __construct(&$C){
 

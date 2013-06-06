@@ -39,7 +39,7 @@
 
 	<div style="width: 300px; height: 100px; position: absolute; left:50%; margin-left: -150px; top:200px;">
 
-		<form action="/" method="post">
+		<form action="<?php  echo 'http://'.$_SERVER['SERVER_NAME'].'/?'.$_SERVER['QUERY_STRING']; ?>" method="post">
 
 		<fieldset>
 

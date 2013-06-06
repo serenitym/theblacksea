@@ -3,21 +3,9 @@
 class eventRegister
 {
 
-    public function setOrderData($action)
-    {
-        switch($action){
-        case 'contest':
-            $this->processContest();
-            break;
-        case 'workshop':
-            // do stuff
-            break;
-        }
 
-        return null;
-    }
 
-    protected function mailSignup_managers()
+    protected function mailSignup_managers($tmpl_file = 'mailSignup_managers', $mailTitle = ' subscription ')
     {
 
 
@@ -61,11 +49,13 @@ class eventRegister
         $mail->username = smtpUser;
         $mail->password = smtpPass;
 
+        //======================================================================
+
         $tmplTxt  = "{$this->modType}/{$this->modName}/tmpl_{$this->template}"
-                  . "/tmpl/mail/mailSignup_managers.txt";
+                  . "/tmpl/mail/{$tmpl_file}.txt";
 
         $tmplHtml = "{$this->modType}/{$this->modName}/tmpl_{$this->template}"
-                  . "/tmpl/mail/mailSignup_managers.html";
+                  . "/tmpl/mail/{$tmpl_file}.html";
 
         $messageTxt = $this->C->renderDisplay_fromObj($this, '', $tmplTxt);
         $messageHtml = $this->C->renderDisplay_fromObj($this, '', $tmplHtml);
@@ -82,7 +72,7 @@ class eventRegister
         }
 
 
-        $mail->setSubject('TFB :: '.$this->psts->ev_name.' subscription');
+        $mail->setSubject('TFB :: '.$this->psts->ev_name.$mailTitle);
 
         $mail->defineText($messageTxt);
         $mail->defineHtml($messageHtml);
