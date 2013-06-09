@@ -77,6 +77,8 @@ class Cevents extends eventRegister
 
     }
 
+
+
     function valid_signupForm(){
 
         $_POST['usr_name']    = trim(strip_tags($_POST['usr_name']   ));
@@ -126,10 +128,10 @@ class Cevents extends eventRegister
 
         // daca s-a facut signup pentru workshop
 
-        if(isset($_POST['evType'])){
+        if(isset($_POST['evType']) && $_POST['evType']=='workshop'){
 
 
-
+            echo "check_promoWs este workshop <br>";
             $stat_deal = strpos($this->psts->ev_name, 'deal');
 
             /**
@@ -140,8 +142,8 @@ class Cevents extends eventRegister
              * - daca da fa un discount la pret de 10%
              */
 
-            if($stat_deal === false && $stat_deal){
-                //  echo "Este un workshop {$stat_deal} <br> ";
+            if($stat_deal === false && $stat_deal !="" ){
+                  echo "Este un workshop {$stat_deal} <br> ";
 
                 $curr_timeStamp = time();
                 $endPromo_timeStamp =  mktime(0, 0, 0, 9, 1, 2013);
@@ -191,10 +193,10 @@ class Cevents extends eventRegister
 
        $this->psts = new stdClass();
        CgetPosts::set_allPsts($this->psts);
-       // var_dump($this->psts);
 
        $this->check_promoWs();
        $this->psts->managers = explode(',', $this->psts->ev_managersEmails);
+       var_dump($this->psts);
 
 
        // retine datele subscriberului in BD
