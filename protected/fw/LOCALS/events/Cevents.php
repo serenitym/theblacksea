@@ -14,6 +14,36 @@ class Cevents extends eventRegister
         $this->DB->query($query);
 
         //echo $query;
+
+
+        // get statistics
+        $query_subs = " SELECT events.idEv,
+                                events.ev_name,
+                                events.ev_managersEmails,
+
+                                events_registrations.idSub,
+                                events_registrations.ev_price,
+                                events_registrations.usr_name,
+                                events_registrations.usr_email,
+                                events_registrations.usr_address,
+                                events_registrations.sub_date
+
+                                FROM events JOIN events_registrations ON (events.idEv = events_registrations.idEv)
+
+                                ";
+
+       $query_subs_unconf      = $query_subs . " WHERE usr_status = 0 ORDER BY events_registrations.idSub desc";
+       $this->subEvents_unconf = $this->C->GET_objProperties($this, $query_subs_unconf);
+
+       $query_subs_conf      = $query_subs . " WHERE usr_status = 1 ORDER BY events_registrations.idSub desc";
+       $this->subEvents_conf = $this->C->GET_objProperties($this, $query_subs_conf);
+
+
+
+       $this->totalSubs_unconf = count($this->subEvents_unconf) ;
+       $this->totalSubs_conf   = count($this->subEvents_conf);
+       $this->totalSubs        = $this->totalSubs_unconf + $this->totalSubs_conf;
+
     }
 
     function payment_feedback(){

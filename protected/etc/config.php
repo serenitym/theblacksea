@@ -36,7 +36,8 @@ define('fw_resTree',varPath.'trees/');
 
 set_include_path(basePath.'protected/');
 
-define('dbHost', 'dev.linuxd.net');
+//define('dbHost', 'dev.linuxd.net');
+define('dbHost', 'localhost');
 define('dbName', 'tribalFest');
 define('dbUser', 'tribalFest');
 define('dbPass', 'tribalFest');

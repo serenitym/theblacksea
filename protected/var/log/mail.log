@@ -2,61 +2,61 @@ MIME-Version: 1.0
 From: "Tribal Fest" <ioana@serenitymedia.ro>
 To: ioana@serenitymedia.ro, 
 	victor@serenitymedia.ro
-Subject: TFB :: Beyond Choreograhpy - 2 hrs (All Levels) payment confirmation 
-Date: Thu, 06 Jun 2013 03:27:42 +0300
-Content-type: multipart/alternative; boundary="PHP-alt-b09e5a96b84b337019beb03a78b76657"
+Subject: TFB :: Beyond Choreography - 2 hrs (All Levels) payment confirmation 
+Date: Fri, 07 Jun 2013 21:29:30 +0300
+Content-type: multipart/alternative; boundary="PHP-alt-21658f660d361268bd81aefd3ea73e44"
 
 
---PHP-alt-b09e5a96b84b337019beb03a78b76657
+--PHP-alt-21658f660d361268bd81aefd3ea73e44
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
-TFB ::  Beyond Choreograhpy - 2 hrs (All Levels)    payment confirmation
+TFB ::  Beyond Choreography - 2 hrs (All Levels)    payment confirmation
 
-From: FULLtest ( ioana@serenitymedia.ro )
+From: Toader Mihai ( ioana@serenitymedia.ro )
 
 
-addressa addressa addressa
+adresa pentru toader mihai
 30
 
 
-go to 'http://zero.tribalfest.ro/admin.php?idc=2&idT=2&idPers=2&idEv=9&idSub=95&confirm=true'
+go to 'http://zero.tribalfestbucharest.com/admin.php?idT=2&idC=2&idEv=9&idSub=96&confirm=true'
 to confirm payment
 
 
 
---PHP-alt-b09e5a96b84b337019beb03a78b76657
+--PHP-alt-21658f660d361268bd81aefd3ea73e44
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
 <b>
     TFB ::
-    <a href='http://zero.tribalfest.ro/?idC=2&idT=2'>
-        Beyond Choreograhpy - 2 hrs (All Levels)
+    <a href='http://zero.tribalfestbucharest.com/?idC=2&idT=2'>
+        Beyond Choreography - 2 hrs (All Levels)
     </a>
     payment confirmation
 </b>
 <br />
 
-<b>From: FULLtest</b> ( ioana@serenitymedia.ro )
+<b>From: Toader Mihai</b> ( ioana@serenitymedia.ro )
 <br />
 
 
-addressa addressa addressa
+adresa pentru toader mihai
 30
 <br />
 
 
-<a href='http://zero.tribalfest.ro/admin.php?idc=2&idT=2&idPers=2&idEv=9&idSub=95&confirm=true'>
+<a href='http://zero.tribalfestbucharest.com/admin.php?idT=2&idC=2&idEv=9&idSub=96&confirm=true'>
         <b>confirm payment</b>
 </a>
 
 <br />
 if there were problems with the confirmation write to
 <a href='mailto:ioana@serenitymedia.ro'>
-        FULLtest
+        Toader Mihai
 </a>
 
---PHP-alt-b09e5a96b84b337019beb03a78b76657--
+--PHP-alt-21658f660d361268bd81aefd3ea73e44--
 
 .

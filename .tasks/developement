@@ -1,1 +1,52 @@
 1 iunie 2013
+Ce mai e de facut ?
+- trimitere mailuri faza2
+
+    - subscriberul apasa pe linkul de confirmare => mailuri
+      la managerii eventului / workshopului
+    - Acest mail pentru manageri va avea si el un buton de confirm
+      payment . La apasarea acestui buton te va redirecta catre pagina
+     siteului + formular logare si se va retine in baza de date ca
+     plata a fost confirmata. Nu cred ca mai are rost sa trimitem inca
+     un mail la subscriber.
+
+- afisarea tabelului cu cei inregistrati la eveniment
+( nu foarte complicat de facut)
+
+======
+despre tabelul de subscriptions
+======
+
+
+
+STATISTICI
+total_nr subscriptions
+total_nr confirmed
+total_nr unconfirmed
+
+
+=========
+
+2 tabele payment unconfirmed / confirmed
+
+ - ordonate dupa data de inregistrare
+
+=========
+
+usr_name
+usr_email
+usr_address
+usr_status 0 /1
+sub_date
+
+ev_name
+
+
+==== lasat pe mai tarziu
+1 tabel
+    ev_name
+    nr_subs
+    nr_confirmed
+
+statistice
+
