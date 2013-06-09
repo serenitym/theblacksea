@@ -2,6 +2,8 @@
 template: tribalFest
 template_file: contact_en
 
+destinationEmail: 'victor@debian.org.ro'
+
 #template_vars:
 #  - feedback_GOOD
 #  - sp_fullname
