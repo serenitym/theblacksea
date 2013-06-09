@@ -131,7 +131,7 @@ class Cevents extends eventRegister
         if(isset($_POST['evType']) && $_POST['evType']=='workshop'){
 
 
-            echo "check_promoWs este workshop <br>";
+            //echo "check_promoWs este workshop <br>";
             $stat_deal = strpos($this->psts->ev_name, 'deal');
 
             /**
@@ -143,7 +143,7 @@ class Cevents extends eventRegister
              */
 
             if($stat_deal === false && $stat_deal !="" ){
-                  echo "Este un workshop {$stat_deal} <br> ";
+                  //echo "Este un workshop {$stat_deal} <br> ";
 
                 $curr_timeStamp = time();
                 $endPromo_timeStamp =  mktime(0, 0, 0, 9, 1, 2013);
@@ -196,7 +196,7 @@ class Cevents extends eventRegister
 
        $this->check_promoWs();
        $this->psts->managers = explode(',', $this->psts->ev_managersEmails);
-       var_dump($this->psts);
+      // var_dump($this->psts);
 
 
        // retine datele subscriberului in BD
