@@ -2,7 +2,7 @@
 template: tribalFest
 template_file: contact_en
 
-destinationEmail: 'victor@debian.org.ro'
+destinationEmail: 'andreea.bonea@gmail.com'
 
 #template_vars:
 #  - feedback_GOOD
