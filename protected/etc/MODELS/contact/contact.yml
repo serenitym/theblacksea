@@ -2,6 +2,8 @@
 template: tribalFest
 template_file: contact_en
 
+destinationEmail: 'andreea.bonea@gmail.com'
+
 #template_vars:
 #  - feedback_GOOD
 #  - sp_fullname
