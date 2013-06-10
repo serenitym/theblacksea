@@ -142,8 +142,8 @@ class Cevents extends eventRegister
              * - daca da fa un discount la pret de 10%
              */
 
-            if($stat_deal === false && $stat_deal == "" ){
-                  //echo "Este un workshop {$stat_deal} <br> ";
+            if($stat_deal === false && $stat_deal =="" ){
+                 // echo "Este un workshop NU un deal {$stat_deal} <br> ";
 
                 $curr_timeStamp = time();
                 $endPromo_timeStamp =  mktime(0, 0, 0, 9, 1, 2013);
