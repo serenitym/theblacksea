@@ -2,7 +2,9 @@
 template: tribalFest
 template_file: contact_en
 
-destinationEmail: 'andreea.bonea@gmail.com'
+destinationEmail: ['andreea.bonea@gmail.com', 'myrhermina@yahoo.com']
+
+feedbackString: "Your message was sent.<br>Please expect an answer shortly."
 
 #template_vars:
 #  - feedback_GOOD
