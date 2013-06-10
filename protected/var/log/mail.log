@@ -1,71 +1,62 @@
 MIME-Version: 1.0
 From: "Tribal Fest" <ioana@serenitymedia.ro>
-To: ioana@serenitymedia.ro
-Subject: TFB :: Building Character 2 hrs (All Levels) subscription
-Date: Sun, 09 Jun 2013 12:07:59 +0300
-Content-type: multipart/alternative; boundary="PHP-alt-75b0742bb5a3e05b7d50dffca68052f5"
+To: ioana@serenitymedia.ro, 
+	victor@serenitymedia.ro
+Subject: TFB :: Beyond Choreography - 2 hrs (All Levels) payment confirmation 
+Date: Sun, 09 Jun 2013 12:38:31 +0300
+Content-type: multipart/alternative; boundary="PHP-alt-aae3b0299f90c9f81c718dc1833db45c"
 
 
---PHP-alt-75b0742bb5a3e05b7d50dffca68052f5
+--PHP-alt-aae3b0299f90c9f81c718dc1833db45c
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
-TFB :: Building Character 2 hrs (All Levels) subscription
+TFB ::  Beyond Choreography - 2 hrs (All Levels)    payment confirmation
 
-From: Tribal Fest Bucharest
-
-Hello ioana aaa,
-
-Thanks for signingup to Building Character 2 hrs (All Levels).
-Please confirm your payment of 35 € here.
+From: Test Ioana ( ioana@serenitymedia.ro )
 
 
+akjdsadna da da
+27
 
 
---PHP-alt-75b0742bb5a3e05b7d50dffca68052f5
+go to 'http://zero.tribalfestbucharest.com/admin.php?idT=2&idC=2&idEv=9&idSub=106&confirm=true'
+to confirm payment
+
+
+
+--PHP-alt-aae3b0299f90c9f81c718dc1833db45c
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
 <b>
     TFB ::
-    <a href='http://zero.tribalfestbucharest.com/?idT=2&idC=2'>
-        Building Character 2 hrs (All Levels)
+    <a href='http://zero.tribalfestbucharest.com/?idC=2&idT=2'>
+        Beyond Choreography - 2 hrs (All Levels)
     </a>
-    subscription
+    payment confirmation
 </b>
 <br />
 
-<b>From: Tribal Fest Bucharest</b>
+<b>From: Test Ioana</b> ( ioana@serenitymedia.ro )
 <br />
 
-Hello ioana aaa,
+
+akjdsadna da da
+27
 <br />
 
-Thanks for signingup to <b>Building Character 2 hrs (All Levels).</b>
-<br />
-<b>Payment options:</b>
-<br />
 
-1. Reserve your space via Paypal XXXX with TribalFestBucharest in the subject line.
-You should also mention if the payment is for workshops/ dance contest/open stage or gala show.
-
-2. Book your space by wiring money to the following Bank Account
-<br />Recipient...
-<br />IBAN:
-<br />Account #
-<br />
-
-Please  confirm  your payment of 35 €
-<a href='http://zero.tribalfestbucharest.com/?idT=2&idC=2&idEv=11&idSub=105'>
-    here.
+<a href='http://zero.tribalfestbucharest.com/admin.php?idT=2&idC=2&idEv=9&idSub=106&confirm=true'>
+        <b>confirm payment</b>
 </a>
 
-
-
 <br />
+if there were problems with the confirmation write to
+<a href='mailto:ioana@serenitymedia.ro'>
+        Test Ioana
+</a>
 
-
-
---PHP-alt-75b0742bb5a3e05b7d50dffca68052f5--
+--PHP-alt-aae3b0299f90c9f81c718dc1833db45c--
 
 .

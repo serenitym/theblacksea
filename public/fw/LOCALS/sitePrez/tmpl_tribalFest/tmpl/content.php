@@ -39,8 +39,16 @@
                     </a>
                 </li>
                 <li>
+                    <a href="http://www.oriens.ro" target="_blank">
+                        <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/ORIENS.png">
+                    </a>
+                </li>
+                <li>
                     <a href="http://www.ambasada.ro/ambasada/2/274/slovenia.html" target="_blank">
-                        <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/ASR.jpg"> Ambasada Sloveniei
+                        <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/ASR.jpg">
+                        <span style="float: right; margin-left: 10px;">
+                            Ambasada <br> Sloveniei
+                        </span>
                     </a>
                 </li>
 
