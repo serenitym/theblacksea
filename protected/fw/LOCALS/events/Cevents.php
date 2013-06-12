@@ -128,7 +128,8 @@ class Cevents extends eventRegister
 
         // daca s-a facut signup pentru workshop
 
-        if(isset($_POST['evType']) && $_POST['evType']=='workshop'){
+        if( (isset($_POST['evType']) && $_POST['evType']=='workshop') || $_POST['idEv'] == 17 )
+        {
 
 
             //echo "check_promoWs este workshop <br>";

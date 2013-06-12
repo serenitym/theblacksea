@@ -62,7 +62,7 @@ class CsitePrez{
 
         $this->resPath = $this->C->get_resPath_forObj($this, 'festDetails');
 
-        file_put_contents($this->resPath, trim($_POST['details_en']));
+        file_put_contents($this->resPath, stripslashes(trim($_POST['details_en'])) );
 
     }
 

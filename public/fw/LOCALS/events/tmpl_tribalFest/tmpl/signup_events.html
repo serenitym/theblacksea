@@ -14,7 +14,10 @@
                   <input type='text' name='usr_name' value=''  placeholder='Name' />
                   <input type='text' name='usr_email' value=''  placeholder='E-mail' />
                   <input type='text' name='usr_address' value=''  placeholder='Adress' />
-                  <textarea  name='usr_more'   placeholder='More about you' ></textarea>
+                  ".($o->idEv == 17 ? "" :
+                    "<textarea  name='usr_more'   placeholder='More about you' ></textarea>"
+                  )."
+
 
               </div>
               <div class='frm-right'>
