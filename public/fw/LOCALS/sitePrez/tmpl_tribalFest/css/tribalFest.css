@@ -93,13 +93,13 @@ body{
             width: 840px;
             margin: 0px auto;
             height: 100%;
-            margin-bottom: 50px;
+            padding-bottom: 50px;
         }
 
         .single{
             width: 840px !important;
             margin: 0px auto;
-            margin-bottom: 50px;
+            padding-bottom: 50px;
             height: 100%;
         }
 
