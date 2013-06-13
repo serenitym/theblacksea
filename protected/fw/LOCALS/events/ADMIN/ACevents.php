@@ -123,11 +123,15 @@ class ACevents extends Cevents{
 
     function _hook_saveEvent(){
 
+        $_POST['ev_name_en'] = htmlspecialchars($_POST['ev_name_en']);
+
         $this->manage_varPrices();
 
         return true;
     }
     function _hook_addEvent(){
+
+        $_POST['ev_name_en'] = htmlspecialchars($_POST['ev_name_en']);
 
         $this->manage_varPrices();
 
@@ -136,6 +140,7 @@ class ACevents extends Cevents{
     function addEvent(){
 
         // processPosts( $expectedPosts, $notEmpty = true, $validation = true)
+
 
         $psts = $this->C->processPosts($this->events_posts, true, false);
 

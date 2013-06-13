@@ -268,11 +268,26 @@ class Cevents extends eventRegister
         $where = $idEv ? " AND idEv = $idEv " : "";
 
 
-        $query_events = "SELECT * from events WHERE idExt = $idM  {$where}  {$exception} ";
+        $query_events = "SELECT
+
+                            idEv             ,
+                            idExt            ,
+                            ev_name,
+                            ev_description   ,
+                            ev_date          ,
+                            ev_hour          ,
+                            ev_location      ,
+                            ev_price         ,
+                            ev_managersEmails,
+                            ev_formType      
+                            
+                            
+                            from events WHERE idExt = $idM  {$where}  {$exception} ";
         $this->events[$idM] = new stdClass();
         $this->events[$idM]->idM = $idM;
         $this->events[$idM]->listEvents = $this->C->GET_objProperties($this, $query_events,'process_event');
 
+        //echo "get_events query = ".$query_events."<br>";
         return "";
     }
 

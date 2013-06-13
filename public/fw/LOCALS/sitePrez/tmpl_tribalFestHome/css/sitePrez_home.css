@@ -43,6 +43,10 @@
         font-size: 13px;
     }
 
+    .festDetails .details a{
+        color: inherit;
+    }
+
 
 
 .container-home .instructorPrev{
