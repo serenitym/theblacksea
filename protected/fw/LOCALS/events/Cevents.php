@@ -35,6 +35,7 @@ class Cevents extends eventRegister
        $query_subs_unconf      = $query_subs . " WHERE usr_status = 0 ORDER BY events_registrations.idSub desc";
        $this->subEvents_unconf = $this->C->GET_objProperties($this, $query_subs_unconf);
 
+
        $query_subs_conf      = $query_subs . " WHERE usr_status = 1 ORDER BY events_registrations.idSub desc";
        $this->subEvents_conf = $this->C->GET_objProperties($this, $query_subs_conf);
 
@@ -67,6 +68,9 @@ class Cevents extends eventRegister
         $this->subEvent = new stdClass();
         $this->C->GET_objProperties($this->subEvent, $query);
 
+        $this->subEvent->ev_name = htmlspecialchars_decode($this->subEvent->ev_name, ENT_QUOTES);
+        // error_log("************** decoded ev_name  ".$this->subEvent->ev_name  );
+
         $this->psts = &$this->subEvent;
         $this->psts->managers = explode(',', $this->psts->ev_managersEmails);
 
@@ -96,10 +100,12 @@ class Cevents extends eventRegister
         $feedback .= $_POST['usr_email'] ? "" : "<p class='highligth-color'> Email field is empty </p>";
         $feedback .= $securimage->check($_POST['captcha_code']) == TRUE
             ? ""
-            : "<p class='highligth-color'> Wrong CAPTCHA code {$_POST['captcha_code']}</p> "
-                         .($securimage->check($_POST['captcha_code']) == TRUE ? "cod corect" : "cod INcorect")
-                         . ' are metoda '.method_exists($securimage, 'check')
-                         .' este obiect = '.is_object($securimage);
+            : "<p class='highligth-color'> Wrong CAPTCHA code </p> "
+                        //   .($securimage->check($_POST['captcha_code']) == TRUE ? "cod corect" : "cod INcorect")
+                        //  . ' are metoda '.method_exists($securimage, 'check')
+                        // .' este obiect = '.is_object($securimage)
+                        // .$_POST['captcha_code']
+        ;
 
 
         if($feedback){
@@ -130,32 +136,19 @@ class Cevents extends eventRegister
 
     function check_promoWs(){
 
-        // daca s-a facut signup pentru workshop
+        // id-uri de eventuri excluse din promotie
+        $notPromos_idEv = array(4, 5 , 6, 10, 12, 16);
+        $promo = in_array($_POST['idEv'] , $notPromos_idEv) ? false : true;
 
-        if( (isset($_POST['evType']) && $_POST['evType']=='workshop') || $_POST['idEv'] == 17 )
+
+       // if( (isset($_POST['evType']) && $_POST['evType']=='workshop') || $_POST['idEv'] == 17 )
+        if($promo)
         {
+             $curr_timeStamp = time();
+             $endPromo_timeStamp =  mktime(0, 0, 0, 9, 1, 2013);
 
-
-            //echo "check_promoWs este workshop <br>";
-            $stat_deal = strpos($this->psts->ev_name, 'deal');
-
-            /**
-             * daca workshopul nu este un deal
-             *
-             * - testeaza daca este data curenta la care s-a facut signup este
-             * mai mica de 1 sept 2013
-             * - daca da fa un discount la pret de 10%
-             */
-
-            if($stat_deal === false && $stat_deal =="" ){
-                 // echo "Este un workshop NU un deal {$stat_deal} <br> ";
-
-                $curr_timeStamp = time();
-                $endPromo_timeStamp =  mktime(0, 0, 0, 9, 1, 2013);
-
-                if($curr_timeStamp <= $endPromo_timeStamp)
-                    $this->psts->ev_price -= $this->psts->ev_price * 0.1;
-            }
+             if($curr_timeStamp <= $endPromo_timeStamp)
+                $this->psts->ev_price -= $this->psts->ev_price * 0.1;
 
         }
 

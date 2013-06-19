@@ -91,6 +91,13 @@ ivyMods.events = {
 
                       if(typeof data != 'undefined' && data!='')
                       {
+                          // daca unul din capuri este invalid automat captcha se va reseta
+                          // iar userul va trebui sa il introduca din nou
+                          // deoarece un captcha este valabil o singura data
+
+                          form.find('input[name=captcha_code]').attr('value','');
+                          ivyMods.events.regenerateCaptcha();
+
                           form.find('.formFBK').remove();
                           form.append(data);
                           //alert("here not valid data");

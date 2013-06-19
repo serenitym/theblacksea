@@ -1,71 +1,62 @@
 MIME-Version: 1.0
-From: "Tribal Fest" <andreea.bonea@gmail.com>
-To: andreea.bonea@gmail.com
-Subject: TFB :: Fast & Furious; Silky Snake - 2 hrs (All Levels) subscription
-Date: Tue, 11 Jun 2013 19:38:53 +0300
-Content-type: multipart/alternative; boundary="PHP-alt-f6f85bc338ef64c6d2088b145aef013f"
+From: "Tribal Fest" <ioana@serenitymedia.ro>
+To: ioana@serenitymedia.ro, 
+	victor@serenitymedia.ro
+Subject: TFB :: Tjarda's Package deal payment confirmation 
+Date: Wed, 19 Jun 2013 05:27:40 +0300
+Content-type: multipart/alternative; boundary="PHP-alt-ea5caaa7e7ebc1ffb9e6e7c6619228cd"
 
 
---PHP-alt-f6f85bc338ef64c6d2088b145aef013f
+--PHP-alt-ea5caaa7e7ebc1ffb9e6e7c6619228cd
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
-TFB :: Fast & Furious; Silky Snake - 2 hrs (All Levels) subscription
+TFB ::  Tjarda's Package deal    payment confirmation
 
-From: Tribal Fest Bucharest
-
-Hello Andreea Bonea,
-
-Thanks for signingup to Fast & Furious; Silky Snake - 2 hrs (All Levels).
-Please confirm your payment of 31.5 € here.
+From: Andrei Nistor ( ioana@serenitymedia.ro )
 
 
+Package Deal address
+90
 
 
---PHP-alt-f6f85bc338ef64c6d2088b145aef013f
+go to 'http://zero.tribalfestbucharest.com/admin.php?idT=2&idC=2&idEv=16&idSub=110&confirm=true'
+to confirm payment
+
+
+
+--PHP-alt-ea5caaa7e7ebc1ffb9e6e7c6619228cd
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
 <b>
     TFB ::
-    <a href='http://test.linuxd.net/?idT=2&idC=2'>
-        Fast & Furious; Silky Snake - 2 hrs (All Levels)
+    <a href='http://zero.tribalfestbucharest.com/?idC=2&idT=2'>
+        Tjarda's Package deal
     </a>
-    subscription
+    payment confirmation
 </b>
 <br />
 
-<b>From: Tribal Fest Bucharest</b>
+<b>From: Andrei Nistor</b> ( ioana@serenitymedia.ro )
 <br />
 
-Hello Andreea Bonea,
+
+Package Deal address
+90
 <br />
 
-Thanks for signingup to <b>Fast & Furious; Silky Snake - 2 hrs (All Levels).</b>
-<br />
-<b>Payment options:</b>
-<br />
 
-1. Reserve your space via Paypal XXXX with TribalFestBucharest in the subject line.
-You should also mention if the payment is for workshops/ dance contest/open stage or gala show.
-<br />
-2. Book your space by wiring money to the following Bank Account
-<br />Recipient...
-<br />IBAN:
-<br />Account #
-<br />
-
-Once you sent us payment, please  confirm  your payment of 31.5 €
-<a href='http://test.linuxd.net/?idT=2&idC=2&idEv=1&idSub=104'>
-    here.
+<a href='http://zero.tribalfestbucharest.com/admin.php?idT=2&idC=2&idEv=16&idSub=110&confirm=true'>
+        <b>confirm payment</b>
 </a>
 
-
-
 <br />
+if there were problems with the confirmation write to
+<a href='mailto:ioana@serenitymedia.ro'>
+        Andrei Nistor
+</a>
 
-
-
---PHP-alt-f6f85bc338ef64c6d2088b145aef013f--
+--PHP-alt-ea5caaa7e7ebc1ffb9e6e7c6619228cd--
 
 .
