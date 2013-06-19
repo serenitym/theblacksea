@@ -96,7 +96,10 @@ class Cevents extends eventRegister
         $feedback .= $_POST['usr_email'] ? "" : "<p class='highligth-color'> Email field is empty </p>";
         $feedback .= $securimage->check($_POST['captcha_code']) == TRUE
             ? ""
-            : "<p class='highligth-color'> Wrong CAPTCHA code </p>";
+            : "<p class='highligth-color'> Wrong CAPTCHA code {$_POST['captcha_code']}</p> "
+                         .($securimage->check($_POST['captcha_code']) == TRUE ? "cod corect" : "cod INcorect")
+                         . ' are metoda '.method_exists($securimage, 'check')
+                         .' este obiect = '.is_object($securimage);
 
 
         if($feedback){
@@ -120,6 +123,7 @@ class Cevents extends eventRegister
             }
 
         }
+        //if(!$feedback) echo "<div class='formFBK'> in validare signupform</div>";
 
 
     }

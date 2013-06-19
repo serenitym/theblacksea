@@ -80,7 +80,10 @@ ivyMods.events = {
 
                 var sendData = form.collectData();
                     sendData['methName']    = "valid_signupForm";
-                    sendData['restoreCore'] = true;
+                    // desi moduleName este luat din cadrul formului
+                    // (aceasta atribuire este pentru transparenta)
+                    sendData['moduleName']  = "events";
+                    sendData['restoreCore'] = 1;
 
                 event.preventDefault();
 

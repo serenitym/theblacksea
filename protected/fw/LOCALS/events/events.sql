@@ -14,16 +14,16 @@ CREATE TABLE IF NOT EXISTS `members` (
 --
 
 CREATE TABLE IF NOT EXISTS `events` (
-  `idEv` int(11) NOT NULL AUTO_INCREMENT,
-  `idExt` int(11) NOT NULL,
-  `ev_name` varchar(300) NOT NULL,
-  `ev_description` text,
-  `ev_date` varchar(10) DEFAULT NULL,
-  `ev_hour` varchar(5) DEFAULT NULL,
-  `ev_location` varchar(100) DEFAULT NULL,
-  `ev_price` int(2) DEFAULT NULL,
+  `idEv`              int(11) NOT NULL AUTO_INCREMENT,
+  `idExt`             int(11) NOT NULL,
+  `ev_name`           varchar(300) NOT NULL,
+  `ev_description`    text,
+  `ev_date`           varchar(10) DEFAULT NULL,
+  `ev_hour`           varchar(5) DEFAULT NULL,
+  `ev_location`       varchar(100) DEFAULT NULL,
+  `ev_price`          int(2) DEFAULT NULL,
   `ev_managersEmails` text,
-  `ev_formType` varchar(50) DEFAULT NULL,
+  `ev_formType`       varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idEv`),
   KEY `idExt` (`idExt`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -64,14 +64,14 @@ ALTER TABLE `events_vars`
 --
 
 CREATE TABLE IF NOT EXISTS `events_registrations` (
-  `idSub` int(5) NOT NULL AUTO_INCREMENT,
-  `idEv` int(3) NOT NULL,
-  `ev_price` int(3) NOT NULL,
-  `usr_name` varchar(200) NOT NULL,
-  `usr_email` text NOT NULL,
+  `idSub`       int(5) NOT NULL AUTO_INCREMENT,
+  `idEv`        int(3) NOT NULL,
+  `ev_price`    int(3) NOT NULL,
+  `usr_name`    varchar(200) NOT NULL,
+  `usr_email`   text NOT NULL,
   `usr_address` text,
-  `usr_status` int(1) DEFAULT '0',
-  `sub_date` date DEFAULT NULL,
+  `usr_status`  int(1) DEFAULT '0',
+  `sub_date`    date DEFAULT NULL,
   PRIMARY KEY (`idUsr`),
   KEY `idEv` (`idEv`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
