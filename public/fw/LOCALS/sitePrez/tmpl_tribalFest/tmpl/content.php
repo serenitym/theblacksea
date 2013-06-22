@@ -44,6 +44,17 @@
                     </a>
                 </li>
                 <li>
+                    <a href="http://www.hagalla.de/" target="_blank">
+                        <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/hagalla.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.world-of-orient.de/en/tribal/" target="_blank">
+                        <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/tribal_logo.png">
+                    </a>
+                </li>
+<!--
+                <li>
                     <a href="http://www.ambasada.ro/ambasada/2/274/slovenia.html" target="_blank">
                         <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/ASR.jpg">
                         <span style="float: right; margin-left: 10px;">
@@ -51,7 +62,7 @@
                         </span>
                     </a>
                 </li>
-
+-->
             </ul>
     </div>
 </footer>
