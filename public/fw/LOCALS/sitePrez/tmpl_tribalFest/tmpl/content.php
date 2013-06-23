@@ -34,22 +34,32 @@
     <div id="footer-content">
             <ul>
                 <li>
-                    <a href="http://www.arcub.ro/" target="_blank">
+                    <a href="http://www.arcub.ro/" target="_blank"
+                        title="Centrul de Proiecte Culturale al Primăriei Municipiului București">
                         <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/logo_arcub.gif">
                     </a>
                 </li>
                 <li>
-                    <a href="http://www.oriens.ro" target="_blank">
+                    <a href="http://www.oriens.ro" target="_blank"
+                        title="Oriens">
                         <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/ORIENS.png">
                     </a>
                 </li>
                 <li>
-                    <a href="http://www.hagalla.de/" target="_blank">
+                    <a href="https://www.facebook.com/CityPuzzleApp?fref=ts" target="_blank"
+                        title="City Puzzle">
+                        <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/greenlogo.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.hagalla.de/" target="_blank"
+                        title="Hagalla">
                         <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/hagalla.png">
                     </a>
                 </li>
                 <li>
-                    <a href="http://www.world-of-orient.de/en/tribal/" target="_blank">
+                    <a href="http://www.world-of-orient.de/en/tribal/" target="_blank"
+                        title="World of Orient">
                         <img src="fw/LOCALS/sitePrez/tmpl_tribalFest/css/img/tribal_logo.png">
                     </a>
                 </li>
