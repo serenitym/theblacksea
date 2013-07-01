@@ -18,7 +18,7 @@ class ACsitePrez extends CsitePrez{
  *
  *  - _handlePosts_functionName
  *
- *      => daca s-au trimis moduleName & methName
+ *      => daca s-au trimis modName & methName
  *      => core va incerca sa apeleze aceasta metoda intai apoi functionName
  *          daca _handlePosts_ returneaza true
  *

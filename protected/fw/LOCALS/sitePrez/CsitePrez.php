@@ -4,27 +4,27 @@ class CsitePrez{
 /**
  * ======[ This module has access to ]=======================
  *
- *  $obj->C                     # obiectul principal core
+ *  $mod->C                     # obiectul principal core
  *
     # situatie core
-    $obj->DB     =              # pointer la BD
-    $obj->admin  =              # true / false - daca sunt pe admin
-    $obj->LG     =              # limba curenta
-    $obj->lang   =              # limba curenta
-    $obj->nameF  =              # numele de RES al paginii/ categoriei curente in limba curenta
+    $mod->DB     =              # pointer la BD
+    $mod->admin  =              # true / false - daca sunt pe admin
+    $mod->LG     =              # limba curenta
+    $mod->lang   =              # limba curenta
+    $mod->nameF  =              # numele de RES al paginii/ categoriei curente in limba curenta
  *                                 ex: name: Categorie Noua = Categorie_noua
 
 
     # date ale modu
-    $obj->idC    =             # id-ul categoriei curente
-    $obj->idT    =             # id-ul parintelui originar
-    $obj->level  =             # levelul din tree la care se afla cat
-    $obj->type   =             # tipul categoriei curente ex: MODELS / LOCALS
+    $mod->idNode    =             # id-ul categoriei curente
+    $mod->idTree    =             # id-ul parintelui originar
+    $mod->level  =             # levelul din tree la care se afla cat
+    $mod->type   =             # tipul categoriei curente ex: MODELS / LOCALS
 
 
     #date despre acest modul
-    $obj->modName =            # numele modulului
-    $obj->modType =            # tipul acestuia : GENERAL/ LOCALS /MODELS/ PLUGINS
+    $mod->modName =            # numele modulului
+    $mod->modType =            # tipul acestuia : GENERAL/ LOCALS /MODELS/ PLUGINS
  *
  *
  *
@@ -34,19 +34,19 @@ class CsitePrez{
  *        * returneaza un array multdimensional cu datele returnate de $result
  *
  *
- *    GET_objProperties(&$obj,$query,$processResMethod='', $onlyArr = false)
+ *    GET_modProperties(&$mod,$query,$processResMethod='', $onlyArr = false)
  *
- *      *  $obj                              - obiectul care a apelat metoda
+ *      *  $mod                              - obiectul care a apelat metoda
         *  $query                            - query-ul de procesat
-        *  string $processResMethod($row)    - metoda a $obj care proceseaza orice rand returnat
+        *  string $processResMethod($row)    - metoda a $mod care proceseaza orice rand returnat
         *  bool $onlyArr                     - daca queryul ret un singur record
-        *                                              false - va seta valoriile ret la obj
+        *                                              false - va seta valoriile ret la mod
         *                                              true - va returna un array[0] = array(colum=>value);
         * return array                     - array muldimensional cu toate recordurile returnate de query
         *                                      si procesate de processResMethod
  *
  *   USE LIKE this
- *      $this->news = $this->C->GET_objProperties($this, $query, 'procesNews');
+ *      $this->news = $this->C->GET_modProperties($this, $query, 'procesNews');
  *
  *   =>$this->news = array(0=> [title=>'', content=>'', idNews=>'' ], 1=> [], ...);
  *
@@ -58,25 +58,21 @@ class CsitePrez{
      */
 
 
-    function save_festDetails(){
-
-        $this->resPath = $this->C->get_resPath_forObj($this, 'festDetails');
-
+    function save_festDetails()
+    {
+        $this->resPath = $this->C->get_resPath_formod($this, 'festDetails');
         file_put_contents($this->resPath, stripslashes(trim($_POST['details_en'])) );
-
     }
 
-    function get_members(){
-
+    function get_members()
+    {
         $query_members = "SELECT * from members";
-        $this->members = $this->C->GET_objProperties($this, $query_members);
-
+        $this->members = $this->C->GET_modProperties($this, $query_members);
     }
-    function _setINI(){
-
+    function _setINI()
+    {
         $this->get_members();
-        $this->C->SET_general_mod('gallery','MODELS');
-
+        $this->C->Module_Build('gallery','MODELS');
     }
 
 

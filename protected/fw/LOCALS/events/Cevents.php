@@ -26,18 +26,19 @@ class Cevents extends eventRegister
                                 events_registrations.usr_name,
                                 events_registrations.usr_email,
                                 events_registrations.usr_address,
-                                events_registrations.sub_date
+                                events_registrations.sub_date,
+                                events_registrations.usr_status
 
                                 FROM events JOIN events_registrations ON (events.idEv = events_registrations.idEv)
 
                                 ";
 
        $query_subs_unconf      = $query_subs . " WHERE usr_status = 0 ORDER BY events_registrations.idSub desc";
-       $this->subEvents_unconf = $this->C->GET_objProperties($this, $query_subs_unconf);
+       $this->subEvents_unconf = $this->C->GET_modProperties($this, $query_subs_unconf);
 
 
        $query_subs_conf      = $query_subs . " WHERE usr_status = 1 ORDER BY events_registrations.idSub desc";
-       $this->subEvents_conf = $this->C->GET_objProperties($this, $query_subs_conf);
+       $this->subEvents_conf = $this->C->GET_modProperties($this, $query_subs_conf);
 
 
 
@@ -66,7 +67,7 @@ class Cevents extends eventRegister
                           ";
 
         $this->subEvent = new stdClass();
-        $this->C->GET_objProperties($this->subEvent, $query);
+        $this->C->GET_modProperties($this->subEvent, $query);
 
         $this->subEvent->ev_name = htmlspecialchars_decode($this->subEvent->ev_name, ENT_QUOTES);
         // error_log("************** decoded ev_name  ".$this->subEvent->ev_name  );
@@ -235,7 +236,7 @@ class Cevents extends eventRegister
         if(!$event['ev_price'])
         {
             $query_prices = "SELECT * from events_vars WHERE idEv = {$event['idEv']}";
-            $event['prices'] = $this->C->GET_objProperties($this, $query_prices,'',false);
+            $event['prices'] = $this->C->GET_modProperties($this, $query_prices,'',false);
 
 
             $prices = array();
@@ -282,7 +283,7 @@ class Cevents extends eventRegister
                             from events WHERE idExt = $idM  {$where}  {$exception} ";
         $this->events[$idM] = new stdClass();
         $this->events[$idM]->idM = $idM;
-        $this->events[$idM]->listEvents = $this->C->GET_objProperties($this, $query_events,'process_event');
+        $this->events[$idM]->listEvents = $this->C->GET_modProperties($this, $query_events,'process_event');
 
         //echo "get_events query = ".$query_events."<br>";
         return "";
@@ -293,7 +294,7 @@ class Cevents extends eventRegister
         $idM = $member['idM'];
 
         // $idPers_str = $this->admin ? "aidPers" : "idPers";
-        $member['mbr_href'] = !isset($_GET['idPers']) ? "?idc={$this->idC}&idT={$this->idT}&idPers={$idM}" : "#";
+        $member['mbr_href'] = !isset($_GET['idPers']) ? "?idc={$this->idNode}&idT={$this->idTree}&idPers={$idM}" : "#";
         $this->get_events($idM);
 
         return $member;
@@ -305,7 +306,7 @@ class Cevents extends eventRegister
         $where = $idM ? " WHERE idM = $idM" : "";
 
         $query_members = "SELECT * from members {$where}";
-        $this->members = $this->C->GET_objProperties($this, $query_members, $processMeth);
+        $this->members = $this->C->GET_modProperties($this, $query_members, $processMeth);
 
     }
 
@@ -357,27 +358,27 @@ class Cevents extends eventRegister
 /**
  * ======[ This module has access to ]=======================
  *
- *  $obj->C                     # obiectul principal core
+ *  $mod->C                     # obiectul principal core
  *
     # situatie core
-    $obj->DB     =              # pointer la BD
-    $obj->admin  =              # true / false - daca sunt pe admin
-    $obj->LG     =              # limba curenta
-    $obj->lang   =              # limba curenta
-    $obj->nameF  =              # numele de RES al paginii/ categoriei curente in limba curenta
+    $mod->DB     =              # pointer la BD
+    $mod->admin  =              # true / false - daca sunt pe admin
+    $mod->LG     =              # limba curenta
+    $mod->lang   =              # limba curenta
+    $mod->nameF  =              # numele de RES al paginii/ categoriei curente in limba curenta
  *                                 ex: name: Categorie Noua = Categorie_noua
 
 
     # date ale modu
-    $obj->idC    =             # id-ul categoriei curente
-    $obj->idT    =             # id-ul parintelui originar
-    $obj->level  =             # levelul din tree la care se afla cat
-    $obj->type   =             # tipul categoriei curente ex: MODELS / LOCALS
+    $mod->idNode    =             # id-ul categoriei curente
+    $mod->idTree    =             # id-ul parintelui originar
+    $mod->level  =             # levelul din tree la care se afla cat
+    $mod->type   =             # tipul categoriei curente ex: MODELS / LOCALS
 
 
     #date despre acest modul
-    $obj->modName =            # numele modulului
-    $obj->modType =            # tipul acestuia : GENERAL/ LOCALS /MODELS/ PLUGINS
+    $mod->modName =            # numele modulului
+    $mod->modType =            # tipul acestuia : GENERAL/ LOCALS /MODELS/ PLUGINS
  *
  *
  *
@@ -387,19 +388,19 @@ class Cevents extends eventRegister
  *        * returneaza un array multdimensional cu datele returnate de $result
  *
  *
- *    GET_objProperties(&$obj,$query,$processResMethod='', $onlyArr = false)
+ *    GET_modProperties(&$mod,$query,$processResMethod='', $onlyArr = false)
  *
- *      *  $obj                              - obiectul care a apelat metoda
+ *      *  $mod                              - obiectul care a apelat metoda
         *  $query                            - query-ul de procesat
-        *  string $processResMethod($row)    - metoda a $obj care proceseaza orice rand returnat
+        *  string $processResMethod($row)    - metoda a $mod care proceseaza orice rand returnat
         *  bool $onlyArr                     - daca queryul ret un singur record
-        *                                              false - va seta valoriile ret la obj
+        *                                              false - va seta valoriile ret la mod
         *                                              true - va returna un array[0] = array(colum=>value);
         * return array                     - array muldimensional cu toate recordurile returnate de query
         *                                      si procesate de processResMethod
  *
  *   USE LIKE this
- *      $this->news = $this->C->GET_objProperties($this, $query, 'procesNews');
+ *      $this->news = $this->C->GET_modProperties($this, $query, 'procesNews');
  *
  *   =>$this->news = array(0=> [title=>'', content=>'', idNews=>'' ], 1=> [], ...);
  *
@@ -439,7 +440,7 @@ class Cevents extends eventRegister
         // progresare in paginile administrate de Cevents
         elseif(isset($this->templates))
         {
-            $tmplFile_stat = $this->set_template($this->idC);
+            $tmplFile_stat = $this->set_template($this->idNode);
 
             if($tmplFile_stat && method_exists($this, 'get_'.$this->template_file))
             {

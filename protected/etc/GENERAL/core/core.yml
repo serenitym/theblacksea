@@ -44,14 +44,15 @@ default_PLUGINS: [LANG, ivyMenu, feedback]
 #=========================================
 
 tree: []
+tempTree: []
 
 # typeul / modelul default cand se intra
 type: single
-type_MOD: MODELS
+modType: MODELS
 
 id: 1
-idT: 1
-idC: 1
+idTree: 1
+idNode: 1
 
 
 

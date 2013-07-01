@@ -25,8 +25,4 @@ ADMIN_default_PLUGINS: []
 ADMIN_default_MODELS: []
 ADMIN_default_LOCALS: []
 
-
-TMPtree: []
-#user
-
 admin: true

@@ -14,4 +14,4 @@ menus:
 
 # typeul / modelul default cand se intra
 type: products
-type_MOD: MODELS
+modType: MODELS

@@ -4,7 +4,7 @@ ivyMods.set_iEdit.events = function(){
     iEdit.add_bttsConf({
         'membr':
         {
-            moduleName: 'events',
+            modName: 'events',
             addBt:{status: false},
             saveBt:{status: false},
             deleteBt:{atrValue: 'delete Member', methName:'deleteMember'}
@@ -18,12 +18,12 @@ ivyMods.set_iEdit.events = function(){
             }
         }
         ,'sgMbr':{
-            moduleName: 'events',
+            modName: 'events',
             saveBt:{atrValue:'save Member', methName:'saveMember'},
             edit:{atrValue:'edit Member'}
         }
         ,'ev' : {
-            moduleName:'events',
+            modName:'events',
             addBt:{atrValue: 'add Event', methName:'addEvent'},
             saveBt:{atrValue: 'save' , methName: 'saveEvent'},
             deleteBt:{atrValue: 'delete', methName:'deleteEvent'},
@@ -80,9 +80,9 @@ ivyMods.events = {
 
                 var sendData = form.collectData();
                     sendData['methName']    = "valid_signupForm";
-                    // desi moduleName este luat din cadrul formului
+                    // desi modName este luat din cadrul formului
                     // (aceasta atribuire este pentru transparenta)
-                    sendData['moduleName']  = "events";
+                    sendData['modName']  = "events";
                     sendData['restoreCore'] = 1;
 
                 event.preventDefault();

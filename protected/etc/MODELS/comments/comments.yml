@@ -1,6 +1,6 @@
 ---
 
- # preluate din Cuser via Ccore-GET_objREQ
+ # preluate din Cuser via Ccore-Module_config
 objREQ:
   user: [uid, uname]
 
