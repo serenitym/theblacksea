@@ -10,7 +10,7 @@ class ACevents extends Cevents{
  *  DMLsql($query,$reset=true,$ANCORA='',$location='',$paramAdd='', $errorMessage='')
  *
  *
- *  DMLsql_bulk($queries,$reset=true,$ANCORA='',$location='',$paramAdd='', $errorMessage='')
+ *  Db_queryBulk($queries,$reset=true,$ANCORA='',$location='',$paramAdd='', $errorMessage='')
  *    - run multiple queries
  *
  *
@@ -89,7 +89,7 @@ class ACevents extends Cevents{
         array_push($queries,"DELETE from members WHERE idM = $idM ");
         array_push($queries,"DELETE from events WHERE idExt = $idM ");
 
-        $this->C->DMLsql_bulk($queries);
+        $this->C->Db_queryBulk($queries);
 
     }
 
@@ -144,7 +144,7 @@ class ACevents extends Cevents{
 
         $psts = $this->C->processPosts($this->events_posts, true, false);
 
-        $setValues = $this->C->DMLsql_setValues_fromArr( $psts->vars);
+        $setValues = $this->C->Db_setValsFromArr( $psts->vars);
 
         $query = "INSERT into events SET $setValues ";
 
@@ -160,7 +160,7 @@ class ACevents extends Cevents{
             foreach($_POST['prices'] AS $priceQuery)
                 array_push($queries, "INSERT into events_vars SET {$priceQuery} , idEv = $idEv ");
 
-             $this->C->DMLsql_bulk($queries);
+             $this->C->Db_queryBulk($queries);
         }
 
     }
@@ -170,7 +170,7 @@ class ACevents extends Cevents{
 
         $psts = $this->C->processPosts($this->events_posts, true, false);
 
-        $setValues = $this->C->DMLsql_setValues_fromArr( $psts->vars);
+        $setValues = $this->C->Db_setValsFromArr( $psts->vars);
 
         $query = "UPDATE events SET $setValues  WHERE idEv = $idEv ";
 
@@ -192,7 +192,7 @@ class ACevents extends Cevents{
             foreach($_POST['prices'] AS $priceQuery)
                 array_push($queries, "INSERT into events_vars SET {$priceQuery} , idEv = $idEv ");
 
-             $this->C->DMLsql_bulk($queries);
+             $this->C->Db_queryBulk($queries);
 
             //echo "delete events_vars {$query_delete} <br>";
             //var_dump($queries);

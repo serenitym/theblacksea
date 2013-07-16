@@ -27,13 +27,13 @@
 
     » preluate cu GET_objProperties
     =====================================================================
-     renderDisplay_Items ($items, $tmplStr='', $tmplPath='', &$obj='')
+     Render_items ($items, $tmplStr='', $tmplPath='', &$obj='')
 
      $items = arra
 -->
 
 <div>
-    ".$this->renderDisplay_Items(
+    ".$this->Render_items(
         $o->news,
         "
             <div>
@@ -55,16 +55,16 @@
 
 <!-- Iterarea prin array-uri unidensionale
 
-     renderDisplay_Items_uniDimens($items, $tmplStr='', $tmplPath='', &$obj='')
+     Render_array($items, $tmplStr='', $tmplPath='', &$obj='')
 
         - logica este idem cu cea a arra-urile muldimensionale doar
         ca ne referim la itemul curent cu ~i sau $i pentru tmplStr / tmplPath
 
  -->
 <div>
-    ".$this-> renderDisplay_Items_uniDimens(
-        $this->someItems,
-        <p>{~i}</p>
+    ".$this-> Render_array(
+        $this->someItems,'','',
+        "<p>{~i}</p>"
     )."
 </div>
 
@@ -72,12 +72,12 @@
 
 <!-- Integrarea de templateuri ale altui obiect / sau ale aceluiasi obiect
 
-    renderDisplay_fromObj(&$obj, $tmplStr='', $tmplPath='')
+    Render_object(&$obj, $tmplStr='', $tmplPath='')
             - ase folosii parametrul de tmplPath al metodei
 -->
 
  <div>
-     ".$this->renderDisplay_fromObj(
+     ".$this->Render_object(
         $this->objName,
         '',
         $this->objName->modType.'/'
@@ -86,7 +86,7 @@
      )."
 
 
-     ".$this->renderDisplay_fromObj(
+     ".$this->Render_object(
             $this->objName,
             '',
             'MODELS/objName/tmpl/templateFile.html'
@@ -99,7 +99,7 @@
 <div>
 
     ".( $this->admin
-        ?  $this->renderDisplay_fromObj(
+        ?  $this->Render_object(
              $o,
              '',
             'MODELS/objName/tmpl/templateFile.html')
@@ -112,7 +112,7 @@
  <!--==========================[ FOLOSIREA EDITmode]=====================================-->
  <!--ENTS-->
 <div class='allENTS allNews' id='allNews_{$o->LG}'>
-    ".$this->renderDisplay_Items(
+    ".$this->Render_items(
         $o->news,
         "
             <div class='ENT news' id='news_{~ao->idNews}_{~o->lang}'>

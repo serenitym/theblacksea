@@ -7,14 +7,14 @@
        mbr_websiteLink
    -->
     ".($this->admin
-        ? $this->renderDisplay_fromObj($this, '',
+        ? $this->Render_object($this, '',
             $o->modType.'/events/tmpl_'.$o->template.'/tmpl/ADMIN/addMember.html')
         :""
     )."
 
     <!--<div class='ENT membr' id='membr_1_en'>-->
 
-    ".$this->renderDisplay_Items($o->members,
+    ".$this->Render_items($o->members, $o, '',
        "
         <div class='ENT membr' id='membr_{~ao->idM}_en'>
 
@@ -31,7 +31,8 @@
                         </div>
 
                         <!--  LOCALS/events/tmpl_tribalFest/tmpl/listEvents1.html -->
-                        `.~this->renderDisplay_fromObj(~o->events[~ao->idM],'', ~o->modType.'/events/tmpl_'.~o->template.'/tmpl/listEvents1.html').`
+                        `.~this->Render_object(~o->events[~ao->idM],'',
+                            ~o->modType.'/events/tmpl_'.~o->template.'/tmpl/listEvents1.html').`
 
                     </div>
             </div>
@@ -42,13 +43,12 @@
         </div>
 
        "
-      ,"",$o
     )."
 
 </div>
 
 ".$o->get_events(0,6,'')."
 
-".$this->renderDisplay_fromObj($o, '',
+".$this->Render_object($o, '',
        $o->modType.'/events/tmpl_'.$o->template.'/tmpl/exception_events.html')."
 

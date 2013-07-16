@@ -1,2 +1,2 @@
 <?php
-$psw = 'adminTribal';
+$psw = 'adminBSea';

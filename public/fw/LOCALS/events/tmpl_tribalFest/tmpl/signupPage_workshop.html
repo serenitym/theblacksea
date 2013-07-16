@@ -5,12 +5,10 @@
             {$o->mbr_name}
         </a>
      </div>
-    ".$this->renderDisplay_fromObj(
-        $o->events[$o->idM],'',
+    ".$this->Render_object($o->events[$o->idM], 'path',
         $o->modType.'/events/tmpl_'.$o->template.'/tmpl/listEvents1.html')."
 
-    ".$this->renderDisplay_fromObj(
-        $o,'',
+    ".$this->Render_object($o, 'path',
         $o->modType.'/events/tmpl_'.$o->template.'/tmpl/signup_workshops.html'
     )."
 

@@ -1,109 +1,105 @@
-13 iunie 2013
-
-tbf - css sitePrez
-fmw - GEN_edit
-
-12 iunie 2013
-
-Ultimele chestii pt. site-ul TribalFest
+16 iulie...
+si cu toate astea....
 
 
-- 1. Sincronizat schimbarile de pe text site si urcat pe tribalfestbucharest
+15 iulie
 
-- 2. Adaugat si Gala Show la regula de 10% discount pana la data de 1 Sep,
+- este atat de tarziu...
 
-- 3. Am observat ca la Gala Show sign-up form, a ramas campul "Tell us more about you". L-as scoate de acolo ca nu mai are sens.
+Cblog
+CLblog extends Cblog
+ACblog
 
-- 4.  Fest schedule - facuta o pagina si linkuita la textul pe care l-am inclus deja pe Homepage (i.e. "Check out Fest Schedule")
+13 iulie
 
-- 5. Test mail intra pe spam
-
-- 6. pus linkurile la HomePage
-
-- 7. modificat preturile workshopurilor & mailurile managerilor
-
-andreea.bonea@gmail.com,
-myrhermina@yahoo.com,
-ioana@serenitymedia.ro
-
-* deocamdata m-am lasat si pe mine ca daca apar probleme sa testez usor.
-O sa o scot peste vreo sapt sau cand vrei tu.
+ /**
+ * Si aici avem mai multe optiuni / filre?
+ * 1. din tot blogul / archive
+ * 2. pe categorie in special din blog / archive
+ * 3. alte filtre (ex: dupa tipul de record )
+ */
 
 
+filterName : category / via get
+filterValue :
 
-- 8. pus anuntzul de discount la galashow + schimbar pretul la 15 euro
+ex: Set_queryRecordsBy[filterName](filterValue = '')
 
- Sign up before <b>September 1st 2013</b> and get a <b>10%</b> discount !
- color: #8E5F1F !important;
-
-- 9. pus modalitatile de plata
-
-
-
- 1. Book your space by wiring money to the following EUR Bank Account
-Recipient: Andreea Bonea
-IBAN: RO33 BTRLEURCRT0217778101
-SWIFT: BTRLRO22
-
-OR
-
-2. Reserve your space via Paypal andreea.bonea@gmail.com.
-Make sure to include TribalFestBucharest in the subject line.
-You should also mention if the payment is for workshops/ dance contest/open stage or gala show.
+se poate porni de la un query de baza si practic aceste filtre vor fi adaugiri
+de wheruri
 
 
+Deci aici cred ca trebuie facuta o logica generala...
+ce inseamna filtru dupa categorie si dupa altele
++ dupa templating ( dar de unde stii ca mai ai nevoie si de templating)
+Cautzi sa vezi daca exista metoda
+
+Sa nu uitam ca un query ar putea sa aibe mai multe filtre
+ex:
+1. este din start category : idC
+2. altul ar putea sa fie orice altceva...
+
+Sa vedem ce notiuni am incorporat
+
+### Proprietati :###
+
+tmplFiles[$methodHandle]
+
+$methodHandle = determinata de requesturi cum ar fii $_GET['idRec'] sau setari
+
+$methodHandles[$idTree]
 
 
+### Metode: ###
 
-1 iunie 2013
-Ce mai e de facut ?
-- trimitere mailuri faza2
-
-    - subscriberul apasa pe linkul de confirmare => mailuri
-      la managerii eventului / workshopului
-    - Acest mail pentru manageri va avea si el un buton de confirm
-      payment . La apasarea acestui buton te va redirecta catre pagina
-     siteului + formular logare si se va retine in baza de date ca
-     plata a fost confirmata. Nu cred ca mai are rost sa trimitem inca
-     un mail la subscriber.
-
-- afisarea tabelului cu cei inregistrati la eveniment
-( nu foarte complicat de facut)
-
-======
-despre tabelul de subscriptions
-======
+_handle_request()
+    * SETS: methodHandle , template_file
+    * CALL: [methodHandle]_setData
 
 
 
-STATISTICI
-total_nr subscriptions
-total_nr confirmed
-total_nr unconfirmed
 
 
-=========
-
-2 tabele payment unconfirmed / confirmed
-
- - ordonate dupa data de inregistrare
-
-=========
-
-usr_name
-usr_email
-usr_address
-usr_status 0 /1
-sub_date
-
-ev_name
 
 
-==== lasat pe mai tarziu
-1 tabel
-    ev_name
-    nr_subs
-    nr_confirmed
 
-statistice
+actiunile / dinamica siteului = defapt cu requesturile  siteului
+deci daca ne dam seama clar de requesturile posibile in interiorul siteului
+ne-am putea da seama foarte usor si de dinamica acestui
+Asa ca hai sa schitzam niste requesturi
 
+dar mai intai....
+
+$idTree & $idNode
+$idTree & $idNode & $idRec
+$idTree & $idNode & $filterName = something1 & filervalue = something2
+
+ s-ar putea sa putem trimite aceste filtre si print-un post ca sa trimitem mai multe
+ dar asta ramane de vazut
+
+cred ca trebuie sa ne gandim si la partea de ordonare
+
+
+Cblog
+CblogArchive extends Cblog
+
+ACblog extends
+
+ACblogArchive extends
+
+CLblog
+Cblog extends CLblog
+
+type = blog.archive
+
+settings : jSON:
+
+=> Carchive
+
+$this->opt->handler = home
+
+Cblog
+CLblog extends Cblog
+
+ACblog extends CLblog
+ACLblog extends ACblog

@@ -5,23 +5,23 @@
 #========================================
 
 
-mainTemplate: tribalFest
-mainModel: sitePrez
+mainModel: blogSite
+mainTemplate: bsea
 
 
 #========================================
 # tipuri de module existente
 #========================================
-mods: [PLUGINS, MODELS, GENERAL, LOCALS]
+modTypes: [PLUGINS, MODELS, GENERAL, LOCALS]
 
-#nu imi e foarte clar la ce sunt bune urmatoarele
-models: [contact,  single, gallery]
 
-plugins: [toolbar, ivyMenu, feedback]
+MODELS: [contact, single, gallery, blog]
 
-general: [TOOLbar, GEN_edit, EDITmode]
+PLUGINS: [toolbar, ivyMenu, feedback]
 
-locals: [ events, members, sitePrez ]
+GENERAL: [TOOLbar, GEN_edit, EDITmode]
+
+LOCALS: [blogSite ]
 
 #========================================
 # modulele instantiate automat
@@ -40,28 +40,44 @@ default_PLUGINS: [LANG, ivyMenu, feedback]
 
 
 #=========================================
+# module utilizate , retinute serializat in var/ tmp/ serUsedModules.txt
+mods: []
+#  modName:
+#    modType: ''
+#    admin: '1 / 0 - adminMods[modName]'
+#    default: '1 / 0 - default_modType'
+#    defaultAdmin: '1 / 0 defaultAdmin_modType'
+
+
+
+
+#=========================================
 # tree stuff
 #=========================================
 
 tree: []
 tempTree: []
 
-# typeul / modelul default cand se intra
-type: single
-modType: MODELS
 
-id: 1
-idTree: 1
-idNode: 1
+#id: 1
+#idTree: 1
+#idNode: 1
 
+#=========================================
+# current node data
+#=========================================
+
+# ar trebui culese din tree si nu in acest mod
+mgrName: blogSite
+mgrType: LOCALS
 
 
 #========================================
 # other settings
 #========================================
 
-INC_css: ''
-INC_js: ''
+cssInc: ''
+jsInc: ''
 admin: false
 # DB: pointer la baza de date
 

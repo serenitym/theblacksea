@@ -27,7 +27,7 @@
                    ".( !$o->ev_price
                         ? "<div class='varPrices radio-varPrices' >
                                 <span class='title'>Prices : </span>"
-                               .$this->renderDisplay_Items($o->prices,
+                               .$this->Render_items($o->prices, '','',
                                     "<input type='radio' name='ev_price' class='radio-btn' value='{~ao->ev_price}'> {~ao->ev_nameVar}
                                     "
                                 ).

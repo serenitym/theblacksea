@@ -5,7 +5,7 @@
 
             <?php
 
-                echo $core->ctrlDisplay_fromObjRes($core->ivyMenu, 'superfish');
+                echo $core->Render_ModulefromRes($core->ivyMenu, 'superfish');
             ?>
         </div>
     </div>
@@ -18,11 +18,13 @@
 
         <?php
 
-        # echo $core->$ob_name->modType."<br>";
-         $obName = $core->type;
-
-         echo $core->ctrlDisplay($core->$obName);
-        //echo 'Page content';
+         //echo $core->mgrName."<br>";
+         $obName = $core->mgrName;
+         /*echo "sitePrez - content.php : "
+             .(is_object($core->$obName)
+                ? 'este obiect <br>'
+                : 'nu este obiect <br>');*/
+         echo $core->Handle_Render($core->$obName);
         ?>
     </div>
 

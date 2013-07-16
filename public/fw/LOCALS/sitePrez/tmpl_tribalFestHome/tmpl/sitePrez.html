@@ -2,24 +2,20 @@
 
     <div id='home-gallery'>
         <div id='container-gallery'>
-            ".$this->ctrlDisplay_fromObj($this->gallery)."
+            ".$this->Render_Module($this->gallery)."
         </div>
     </div>
 </div>
 <div class='container-home'>
     <div class = 'SING row1 festDetails'  id='festDetails_0_en'>
         <div class='EDeditor details'>
-
-            <!--/var/www/tbf/public/RES/LOCALS/sitePrez/en_festDetails.html -->
-            ".$this->ctrlDisplay_fromObjRes($o, 'festDetails')."
-
-
+            ".$this->Render_ModulefromRes($o, 'festDetails')."
         </div>
     </div>
 
     <div class = 'row2'>
 
-        ".$this->renderDisplay_Items($o->members,
+        ".$this->Render_items($o->members,'','',
             "
                 <div class='instructorPrev'>
                     <div class='img-med2Pic img-container'>

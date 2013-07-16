@@ -45,10 +45,12 @@
 
     ".(count($o->events[$o->idM]->listEvents) == 0
 
-        ?   $this->renderDisplay_fromObj($o,'', $o->modType.'/events/tmpl_'.$o->template.'/tmpl/ADMIN/add_wsEvent.html')
+        ?   $this->Render_object($o,'path',
+                $o->modType.'/events/tmpl_'.$o->template.'/tmpl/ADMIN/add_wsEvent.html')
 
 
-        :   $this->renderDisplay_fromObj($o->events[$o->idM],'', $o->modType.'/events/tmpl_'.$o->template.'/tmpl/AlistEvents1.html')
+        :   $this->Render_object($o->events[$o->idM],'path',
+                $o->modType.'/events/tmpl_'.$o->template.'/tmpl/AlistEvents1.html')
     )."
 
     <div class='clearfix'></div>

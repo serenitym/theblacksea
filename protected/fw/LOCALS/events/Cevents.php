@@ -34,11 +34,11 @@ class Cevents extends eventRegister
                                 ";
 
        $query_subs_unconf      = $query_subs . " WHERE usr_status = 0 ORDER BY events_registrations.idSub desc";
-       $this->subEvents_unconf = $this->C->GET_modProperties($this, $query_subs_unconf);
+       $this->subEvents_unconf = $this->C->Handle_Db_fetch($this, $query_subs_unconf);
 
 
        $query_subs_conf      = $query_subs . " WHERE usr_status = 1 ORDER BY events_registrations.idSub desc";
-       $this->subEvents_conf = $this->C->GET_modProperties($this, $query_subs_conf);
+       $this->subEvents_conf = $this->C->Handle_Db_fetch($this, $query_subs_conf);
 
 
 
@@ -67,7 +67,7 @@ class Cevents extends eventRegister
                           ";
 
         $this->subEvent = new stdClass();
-        $this->C->GET_modProperties($this->subEvent, $query);
+        $this->C->Handle_Db_fetch($this->subEvent, $query);
 
         $this->subEvent->ev_name = htmlspecialchars_decode($this->subEvent->ev_name, ENT_QUOTES);
         // error_log("************** decoded ev_name  ".$this->subEvent->ev_name  );
@@ -236,7 +236,7 @@ class Cevents extends eventRegister
         if(!$event['ev_price'])
         {
             $query_prices = "SELECT * from events_vars WHERE idEv = {$event['idEv']}";
-            $event['prices'] = $this->C->GET_modProperties($this, $query_prices,'',false);
+            $event['prices'] = $this->C->Handle_Db_fetch($this, $query_prices,'',false);
 
 
             $prices = array();
@@ -283,7 +283,7 @@ class Cevents extends eventRegister
                             from events WHERE idExt = $idM  {$where}  {$exception} ";
         $this->events[$idM] = new stdClass();
         $this->events[$idM]->idM = $idM;
-        $this->events[$idM]->listEvents = $this->C->GET_modProperties($this, $query_events,'process_event');
+        $this->events[$idM]->listEvents = $this->C->Handle_Db_fetch($this, $query_events,'process_event');
 
         //echo "get_events query = ".$query_events."<br>";
         return "";
@@ -306,7 +306,7 @@ class Cevents extends eventRegister
         $where = $idM ? " WHERE idM = $idM" : "";
 
         $query_members = "SELECT * from members {$where}";
-        $this->members = $this->C->GET_modProperties($this, $query_members, $processMeth);
+        $this->members = $this->C->Handle_Db_fetch($this, $query_members, $processMeth);
 
     }
 
@@ -365,7 +365,7 @@ class Cevents extends eventRegister
     $mod->admin  =              # true / false - daca sunt pe admin
     $mod->LG     =              # limba curenta
     $mod->lang   =              # limba curenta
-    $mod->nameF  =              # numele de RES al paginii/ categoriei curente in limba curenta
+    $mod->nodeResFile  =              # numele de RES al paginii/ categoriei curente in limba curenta
  *                                 ex: name: Categorie Noua = Categorie_noua
 
 
@@ -373,7 +373,7 @@ class Cevents extends eventRegister
     $mod->idNode    =             # id-ul categoriei curente
     $mod->idTree    =             # id-ul parintelui originar
     $mod->level  =             # levelul din tree la care se afla cat
-    $mod->type   =             # tipul categoriei curente ex: MODELS / LOCALS
+    $mod->mgrName   =             # tipul categoriei curente ex: MODELS / LOCALS
 
 
     #date despre acest modul
@@ -384,11 +384,11 @@ class Cevents extends eventRegister
  *
  * =====[ USABLE DB - methods ]=================================
  *
- *    GET_resultArray ($result, $method = 'fetch_assoc')
+ *    Db_Get_rows ($result, $method = 'fetch_assoc')
  *        * returneaza un array multdimensional cu datele returnate de $result
  *
  *
- *    GET_modProperties(&$mod,$query,$processResMethod='', $onlyArr = false)
+ *    Handle_Db_fetch(&$mod,$query,$processResMethod='', $onlyArr = false)
  *
  *      *  $mod                              - obiectul care a apelat metoda
         *  $query                            - query-ul de procesat
@@ -400,7 +400,7 @@ class Cevents extends eventRegister
         *                                      si procesate de processResMethod
  *
  *   USE LIKE this
- *      $this->news = $this->C->GET_modProperties($this, $query, 'procesNews');
+ *      $this->news = $this->C->Handle_Db_fetch($this, $query, 'procesNews');
  *
  *   =>$this->news = array(0=> [title=>'', content=>'', idNews=>'' ], 1=> [], ...);
  *
@@ -411,7 +411,7 @@ class Cevents extends eventRegister
      * like a second __construct()
      */
 
-    function _setINI(){
+    function _init_(){
 
         // ADMISNISTARRE ACTIUNI
         // daca se face singup

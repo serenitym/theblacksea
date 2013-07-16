@@ -41,13 +41,13 @@ class eventRegister
 
         */
 
-        if (defined('smtpPort'))
-            $mail = new ivyMailer(smtpServer, smtpPort);
+        if (defined('SMTP_PORT'))
+            $mail = new ivyMailer(SMTP_SERVER, SMTP_PORT);
         else
-            $mail = new ivyMailer(smtpServer);
+            $mail = new ivyMailer(SMTP_SERVER);
 
-        $mail->username = smtpUser;
-        $mail->password = smtpPass;
+        $mail->username = SMTP_USER;
+        $mail->password = SMTP_PASS;
 
         //======================================================================
 
@@ -57,8 +57,8 @@ class eventRegister
         $tmplHtml = "{$this->modType}/{$this->modName}/tmpl_{$this->template}"
                   . "/tmpl/mail/{$tmpl_file}.html";
 
-        $messageTxt = $this->C->renderDisplay_fromObj($this, '', $tmplTxt);
-        $messageHtml = $this->C->renderDisplay_fromObj($this, '', $tmplHtml);
+        $messageTxt = $this->C->Render_object($this, 'path', $tmplTxt);
+        $messageHtml = $this->C->Render_object($this, 'path', $tmplHtml);
 
         //======================================================================
 
@@ -107,13 +107,13 @@ class eventRegister
             */
 
 
-            if (defined('smtpPort'))
-                $mail = new ivyMailer(smtpServer, smtpPort);
+            if (defined('SMTP_PORT'))
+                $mail = new ivyMailer(SMTP_SERVER, SMTP_PORT);
             else
-                $mail = new ivyMailer(smtpServer);
+                $mail = new ivyMailer(SMTP_SERVER);
 
-            $mail->username = smtpUser;
-            $mail->password = smtpPass;
+            $mail->username = SMTP_USER;
+            $mail->password = SMTP_PASS;
 
 
             //==================================================================
@@ -133,8 +133,8 @@ class eventRegister
             $tmplHtml = "{$this->modType}/{$this->modName}/tmpl_"
                      . "{$this->template}/tmpl/mail/mailSignup_subscriber.html";
 
-            $messageTxt = $this->C->renderDisplay_fromObj($this, '', $tmplTxt);
-            $messageHtml = $this->C->renderDisplay_fromObj($this, '', $tmplHtml);
+            $messageTxt = $this->C->Render_object($this, 'path', $tmplTxt);
+            $messageHtml = $this->C->Render_object($this, 'path', $tmplHtml);
 
             $mail->defineText($messageTxt);
             $mail->defineHtml($messageHtml);

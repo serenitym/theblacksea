@@ -1,10 +1,10 @@
-template: superfishTbf
+#template: superfishTbf
 
 menuSet1:
   idMenu: 1
   templateMethod: default
   levels: 1
-  ulclass1: "sf-menu sf-navbar"
+  ulclass1: "mainNav"
   items: []
 
 #menuSet1:

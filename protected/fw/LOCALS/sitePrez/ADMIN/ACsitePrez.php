@@ -7,10 +7,10 @@ class ACsitePrez extends CsitePrez{
  *
  *  reLocate($location='', $ANCORA='',$paramAdd='');
  *
- *  DMLsql($query,$reset=true,$ANCORA='',$location='',$paramAdd='', $errorMessage='')
+ *  Db_query($query,$reset=true,$ANCORA='',$location='',$paramAdd='', $errorMessage='')
  *
  *
- *  DMLsql_bulk($queries,$reset=true,$ANCORA='',$location='',$paramAdd='', $errorMessage='')
+ *  Db_queryBulk($queries,$reset=true,$ANCORA='',$location='',$paramAdd='', $errorMessage='')
  *    - run multiple queries
  *
  *

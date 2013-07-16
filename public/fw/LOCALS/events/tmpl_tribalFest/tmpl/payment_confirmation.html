@@ -25,8 +25,7 @@
         <!--  Unconfirmed subscriptions  -->
         <p class='b title2'> Total Subscriptions unconfirmed: {$o->totalSubs_unconf} </p>
         <table class='table-subs well'>
-            ".$this->renderDisplay_Items(
-                 $o->subEvents_unconf,
+            ".$this->Render_items($o->subEvents_unconf, '','',
                 "<tr>
                     <td> {~ao->ev_name} </td>
                     <td> {~ao->usr_name} </td>
@@ -43,8 +42,7 @@
         <!--  Confirmed subscriptions  -->
         <p class='b title2'> Total Subscriptions confirmed: {$o->totalSubs_conf} </p>
         <table class='table-subs well'>
-            ".$this->renderDisplay_Items(
-                $o->subEvents_conf,
+            ".$this->Render_items( $o->subEvents_conf,'','',
                 "<tr>
                     <td> {~ao->ev_name} </td>
                     <td> {~ao->usr_name} </td>

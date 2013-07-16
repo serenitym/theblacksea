@@ -1,6 +1,6 @@
 <b>
     TFB ::
-    <a href='".publicURL."?".$_SERVER['QUERY_STRING']."'>
+    <a href='".PUBLIC_URL."?".$_SERVER['QUERY_STRING']."'>
         {$o->psts->ev_name}
     </a>
     subscription
@@ -27,7 +27,7 @@ Book your space by wiring money to the following EUR Bank Account
 <br />
 
 Once you sent us payment, please  confirm  your payment of {$o->psts->ev_price} €
-<a href='".publicURL."?".$_SERVER['QUERY_STRING']."&idEv={$o->psts->idEv}&idSub={$o->psts->idSub}'>
+<a href='".PUBLIC_URL."?".$_SERVER['QUERY_STRING']."&idEv={$o->psts->idEv}&idSub={$o->psts->idSub}'>
     here.
 </a>
 

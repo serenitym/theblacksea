@@ -1,7 +1,7 @@
 <div id="header">
     <div class="container_12">
         <div id="logo" class="grid_5 alpha">
-        <a href="<?php echo publicURL; ?>">
+        <a href="<?php echo PUBLIC_URL; ?>">
         <img src="<?php echo tmpl_url; ?>/css/img/logo_prographic.png"
              alt="Prographic" />
         </a>
@@ -20,7 +20,7 @@
                     'language_selector',
                     '<span>/</span>'
                 );
-                echo $core->ctrlDisplay_fromObjRes($core->ivyMenu, 'superfish');
+                echo $core->Render_ModulefromRes($core->ivyMenu, 'superfish');
             ?>
         </div>
     </div>
@@ -36,13 +36,13 @@
     <div id="mainPage" class='container_12 clearfix'>
 
         <?php
-         echo $core->ctrlDisplay_fromObj($core->feedback);
+         echo $core->Render_Module($core->feedback);
 
-         $obName = $core->type;
+         $obName = $core->mgrName;
         #<!--src="fw/LOCALS/newsPaper/tmpl_blackSea/css/img/logo_color.png"-->
 
         # echo $core->$ob_name->modType."<br>";
-         echo $core->ctrlDisplay($core->$obName);
+         echo $core->Handle_Render($core->$obName);
         //echo 'Page content';
         ?>
     </div>

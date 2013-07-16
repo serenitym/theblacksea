@@ -5,11 +5,7 @@ record_mainPic_src: ""          # HTML src_img main picture - luata din cadrul r
 record_mainPic: ""              # HTML img main picture - luata din cadrul record-content
 total_nrComments: "0"
 
-# nume de tipuri de recorduri existente
-blogModels:
-  - blog
-  - articles
-
+# ===========================[ usefull ]========================================
 #   array cu numele variabilelor dorite din CsetINI
 #   sau dintr-un anumit model ex model: nume variabila  sau model:[var1, var2]
 objREQ:
@@ -17,6 +13,28 @@ objREQ:
   user: uid
 
 
+# nume de tipuri de recorduri existente
+blogModels:
+  - text
+  - grafic
+  - video
+
+tmplFiles:
+  home: homeListRecords
+  blog: blog
+  archive: archive
+  record: blogRecord
+
+#sufixe pentru metode
+methodHandles:
+  85: home
+  86: blog
+  88: archive
+
+filterName: category
+filterValue: ''
+
+template: bsea
 template_file: blogRecords
 
 #======================================================================================================================

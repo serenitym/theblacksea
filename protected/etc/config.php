@@ -15,40 +15,47 @@
 define('UMASK', '0755');
 //define('AVATAR',FALSE);
 
-define('baseURL','http://'.$_SERVER['HTTP_HOST'].'/');
-define('basePath',dirname($_SERVER['DOCUMENT_ROOT']).'/');
+define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/');
+define('BASE_PATH', dirname($_SERVER['DOCUMENT_ROOT']).'/');
 
-define('publicURL',baseURL.'');
-define('publicPath',basePath.'public/');
-define('incPath',basePath.'protected/');
+define('PUBLIC_URL', BASE_URL.'');
+define('PUBLIC_PATH', BASE_PATH.'public/');
+
+//========================[ Locations ]=========================================
+
+define('INC_PATH', BASE_PATH.'protected/');
+
+define('FW_PUB_PATH', PUBLIC_PATH.'fw/');
+define('FW_PUB_URL', PUBLIC_URL.'fw/');
+define('FW_INC_PATH', INC_PATH.'fw/');
+
+define('ETC_PATH', INC_PATH.'etc/');
+define('VAR_PATH', INC_PATH.'var/');
+define('LOG_PATH', VAR_PATH.'log/');
+define('RES_PATH', PUBLIC_PATH.'RES/');
+define('RES_URL', PUBLIC_URL.'RES/');
+
+define('FW_RES_TREE', VAR_PATH.'trees/');
+
+//========================[ Data Base ]=========================================
+
+//define('DB_HOST', 'dev.linuxd.net');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'blacksea_dev');
+define('DB_USER', 'blacksea');
+define('DB_PASS', 'XTfUyJ7DsvWfjcDy');
+
+define('DB_RO_USER', 'roblacksea');
+define('DB_RO_PASS', 'Z3FE2bPH9uyw3Sn3');
+
+//========================[ pt mail ]===========================================
+define('SMTP_SERVER', 'mail.serenitymedia.ro');
+define('SMTP_USER', 'noreply@serenitymedia.ro');
+define('SMTP_PASS', 'donotreply');
+define('SMTP_PORT', 587);
 
 
-define('fw_pubPath',publicPath.'fw/');
-define('fw_pubURL', publicURL.'fw/');
-define('fw_incPath',incPath.'fw/');
+set_include_path(BASE_PATH.'protected/');
 
-define('varPath',incPath.'var/');
-define('logPath',varPath.'log/');
-define('resPath',publicPath.'RES/');
-define('resURL',publicURL.'RES/');
-
-define('fw_resTree',varPath.'trees/');
-
-set_include_path(basePath.'protected/');
-
-define('dbHost', 'dev.linuxd.net');
-//define('dbHost', 'localhost');
-define('dbName', 'tribalFest');
-define('dbUser', 'tribalFest');
-define('dbPass', 'tribalFest');
-
-define('dbroUser', '');
-define('dbroPass', '');
-
-# pt mail
-define('smtpServer','mail.serenitymedia.ro');
-define('smtpUser','noreply@serenitymedia.ro');
-define('smtpPass','donotreply');
-define('smtpPort',587);
 
 

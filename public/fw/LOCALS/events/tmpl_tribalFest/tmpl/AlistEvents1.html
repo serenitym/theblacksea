@@ -14,7 +14,7 @@
        <!--<div class='ENT ev' id='ev_1_en'>-->
 
 
-       ".$this->renderDisplay_Items( $o->listEvents,
+       ".$this->Render_items( $o->listEvents, $o, '',
             "
                 <div class='ENT ev' id='ev_{~ao->idEv}_en'  style='{~ao->style}' >
 
@@ -72,10 +72,7 @@
                         </div>
 
                 </div>
-                ",
-                '',$o
-
-
+                "
        )."
 
    </div>

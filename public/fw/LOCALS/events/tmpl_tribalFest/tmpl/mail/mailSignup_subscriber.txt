@@ -1,6 +1,6 @@
     TFB :: event {$o->psts->ev_name} subscription
 
-    ".publicURL."?".$_SERVER['QUERY_STRING']."
+    ".PUBLIC_URL."?".$_SERVER['QUERY_STRING']."
 
 
 
@@ -22,6 +22,6 @@ SWIFT: BTRLRO22
 
 
 Once you sent us payment, please  confirm  your payment of {$o->psts->ev_price} €
-at : ".publicURL."?".$_SERVER['QUERY_STRING']."&idEv={$o->psts->idEv}&idSub={$o->psts->idSub}
+at : ".PUBLIC_URL."?".$_SERVER['QUERY_STRING']."&idEv={$o->psts->idEv}&idSub={$o->psts->idSub}
 
 

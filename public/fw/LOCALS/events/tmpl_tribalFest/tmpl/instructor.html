@@ -38,7 +38,8 @@
     </div>
 
 
-    ". $this->renderDisplay_fromObj($o->events[$o->idM],'', $o->modType.'/events/tmpl_'.$o->template.'/tmpl/AlistEvents1.html')."
+    ". $this->Render_object($o->events[$o->idM], 'path',
+            $o->modType.'/events/tmpl_'.$o->template.'/tmpl/AlistEvents1.html')."
 
     <div class='clearfix'></div>
 
