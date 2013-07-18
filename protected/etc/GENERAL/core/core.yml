@@ -60,16 +60,16 @@ tempTree: []
 
 
 #id: 1
-#idTree: 1
-#idNode: 1
+idTree: 85
+idNode: 85
 
 #=========================================
 # current node data
 #=========================================
 
 # ar trebui culese din tree si nu in acest mod
-mgrName: blogSite
-mgrType: LOCALS
+mgrName: blog
+mgrType: MODELS
 
 
 #========================================

@@ -14,22 +14,30 @@ objREQ:
 
 
 # nume de tipuri de recorduri existente
+# defapt mai mult un fel de record types- ar trebui un refactoring pe denumire
 blogModels:
+  - video
   - text
   - grafic
-  - video
 
 tmplFiles:
-  home: homeListRecords
+  home: home
   blog: blog
   archive: archive
   record: blogRecord
+  grafic: blogRecord
+  text:  blogRecord
+  video: blogRecord
 
 #sufixe pentru metode
 methodHandles:
   85: home
   86: blog
   88: archive
+
+blogSections:
+  blog: 86
+  archive: 88
 
 filterName: category
 filterValue: ''
