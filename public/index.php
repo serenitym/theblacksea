@@ -4,7 +4,6 @@ error_log("[ ivy ] "."//////////////////////////////// [ BlackSea page load ] //
 error_log("[ ivy ] "."/////////////////////////////////////////////////////////////////////////////////////////////////");
 error_log("[ ivy ] "."                                                                                                 ");
 error_log("[ ivy ] "."                                                                                                 ");
-session_start();
 #xdebug_start_trace('../trace.txt');
 
     require_once('../protected/etc/config.php');
