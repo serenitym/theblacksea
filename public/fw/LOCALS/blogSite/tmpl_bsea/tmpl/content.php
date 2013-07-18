@@ -15,6 +15,7 @@
             ?>
 	    </div>
 	</div>
+    <div class="clearfix"></div>
     <!-- end topbar -->
     <?php
 
