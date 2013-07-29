@@ -20,6 +20,7 @@ a:hover {border-bottom:none;text-decoration: none;}
 .lightblue {background-color:#D2EDF5;}
 .mediumblue {background-color:#A7DEED;border-bottom: 8px solid #D2EDF5;}
 .lightgrey {background-color:#f4f4f4;}
+.openfilesBg {background-color: #FF97B5;padding: 1px 3px;}
 .fullwidth {width:100%; float:left;}
 .formatIcons {width:90px; margin:5px auto; position: relative; }
 .shadow {
@@ -148,7 +149,30 @@ li.shareText {list-style: none; display: inline-block;}
 .blogSectionColumn:hover {padding-top:10px;cursor:pointer;margin-top:0;}
 
 /* stiluri pentru foto */
-.imageColumn { position: relative; float:left;display:inline-block;text-align: left;margin-right:0.5%;width:24.5%;}
+.imageColumn {
+    position: relative;
+    float:left;
+    display:inline-block;
+    text-align: left;
+    margin-right:0.5%;
+    width:24.5%;
+}
+
+.archivePrevRec {
+    position: relative;
+    float: left;
+    height: 280px;
+    /*vertical-align: text-top;*/
+    display:inline-block;
+    text-align: left;
+    margin-right:0.5%;
+    width:24.5%;
+}
+.allrecords {
+    overflow: hidden;
+}
+    .record-unpublished{ color: #ff4500 !important;}
+
 .imageColumn:hover {cursor:pointer;}
 .imageColumnHead, .imageColumnHead a {font-family:"futura-pt", Arial, serif; font-size: 12px; text-transform: uppercase;text-decoration: none; color:#333;border-bottom: none;}
 .StoryLabel {font-family:"futura-pt", Arial, serif; font-size: 11px; text-transform: uppercase;text-decoration: none; }
@@ -279,3 +303,4 @@ li.relatedContent a:hover {border-bottom: none;}
 a.noBorder{ border: 0px; color: inherit;}
 
 .home-latestIn {position: absolute;left: 0px;}
+

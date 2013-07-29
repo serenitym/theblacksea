@@ -1,0 +1,49 @@
+<div class='block overflow'>
+	<div class='textColumnBig right space '>
+        {$o->profile->bio}
+	    <p></p>
+	    <div class='fullwidth'>
+            <div class='label'>
+                Stories
+            </div>
+        </div>
+	    <ul class='contributions space'>
+		    <li><a href=''>Lorem ipsum dolor sit amet, eos ea consetetur</a></li>
+		    <li><a href=''>Cu graeci efficiantur mea, eam ea malis fabellas</a></li>
+		    <li><a href=''>Cum vitae libris altera no, labitur euripidis constituto et mea</a></li>
+		
+	    </ul>
+	
+	
+	    <div class='fullwidth'><div class='label'>Blog contributions</div></div>
+	    <ul class='contributions space'>
+    		<li><a href=''>Photoblog: E misto la Techirghiol (October 13, 2010)</a></li>
+	    	<li><a href=''>Photoblog: Turism industrial de la Albena la Primorsko, Bulgaria</a></li>
+    		<li><a href=''>Photoblog: In cautarea gloriei georgiene</a></li>
+		
+	    </ul>
+    </div>
+
+    <div class='LeftColumnSmall space'>
+
+	    <div class='mainFeaturedImg space'>
+            ".($o->profile->photo
+                   ? "<img style='width:100%' src='{$o->profile->photo}'/>"
+                : "<img style='width:100%' src='RES/uploads/foto/default.jpg'/>"
+            )."
+        </div>
+	    <div class='fullwidth'>
+            <div class='Name'>{$o->profile->fullName}</div>
+        </div>
+	    <div class='imageColumnLocation blue'>{$o->profile->title}</div>
+	    <div class='fullwidth space'></div>
+	    <div class='imageColumnHead'>
+            {$o->profile->site}<br>
+		    {$o->profile->email}<br>
+            {$o->profile->phone}
+	    </div>
+    </div>
+</div>
+
+
+</div>

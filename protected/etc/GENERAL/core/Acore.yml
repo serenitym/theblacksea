@@ -17,7 +17,7 @@ adminMods:
 defaultAdmin_GENERAL:
   - TOOLbar
   - GEN_edit
-  - EDITmode
+ - EDITmode
 
 defaultAdmin_PLUGINS: []
 defaultAdmin_MODELS: []

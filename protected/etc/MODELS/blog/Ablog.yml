@@ -1,0 +1,32 @@
+posts_updateRecord:
+  title:
+    fbk_notempty: {type: "error", name: "Must have a title", mess: "Please insert a title to your article"}
+  content:
+     fbk_notempty: {type: "warning", name: "Content", mess: "Your article should have a Content"}
+  lead:
+     fbk_notempty: {type: "warning", name: "Lead", mess: "Your article should have a lead"}
+  leadSec: []
+  recordTags:
+    fbk: {type: "warning", name: "Tags", mess: "This tags are not allowed "}
+  city: []
+  country: []
+  idRecord:
+    postName: "BLOCK_id"
+
+posts_publish:
+  idRec: ""
+
+posts_unpublish:
+  idRec: ""
+
+posts_addRecord:
+  title:
+     fbk_notempty: {type: "error", name: "Title", mess: "Your article must have a title"}
+  modelBlog_name: ""
+
+blogPsts_deleteRecord:
+  idRec:
+    postName: "BLOCK_id"
+
+
+

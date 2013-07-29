@@ -17,7 +17,16 @@
 	</div>
     <div class="clearfix"></div>
     <!-- end topbar -->
+    <div class="block space">
+        <div style='width: 50%; float: right;'>
+
+            <?php echo $core->Render_Module($core->feedback); ?>
+        </div>
+        <div class="clearfix"></div>
+    </div>
     <?php
+
+
 
         //echo $core->mgrName."<br>";
         $obName = $core->mgrName;
