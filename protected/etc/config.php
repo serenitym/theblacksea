@@ -59,7 +59,7 @@ define('SMTP_PASS', 'donotreply');
 define('SMTP_PORT', 587);
 
 
-set_include_path(get_include_path() . ':' . BASE_PATH . 'protected');
+//set_include_path(get_include_path() . ':' . BASE_PATH . 'protected');
 
 
 
