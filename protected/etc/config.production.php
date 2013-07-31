@@ -15,30 +15,16 @@
 define('UMASK', '0755');
 //define('AVATAR',FALSE);
 
+
+//========================[ Locations ]=========================================
+
 define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/');
 define('BASE_PATH', dirname(dirname($_SERVER['DOCUMENT_ROOT'])).'/');
 
 define('PUBLIC_URL', BASE_URL.'');
 define('PUBLIC_PATH', BASE_PATH.'public_html/2013/');
 
-define('PUBLIC_URL', BASE_URL.'');
-define('PUBLIC_PATH', BASE_PATH.'public/');
-
-//========================[ Locations ]=========================================
-
 define('INC_PATH', BASE_PATH.'ivy-framework/');
-
-define('FW_PUB_PATH', PUBLIC_PATH.'fw/');
-define('FW_PUB_URL', PUBLIC_URL.'fw/');
-define('FW_INC_PATH', INC_PATH.'fw/');
-
-define('ETC_PATH', INC_PATH.'etc/');
-define('VAR_PATH', INC_PATH.'var/');
-define('LOG_PATH', VAR_PATH.'log/');
-define('RES_PATH', PUBLIC_PATH.'RES/');
-define('RES_URL', PUBLIC_URL.'RES/');
-
-define('FW_RES_TREE', VAR_PATH.'trees/');
 
 //========================[ Data Base ]=========================================
 
