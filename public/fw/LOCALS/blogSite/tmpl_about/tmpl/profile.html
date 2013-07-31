@@ -1,49 +1,68 @@
-<div class='block overflow'>
+<div class='{$o->profile->editStatus}SING block  sgProfile' id='sgProfile_{$o->user->uid}_en'>
 	<div class='textColumnBig right space '>
-        {$o->profile->bio}
+        <div class='EDeditor bio'>{$o->profile->bio}</div>
 	    <p></p>
 	    <div class='fullwidth'>
-            <div class='label'>
-                Stories
-            </div>
+            <div class='label'>  Stories</div>
         </div>
-	    <ul class='contributions space'>
-		    <li><a href=''>Lorem ipsum dolor sit amet, eos ea consetetur</a></li>
-		    <li><a href=''>Cu graeci efficiantur mea, eam ea malis fabellas</a></li>
-		    <li><a href=''>Cum vitae libris altera no, labitur euripidis constituto et mea</a></li>
-		
-	    </ul>
-	
-	
+
+        ".( count($o->recordsArchive) == 0
+            ? "<p> There are not stories written </p>"
+            : "<ul class='contributions space'>"
+              . $this->Render_itemsFromStr($o->recordsArchive, '', "
+                    <li>
+                        <a href='{~ao->record_href}' target='_blank'>
+                            {~ao->title}
+                        </a>
+                    </li>
+
+                ")
+              . "</ul>"
+        )."
+
 	    <div class='fullwidth'><div class='label'>Blog contributions</div></div>
-	    <ul class='contributions space'>
-    		<li><a href=''>Photoblog: E misto la Techirghiol (October 13, 2010)</a></li>
-	    	<li><a href=''>Photoblog: Turism industrial de la Albena la Primorsko, Bulgaria</a></li>
-    		<li><a href=''>Photoblog: In cautarea gloriei georgiene</a></li>
-		
-	    </ul>
+        ".( count($o->recordsBlog) == 0
+            ? "<p> There are not stories written </p>"
+            : "<ul class='contributions space'>"
+              . $this->Render_itemsFromStr($o->recordsBlog, '', "
+                    <li>
+                        <a href='{~ao->record_href}' target='_blank'>
+                        {~ao->title}
+                        </a>
+                    </li>
+              ")
+              . "</ul>"
+        )."
     </div>
 
     <div class='LeftColumnSmall space'>
 
-	    <div class='mainFeaturedImg space'>
+	    <div class='mainFeaturedImg space .photo-containter'>
             ".($o->profile->photo
-                   ? "<img style='width:100%' src='{$o->profile->photo}'/>"
-                : "<img style='width:100%' src='RES/uploads/foto/default.jpg'/>"
+                   ? "<img class='EDpic photo' style='width:100%' src='{$o->profile->photo}'/>"
+                   : "<img class='EDpic photo'  style='width:100%' src='RES/uploads/foto/default.jpg'/>"
             )."
         </div>
 	    <div class='fullwidth'>
-            <div class='Name'>{$o->profile->fullName}</div>
+            <div class='Name'>
+                <span class='ATmpl req'>Firstname/ LastName</span>
+                <span class='EDtxt first_name'>{$o->profile->first_name}</span>
+                <span class='EDtxt last_name'>{$o->profile->last_name}</span>
+
+            </div>
         </div>
-	    <div class='imageColumnLocation blue'>{$o->profile->title}</div>
+        <span class='ATmpl req'>Title</span>
+	    <div class='EDtxt imageColumnLocation blue title'>
+            {$o->profile->title}
+        </div>
 	    <div class='fullwidth space'></div>
 	    <div class='imageColumnHead'>
-            {$o->profile->site}<br>
-		    {$o->profile->email}<br>
-            {$o->profile->phone}
+            <span class='ATmpl'>site</span>
+            <span class='EDtxt site'>{$o->profile->site}</span><br>
+            <span class='ATmpl'>email</span>
+            <span class='EDtxt email'>{$o->profile->email}</span><br>
+            <span class='ATmpl'>phone</span>
+            <span class='EDtxt phone'>{$o->profile->phone}</span>
 	    </div>
     </div>
-</div>
-
-
 </div>

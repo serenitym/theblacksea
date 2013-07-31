@@ -1,0 +1,17 @@
+
+post_profile:
+  uid:
+    postName: "BLOCK_id"
+    fbk: {type: "error", name: "Not yours", mess: "This is not your profile and you are not alloed to edit it!!"}
+  bio:
+    fbk: {type: "warning", name: "Biography", mess: "You should write something about you"}
+  photo: []
+  first_name:
+    fbk: {type: "error", name: "First Name", mess: "Please enter your name"}
+  last_name:
+    fbk: {type: "error", name: "First Name", mess: "Please enter your last name"}
+  title: []
+  site: []
+  phone: []
+  email: []
+

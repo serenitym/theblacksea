@@ -175,8 +175,9 @@ li.shareText {list-style: none; display: inline-block;}
 
 .imageColumn:hover {cursor:pointer;}
 .imageColumnHead, .imageColumnHead a {font-family:"futura-pt", Arial, serif; font-size: 12px; text-transform: uppercase;text-decoration: none; color:#333;border-bottom: none;}
-.StoryLabel {font-family:"futura-pt", Arial, serif; font-size: 11px; text-transform: uppercase;text-decoration: none; }
 .imageColumnHead a:hover {text-decoration:none; border-bottom: 1px dotted #666;}
+.imageColumnHead .ATmpl {text-transform: lowercase !important;}
+.StoryLabel {font-family:"futura-pt", Arial, serif; font-size: 11px; text-transform: uppercase;text-decoration: none; }
 .imageColumnLocation {font-family:"futura-pt", Arial, serif; font-size: 11px; text-transform: uppercase; line-height: 12px; padding-top:5px;display:block;}
 .imageColumnMeta{padding-top:5px; padding-bottom:15px;padding-right:25px;font-family: "futura-pt", Times, serif;font-size:13px; color:#666;}
 .imageColumnRow {float:left; position:relative;display: block; width:100%;}

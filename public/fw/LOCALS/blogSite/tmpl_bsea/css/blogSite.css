@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.sgProfile .photo-containter{width: 253px; height: 160px; overflow: hidden;}
+/*.sgProfile .photo-containter .photo {width: 253; }*/
+
+.about-photo-containter{width: 248px; height: 142px; overflow: hidden;}
+/*.about-photo-containter .photo {width: 248; }*/

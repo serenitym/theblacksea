@@ -1,0 +1,1 @@
+a:1:{i:3;O:4:"item":13:{s:4:"name";s:5:"About";s:7:"name_ro";s:6:"Despre";s:7:"name_en";s:5:"About";s:7:"modName";s:8:"blogSite";s:6:"modOpt";s:0:"";s:2:"id";s:1:"3";s:8:"idParent";s:0:"";s:6:"idTree";s:1:"3";s:5:"level";i:0;s:7:"resFile";s:5:"About";s:4:"type";s:8:"blogSite";s:3:"idT";s:1:"3";s:7:"modType";s:6:"LOCALS";}}

@@ -1,3 +1,31 @@
+30iulie
+
+
+* observ niset probleme in CsetModule - Module_Build
+
+deoarece se instantiaza intai modulul
+partea de init vine mai apoi
+dupa setarea lui
+dar in setarea lui pote depinde de template file pentru aceasta setare
+
+profile page
+** campuri existente **
+- first_name
+- last_name
+- title
+- bio
+- photo
+- phone
+- site
+
+- email
+** invizible **
+
+- facilitati:
+*suspend - campul active
+
+
+
 16 iulie...
 si cu toate astea....
 
