@@ -1,1 +1,0 @@
-a:1:{i:85;O:4:"item":13:{s:4:"name";s:4:"Home";s:7:"name_ro";s:6:"myBlog";s:7:"name_en";s:4:"Home";s:7:"modName";s:4:"blog";s:6:"modOpt";N;s:2:"id";i:85;s:8:"idParent";s:0:"";s:6:"idTree";i:85;s:5:"level";i:0;s:7:"resFile";s:4:"Home";s:4:"type";s:4:"blog";s:3:"idT";i:85;s:7:"modType";s:6:"MODELS";}}
