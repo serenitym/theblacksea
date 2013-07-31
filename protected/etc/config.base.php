@@ -15,9 +15,6 @@ define('ENV', 'development');
 
 require_once 'config.' . ENV . '.php';
 
-define('PUBLIC_URL', BASE_URL.'');
-define('PUBLIC_PATH', BASE_PATH.'public/');
-
 //========================[ Locations ]=========================================
 
 define('FW_PUB_PATH', PUBLIC_PATH.'fw/');

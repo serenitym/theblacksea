@@ -9,6 +9,9 @@ define('BASE_PATH', dirname($_SERVER['DOCUMENT_ROOT']).'/');
 
 define('INC_PATH', BASE_PATH.'protected/');
 
+define('PUBLIC_URL', BASE_URL.'');
+define('PUBLIC_PATH', BASE_PATH.'public/');
+
 //========================[ Data Base ]=========================================
 
 //define('DB_HOST', 'dev.linuxd.net');

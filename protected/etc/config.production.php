@@ -21,6 +21,9 @@ define('BASE_PATH', dirname(dirname($_SERVER['DOCUMENT_ROOT'])).'/');
 define('PUBLIC_URL', BASE_URL.'');
 define('PUBLIC_PATH', BASE_PATH.'public_html/2013/');
 
+define('PUBLIC_URL', BASE_URL.'');
+define('PUBLIC_PATH', BASE_PATH.'public/');
+
 //========================[ Locations ]=========================================
 
 define('INC_PATH', BASE_PATH.'ivy-framework/');
