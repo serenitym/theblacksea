@@ -107,6 +107,7 @@ class ACblogSite extends CblogSite
                     || $this->user->uclass == 'admin');
                     //|| $this->user->rights['user_edit'] );
 
+        //echo "ACblogSite - Get_rightsProfile: $uid = {$this->user->uid} <br>";
         /*echo "ACblogSite Get_rightsProfile :"
              .($permision
                 ? 'Userul are Permisiuni de editare'
@@ -114,13 +115,16 @@ class ACblogSite extends CblogSite
               ."<br>";*/
         return $permision;
     }
-    function _hookRow_profileData($row)
+    function _hookRow_userData($row)
     {
+       // echo "ACblogSite - _hookRow_profileData  <br>";
         $row['editStatus'] = $this->Get_rightsProfile($row['uid']) ? '' : 'not';
         return $row;
     }
     function _init_()
     {
+        //echo "ACblogSite - _init_<br>";
+
         $this->user = &$this->C->user;
         $this->fbk = &$this->C->feedback;
         parent::_init_();
