@@ -1,4 +1,23 @@
 @charset "UTF-8";
+
+.well,
+.admin-extras{
+    text-align: right;
+    border: 1px solid #ddd;
+    border-radius: 0px 0px 3px 3px;
+    padding: 20px;
+    /*margin: 0px 7px 20px 7px;*/
+    margin-bottom: 20px;
+    background: rgba(210,210,210,0.3);
+    box-shadow: 2px 1px 4px rgba(255,255,255,0.5);
+}
+    .admin-extra{
+        text-align: left;
+        vertical-align: top;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
 /*=================[profile.html]===================*/
 .ELMcontent .bio{ min-height: 220px;}
 
@@ -9,4 +28,6 @@
 .ELMcontent .phone,
 .ELMcontent .title
 {width: 250px; text-transform: none;}
+
+
 

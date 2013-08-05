@@ -1,3 +1,30 @@
+
+core->jsTalk
+refer
+ - to EDITmode.js
+ - core.yml
+ - Ccore.php - variables
+
+Cuser extends permissions
+Cprofile extends Cuser
+ACprofile extends Cprofile
+
+
+Ccore
+ - js can now send multiple methods to be called from the same handling parrent
+ - * din pacate nu pate sa apeleze alt modul
+
+
+31 iulie
+
+EDITmode.js
+
+- adaugare proprietate pentru etraButtons: methName
+- adaugare extraHtml
+
+- refactoring la modul de bindeuri pe methName
+- adaugarea obiectului templates
+
 30iulie
 
 

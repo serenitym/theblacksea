@@ -10,8 +10,12 @@ posts_updateRecord:
     fbk: {type: "warning", name: "Tags", mess: "This tags are not allowed "}
   city: []
   country: []
+  publishDate: []
   idRecord:
     postName: "BLOCK_id"
+
+  idCat: []
+  modelBlog_name: []
 
 posts_publish:
   idRec: ""

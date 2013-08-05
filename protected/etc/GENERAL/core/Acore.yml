@@ -11,15 +11,17 @@ adminMods:
   gallery: 1,
   events: 1,
   blog: 1,
-  blogSite: 1
+  blogSite: 1,
+  profile: 1
 
 # modele instantiate automat la logarea ca admin
 defaultAdmin_GENERAL:
-  - TOOLbar
-  - GEN_edit
+  #- GEN_edit
   - EDITmode
 
-defaultAdmin_PLUGINS: []
+defaultAdmin_PLUGINS:
+  - TOOLbar
+
 defaultAdmin_MODELS: []
 defaultAdmin_LOCALS: []
 
