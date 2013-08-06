@@ -5,3 +5,16 @@
 
 .about-photo-containter{width: 248px; height: 142px; overflow: hidden;}
 /*.about-photo-containter .photo {width: 248; }*/
+
+.addthis_button_facebook > span {
+	/*background: url("img/social-connect-facebook.png") no-repeat scroll 0% 0% transparent !important;
+	background-position: 0px 0px !important;*/
+}
+
+.addthis_button_twitter {
+	/**/
+}
+
+.addthis_button_vk {
+	/**/
+}
