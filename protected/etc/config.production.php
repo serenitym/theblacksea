@@ -19,12 +19,12 @@ define('UMASK', '0755');
 //========================[ Locations ]=========================================
 
 define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/');
-define('BASE_PATH', dirname(dirname($_SERVER['DOCUMENT_ROOT'])).'/');
+define('BASE_PATH', dirname($_SERVER['DOCUMENT_ROOT']).'/');
 
 define('PUBLIC_URL', BASE_URL.'');
-define('PUBLIC_PATH', BASE_PATH.'public_html/2013/');
+define('PUBLIC_PATH', BASE_PATH.'public/');
 
-define('INC_PATH', BASE_PATH.'ivy-framework/');
+define('INC_PATH', BASE_PATH.'protected/');
 
 //========================[ Data Base ]=========================================
 
@@ -48,6 +48,6 @@ define('SMTP_PASS', 'donotreply');
 define('SMTP_PORT', 587);
 
 
-set_include_path(get_include_path() . ':' . BASE_PATH . 'php');
+set_include_path('/home/theblack/php:' . get_include_path());
 
 

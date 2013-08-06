@@ -12,6 +12,13 @@ objREQ:
   0: simpleHref_history
   user: uid
 
+assetsInc:
+  js:
+    -"/assets/fancybox/source/jquery.fancybox.js"
+    -"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.js"
+  css:
+    -"/assets/fancybox/source/jquery.fancybox.css"
+    -"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.css"
 
 # nume de tipuri de recorduri existente
 # defapt mai mult un fel de record types- ar trebui un refactoring pe denumire
@@ -44,14 +51,6 @@ filterValue: ''
 
 template: bsea
 template_file: blogRecords
-
-assetsInc:
-  js:
-    -"/assets/fancybox/source/jquery.fancybox.js"
-    -"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.js"
-  css:
-    -"/assets/fancybox/source/jquery.fancybox.css"
-    -"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.css"
 
 assetsExternal_home: >
   <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
