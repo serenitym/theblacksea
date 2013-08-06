@@ -44,3 +44,18 @@ filterValue: ''
 
 template: bsea
 template_file: blogRecords
+
+assetsInc:
+  js:
+    -"/assets/fancybox/source/jquery.fancybox.js"
+    -"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.js"
+  css:
+    -"/assets/fancybox/source/jquery.fancybox.css"
+    -"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.css"
+
+assetsExternal_home: >
+  <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+  <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.ie.css" />
+  <![endif]-->

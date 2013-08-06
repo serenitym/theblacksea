@@ -4,11 +4,9 @@ var filter;
 var PanelOpen;
 var ShareClicked;
 var moretext;
-var PanelOpen = true;
-var ShowText=false;
-var ShareClicked=false;
-var map;
-
+PanelOpen = true;
+ShowText=false;
+ShareClicked=false;
 
 setTimeout(function(){
         $(".manifesttext").slideUp();
@@ -20,11 +18,11 @@ setTimeout(function(){
   		$("#chisinau").css("display", "block"); 
         }, 2000);
         
-setTimeout(function(){
+        setTimeout(function(){
   		$("#baku").css("display", "block"); 
         }, 2700);
   
-$(".controlmanifest").click(function () {
+  $(".controlmanifest").click(function () {
 
 if (PanelOpen ==true) {
   		$(".manifesttext").slideUp();
@@ -43,38 +41,22 @@ if (PanelOpen ==true) {
   
   	$(".onTheMap").hover(
   		function(){
-  		    var place = $(this).attr('id');
-  		    $("#"+place+"_place").show();
+  		place = $(this).attr('id');
+  		$("#"+place+"_place").show();
   		},
   		function () {
-            var place = $(this).attr('id');
-  		    $("#"+place+"_place").hide();
+  	 	place = $(this).attr('id'); 
+  		$("#"+place+"_place").hide();
   		}	
   	);
-  	
-  	  /*
-	$(".authorImg").hover(
-  		function(){
-  		author = $(this).attr('id');
-  		console.log(author);
-  		$("#"+author+"_q").show();
-  		$(".authorImg").hide();
-  		},
-  		function () {
-  	 	author = $(this).attr('id'); 
-  		$("#"+author+"_q").hide();
-  		$(".authorImg").show();
-  		}	
-  	);
-*/
   
   $(".mainFeaturedImg").hover(
-      function(){
-        var number=$(this).attr('id');
-        $("#"+number+"_Thumb").show();
-      },
-  	  function () {
-  	 	var number = $(this).attr('id');
+  function(){
+  	number=$(this).attr('id');
+  	$("#"+number+"_Thumb").show();
+  		},
+  		function () {
+  	 	number = $(this).attr('id'); 
   		$("#"+number+"_Thumb").hide();
   }  
   );	
@@ -142,9 +124,7 @@ if (ShowText ==true) {
   		} 		  		
 
   });
-  
-
    		
-});
+   });
   
  

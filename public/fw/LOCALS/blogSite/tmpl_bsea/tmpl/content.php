@@ -1,7 +1,6 @@
-
 <!-- begin mainContainer -->
 <div class="mainContainer">
-	<div class="fullwidth topbar lightgrey space"> <!-- begin topbar -->
+	<div class="fullwidth topbar lightgrey blkcat<?= $core->idTree ?> space"> <!-- begin topbar -->
 	<div class="block overflow">
 		<div class="logo">The Black Sea&nbsp; <span class="blue"> Diving Deep into Stories</span></div>
             <!--<ul class="mainNav">

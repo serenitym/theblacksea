@@ -295,6 +295,18 @@ li.relatedContent a:hover {border-bottom: none;}
 }
 
 
+/* cartodb map */
+#cartodb-map {margin-top: -40px; width: 100%; height:550px; background: #333;}
+div.leaflet-control-attribution.leaflet-control {background-color: #333;color: #999;opacity: 1;border: 0px solid #333;-moz-box-shadow: 0 0 0 #000000;-webkit-box-shadow: 0 0 0 #000000;box-shadow: 0 0 0 #000000;}
+.leaflet-container {font-family: "futura-pt", Helvetica, sans-serif; font-size: 12px; color:#666;background-color: #ccc;}
+div.cartodb-popup.dark p {color: #CCC;display: block;width: 190px;max-width: 190px;margin: 0;padding: 0 0 7px;font: normal 15px/18px "futura-pt", Helvetica, sans-serif;color: #333;word-wrap: break-word;background-color: #ccc;}
+div.cartodb-popup.dark div.cartodb-popup-content-wrapper {background: #ccc;}
+.cartodb-popup-header {font: normal 21px/23px "futura-pt", Helvetica, sans-serif;}
+div.cartodb-popup.dark a.cartodb-popup-close-button {background: url('foto/close_button.png') no-repeat 0 -23px;margin:20px;}
+
+
+
+
 /*
 @media screen and (min-width:1201px) {
 .block	{width:900px;}
@@ -305,3 +317,12 @@ a.noBorder{ border: 0px; color: inherit;}
 
 .home-latestIn {position: absolute;left: 0px;}
 
+/*======== blogSite - content.php */
+.blkcat85 {
+    background: #000000 !important;m;
+}
+    .blkcat85 .logo ,
+    .blkcat85 .mainNav a {
+        color: #ffffff;
+    }
+    .blkcat85 .mainNav a:hover {color: #9BC2CC;}
