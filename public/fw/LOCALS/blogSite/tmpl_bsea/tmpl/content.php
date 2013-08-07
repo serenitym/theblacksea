@@ -25,6 +25,8 @@
     </div>
     <?php
 
+        //isset($_GET['login']) && include "login.html";
+
 
 
         //echo $core->mgrName."<br>";

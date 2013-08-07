@@ -17,6 +17,3 @@
 
 <!-- end mainContainer -->
 
-<?php
-    isset($_GET['login']) && include "login.html";
-?>

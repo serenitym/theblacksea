@@ -1,3 +1,21 @@
+branza
+oua
+rosii
+piersici
+alunele
+un dovlecel
+laptele batut
+
+
+
+
+7 august 2013
+
+deci problema lui CsetModule este defapt ca baga css si js-ul inainte de
+instantierea modulului
+in Module Set
+ar trebui sa existe Module_config si Module_inc or something
+sau mai bine zis dupa apelarea metodei de _init_
 
 core->jsTalk
 refer

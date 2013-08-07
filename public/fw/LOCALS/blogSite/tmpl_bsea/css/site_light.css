@@ -319,10 +319,11 @@ a.noBorder{ border: 0px; color: inherit;}
 
 /*======== blogSite - content.php */
 .blkcat85 {
-    background: #000000 !important;m;
+    background: #000000 !important;
+    margin-top: -1px;
 }
     .blkcat85 .logo ,
     .blkcat85 .mainNav a {
         color: #ffffff;
     }
-    .blkcat85 .mainNav a:hover {color: #9BC2CC;}
+.blkcat85 .mainNav a:hover {color: #9BC2CC;}

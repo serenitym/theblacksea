@@ -18,3 +18,7 @@
 .addthis_button_vk {
 	/**/
 }
+
+#popUp {
+    background-image: url("img/bg.gif"); background-repeat: repeat;
+}
