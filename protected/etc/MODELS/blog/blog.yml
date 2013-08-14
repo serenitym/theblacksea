@@ -23,18 +23,18 @@ assetsInc:
 # nume de tipuri de recorduri existente
 # defapt mai mult un fel de record types- ar trebui un refactoring pe denumire
 blogModels:
-  - video
-  - text
-  - grafic
+  - story #text
+  - photo #video
+  - multimedia #grafic
 
 tmplFiles:
   home: home
   blog: blog
   archive: archive
   record: blogRecord
-  grafic: blogRecord
-  text:  blogRecord
-  video: blogRecord
+  multimedia: blogRecord
+  story:  blogRecord
+  photo: blogRecord
 
 #sufixe pentru metode
 methodHandles:

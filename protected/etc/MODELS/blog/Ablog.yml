@@ -1,4 +1,6 @@
 posts_updateRecord:
+
+  #blogRecords
   title:
     fbk_notempty: {type: "error", name: "Must have a title", mess: "Please insert a title to your article"}
   content:
@@ -10,11 +12,17 @@ posts_updateRecord:
     fbk: {type: "warning", name: "Tags", mess: "This tags are not allowed "}
   city: []
   country: []
-  publishDate: []
   idRecord:
     postName: "BLOCK_id"
-
   idCat: []
+
+  #blogRecords_stats
+  publishDate: []
+
+
+  # blogRecord_settings variables
+  relatedStory: []
+  idFolder: []
   modelBlog_name: []
 
 posts_publish:
