@@ -30,7 +30,7 @@ define('INC_PATH', BASE_PATH.'protected/');
 
 //define('DB_HOST', 'dev.linuxd.net');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'theblack_dev');
+define('DB_NAME', 'theblack_production');
 define('DB_USER', 'theblack_dev');
 define('DB_PASS', 'XTfUyJ7DsvWfjcDy');
 
@@ -46,6 +46,10 @@ define('SMTP_SERVER', 'mail.serenitymedia.ro');
 define('SMTP_USER', 'noreply@serenitymedia.ro');
 define('SMTP_PASS', 'donotreply');
 define('SMTP_PORT', 587);
+//define('SMTP_SERVER', 'mail.theblacksea.eu');
+//define('SMTP_USER', 'noreply@theblacksea.eu');
+//define('SMTP_PASS', 'busDohab6');
+//define('SMTP_PORT', 25);
 
 
 set_include_path('/home/theblack/php:' . get_include_path());

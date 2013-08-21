@@ -30,6 +30,8 @@ RewriteEngine On
 
 #RewriteBase /
 
+RewriteRule ^.*local\.blacksea\.eu/(.*)$ http://2013.theblacksea.eu/$1 [L,QSA,NC]
+
 RewriteRule ^myProfile$      /index.php?idT=89&idC=89 [L,NC]
 RewriteRule ^Partners$     /index.php?idT=2&idC=2 [L,NC]
 RewriteRule ^About$     /index.php?idT=3&idC=3 [L,NC]

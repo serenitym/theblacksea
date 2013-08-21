@@ -2,7 +2,7 @@
 post_profile:
   uid:
     postName: "BLOCK_id"
-    fbk: {type: "error", name: "Not yours", mess: "This is not your profile and you are not alloed to edit it!!"}
+    fbk: {type: "error", name: "Not yours", mess: "This is not your profile and you are not allowed to edit it!!"}
   bio:
     fbk: {type: "warning", name: "Biography", mess: "You should write something about you"}
   photo: []
@@ -26,5 +26,5 @@ post_adminDelete:
 fbks:
   noRights: {type: "error" , name: "Right violation", mess: "You do not have permission to change this kind of properties, so stop!!!"}
   emptyUname: {type: "error" , name: "Empty user name", mess: "You must introduce a user name"}
-  takenUname: {type: "error" , name: "Taken user name", mess: "The user name is allredy take"}
+  takenUname: {type: "error" , name: "Taken user name", mess: "The user name is already taken"}
   #fbk_noRights: {type: , name: '', mess:}
