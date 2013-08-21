@@ -3,6 +3,7 @@ ul {display: block;list-style-type: none;margin:0; -webkit-padding-start: 0;}
 a {border-bottom: 1px dotted #666;text-decoration: none;}
 a:hover {border-bottom:none;text-decoration: none;}
 .block {width:75%;margin:0 auto; clear:both;position:relative; color:#333;max-width:1100px;}
+.block-full {margin:0 auto; clear:both;position:relative; color:#333;max-width:1100px;}
 .overflow {overflow:auto;}
 .space {margin-bottom:20px;}
 .white {background-color:#ffffff;}
@@ -199,6 +200,12 @@ li.shareText {list-style: none; display: inline-block;}
 .imageColumn.filter:hover {cursor:pointer;}
 
 .orangeleftborder {border-left:10px solid #E27747;}
+.greyleftborder {
+    border-left:10px solid #333;
+    margin-bottom: 20px;
+    padding-left: 13px;
+}
+
 .travelnotesleftborder, .Travel_Notesleftborder {border-left:10px solid #7FC7AF;}
 .photoblogleftborder, .Photoblogleftborder {border-left:10px solid #DAD072;}
 .resourcesleftborder , .Resourcesleftborder {border-left:10px solid #FF9E9D;}
@@ -267,7 +274,12 @@ li.relatedContent a:hover {border-bottom: none;}
 .showMore:hover { color:#c33;cursor:pointer;}
 .moreText {display:none;}
 .label {font-family: "futura-pt", Arial, sans-serif; font-size: 12px; text-transform: uppercase;color:#666; background-color:#edf4f4;padding:2px 5px 2px 5px;float:left;}
-.storyCaption {font-family: "skolar", Times, serif; font-size:15px; line-height: 21px; color:#333;width:65%; float:left; margin-top:10px; margin-bottom:50px;}
+.storyCaption {
+    font-family: "skolar", Times, serif;
+    font-size:15px; line-height: 21px;
+    color:#333;width:65%; /*float:left;*/
+    margin-top:10px; margin-bottom:50px;
+}
 .firstcharacter { float: left; font-size: 70px; line-height: 60px; padding-right: 8px;/* font-family: "skolar", Times, serif; */ font-weight:700;}
 .Name {font-family: "skolar", Times, serif; font-size: 17px; line-height:17px;font-weight:400;position: relative;clear:both;padding-bottom:5px;float:left;}
 .NameCentered {font-family: "skolar", Times, serif; font-size: 17px; line-height:17px;font-weight:400;position: relative;clear:both;padding-bottom:5px;}

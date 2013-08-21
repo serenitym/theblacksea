@@ -23,7 +23,10 @@ posts_updateRecord:
   # blogRecord_settings variables
   relatedStory: []
   idFolder: []
-  modelBlog_name: []
+  idFormat: []
+
+  #blogRecords_authors
+  authors: []
 
 posts_publish:
   idRec: ""
@@ -34,11 +37,18 @@ posts_unpublish:
 posts_addRecord:
   title:
      fbk_notempty: {type: "error", name: "Title", mess: "Your article must have a title"}
-  modelBlog_name: ""
+  idFormat: ""
 
 blogPsts_deleteRecord:
   idRec:
     postName: "BLOCK_id"
 
 
+# pentru multipleusers
+assetsInc_blogRecord:
+  js:
+    -"/assets/tokeninput/src/jquery.tokeninput.js"
 
+assetsInc_archiveRecord:
+  js:
+    -"/assets/tokeninput/src/jquery.tokeninput.js"
