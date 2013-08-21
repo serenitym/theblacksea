@@ -25,9 +25,14 @@
 .ELMcontent .last_name,
 .ELMcontent .site,
 .ELMcontent .email,
-.ELMcontent .phone,
-.ELMcontent .title
-{width: 250px; text-transform: none;}
+.ELMcontent .phone
+/*, .ELMcontent .title*/
+{   width: 250px;
+    text-transform: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
 
 
 

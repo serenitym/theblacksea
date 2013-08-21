@@ -1,10 +1,25 @@
-branza
-oua
-rosii
-piersici
-alunele
-un dovlecel
-laptele batut
+pt EDITmode.js
+
+<input
+data-iedit-btt = 'numeleButtonului'
+data-iedit-elm = 'numele elementului de care apartine'
+data-iedit-callback = true/ false
+>
+
+buunn...
+EDsel
+
+este o oarecare problema aici eu il vad in felul urmator
+
+<div class = 'EDsel folder' data-iedit-options='$json'>
+
+deci hai sa vedem ce am eu de facut
+1. trebuie declarata o metoda care sa preaia aceste setari
+2. 2 crearea jsonului de folders
+
+3. mai intai vom lucra pe folders
+
+
 
 
 

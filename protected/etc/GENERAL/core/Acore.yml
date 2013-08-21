@@ -16,8 +16,8 @@ adminMods:
 
 # modele instantiate automat la logarea ca admin
 defaultAdmin_GENERAL:
-  #- GEN_edit
   - EDITmode
+  #- GEN_edit
 
 defaultAdmin_PLUGINS:
   - TOOLbar
