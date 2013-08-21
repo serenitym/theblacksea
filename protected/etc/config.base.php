@@ -1,5 +1,5 @@
 <?php
-/*{{{*/
+
 //ini_set('unserialize_callback_func', array(ClassLoader::getInstance(),
     //'loadClass'));
 
@@ -9,11 +9,13 @@
                          //"SessionManager::write",
                          //"SessionManager::destroy",
                          //"SessionManager::gc"
-                        //);/*}}}*/
+                        //);
 
 define('ENV', 'development');
 
 require_once 'config.' . ENV . '.php';
+
+define('SITE_NAME', 'Around the Black Sea');
 
 //========================[ Locations ]=========================================
 
