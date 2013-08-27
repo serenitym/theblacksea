@@ -45,7 +45,7 @@ li.shareText {list-style: none; display: inline-block;}
 #sharepanel {position:relative;float:left;}
 #shareicons {float:left;display:inline;margin-top:-3px;position:relative;margin-left:5px;}
 #share {display:inline;float:left;position: relative;z-index:10;}
-.textColumnBig {width: 65%; float:left; position:relative;font-family: "futura-pt", Arial, sans-serif; font-size: 17px; line-height: 20px;color:#333;font-weight:200;}
+.textColumnBig {width: 65%; float:left; position:relative;font-family: "futura-pt", Arial, sans-serif; font-size: 17px; line-height: 20px !important;color:#333;font-weight:200;}
 .right {float:right;}
 .leftColumnBig {width: 65%; float:left; position:relative;}
 .centeredQuote {text-align: center; padding-top:20px; padding-bottom:20px; font-family: "futura-pt", Helvetica, sans-srif; font-size: 21px; font-weight: 400; font-style: italic;}
@@ -212,7 +212,7 @@ li.shareText {list-style: none; display: inline-block;}
 .openfilesleftborder, .Open_Filesleftborder {border-left:10px solid #FF3D7F;}
 
 .travelnotes, .travelnotes a,
-.Travel_Notes, .Travel_Notes a {color:#7FC7AF;border-bottom: none;}
+.Travel_Notes, .Travel_Notes a {color:#7FC7AF ;border-bottom: none;}
 .travelnotesBg, .Travel_NotesBg {background-color: #D3EAE2; padding:3px;}
 
 .photoblog, .photoblog a,
@@ -246,6 +246,7 @@ li.shareText {list-style: none; display: inline-block;}
 .photoThumbs {width: 100%;}
 
 li.relatedContent {list-style: none;width:100%;font-family: "futura-pt", Arial, serif; font-size: 14px;line-height: 16px; color:#333;font-weight: 300;}
+li.relatedContent input{width: 300px;}
 li.relatedContent a {border-bottom: 1px dotted #999;text-decoration: none;color:#333;}
 li.relatedContent a:hover {border-bottom: none;}
 .footerText {font-family: "futura-pt", Arial, serif; font-size: 13px;line-height:14px;color:#BCBEC0;font-weight: 100;padding:20px 0;}
@@ -276,7 +277,7 @@ li.relatedContent a:hover {border-bottom: none;}
 .label {font-family: "futura-pt", Arial, sans-serif; font-size: 12px; text-transform: uppercase;color:#666; background-color:#edf4f4;padding:2px 5px 2px 5px;float:left;}
 .storyCaption {
     font-family: "skolar", Times, serif;
-    font-size:15px; line-height: 21px;
+    font-size:15px; line-height: 21px !important;
     color:#333;width:65%; /*float:left;*/
     margin-top:10px; margin-bottom:50px;
 }
@@ -341,3 +342,10 @@ a.noBorder{ border: 0px; color: inherit;}
         color: #ffffff;
     }
 .blkcat85 .mainNav a:hover {color: #9BC2CC;}
+
+/*================= about.html==========*/
+.uactive0 { color: #808080 !important;}
+.uclass5 {color: #808080 !important; font-style: italic;}
+
+img.uclass5 {opacity: 0.5;}
+img.uclass5:hover {opacity: 1;}

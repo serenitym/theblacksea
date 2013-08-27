@@ -18,6 +18,8 @@ CKEDITOR.editorConfig = function( config )
 					config.language = 'en';
 					config.skin = 'moono';
                    // config.extraPlugins = 'slideshow';
+                    config.extraPlugins = 'oembed';
+                    config.allowedContent = true;
 
 
 
@@ -39,7 +41,7 @@ CKEDITOR.editorConfig = function( config )
         { name: 'basicstyles', items : [ 'Bold','Italic','Underline','RemoveFormat' ] },
         { name: 'paragraph', items : ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','BulletedList' ] },
         { name: 'colors', items : [ 'TextColor','BGColor' ] },
-        { name: 'insert', name:'save',items : [ 'Image','Flash','Table', 'Slideshow' ] }
+        { name: 'insert', name:'save',items : [ 'Image','Flash','Table', 'Iframe', 'oembed','Slideshow' ] }
     ];
     config.toolbar_defaultSmall =
     [
@@ -51,8 +53,17 @@ CKEDITOR.editorConfig = function( config )
     [
         { name: 'links', items : [ 'Link','Unlink'] },
         { name: 'basicstyles', items : [ 'RemoveFormat' ] },
-        { name: 'insert', name:'save',items : [ 'Image','Flash','Table', 'Slideshow' ] }
+        { name: 'insert', name:'save',items : [ 'Image' ] }
     ];
+
+    config.toolbar_embedVideo =
+    [
+        { name: 'links', items : [ 'Link','Unlink'] },
+        { name: 'basicstyles', items : [ 'RemoveFormat' ] },
+        { name: 'insert', name:'save',items : [ 'Image','Flash', 'Iframe','oembed' ] }
+    ];
+
+
 //config.toolbar = 'Full';
 config.toolbar_Full =
 [

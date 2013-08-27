@@ -29,11 +29,11 @@ assetsInc:
 
 assetsInc_blogRecord:
     js:
-      -"/assets/addthis/addthis.js"
+      - "/assets/addthis/addthis.js"
 
 assetsInc_archiveRecord:
     js:
-      -"/assets/addthis/addthis.js"
+      - "/assets/addthis/addthis.js"
 
 
 
