@@ -15,7 +15,7 @@ define('PUBLIC_PATH', BASE_PATH.'public/');
 //========================[ Data Base ]=========================================
 
 //define('DB_HOST', 'dev.linuxd.net');
-define('DB_HOST', '10.10.0.28');
+define('DB_HOST', 'localhost');
 define('DB_NAME', 'blacksea_dev');
 define('DB_USER', 'blacksea');
 define('DB_PASS', 'XTfUyJ7DsvWfjcDy');
