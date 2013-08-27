@@ -16,7 +16,7 @@ if (ENV == 'production') {
 
     @require_once '../protected/etc/config.base.php';
     @require_once FW_INC_PATH.'GENERAL/core/scripts/ivyStart.php';
-    $profiler = new PhpQuickProfiler(PhpQuickProfiler::getMicroTime());
+    //$profiler = new PhpQuickProfiler(PhpQuickProfiler::getMicroTime());
 
 
 //var_dump($core);

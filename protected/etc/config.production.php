@@ -42,14 +42,14 @@ define('DSN', 'mysqli://'.DB_USER.':'.DB_PASS.'@'.DB_HOST.'/'.DB_NAME);
 define('DSN_RO', 'mysqli://'.DB_RO_USER.':'.DB_RO_PASS.'@'.DB_HOST.'/'.DB_NAME);
 
 //========================[ pt mail ]===========================================
-define('SMTP_SERVER', 'mail.serenitymedia.ro');
-define('SMTP_USER', 'noreply@serenitymedia.ro');
-define('SMTP_PASS', 'donotreply');
-define('SMTP_PORT', 587);
-//define('SMTP_SERVER', 'mail.theblacksea.eu');
-//define('SMTP_USER', 'noreply@theblacksea.eu');
-//define('SMTP_PASS', 'busDohab6');
-//define('SMTP_PORT', 25);
+//define('SMTP_SERVER', 'mail.serenitymedia.ro');
+//define('SMTP_USER', 'noreply@serenitymedia.ro');
+//define('SMTP_PASS', 'donotreply');
+//define('SMTP_PORT', 587);
+define('SMTP_SERVER', 'ssl://server.creativeblue.net');
+define('SMTP_USER', 'noreply@theblacksea.eu');
+define('SMTP_PASS', 'busDohab6');
+define('SMTP_PORT', 465);
 
 
 set_include_path('/home/theblack/php:' . get_include_path());

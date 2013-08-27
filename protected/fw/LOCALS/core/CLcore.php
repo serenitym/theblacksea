@@ -12,4 +12,8 @@
 class CLcore extends Ccore
 {
 
+    public function Set_lastURL() {
+        $_SESSION['lastURL'] = Toolbox::curURL();
+    }
+
 }
