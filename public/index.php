@@ -5,13 +5,19 @@ error_log("[ ivy ] "."/////////////////////////////////////////////////");
 error_log("[ ivy ] "."                                                 ");
 error_log("[ ivy ] "."                                                 ");
 
+if (ENV == 'production') {
+    error_reporting(0);
+    @ini_set('display_errors', 0);
+}
+
 //xdebug_start_trace('../trace.txt');
 
-    require_once '../protected/etc/config.base.php';
-    require_once FW_INC_PATH.'GENERAL/core/scripts/ivyStart.php';
+    error_reporting(E_ERROR);
+
+    @require_once '../protected/etc/config.base.php';
+    @require_once FW_INC_PATH.'GENERAL/core/scripts/ivyStart.php';
     $profiler = new PhpQuickProfiler(PhpQuickProfiler::getMicroTime());
 
-//error_reporting(E_ALL);
 
 //var_dump($core);
 //echo $_SESSION['auth']->name;
@@ -19,5 +25,5 @@ error_log("[ ivy ] "."                                                 ");
 
 //xdebug_stop_trace();
 
-require_once FW_INC_PATH.'GENERAL/core/scripts/index.php';
+@require_once FW_INC_PATH.'GENERAL/core/scripts/index.php';
 
