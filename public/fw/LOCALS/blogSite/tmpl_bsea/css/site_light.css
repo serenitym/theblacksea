@@ -8,7 +8,7 @@ a:hover {border-bottom:none;text-decoration: none;}
 .space {margin-bottom:20px;}
 .white {background-color:#ffffff;}
 .darkblue {color:#1B687C;}
-.blue {color:#9BC2CC;}
+.blue {color:rgb(116, 192, 226);}
 .red {color:#c33;}
 .orange {color:#E27747;}
 .darkgrey {color:#808285;}
@@ -124,6 +124,7 @@ li.shareText {list-style: none; display: inline-block;}
 /*.textIcon:hover {opacity:1;cursor:pointer;}*/
 
 .mainFeaturedImg {position:relative; top:0; left:0;display:block; float:none; overflow:hidden; height: 160px;}
+.mainFeaturedImg > a {border-bottom: none !important;}
 .mainFeaturedImg  img {width: 100% !important;}
 .iconsThumb {position:absolute; left:0; bottom:20px; background-color: rgba(255,255,255,0.4);padding:4px 4px 4px 0px;display:none;}
 .photoIconThumb {position:relative; margin-right:6px;background-image: url("img/video_icon_thumb.png");background-repeat: no-repeat; display:inline;float:right;width:22px; height:22px;}
@@ -224,7 +225,7 @@ li.shareText {list-style: none; display: inline-block;}
 .resourcesBg , .ResourcesBg {background-color: #FFCFCF; padding:1px 3px;}
 
 .openfiles, .openfiles a,
-.Open_Files, .Open_Files a {color:#FF3D7F;}
+.Open_Files, .Opiten_Files a {color:#FF3D7F;}
 .Open_FilesBg {background-color:#FF97B5; padding:1px 3px; }
 
 
@@ -263,11 +264,11 @@ li.relatedContent a:hover {border-bottom: none;}
 .circle{width:8px;height:8px;border-radius:4px;text-align:center;/* margin:0 auto;margin-top:3px; margin-bottom:3px; */ margin-right:3px;}
 .divider {
     width:100%;
-    /*background-image: url('img/divider.png');*/
+    background-image: url('img/divider.png');
     height:2px;
     margin-bottom:5px;
     float:left;
-    border-bottom: 1px solid #eee;
+    /*border-bottom: 1px solid #eee;*/
 }
 .storyhead {font-size: 13px; text-transform: uppercase;font-weight:300;}
 .theStory {width:450px; float:right; font-family: "skolar", Times, serif; font-size:15px; line-height: 20px; color:#999;font-weight: 300;}
@@ -330,7 +331,7 @@ div.cartodb-popup.dark a.cartodb-popup-close-button {background: url('foto/close
 .blogmain_head a,
 a.noBorder{ border: 0px; color: inherit;}
 
-.home-latestIn {position: absolute;left: 0px;}
+.home-latestIn {position: absolute;left: 0px; top: 10px;}
 
 /*======== blogSite - content.php */
 .blkcat85 {
