@@ -7,7 +7,7 @@ ivyMods.blogSite = {
     enforceStyling: function(){
 
         //toate elementele vor fi stripuite de style
-        $(this.sel.record).find('*').attr("style",'');
+        $(this.sel.records).find('*').attr("style",'');
 
         /*var recordArchive_content = $(this.sel.recordArchive_content);
         var maxWidth = recordArchive_content.width();
