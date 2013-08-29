@@ -14,8 +14,8 @@ if (ENV == 'production') {
 
     error_reporting(E_ERROR);
 
-    @require_once '../protected/etc/config.base.php';
-    @require_once FW_INC_PATH.'GENERAL/core/scripts/ivyStart.php';
+    require_once '../protected/etc/config.base.php';
+    require_once FW_INC_PATH.'GENERAL/core/scripts/ivyStart.php';
     //$profiler = new PhpQuickProfiler(PhpQuickProfiler::getMicroTime());
 
 
