@@ -278,7 +278,7 @@ li.relatedContent a:hover {border-bottom: none;}
 .storyCaption {
     font-family: "skolar", Times, serif;
     font-size:15px; line-height: 21px !important;
-    color:#333;width:65%; /*float:left;*/
+    color:#333;/*width:65%;*/ /*float:left;*/
     margin-top:10px; margin-bottom:50px;
 }
 .firstcharacter { float: left; font-size: 70px; line-height: 60px; padding-right: 8px;/* font-family: "skolar", Times, serif; */ font-weight:700;}

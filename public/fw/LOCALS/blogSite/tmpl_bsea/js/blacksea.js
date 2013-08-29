@@ -1,5 +1,22 @@
 ivyMods.blogSite = {
 
+    sel: {
+       records: "*[class$=SGrecord] , *[class$=record]",
+       recordArchive_content: "*[class~=SGrecord-archive] *[class$=content]"
+    },
+    enforceStyling: function(){
+
+        //toate elementele vor fi stripuite de style
+        $(this.sel.record).find('*').attr("style",'');
+
+        /*var recordArchive_content = $(this.sel.recordArchive_content);
+        var maxWidth = recordArchive_content.width();
+        recordArchive_content.find('img, iframe').map(function(){
+                $(this).attr('style', "width = "+maxWidth+"px !important;");
+        });*/
+
+
+    },
     writeLoginLink: function (){
         var el = $("div.footerText");
         el.html(el.html() + "<a href='/?login'>Login</a>");
@@ -36,9 +53,11 @@ ivyMods.blogSite = {
 
            });
     },
+
     init: function (){
         this.writeLoginLink();
         this.showMoreText();
+        this.enforceStyling();
     }
 };
 
