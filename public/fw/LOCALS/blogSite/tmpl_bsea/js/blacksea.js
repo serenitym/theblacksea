@@ -34,7 +34,7 @@ ivyMods.blogSite = {
 
                if (visibleStat ==true) {
 
-                   jqMoretext.hide();
+                   jqMoretext.slideUp();
                    $(this).html("More");
 
                    var scrollAt = $(this).data('scrollat')
@@ -50,7 +50,7 @@ ivyMods.blogSite = {
                    $(this)
                        .html("Less")
                        .data('scrollat', scrollAt);
-                   jqMoretext.show();
+                   jqMoretext.slideDown();
                }
 
            });
