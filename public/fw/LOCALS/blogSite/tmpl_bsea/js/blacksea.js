@@ -151,7 +151,9 @@ $(document).ready(function() {
         }
     });
 
-
+$('.mainFeaturedImg>a>img').each(function(){
+    fmw.resizeImg($(this))
+});
 
 
 

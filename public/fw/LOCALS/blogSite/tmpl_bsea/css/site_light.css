@@ -25,9 +25,9 @@ a:hover {border-bottom:none;text-decoration: none;}
 .fullwidth {width:100%; float:left;}
 .formatIcons {width:90px; margin:5px auto; position: relative; }
 .shadow {
-    box-shadow: 2px 3px 5px #eaeaea;
+    /*box-shadow: 2px 3px 5px #eaeaea;*/
    /* border-top:1px dotted #ccc;*/
-    border-bottom:1px dotted #ccc;
+    /*border-bottom:1px dotted #ccc;*/
 }
 .textColumn {width: 65%; float:left; position:relative;font-family: "futura-pt", Arial, sans-serif; font-size: 0.95em; line-height: 1.4em;color:#666;font-weight:200;}
 .shareText {font-size: 12px; text-transform: uppercase;font-family: "futura-pt", Arial, sans-serif;color:#666;float:left;margin-right:7px;}
@@ -124,7 +124,7 @@ li.shareText {list-style: none; display: inline-block;}
 /*.textIcon:hover {opacity:1;cursor:pointer;}*/
 
 .mainFeaturedImg {position:relative; top:0; left:0;display:block; float:none; overflow:hidden; height: 160px;}
-.mainFeaturedImg > a {border-bottom: none !important;}
+.mainFeaturedImg > a {border-bottom: none !important; display: block; overflow: hidden; height: 150px; width: 100%;}
 .mainFeaturedImg  img {width: 100% !important;}
 .iconsThumb {position:absolute; left:0; bottom:20px; background-color: rgba(255,255,255,0.4);padding:4px 4px 4px 0px;display:none;}
 .photoIconThumb {position:relative; margin-right:6px;background-image: url("img/video_icon_thumb.png");background-repeat: no-repeat; display:inline;float:right;width:22px; height:22px;}
