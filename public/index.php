@@ -5,16 +5,17 @@ error_log("[ ivy ] "."/////////////////////////////////////////////////");
 error_log("[ ivy ] "."                                                 ");
 error_log("[ ivy ] "."                                                 ");
 
-if (ENV == 'production') {
-    error_reporting(0);
-    @ini_set('display_errors', 0);
-}
-
 //xdebug_start_trace('../trace.txt');
 
-    error_reporting(E_ERROR);
+    //error_reporting(E_ERROR);
 
     @require_once '../protected/etc/config.base.php';
+
+    if (defined(ENV) && ENV == 'production') {
+        error_reporting(0);
+        @ini_set('display_errors', 0);
+    }
+
     @require_once FW_INC_PATH.'GENERAL/core/scripts/ivyStart.php';
     //$profiler = new PhpQuickProfiler(PhpQuickProfiler::getMicroTime());
 
