@@ -22,3 +22,34 @@
 #popUp {
     background-image: url("img/bg.gif"); background-repeat: repeat;
 }
+
+input[type="button"].bsea,
+input[type="submit"].bsea,
+button.bsea
+{
+    font-family: "futura-pt", Arial, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #666;
+    background-color: #edf4f4;
+    padding: 2px 5px 2px 5px;
+    border: none;
+    line-height: 20px !important;
+    font-weight: 200;
+}
+input[type="button"].bsea:hover,
+input[type="submit"].bsea:hover,
+button.bsea:hover { color:#c33;cursor:pointer;}
+
+.getNext_blogRecords,
+.go-topPage{
+    display: block;
+    margin: 20px auto;
+}
+.go-topPage {display: none;}
+
+.blog-articlesNo {
+    text-align: center;
+    color: #999;
+    margin-bottom: 10px;
+}

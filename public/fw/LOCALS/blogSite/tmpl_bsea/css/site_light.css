@@ -267,8 +267,17 @@ li.relatedContent a:hover {border-bottom: none;}
     background-image: url('img/divider.png');
     height:2px;
     margin-bottom:5px;
+    position: relative;
     float:left;
     /*border-bottom: 1px solid #eee;*/
+}
+.divider-clear {
+    width:100%;
+    background-image: url('img/divider.png');
+    height:2px;
+    margin-bottom:5px;
+    position: relative;
+
 }
 .storyhead {font-size: 13px; text-transform: uppercase;font-weight:300;}
 .theStory {width:450px; float:right; font-family: "skolar", Times, serif; font-size:15px; line-height: 20px; color:#999;font-weight: 300;}
