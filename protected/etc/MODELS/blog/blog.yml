@@ -27,6 +27,10 @@ assetsInc:
     -"/assets/fancybox/source/jquery.fancybox.css"
     -"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.css"
 
+assetsInc_home:
+    js:
+      - "/assets/hoverIntent/hoverIntent.minified.js"
+
 assetsInc_blogRecord:
     js:
       - "/assets/addthis/addthis.js"

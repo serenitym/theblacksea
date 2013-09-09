@@ -55,11 +55,25 @@ ivyMods.blogSite = {
 
         });
     },
+    resizeImg: function(jqImg){
+	     var h = jqImg.height;
+        var w = jqImg.width;
+        if (h > w) {
+	        jqImg.css("width", "248px");
+        }
+        /*else {
+	        jqImg.css("height", "150px");
+        }*/
+    },
 
     init: function (){
         this.writeLoginLink();
         this.showMoreText();
         this.enforceStyling();
+
+	    $('.mainFeaturedImg>a>img').each(function(){
+		    ivyMods.blogSite.resizeImg($(this))
+	    });
     }
 };
 
@@ -114,7 +128,7 @@ $(document).ready(function() {
 
 
   $(".mainFeaturedImg").hover(
-      function(){
+     function(){
         var number=$(this).attr('id');
         $("#"+number+"_Thumb").show();
       },
@@ -151,9 +165,7 @@ $(document).ready(function() {
         }
     });
 
-$('.mainFeaturedImg>a>img').each(function(){
-    fmw.resizeImg($(this))
-});
+
 
 
 
