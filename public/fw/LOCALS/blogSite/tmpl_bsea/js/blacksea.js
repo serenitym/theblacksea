@@ -24,36 +24,36 @@ ivyMods.blogSite = {
         el.html(el.html() + "<a href='/?login'>Login</a>");
     },
     showMoreText: function(){
-        $(".showMore").click(function ()
-           {
+        $(".showMore").live('click',function ()
+        {
 
-               var moretext=$(this).attr('id');
-               var jqMoretext = $("#"+moretext+"_text");
+            var moretext=$(this).attr('id');
+            var jqMoretext = $("#"+moretext+"_text");
 
-               var visibleStat = jqMoretext.is(':visible');
+            var visibleStat = jqMoretext.is(':visible');
 
-               if (visibleStat ==true) {
+            if (visibleStat ==true) {
 
-                   jqMoretext.slideUp();
-                   $(this).html("More");
+                jqMoretext.slideUp();
+                $(this).html("More");
 
-                   var scrollAt = $(this).data('scrollat')
-                   //console.log("scrollAt "+scrollAt );
+                var scrollAt = $(this).data('scrollat')
+                //console.log("scrollAt "+scrollAt );
 
-                   $(window).scrollTop(scrollAt);
+                $(window).scrollTop(scrollAt);
 
-               } else {
+            } else {
 
-                   var scrollAt = $(window).scrollTop();
+                var scrollAt = $(window).scrollTop();
 
-                   //console.log("scrollAt "+scrollAt );
-                   $(this)
-                       .html("Less")
-                       .data('scrollat', scrollAt);
-                   jqMoretext.slideDown();
-               }
+                //console.log("scrollAt "+scrollAt );
+                $(this)
+                    .html("Less")
+                    .data('scrollat', scrollAt);
+                jqMoretext.slideDown();
+            }
 
-           });
+        });
     },
 
     init: function (){
