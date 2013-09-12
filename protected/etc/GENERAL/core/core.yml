@@ -27,7 +27,7 @@ LOCALS: [blogSite ]
 # modulele instantiate automat
 #========================================
 
-default_LOCALS: []
+default_LOCALS: [blogSite]
 
 default_GENERAL: []
   #- authManager

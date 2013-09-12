@@ -43,6 +43,17 @@ CKEDITOR.editorConfig = function( config )
         { name: 'colors', items : [ 'TextColor','BGColor' ] },
         { name: 'insert', name:'save',items : [ 'Image','Flash','Table', 'Iframe', 'oembed','Slideshow' ] }
     ];
+
+	 config.toolbar_webmaster =
+    [
+        { name: 'document', items : [ 'Source', '-', 'Templates', 'DocProps' ] },
+        { name: 'styles', items : [ 'FontSize' ] },
+        { name: 'links', items : [ 'Link','Unlink'] },
+        { name: 'basicstyles', items : [ 'Bold','Italic','Underline','RemoveFormat' ] },
+        { name: 'colors', items : [ 'TextColor','BGColor' ] },
+        { name: 'insert', name:'save',items : [ 'Image','Flash','Table', 'Iframe', 'oembed' ] }
+    ];
+
     config.toolbar_defaultSmall =
     [
           { name: 'document', items : [ 'Source'] },

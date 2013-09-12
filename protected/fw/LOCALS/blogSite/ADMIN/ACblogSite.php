@@ -35,5 +35,49 @@
 
 class ACblogSite extends CblogSite
 {
+    var $contentRights = 'no';
+    var $post;
 
+    function _hook_save_descPage()
+    {
+        if($this->contentRights) {
+            $this->C->feedBack->Set_mess(
+                'error',
+                'Permission error',
+                'You dont have permissions to edit this page'
+            );
+            return false;
+        }
+
+        $this->post->resName  = $_POST['BLOCK_id'].'Description';
+        $this->post->pathName = $this->C->Module_Get_pathRes($this,
+                                $this->post->resName);
+        $this->post->desc = $_POST['desc'];
+
+        //error_log("********* [ ivy ] _hook_save_descPage");
+        //var_dump($this->post);
+        return true;
+    }
+    function save_descPage()
+    {
+        var_dump($this->post);
+        Toolbox::Fs_writeTo($this->post->pathName, $this->post->desc);
+        //file_put_contents($this->post->pathName, $this->post->desc);
+
+        //return false;
+        return true;
+    }
+
+    function set_contentRights()
+    {
+        if($this->user-cid <= 2) {
+
+            $this->contentRights = '';
+        }
+    }
+
+    function _init_()
+    {
+        $this->set_contentRights();
+    }
 }
