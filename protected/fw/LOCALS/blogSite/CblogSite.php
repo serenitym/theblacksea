@@ -2,4 +2,8 @@
 class CblogSite
 {
 
+    function _init_()
+    {
+
+    }
 }

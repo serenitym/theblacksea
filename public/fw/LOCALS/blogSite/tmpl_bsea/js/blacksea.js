@@ -1,3 +1,25 @@
+ivyMods.set_iEdit.blogSite = function(){
+
+	var pageDescSettings = {
+		modName: 'blogSite',
+		saveBt: {
+			attrValue: "save description",
+			methName: "save_descPage"
+		}
+	};
+
+	iEdit.add_bttsConf( {
+		aboutDesc:  pageDescSettings,
+		blogDesc: pageDescSettings,
+		archiveDesc: pageDescSettings,
+		sponsorsDesc: pageDescSettings,
+		awardsDesc: pageDescSettings
+
+
+	});
+}
+
+
 ivyMods.blogSite = {
 
     sel: {
@@ -61,9 +83,6 @@ ivyMods.blogSite = {
         if (h > w) {
 	        jqImg.css("width", "248px");
         }
-        /*else {
-	        jqImg.css("height", "150px");
-        }*/
     },
 
     init: function (){

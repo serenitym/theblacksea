@@ -34,5 +34,31 @@
     font-weight: inherit;
 }
 
+.aboutDesc,
+.archiveDesc,
+.blogDesc
+{ width: 99%; }
+
+.aboutDesc .ELMcontent,
+.archiveDesc .ELMcontent,
+.blogDesc .ELMcontent,
+.awardsDesc .ELMcontent,
+.sponsorsDesc .ELMcontent
+{ min-height: 20px; }
+
+
+form.aboutDesc,
+form.archiveDesc,
+form.blogDesc
+{ margin-top: 20px; }
+
+form.aboutDesc .desc,
+form.archiveDesc .desc,
+form.blogDesc .desc,
+form.awardsDesc .desc,
+form.sponsorsDesc .desc
+{ min-height: 100px; }
+
+
 
 
