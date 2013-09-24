@@ -24,12 +24,12 @@ CKEDITOR.editorConfig = function( config )
 
 
 
-    config.filebrowserBrowseUrl          = './assets/kcfinder/browse.php?type=files';
-    config.filebrowserImageBrowseUrl     = './assets/kcfinder/browse.php?type=images';
-    config.filebrowserFlashBrowseUrl     = './assets/kcfinder/browse.php?type=flash';
-    config.filebrowserUploadUrl          = './assets/kcfinder/upload.php?type=files';
-    config.filebrowserImageUploadUrl     = './assets/kcfinder/upload.php?type=images';
-    config.filebrowserFlashUploadUrl     = './assets/kcfinder/upload.php?type=flash';
+    config.filebrowserBrowseUrl          = './assets/ivy-kcfinder/browse.php?type=files';
+    config.filebrowserImageBrowseUrl     = './assets/ivy-kcfinder/browse.php?type=images';
+    config.filebrowserFlashBrowseUrl     = './assets/ivy-kcfinder/browse.php?type=flash';
+    config.filebrowserUploadUrl          = './assets/ivy-kcfinder/upload.php?type=files';
+    config.filebrowserImageUploadUrl     = './assets/ivy-kcfinder/upload.php?type=images';
+    config.filebrowserFlashUploadUrl     = './assets/ivy-kcfinder/upload.php?type=flash';
 
     config.toolbar_admin =
     [
