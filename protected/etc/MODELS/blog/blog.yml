@@ -19,10 +19,20 @@ objREQ:
   0: simpleHref_history
   user: uid
 
+objProps_links:
+ blog_baseQuery: ["filters"]
+ blogHandler_home: ["baseQuery", "rowDb", "filters"]
+ blogHandler_blog: ["baseQuery", "rowDb", "filters"]
+ blogHandler_archive: ["baseQuery", "rowDb", "filters"]
+ blogHandler_record: ["baseQuery", "rowDb", "filters"]
+ blogHandler_profile: ["baseQuery", "rowDb", "filters"]
+
+
 assetsInc:
   js:
     -"/assets/fancybox/source/jquery.fancybox.js"
     -"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.js"
+    -"/assets/garand-sticky/jquery.sticky.js"
   css:
     -"/assets/fancybox/source/jquery.fancybox.css"
     -"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.css"
@@ -53,8 +63,8 @@ tmplFiles:
   home: home
   blog: blog
   archive: archive
-  blogRecord: blogRecord
-  archiveRecord: archiveRecord
+  record86: blogRecord
+  record88: archiveRecord
 
   record: blogRecord
   multimedia: blogRecord
@@ -66,6 +76,7 @@ methodHandles:
   85: home
   86: blog
   88: archive
+  idRec: record
 
 blogSections:
   blog: 86

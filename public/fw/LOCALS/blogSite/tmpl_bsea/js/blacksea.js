@@ -24,7 +24,10 @@ ivyMods.blogSite = {
 
     sel: {
        records: "*[class$=SGrecord] , *[class$=record]",
-       recordArchive_content: "*[class~=SGrecord-archive] *[class$=content]"
+       recordArchive_content: "*[class~=SGrecord-archive] *[class$=content]",
+	    selectedFilters : 'filters-selected',
+	    hoverFilters : 'filters-hover',
+	    filtersPanel: function(filterId) {return "#" + filterId + "_panel"; }
     },
     enforceStyling: function(){
 
@@ -77,22 +80,118 @@ ivyMods.blogSite = {
 
         });
     },
-    resizeImg: function(jqImg){
-	     var h = jqImg.height;
-        var w = jqImg.width;
-        if (h > w) {
-	        jqImg.css("width", "248px");
-        }
-    },
+    resizeImg: function(jqImg, proportion){
+	     var h = jqImg.height();
+        var w = jqImg.width();
 
-    init: function (){
+	    var newH = w / proportion;
+
+        //if (h > w) {}
+	    //console.log("poze gasite "+ jqImg.attr('src') + ' height = ' + h);
+	    //console.log("poze gasite "+ jqImg.attr('src') + ' width = ' + w);
+
+	    jqImg.parent().css('height', newH + 'px');
+	    //console.log("poze gasite "+ jqImg.attr('src') + ' height = ' + newH + '\n');
+
+    },
+	 resizeImgs: function(){
+		 $('.mainFeaturedImg > a > img').each(function(){
+		    ivyMods.blogSite.resizeImg($(this), 219/140);
+	    });
+
+		 $('.mainFeaturedImg-profilePhoto   img').each(function(){
+		    ivyMods.blogSite.resizeImg($(this), 219/125);
+	    });
+
+	 },
+
+	 // filters - archive
+	 removeallFilters: function(){
+		 $(".imageColumn.filter").removeClass(this.sel.selectedFilters);
+		 $(".imageColumn.filter").removeClass(this.sel.hoverFilters);
+		 $(".filter_panel").hide();
+
+	 },
+	 selectFilter : function(jqFilter){
+		 this.removeallFilters();
+		 jqFilter.addClass(this.sel.selectedFilters);
+		 var filterId = jqFilter.attr('id');
+		 $(this.sel.filtersPanel(filterId)).show();
+
+	 },
+	 hoverFilter: function(jqFilter){
+        if (jqFilter.hasClass(this.sel.selectedFilters)) {
+
+        } else {
+	        jqFilter.toggleClass(this.sel.hoverFilters);
+        }
+	 },
+	 bindsFilters: function(){
+
+		 this.selectFilter($('.'+this.sel.selectedFilters));
+		 $(".imageColumn.filter").click(function(){
+			 ivyMods.blogSite.selectFilter($(this));
+		 });
+
+		 $(".imageColumn.filter").hover(function () {
+            ivyMods.blogSite.hoverFilter($(this));
+	     });
+
+	 },
+
+	/**
+	 * stick bar ( use asset sticky.js)
+	 * for css details look in blogSite.css
+	 *
+	 * @param selector - selectorul pe care se face sticky
+	 * @param replaceClass - pt wraperul stickerului ,
+	 * se va pune doar cand se face sticky
+	 */
+	stickyBar: function(selector, stickyClass) {
+
+		var jqSelector = $(selector);
+		if(jqSelector.length) {
+			jqSelector.sticky({
+					getWidthFrom: $('#sticky-container'),
+					wrapperClassName: 'wrapSticky',
+					className: stickyClass,
+					topSpacing: 35
+				});
+		}
+
+	},
+	stickBars : function(){
+
+		this.stickyBar('#sticky-archive', 'sticked-archive');
+		this.stickyBar('#sticky-blog', 'sticked-blog');
+
+
+		$('.topbar').sticky({
+			getWidthFrom: $('body'),
+			wrapperClassName: 'wrapSticky-topbar',
+			className: 'sticked-topbar',
+			topSpacing: 0
+
+		});
+	},
+
+   init: function (){
         this.writeLoginLink();
         this.showMoreText();
         this.enforceStyling();
 
-	    $('.mainFeaturedImg>a>img').each(function(){
-		    ivyMods.blogSite.resizeImg($(this))
-	    });
+        this.resizeImgs();
+
+	     $(window).resize(function() {
+		     ivyMods.blogSite.resizeImgs();
+	     });
+
+	     this.bindsFilters();
+
+	     // daca a fost inclus pluginul de sticky bar
+	     if(typeof  $.fn.sticky == 'function') {
+	   	   this.stickBars();
+		  }
     }
 };
 
@@ -100,9 +199,7 @@ $(document).ready(function() {
 
     ivyMods.blogSite.init();
 
-    var filter;
     var PanelOpen = true;
-
 
     setTimeout(function(){
             $(".manifesttext").slideUp();
@@ -145,7 +242,6 @@ $(document).ready(function() {
   		}
   	);
 
-
   $(".mainFeaturedImg").hover(
      function(){
         var number=$(this).attr('id');
@@ -156,41 +252,6 @@ $(document).ready(function() {
   		$("#"+number+"_Thumb").hide();
   }
   );
-
-    $(".imageColumn.filter").click(function(){
-        var filter = $(this).attr('id');
-        if ($(".imageColumn.filter#" + filter).hasClass('selected')) {
-            $("#" + filter + "_panel").hide();
-        } else {
-            $(".imageColumn.filter").removeClass('selected');
-            $(".imageColumn.filter#" + filter).addClass('selected');
-            $(".imageColumn.filter").removeClass('thickBorderBlue');
-            $(".imageColumn.filter#" + filter).addClass('thickBorderBlue');
-            $(".Name").removeClass('filterblue');
-            $(".Name#" + filter + "_name").addClass('filterblue');
-            $(".filter_panel").hide();
-            $("#" + filter + "_panel").show();
-        }
-
-    });
-
-    $(".imageColumn.filter").hover(function () {
-        var filter = $(this).attr('id');
-        if ($(".imageColumn.filter#" + filter).hasClass('selected')) {
-
-        } else {
-            $(".imageColumn.filter#" + filter).toggleClass("thickBorderBlue");
-            $(".Name#" + filter + "_name").toggleClass('filterblue');
-        }
-    });
-
-
-
-
-
-
-
-
 
 });
 

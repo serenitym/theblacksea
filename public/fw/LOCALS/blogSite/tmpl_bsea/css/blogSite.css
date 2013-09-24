@@ -28,29 +28,37 @@ input[type="button"].bsea:hover,
 input[type="submit"].bsea:hover,
 button.bsea:hover { color:#c33;cursor:pointer;}
 
-
-
 .sgProfile .photo-containter{width: 253px; height: 160px; overflow: hidden;}
 
-.about-photo-containter{width: 248px; height: 142px; overflow: hidden;}
-
-
-
 #popUp { background-image: url("img/bg.gif"); background-repeat: repeat; }
-
 
 .getNext_blogRecords,
 .go-topPage{ display: block; margin: 20px auto; }
 .go-topPage {display: none;}
 
-.blog-articlesNo {
-    text-align: center;
-    color: #999;
-    margin-bottom: 10px;
-}
+.blog-articlesNo { text-align: center; color: #999; margin-bottom: 10px; }
 
 
 /*Social links*/
 .addthis_button_facebook > span { /*background: url("img/social-connect-facebook.png") no-repeat scroll 0% 0% transparent !important; background-position: 0px 0px !important;*/ }
 .addthis_button_twitter { /**/ }
 .addthis_button_vk { /**/ }
+
+
+
+/*sticky stuff*/
+#sticky-container {overflow: hidden;}
+
+.wrapSticky { float: none !important; width: 100%; }
+
+#sticky-archive , #sticky-blog { width: inherit !important ; }
+.sticked-archive #sticky-archive,
+.sticked-blog #sticky-blog
+{
+    width: 75% !important;
+    z-index: 8; background-image: url("img/bg.gif");
+}
+.sticked-archive #sticky-archive { height: 100px;}
+.sticked-blog #sticky-blog { height: 80px; }
+
+.wrapSticky-topbar > *{z-index: 19; width: 100% !important;}

@@ -1,3 +1,57 @@
+14 sept 2013
+
+problema refactoringului pe blog
+
+problema in a sparge blog-ul pe mai multe clase prezinta urm probleme:
+
+1. clasele instantiate de blog nu au acces la aceleasi prop ca si blog
+trebuie sa se refere prin blog
+
+
+ex: $this->blog->idTree sau si mai si $this->blog->C->Get_rows()
+
+poate ca o idee buna ar fi sa declaram niste pointeri primari
+si instantiere de acest gen sa se faca defapt prin core
+Astfel core poate sa "echipeze" aceste clase cu niste mini pointeri necesari
+cum as numi o astfel de metoda???
+
+-------
+as numio Module_Set_objProps ( $mod, $objName, $adminFolder, $adminPrefix = '');
+--------
+
+Ne intereseaza oare si o aplicabilitate pe partea de admin???
+
+----------
+ex: core ar putea sa decida daca sa instantieze un ADMIN/AclassName sau pur si simplu un
+className
+------------
+
+
+bineinteles ca ne putem gandii acum ca acest "objProps ar putea fi declarat in yml"
+si mda..
+hmmm...
+trebuie putin gandita toata faza asta, arputea sa iasa frumos daca o gandesc putin
+
+
+Am putea oare sa gandim aceste clase ca un fel de minicontrolere???
+hmm...
+
+well..probabil ca am putea
+defapt intrebarea este lasam partea de controling modulului iar restul
+claselor sa fie mai degraba colectii de methde?
+
+
+
+
+
+-----
+autonomia metodelor pare esentiala
+-----
+
+
+//==========================================
+
+
 
 
 
