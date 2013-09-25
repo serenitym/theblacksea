@@ -87,11 +87,13 @@ ivyMods.blogSite = {
 	    var newH = w / proportion;
 
         //if (h > w) {}
-	    //console.log("poze gasite "+ jqImg.attr('src') + ' height = ' + h);
-	    //console.log("poze gasite "+ jqImg.attr('src') + ' width = ' + w);
+	    console.log("blacksea.js - resizeImg :poze gasite "+ jqImg.attr('src') );
+	    console.log(' height = ' + h);
+	    console.log(' width = ' + w);
 
 	    jqImg.parent().css('height', newH + 'px');
-	    //console.log("poze gasite "+ jqImg.attr('src') + ' height = ' + newH + '\n');
+	    console.log(' NEWheight = ' + newH + '\n');
+
 
     },
 	 resizeImgs: function(){
