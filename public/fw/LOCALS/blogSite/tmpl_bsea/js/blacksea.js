@@ -96,7 +96,7 @@ ivyMods.blogSite = {
     },
 	 resizeImgs: function(){
 		 $('.mainFeaturedImg > a > img').each(function(){
-		    ivyMods.blogSite.resizeImg($(this), 219/140);
+		    ivyMods.blogSite.resizeImg($(this), 248/152);
 	    });
 
 		 $('.mainFeaturedImg-profilePhoto   img').each(function(){

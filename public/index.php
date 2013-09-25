@@ -5,6 +5,8 @@ error_log("[ ivy ] "."/////////////////////////////////////////////////");
 error_log("[ ivy ] "."                                                 ");
 error_log("[ ivy ] "."                                                 ");
 
+//header("Content-Security-Policy: script-src http://blacksea-beta.disqus.com");
+
 //xdebug_start_trace('../trace.txt');
 
     //error_reporting(E_ERROR);
@@ -16,7 +18,7 @@ error_log("[ ivy ] "."                                                 ");
         @ini_set('display_errors', 0);
     }
 
-    require_once FW_INC_PATH.'GENERAL/core/scripts/ivyStart.php';
+    @require_once FW_INC_PATH.'GENERAL/core/scripts/ivyStart.php';
     //$profiler = new PhpQuickProfiler(PhpQuickProfiler::getMicroTime());
 
 
