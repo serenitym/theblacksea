@@ -27,12 +27,14 @@ objProps_links:
  blogHandler_record: ["baseQuery", "rowDb", "filters"]
  blogHandler_profile: ["baseQuery", "rowDb", "filters"]
 
+#"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.js"
 
 assetsInc:
   js:
     -"/assets/fancybox/source/jquery.fancybox.js"
-    -"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.js"
     -"/assets/garand-sticky/jquery.sticky.js"
+    - "/assets/galleria/galleria-1.2.9.min.js"
+
   css:
     -"/assets/fancybox/source/jquery.fancybox.css"
     -"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.css"
@@ -48,6 +50,8 @@ assetsInc_blogRecord:
 assetsInc_archiveRecord:
     js:
       - "/assets/addthis/addthis.js"
+
+
 
 
 

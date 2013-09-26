@@ -30,19 +30,10 @@ ivyMods.blogSite = {
 	    filtersPanel: function(filterId) {return "#" + filterId + "_panel"; }
     },
     enforceStyling: function(){
-
         //toate elementele vor fi stripuite de style
         $(this.sel.records)
             .find('*[class$=content], *[class$=lead], *[class$=blogPrev-lead], *[class$=blogPrev-content]')
             .find('*').attr("style",'');
-
-        /*var recordArchive_content = $(this.sel.recordArchive_content);
-        var maxWidth = recordArchive_content.width();
-        recordArchive_content.find('img, iframe').map(function(){
-                $(this).attr('style', "width = "+maxWidth+"px !important;");
-        });*/
-
-
     },
     writeLoginLink: function (){
         var el = $("div.footerText");
@@ -51,10 +42,8 @@ ivyMods.blogSite = {
     showMoreText: function(){
         $(".showMore").live('click',function ()
         {
-
-            var moretext=$(this).attr('id');
-            var jqMoretext = $("#"+moretext+"_text");
-
+            var moretext    =$(this).attr('id');
+            var jqMoretext  = $("#"+moretext+"_text");
             var visibleStat = jqMoretext.is(':visible');
 
             if (visibleStat ==true) {
@@ -64,37 +53,29 @@ ivyMods.blogSite = {
 
                 var scrollAt = $(this).data('scrollat')
                 //console.log("scrollAt "+scrollAt );
-
                 $(window).scrollTop(scrollAt);
 
             } else {
-
                 var scrollAt = $(window).scrollTop();
-
                 //console.log("scrollAt "+scrollAt );
                 $(this)
                     .html("Less")
                     .data('scrollat', scrollAt);
                 jqMoretext.slideDown();
             }
-
         });
     },
     resizeImg: function(jqImg, proportion){
-	     var h = jqImg.height();
-        var w = jqImg.width();
-
+	    var h = jqImg.height();
+       var w = jqImg.width();
 	    var newH = w / proportion;
 
-        //if (h > w) {}
 	    console.log("blacksea.js - resizeImg :poze gasite "+ jqImg.attr('src') );
 	    console.log(' height = ' + h);
 	    console.log(' width = ' + w);
 
 	    jqImg.parent().css('height', newH + 'px');
 	    console.log(' NEWheight = ' + newH + '\n');
-
-
     },
 	 resizeImgs: function(){
 		 $('.mainFeaturedImg > a > img').each(function(){
@@ -104,7 +85,6 @@ ivyMods.blogSite = {
 		 $('.mainFeaturedImg-profilePhoto   img').each(function(){
 		    ivyMods.blogSite.resizeImg($(this), 219/125);
 	    });
-
 	 },
 
 	 // filters - archive
@@ -167,13 +147,11 @@ ivyMods.blogSite = {
 		this.stickyBar('#sticky-archive', 'sticked-archive');
 		this.stickyBar('#sticky-blog', 'sticked-blog');
 
-
 		$('.topbar').sticky({
 			getWidthFrom: $('body'),
 			wrapperClassName: 'wrapSticky-topbar',
 			className: 'sticked-topbar',
 			topSpacing: 0
-
 		});
 	},
 

@@ -1,8 +1,11 @@
 <!-- begin mainContainer -->
 <div class="mainContainer">
-	<div class="fullwidth topbar lightgrey blkcat<?= $core->idTree ?> space"> <!-- begin topbar -->
-	<div class="block overflow">
-		<div class="logo"><a class="inherit" href="/">The Black Sea </a>&nbsp; <span class="blue"> Diving Deep into Stories</span></div>
+	<div class="fullwidth topbar lightgrey blkcat<?= $core->idTree ?> space" id='topbar-bsea'> <!-- begin topbar -->
+	    <div class="block overflow">
+		    <div class="logo">
+                <a class="inherit" href="/">The Black Sea </a>
+                &nbsp; <span class="blue"> Diving Deep into Stories</span>
+            </div>
             <!--<ul class="mainNav">
                 <li class="navitem">archive</li>
                 <li class="navitem">blog</li>
