@@ -15,7 +15,7 @@ define('ENV', 'development');
 
 require_once 'config.' . ENV . '.php';
 
-define('SITE_NAME', 'Around the Black Sea');
+define('SITE_NAME', 'The Black Sea');
 
 //========================[ Locations ]=========================================
 

@@ -9,6 +9,11 @@
 .width-100pr{ width: 100%;}
 
 .textDesc { font-family: "futura-pt", Arial, sans-serif; font-size: 17px; line-height: 20px !important; color: #333; font-weight: 200; }
+/*.textDesc p {margin: 0px;}*/
+.sponsorsDesc,
+.awardsDesc {width: 65%; float: right}
+
+
 
 input[type="button"].bsea,
 input[type="submit"].bsea,
