@@ -14,6 +14,7 @@
 //define('PROFILER', '1');
 define('UMASK', '0755');
 //define('AVATAR',FALSE);
+define('FAV_ICON', 'http://serenitymedia.ro/uploads/favicon.png');
 
 
 //========================[ Locations ]=========================================
@@ -22,7 +23,7 @@ define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/');
 define('BASE_PATH', dirname($_SERVER['DOCUMENT_ROOT']).'/');
 
 define('PUBLIC_URL', BASE_URL.'');
-define('PUBLIC_PATH', BASE_PATH.'public/');
+define('PUBLIC_PATH', BASE_PATH.'public_html/');
 
 define('INC_PATH', BASE_PATH.'protected/');
 
