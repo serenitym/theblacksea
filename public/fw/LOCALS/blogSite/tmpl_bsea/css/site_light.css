@@ -46,7 +46,7 @@ li.shareText {list-style: none; display: inline-block;}
 #shareicons {float:left;display:inline;margin-top:-3px;position:relative;margin-left:5px;}
 #share {display:inline;float:left;position: relative;z-index:10;}
 .textColumnBig {width: 65%; float:left; position:relative;font-family: "futura-pt", Arial, sans-serif; font-size: 17px; line-height: 20px !important;color:#333;font-weight:200;}
-.textColumnBig p {margin: inherit;}
+.textColumnBig p {/*margin: inherit;*/}
 .right {float:right;}
 .leftColumnBig {width: 65%; float:left; position:relative;}
 .centeredQuote {text-align: center; padding-top:20px; padding-bottom:20px; font-family: "futura-pt", Helvetica, sans-srif; font-size: 21px; font-weight: 400; font-style: italic;}
@@ -295,12 +295,49 @@ li.relatedContent a:hover {border-bottom: none;}
 .label {font-family: "futura-pt", Arial, sans-serif; font-size: 12px; text-transform: uppercase;color:#666; background-color:#edf4f4;padding:2px 5px 2px 5px;float:left;}
 .storyCaption {
     font-family: "skolar", Times, serif;
-    font-size:15px; line-height: 21px !important;
-    color:#333;/*width:65%;*/ /*float:left;*/
-    margin-top:10px; margin-bottom:50px;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 18px;
+    color: #333;
+    /*width: 65%;*/
+   /* float: right;*/
+    margin-top: 10px;
+    margin-bottom: 50px;
+
 }
-.firstcharacter { float: left; font-size: 70px; line-height: 60px; padding-right: 8px;/* font-family: "skolar", Times, serif; */ font-weight:700;}
-.Name {font-family: "skolar", Times, serif; font-size: 17px; line-height:17px;font-weight:400;position: relative;clear:both;padding-bottom:5px;float:left;}
+.byFilter {font-family: "skolar", Times, serif; font-size:15px; line-height:17px;font-weight:400;position: relative;clear:both;padding-bottom:5px;float:left;}
+
+.firstcharacter {
+    float: left;
+    font-size: 70px;
+    line-height: 60px;
+    padding-right: 8px;/* font-family: "skolar", Times, serif; */
+    font-weight:700;
+}
+
+
+.Name{
+    font-family: "skolar", Times, serif;
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: 400;
+    position: relative;
+    clear: both;
+    padding-bottom: 5px;
+    float: left;
+}
+
+.SGrecord .Name {
+    font-family: "skolar", Times, serif;
+    font-size: 23px;
+    line-height: 27px;
+    font-weight: 400;
+    position: relative;
+    clear: both;
+    padding-bottom: 5px;
+}
+
+
 .NameCentered {font-family: "skolar", Times, serif; font-size: 17px; line-height:17px;font-weight:400;position: relative;clear:both;padding-bottom:5px;}
 .arrowRight {width: 0; height: 0; border-top: 5px solid transparent;border-bottom: 5px solid transparent;border-left: 5px solid white; display:inline;margin-left:4px;position:relative;float:right;margin-top:2px;}
 .arrowDown {width: 0; height: 0; border-left: 5px solid transparent;border-right: 5px solid transparent;border-top: 5px solid #333;float:left;position:relative;margin-top:7px;margin-left:5px;}
