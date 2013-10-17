@@ -69,6 +69,8 @@ ivyMods.blogSite = {
 	    var h = jqImg.height();
        var w = jqImg.width();
 	    var newH = w / proportion;
+	    var imgProportion = w /h;
+
 
 	    console.log("blacksea.js - resizeImg :poze gasite "+ jqImg.attr('src') );
 	    console.log(' height = ' + h);
@@ -76,9 +78,18 @@ ivyMods.blogSite = {
 
 	    jqImg.parent().css('height', newH + 'px');
 	    console.log(' NEWheight = ' + newH + '\n');
+	    /**
+        * Daca sa zicem proportia imaginii w/h > proportion
+        *   => imaginea este mult mai wide decat containerul ei. - o vom fixa
+        *   pe inaltimea containerului
+        */
+	    if(imgProportion > proportion) {
+		    jqImg.css('height', newH + 'px');
+	    }
     },
 	 resizeImgs: function(){
 		 $('.mainFeaturedImg > a > img').each(function(){
+			 //proportion = ~1.63157894737
 		    ivyMods.blogSite.resizeImg($(this), 248/152);
 	    });
 
