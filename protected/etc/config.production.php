@@ -23,7 +23,7 @@ define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/');
 define('BASE_PATH', dirname($_SERVER['DOCUMENT_ROOT']).'/');
 
 define('PUBLIC_URL', BASE_URL.'');
-define('PUBLIC_PATH', BASE_PATH.'public_html/');
+define('PUBLIC_PATH', BASE_PATH.'htdocs');
 
 define('INC_PATH', BASE_PATH.'protected/');
 
