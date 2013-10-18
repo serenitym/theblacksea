@@ -393,6 +393,7 @@ a.noBorder{ border: 0px; color: inherit;}
 /*======== blogSite - content.php */
 .blkcat85 {
     height: 20px;
+    margin: 0px;
     background: #000000 !important;
 }
     .blkcat85 .logo ,
