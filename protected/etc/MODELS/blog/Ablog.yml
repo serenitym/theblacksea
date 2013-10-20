@@ -53,3 +53,9 @@ assetsInc_blogRecord:
 assetsInc_archiveRecord:
   js:
     -"/assets/tokeninput/src/jquery.tokeninput.js"
+
+
+assetsInc_archiveRecordPhoto:
+  js:
+    -"/assets/tokeninput/src/jquery.tokeninput.js"
+

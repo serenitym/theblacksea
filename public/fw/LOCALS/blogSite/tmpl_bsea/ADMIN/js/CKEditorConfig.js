@@ -25,6 +25,8 @@ CKEDITOR.editorConfig = function( config )
 	//config.extraPlugins = 'sourcedialog';
 	//config.removePlugins= 'sourcearea';
 	config.extraPlugins = 'codemirror';
+	//config.extraPlugins = 'fakeobjects';
+	//config.extraPlugins = 'backup';
 
 
 
@@ -37,7 +39,7 @@ CKEDITOR.editorConfig = function( config )
 
     config.toolbar_admin =
     [
-        { name: 'document', items : [ 'Source','Sourcedialog', '-', 'Templates', 'DocProps' ] },
+        { name: 'document', items : [ 'Source', '-', 'Templates', 'DocProps' ] },
         { name: 'forms', items : [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
                'HiddenField' ] },
         { name: 'styles', items : [ 'FontSize' ] },
@@ -50,7 +52,7 @@ CKEDITOR.editorConfig = function( config )
 
 	 config.toolbar_webmaster =
     [
-        { name: 'document', items : [ 'Source','Sourcedialog', '-', 'Templates', 'DocProps' ] },
+        { name: 'document', items : [ 'Source', '-', 'Templates', 'DocProps' ] },
         { name: 'styles', items : [ 'FontSize' ] },
         { name: 'links', items : [ 'Link','Unlink'] },
         { name: 'basicstyles', items : [ 'Bold','Italic','Underline','RemoveFormat' ] },
