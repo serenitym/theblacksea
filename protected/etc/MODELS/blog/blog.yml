@@ -82,6 +82,25 @@ methodHandles:
   88: archive
   idRec: record
 
+
+handlers:
+  85:
+    handler: home
+  86:
+    handler: blog
+    tmplFile: blog
+    idRec:
+      handler: record
+      tmplFile: blogRecord
+  88:
+    handler: archive
+    tmplFile: archive
+    idRec:
+      handler: record
+      tmplFile: archiveRecord
+      tmplFile_photo: archiveRecordPhoto
+
+
 blogSections:
   blog: 86
   archive: 88
