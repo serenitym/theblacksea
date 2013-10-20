@@ -86,6 +86,7 @@ methodHandles:
 handlers:
   85:
     handler: home
+    tmplFile: home
   86:
     handler: blog
     tmplFile: blog
