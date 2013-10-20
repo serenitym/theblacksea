@@ -125,8 +125,10 @@ li.shareText {list-style: none; display: inline-block;}
 /*.textIcon:hover {opacity:1;cursor:pointer;}*/
 
 .mainFeaturedImg {position:relative; top:0; left:0;display:block; float:none; overflow:hidden;/* height: 160px;*/}
-.mainFeaturedImg > a {border-bottom: none !important; display: block; overflow: hidden;/* height: 150px;*/ width: 100%;}
-.mainFeaturedImg  img {width: 100% !important;}
+.mainFeaturedImg > a {border-bottom: none !important; display: block; overflow: hidden;/* min-height: 140px;*/ width: 100%;}
+.mainFeaturedImg  img {width: 100%  !important;}
+
+
 
 .mainFeaturedImg-profilePhoto {position:relative; top:0; left:0;display:block; float:none; overflow:hidden; /*height: 143px;*/}
 .mainFeaturedImg-profilePhoto > a {border-bottom: none !important; display: block; overflow: hidden;  width: 100%;}

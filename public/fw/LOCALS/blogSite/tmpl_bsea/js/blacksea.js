@@ -65,7 +65,23 @@ ivyMods.blogSite = {
             }
         });
     },
-    resizeImg: function(jqImg, proportion){
+	 metricsImg: function(jqImgContainer, proportion){
+		 // de la imgMetricsContainer
+		 var imgMC = {};
+		 imgMC.h = jqImgContainer.height();
+		 imgMC.w = jqImgContainer.width();
+		 imgMC.newH = imgMC.w / proportion;
+
+
+	    console.log(' Container  ' );
+	    console.log(' height = ' + imgMC.h);
+	    console.log(' width = ' + imgMC.w);
+	    console.log(' NEWheight = ' + imgMC.newH + '\n');
+		 return imgMC;
+
+
+	 },
+   resizeImgg: function(jqImg, proportion){
 	    var h = jqImg.height();
        var w = jqImg.width();
 	    var newH = w / proportion;
@@ -75,9 +91,9 @@ ivyMods.blogSite = {
 	    console.log("blacksea.js - resizeImg :poze gasite "+ jqImg.attr('src') );
 	    console.log(' height = ' + h);
 	    console.log(' width = ' + w);
+	    console.log(' NEWheight = ' + newH + '\n');
 
 	    jqImg.parent().css('height', newH + 'px');
-	    console.log(' NEWheight = ' + newH + '\n');
 	    /**
         * Daca sa zicem proportia imaginii w/h > proportion
         *   => imaginea este mult mai wide decat containerul ei. - o vom fixa
@@ -87,15 +103,31 @@ ivyMods.blogSite = {
 		    jqImg.css('height', newH + 'px');
 	    }
     },
-	 resizeImgs: function(){
-		 $('.mainFeaturedImg > a > img').each(function(){
-			 //proportion = ~1.63157894737
-		    ivyMods.blogSite.resizeImg($(this), 248/152);
-	    });
+	resizeImg: function(jqImg, imgMC, proportion) {
 
-		 $('.mainFeaturedImg-profilePhoto   img').each(function(){
-		    ivyMods.blogSite.resizeImg($(this), 219/125);
-	    });
+		console.log("blacksea.js - resizeImg :poze gasite "+ jqImg.attr('src') );
+
+		jqImg.parent().css('height', imgMC.newH + 'px');
+
+		var imgProportion = jqImg.width() / jqImg.height();
+		if(imgProportion > proportion) {
+		    jqImg.css('height', imgMC.newH + 'px');
+	    }
+
+	},
+	resizeImgContainer: function(selector,  proportion){
+	   var imgs = $(selector +' img').reverse();
+		var imgMC = this.metricsImg(imgs.first().parent(), proportion);
+		imgs.each(function(){
+			 //proportion = ~1.63157894737
+		    ivyMods.blogSite.resizeImg($(this), imgMC, proportion);
+
+	   });
+
+   },
+	resizeImgs: function(){
+		this.resizeImgContainer('.mainFeaturedImg > a > ', 248/152);
+		this.resizeImgContainer('.mainFeaturedImg-profilePhoto ', 219/125);
 	 },
 
 	 // filters - archive
