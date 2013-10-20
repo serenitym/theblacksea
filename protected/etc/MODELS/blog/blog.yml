@@ -51,6 +51,10 @@ assetsInc_archiveRecord:
     js:
       - "/assets/addthis/addthis.js"
 
+assetsInc_archiveRecordPhoto:
+    js:
+      - "/assets/addthis/addthis.js"
+
 
 
 
