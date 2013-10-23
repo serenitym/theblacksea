@@ -94,3 +94,19 @@ button.bsea:hover { color:#c33;cursor:pointer;}
    /* top: 100px;*/
    /* display: none;*/
 }
+
+.ivy-closeButton-canvas{ background: rgba(255,255,255,0.8); height: 27px; padding: 3px 0px 0px 0px; border-radius: 5px; }
+
+/*===================CKEditor styles=======================*/
+
+
+.SGrecord-archive *[id^="gallery-container"] {
+    float: right;
+
+    /*width: 700px; height: 500px;*/
+}
+/*
+- imaginile din gallery nu trebuie vazute
+*/
+.gallery  {display: none;}
+
