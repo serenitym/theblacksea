@@ -14,6 +14,8 @@ CKEDITOR.editorConfig = function( config )
 	config.extraPlugins = 'dialog';
 	config.extraPlugins = 'link';
 	config.extraPlugins = 'save';
+	config.extraPlugins = 'div';
+	config.extraPlugins = 'stylescombo';
 
 	//config.extraPlugins = 'scayt';
 	config.language = 'en';
@@ -24,7 +26,7 @@ CKEDITOR.editorConfig = function( config )
 
 	//config.extraPlugins = 'sourcedialog';
 	//config.removePlugins= 'sourcearea';
-	config.extraPlugins = 'codemirror';
+	//config.extraPlugins = 'codemirror';
 	//config.extraPlugins = 'fakeobjects';
 	//config.extraPlugins = 'backup';
 
@@ -42,42 +44,42 @@ CKEDITOR.editorConfig = function( config )
         { name: 'document', items : [ 'Source', '-', 'Templates', 'DocProps' ] },
         { name: 'forms', items : [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
                'HiddenField' ] },
-        { name: 'styles', items : [ 'FontSize' ] },
+        { name: 'styles', items : [ 'Styles', 'FontSize' ] },
         { name: 'links', items : [ 'Link','Unlink'] },
         { name: 'basicstyles', items : [ 'Bold','Italic','Underline','RemoveFormat' ] },
         { name: 'paragraph', items : ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','BulletedList' ] },
         { name: 'colors', items : [ 'TextColor','BGColor' ] },
-        { name: 'insert', name:'save',items : [ 'Image','Flash','Table', 'Iframe', 'oembed','Slideshow' ] }
+        { name: 'insert', name:'save',items : [ 'Image','Flash','Table', 'Iframe', 'oembed', 'CreateDiv' ] }
     ];
 
 	 config.toolbar_webmaster =
     [
         { name: 'document', items : [ 'Source', '-', 'Templates', 'DocProps' ] },
-        { name: 'styles', items : [ 'FontSize' ] },
+        { name: 'styles', items : [ 'Styles', 'FontSize' ] },
         { name: 'links', items : [ 'Link','Unlink'] },
         { name: 'basicstyles', items : [ 'Bold','Italic','Underline','RemoveFormat' ] },
         { name: 'colors', items : [ 'TextColor','BGColor' ] },
-        { name: 'insert', name:'save',items : [ 'Image','Flash','Table', 'Iframe', 'oembed' ] }
+        { name: 'insert', name:'save',items : [ 'Image','Flash','Table', 'Iframe', 'oembed', 'CreateDiv' ] }
     ];
 
     config.toolbar_defaultSmall =
     [
           { name: 'document', items : [ 'Source'] },
-          { name: 'insert', items : [ 'Image', 'Link' ] }
+          { name: 'insert', items : [ 'Image',  'CreateDiv', 'Link' ] }
     ];
 
     config.toolbar_default =
     [
         { name: 'links', items : [ 'Link','Unlink'] },
         { name: 'basicstyles', items : [ 'RemoveFormat' ] },
-        { name: 'insert', name:'save',items : [ 'Image' ] }
+        { name: 'insert', name:'save',items : [ 'Image', 'CreateDiv' ] }
     ];
 
     config.toolbar_embedVideo =
     [
         { name: 'links', items : [ 'Link','Unlink'] },
         { name: 'basicstyles', items : [ 'RemoveFormat' ] },
-        { name: 'insert', name:'save',items : [ 'Image','Flash', 'Iframe','oembed' ] }
+        { name: 'insert', name:'save',items : [ 'Image',  'CreateDiv','Flash', 'Iframe','oembed' ] }
     ];
 
 
@@ -183,7 +185,21 @@ config.toolbar_Full =
 	 	};
 
 
+	/*Configurarea stilurilor*/
+	config.stylesSet = 'bsea_styles';
+	config.contentsCss = '/fw/LOCALS/blogSite/tmpl_bsea/ADMIN/CKEdtiorContents.css ';
 };
+
+CKEDITOR.stylesSet.add( 'bsea_styles', [
+	{
+		name: 'galleriaContainer',
+		element: 'div',
+		styles: {},
+		attributes: {
+			'class' : 'gallery'
+		}
+	}
+]);
 /*
 CKEDITOR.on('dialogDefinition', function(ev) {
       // Take the dialog name and its definition from the event data

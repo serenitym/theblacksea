@@ -39,6 +39,7 @@ assetsInc:
     -"/assets/fancybox/source/jquery.fancybox.css"
     -"/assets/fancybox/source/helpers/jquery.fancybox-thumbs.css"
 
+
 assetsInc_home:
     js:
       - "/assets/hoverIntent/hoverIntent.minified.js"
@@ -50,12 +51,6 @@ assetsInc_blogRecord:
 assetsInc_archiveRecord:
     js:
       - "/assets/addthis/addthis.js"
-
-assetsInc_archiveRecordPhoto:
-    js:
-      - "/assets/addthis/addthis.js"
-
-
 
 
 
@@ -103,7 +98,8 @@ handlers:
     idRec:
       handler: record
       tmplFile: archiveRecord
-      tmplFile_photo: archiveRecordPhoto
+
+#     tmplFile_photo: archiveRecordPhoto
 
 
 blogSections:

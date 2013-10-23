@@ -29,20 +29,15 @@ ivyMods.blogSite = {
 	    hoverFilters : 'filters-hover',
 	    filtersPanel: function(filterId) {return "#" + filterId + "_panel"; }
     },
-    enforceStyling: function(){
-        //toate elementele vor fi stripuite de style
-        $(this.sel.records)
-            .find('*[class$=content], *[class$=lead], *[class$=blogPrev-lead], *[class$=blogPrev-content]')
-            .find('*').attr("style",'');
-    },
-    writeLoginLink: function (){
-        var el = $("div.footerText");
-        el.html(el.html() + "<a href='/?login'>Login</a>");
-    },
+	//general usage
     showMoreText: function(){
+	     $('*[id^=more]').on('showMore',function(){
+		     //alert('in show more');
+		     $(this).slideDown();
+	     });
         $(".showMore").live('click',function ()
         {
-            var moretext    =$(this).attr('id');
+            var moretext    = $(this).attr('id');
             var jqMoretext  = $("#"+moretext+"_text");
             var visibleStat = jqMoretext.is(':visible');
 
@@ -61,10 +56,13 @@ ivyMods.blogSite = {
                 $(this)
                     .html("Less")
                     .data('scrollat', scrollAt);
-                jqMoretext.slideDown();
+                //jqMoretext.slideDown();
+	            jqMoretext.trigger('showMore');
+
             }
         });
     },
+
 	 metricsImg: function(jqImgContainer, proportion){
 		 // de la imgMetricsContainer
 		 var imgMC = {};
@@ -81,29 +79,13 @@ ivyMods.blogSite = {
 
 
 	 },
-   resizeImgg: function(jqImg, proportion){
-	    var h = jqImg.height();
-       var w = jqImg.width();
-	    var newH = w / proportion;
-	    var imgProportion = w /h;
-
-
-	    console.log("blacksea.js - resizeImg :poze gasite "+ jqImg.attr('src') );
-	    console.log(' height = ' + h);
-	    console.log(' width = ' + w);
-	    console.log(' NEWheight = ' + newH + '\n');
-
-	    jqImg.parent().css('height', newH + 'px');
-	    /**
-        * Daca sa zicem proportia imaginii w/h > proportion
-        *   => imaginea este mult mai wide decat containerul ei. - o vom fixa
-        *   pe inaltimea containerului
-        */
-	    if(imgProportion > proportion) {
-		    jqImg.css('height', newH + 'px');
-	    }
-    },
-	resizeImg: function(jqImg, imgMC, proportion) {
+	 /**
+	 * Documenteaza!!!
+	 * @param jqImg
+	 * @param imgMC
+	 * @param proportion
+	 */
+	 resizeImg: function(jqImg, imgMC, proportion) {
 
 		console.log("blacksea.js - resizeImg :poze gasite "+ jqImg.attr('src') );
 
@@ -115,7 +97,8 @@ ivyMods.blogSite = {
 	    }
 
 	},
-	resizeImgContainer: function(selector,  proportion){
+	 resizeImgContainer: function(selector,  proportion){
+		//alert("resizeImgContainer cu "+proportion);
 	   var imgs = $(selector +' img').reverse();
 		var imgMC = this.metricsImg(imgs.first().parent(), proportion);
 		imgs.each(function(){
@@ -125,46 +108,29 @@ ivyMods.blogSite = {
 	   });
 
    },
-	resizeImgs: function(){
-		this.resizeImgContainer('.mainFeaturedImg > a > ', 248/152);
+
+	 //specfic
+	 resizeImgs_profile: function(){
 		this.resizeImgContainer('.mainFeaturedImg-profilePhoto ', 219/125);
+		$(window).resize(function() {
+	      ivyMods.blogSite.resizeImgContainer('.mainFeaturedImg-profilePhoto ', 219/125);
+      });
+	 },
+	 enforceStyling: function(){
+     //toate elementele vor fi stripuite de style
+     $(this.sel.records)
+         .find('*[class$=content], *[class$=lead], *[class$=blogPrev-lead], *[class$=blogPrev-content]')
+         .find('*').not('div').attr("style",'');
+	 },
+	 writeLoginLink: function (){
+	     var el = $("div.footerText");
+	     el.html(el.html() + "<a href='/?login'>Login</a>");
 	 },
 
-	 // filters - archive
-	 removeallFilters: function(){
-		 $(".imageColumn.filter").removeClass(this.sel.selectedFilters);
-		 $(".imageColumn.filter").removeClass(this.sel.hoverFilters);
-		 $(".filter_panel").hide();
 
-	 },
-	 selectFilter : function(jqFilter){
-		 this.removeallFilters();
-		 jqFilter.addClass(this.sel.selectedFilters);
-		 var filterId = jqFilter.attr('id');
-		 $(this.sel.filtersPanel(filterId)).show();
 
-	 },
-	 hoverFilter: function(jqFilter){
-        if (jqFilter.hasClass(this.sel.selectedFilters)) {
-
-        } else {
-	        jqFilter.toggleClass(this.sel.hoverFilters);
-        }
-	 },
-	 bindsFilters: function(){
-
-		 this.selectFilter($('.'+this.sel.selectedFilters));
-		 $(".imageColumn.filter").click(function(){
-			 ivyMods.blogSite.selectFilter($(this));
-		 });
-
-		 $(".imageColumn.filter").hover(function () {
-            ivyMods.blogSite.hoverFilter($(this));
-	     });
-
-	 },
-
-	/**
+	 // i think this shoul be moved in blogRecord.js
+	 /**
 	 * stick bar ( use asset sticky.js)
 	 * for css details look in blogSite.css
 	 *
@@ -172,7 +138,7 @@ ivyMods.blogSite = {
 	 * @param replaceClass - pt wraperul stickerului ,
 	 * se va pune doar cand se face sticky
 	 */
-	stickyBar: function(selector, stickyClass) {
+	 stickyBar: function(selector, stickyClass) {
 
 		var jqSelector = $(selector);
 		if(jqSelector.length) {
@@ -185,7 +151,7 @@ ivyMods.blogSite = {
 		}
 
 	},
-	stickBars : function(){
+	 stickBars : function(){
 
 		this.stickyBar('#sticky-archive', 'sticked-archive');
 		this.stickyBar('#sticky-blog', 'sticked-blog');
@@ -196,25 +162,21 @@ ivyMods.blogSite = {
 			className: 'sticked-topbar',
 			topSpacing: 0
 		});
-	},
+	 },
 
-   init: function (){
-        this.writeLoginLink();
+    init: function (){
         this.showMoreText();
         this.enforceStyling();
-
-        this.resizeImgs();
-
-	     $(window).resize(function() {
-		     ivyMods.blogSite.resizeImgs();
-	     });
-
-	     this.bindsFilters();
-
 	     // daca a fost inclus pluginul de sticky bar
 	     if(typeof  $.fn.sticky == 'function') {
 	   	   this.stickBars();
 		  }
+
+        this.resizeImgs_profile();
+        this.writeLoginLink();
+
+
+
     }
 };
 
