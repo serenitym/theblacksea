@@ -71,10 +71,10 @@ ivyMods.blogSite = {
 		 imgMC.newH = imgMC.w / proportion;
 
 
-	    console.log(' Container  ' );
+	   /* console.log(' Container  ' );
 	    console.log(' height = ' + imgMC.h);
 	    console.log(' width = ' + imgMC.w);
-	    console.log(' NEWheight = ' + imgMC.newH + '\n');
+	    console.log(' NEWheight = ' + imgMC.newH + '\n');*/
 		 return imgMC;
 
 
