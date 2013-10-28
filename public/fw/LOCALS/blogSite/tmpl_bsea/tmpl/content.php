@@ -1,6 +1,6 @@
 <!-- begin mainContainer -->
 <div class="mainContainer">
-	<div class="fullwidth topbar lightgrey blkcat<?= $core->idTree ?> space" id='topbar-bsea'> <!-- begin topbar -->
+	<div class="fullwidth topbar lightgrey blkcat85 space" id='topbar-bsea'> <!-- begin topbar -->
 	    <div class="block overflow">
 		    <div class="logo">
                 <a class="inherit" href="/">The Black Sea </a>
@@ -29,8 +29,6 @@
     <?php
 
         //isset($_GET['login']) && include "login.html";
-
-
 
         //echo $core->mgrName."<br>";
         $obName = $core->mgrName;
