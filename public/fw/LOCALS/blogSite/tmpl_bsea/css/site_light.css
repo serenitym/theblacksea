@@ -21,6 +21,7 @@ a:hover {border-bottom:none;text-decoration: none;}
 .lightblue {background-color:#D2EDF5;}
 .mediumblue {background-color:#A7DEED;border-bottom: 8px solid #D2EDF5;}
 .lightgrey {background-color:#f4f4f4;}
+.black {background-color:#000;}
 .openfilesBg {background-color: #FF97B5;padding: 1px 3px;}
 .fullwidth {width:100%; float:left;}
 .formatIcons {width:90px; margin:5px auto; position: relative; }
@@ -399,10 +400,15 @@ a.noBorder{ border: 0px; color: inherit;}
     background: #000000 !important;
 }
     .blkcat85 .logo ,
-    .blkcat85 .mainNav a {
+    .blkcat85 .mainNav a,
+    .black .mainNav a,
+    .black .logo
+    {
         color: #ffffff;
     }
-.blkcat85 .mainNav a:hover {color: #9BC2CC;}
+.blkcat85 .mainNav a:hover,
+.black .mainNav a:hover
+{color: #9BC2CC;}
 
 /*================= about.html==========*/
 .uactive0 { color: #808080 !important;}

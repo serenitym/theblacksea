@@ -52,10 +52,7 @@ blockquote
 	border-right-width: 5px;
 }
 
-a
-{
-	color: #0782C1;
-}
+a { color: #0782C1; }
 
 ol,ul,dl
 {
@@ -120,3 +117,5 @@ pre
     background: #eee;
     border: 1px solid red;
 }
+
+img{max-width: 100% !important; height: initial !important;}
