@@ -64,6 +64,7 @@ CKEDITOR.editorConfig = function( config )
 
     config.toolbar_defaultSmall =
     [
+	       { name: 'styles', items : [ 'Styles'] },
           { name: 'document', items : [ 'Source'] },
           { name: 'insert', items : [ 'Image',  'CreateDiv', 'Link' ] }
     ];
@@ -198,7 +199,16 @@ CKEDITOR.stylesSet.add( 'bsea_styles', [
 		attributes: {
 			'class' : 'gallery'
 		}
+	},
+	{
+		name: 'pullQuotes',
+		element: 'p',
+		styles: {},
+		attributes: {
+			'class' : 'pullQuotes'
+		}
 	}
+
 ]);
 /*
 CKEDITOR.on('dialogDefinition', function(ev) {
