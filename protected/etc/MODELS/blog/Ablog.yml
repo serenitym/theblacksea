@@ -7,7 +7,8 @@ posts_updateRecord:
      fbk_notempty: {type: "warning", name: "Content", mess: "Your article should have a Content"}
   lead:
      fbk_notempty: {type: "warning", name: "Lead", mess: "Your article should have a lead"}
-  sideContent: []
+  sideContent:
+    postName: "pulledQuotes"
   leadSec: []
   recordTags:
     fbk: {type: "warning", name: "Tags", mess: "This tags are not allowed "}
