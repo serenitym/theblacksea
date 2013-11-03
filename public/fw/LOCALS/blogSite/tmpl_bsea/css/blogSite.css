@@ -88,7 +88,7 @@ button.bsea:hover { color:#c33;cursor:pointer;}
 #galleria {
     position: absolute;
     height: 550px;
-    width: 50%;
+    width: 63%;
     right: 20%;
     z-index: 20;
    /* top: 100px;*/
@@ -119,5 +119,6 @@ button.bsea:hover { color:#c33;cursor:pointer;}
     color: #333;
     font-weight: 200;
     width: 75%;
+    z-index: 1;
 }
 

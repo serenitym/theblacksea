@@ -1,0 +1,39 @@
+
+ 
+ Meniul MenuFREE 
+ 
+ id-ul = 2  si Pid-ul = 0  si cu poz = 0
+ id-ul = 4  si Pid-ul = 0  si cu poz = 1
+ id-ul = 91  si Pid-ul = 0  si cu poz = 2
+ id-ul = 98  si Pid-ul = 0  si cu poz = 3
+ id-ul = 92  si Pid-ul = 0  si cu poz = 4
+ Meniul Menu1 
+ 
+ id-ul = 85  si Pid-ul = 0  si cu poz = 0
+ id-ul = 86  si Pid-ul = 0  si cu poz = 1
+ 
+ 	id-ul = 101  si Pid-ul = 86  si cu poz = 0
+ 	id-ul = 102  si Pid-ul = 86  si cu poz = 1
+ 	id-ul = 100  si Pid-ul = 86  si cu poz = 2
+ 	id-ul = 96  si Pid-ul = 86  si cu poz = 3
+ id-ul = 88  si Pid-ul = 0  si cu poz = 2
+ id-ul = 3  si Pid-ul = 0  si cu poz = 3
+ 
+Si acum vectorul
+ 
+Meniul MenuFREE
+ id-ul = 2 is Pid = 0 cu poz=0
+ id-ul = 4 is Pid = 0 cu poz=1
+ id-ul = 91 is Pid = 0 cu poz=2
+ id-ul = 98 is Pid = 0 cu poz=3
+ id-ul = 92 is Pid = 0 cu poz=4
+ 
+Meniul Menu1
+ id-ul = 85 is Pid = 0 cu poz=0
+ id-ul = 86 is Pid = 0 cu poz=1
+ id-ul = 101 is Pid = 86 cu poz=0
+ id-ul = 102 is Pid = 86 cu poz=1
+ id-ul = 100 is Pid = 86 cu poz=2
+ id-ul = 96 is Pid = 86 cu poz=3
+ id-ul = 88 is Pid = 0 cu poz=2
+ id-ul = 3 is Pid = 0 cu poz=3

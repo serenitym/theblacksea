@@ -15,6 +15,9 @@ CKEDITOR.editorConfig = function( config )
 	config.extraPlugins = 'link';
 	config.extraPlugins = 'save';
 	config.extraPlugins = 'div';
+	config.extraPlugins = 'magicline';
+	config.magicline_putEverywhere = true;
+
 	config.extraPlugins = 'stylescombo';
 
 	//config.extraPlugins = 'scayt';
@@ -23,6 +26,9 @@ CKEDITOR.editorConfig = function( config )
    // config.extraPlugins = 'slideshow';
    config.extraPlugins = 'oembed';
    config.allowedContent = true;
+
+	config.extraPlugins = 'stat';
+
 
 	//config.extraPlugins = 'sourcedialog';
 	//config.removePlugins= 'sourcearea';
@@ -66,6 +72,7 @@ CKEDITOR.editorConfig = function( config )
     [
 	       { name: 'styles', items : [ 'Styles'] },
           { name: 'document', items : [ 'Source'] },
+          { name: 'basicstyles', items : [ 'RemoveFormat' ] },
           { name: 'insert', items : [ 'Image',  'CreateDiv', 'Link' ] }
     ];
 
@@ -73,7 +80,7 @@ CKEDITOR.editorConfig = function( config )
     [
         { name: 'links', items : [ 'Link','Unlink'] },
         { name: 'basicstyles', items : [ 'RemoveFormat' ] },
-        { name: 'insert', name:'save',items : [ 'Image', 'CreateDiv' ] }
+        { name: 'insert', name:'save',items : [ 'Image', 'CreateDiv'] }
     ];
 
     config.toolbar_embedVideo =
@@ -188,6 +195,11 @@ config.toolbar_Full =
 
 	/*Configurarea stilurilor*/
 	config.stylesSet = 'bsea_styles';
+	/**
+	 * este pus aici si nu in folderul normal de css pentru ca
+	 * nu trebuie automat inclus, CKEditorul in va include acolo
+	 * unde are nevoie
+	 * */
 	config.contentsCss = '/fw/LOCALS/blogSite/tmpl_bsea/ADMIN/CKEdtiorContents.css ';
 };
 
@@ -200,9 +212,10 @@ CKEDITOR.stylesSet.add( 'bsea_styles', [
 			'class' : 'gallery'
 		}
 	},
+
 	{
 		name: 'pullQuotes',
-		element: 'p',
+		element: 'div',
 		styles: {},
 		attributes: {
 			'class' : 'pullQuotes'
