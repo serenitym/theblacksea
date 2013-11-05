@@ -43,6 +43,8 @@ assetsInc:
 assetsInc_home:
     js:
       - "/assets/hoverIntent/hoverIntent.minified.js"
+      - "/assets/addthis/addthis.js"
+
 
 assetsInc_blogRecord:
     js:
