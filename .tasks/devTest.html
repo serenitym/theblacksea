@@ -1,0 +1,128 @@
+
+<!--testting-->
+        <script type="text/javascript">console.log('in script article');</script>
+<!--testting-->
+<script type="text/javascript" src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+
+<script>
+ (function() {
+$(document).ready(function() {
+
+var map;
+
+init();
+
+$(".armenia_locator").hide();
+
+function init(){	
+
+      // initiate leaflet map
+
+      map = new L.Map("cartodb-map-fishy", {scrollWheelZoom:false,
+
+              center: [40.070584,44.325859],
+
+        zoom: 12
+
+      })
+
+       L.tileLayer("https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-4xtxp73f/{z}/{x}/{y}.png", {opacity:0.75}).addTo(map);
+
+      var layerUrl = "http://ulmonica.cartodb.com/api/v2/viz/9e885136-45a9-11e3-a07b-3085a9a956e8/viz.json";
+
+      
+
+      cartodb.createLayer(map, layerUrl)
+
+       .addTo(map)
+
+       .on("done", function(layer) {
+
+        // change the query for the first layer
+
+   
+
+      }).on("error", function() {
+
+        //log the error
+
+      });
+
+    }
+
+
+  $(".show_container").click(function() {
+
+      $(".black_container").hide();
+
+      $(".intro_container").hide();
+
+      $(".title_container").hide();
+
+      $(".place_container").hide();
+
+      $(".authors_container").hide();
+
+      $(".lead_container").hide();
+
+      $(".show_container").hide();
+
+      $(".armenia_locator").show();
+
+  });
+
+});
+
+})();
+
+</script>
+
+<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+
+<style>
+
+
+#cartodb-map-fishy { width: 100%; height:450px; background: #333;}
+
+div.leaflet-control-attribution.leaflet-control {background-color: #333;color: #999;opacity: 1;border: 0px solid #333;-moz-box-shadow: 0 0 0 #000000;-webkit-box-shadow: 0 0 0 #000000;box-shadow: 0 0 0 #000000;}
+
+.leaflet-container {font-family: "futura-pt", Helvetica, sans-serif; font-size: 12px; color:#666;background-color: #ccc;width:240px;}
+
+div.cartodb-popup.dark p {color: #CCC;display: block;width: 190px;max-width: 190px;margin: 0;padding: 0 0 7px;font: normal 15px/18px "futura-pt", Helvetica, sans-serif;color: #333;word-wrap: break-word;background-color: #ccc;}
+
+div.cartodb-popup.dark div.cartodb-popup-content-wrapper {background: #ccc;}
+
+.cartodb-popup-header {font: normal 21px/23px "futura-pt", Helvetica, sans-serif;}
+
+div.cartodb-popup.dark a.cartodb-popup-close-button {background: url("foto/close_button.png") no-repeat 0 -23px;margin:20px;}
+
+.infow_place {font-family:"futura-pt", Helvetica, sans-serif; font-size: 11px; color: #BFBFBF;text-transform:uppercase;display:block;padding: 5px 3px;background-color:#B20D19;}
+
+.infow_owner, .infow_company {font-size: 14px; line-height:18px;padding-top:10px;}
+
+
+.intro_container {position:absolute; top:0; left:85px; width:346px;background-color:rgba(229,229,229,0.11);height:450px;z-index:5;}
+
+.black_container {position:absolute; top:0; left:0; width:100%;background-color:rgba(0,0,0,0.8);height:450px;z-index:3;}
+
+.title_container {position:absolute; top:65px; left:110px; width:290px; font-family:"futura-pt", Helvetica, sans-serif; font-size: 23px; color: #BFBFBF;line-height: 26px; font-weight:400;display:block;z-index:7;}
+
+.place_container {position:absolute; top:132px; left:67px; width:154px; font-family:"futura-pt", Helvetica, sans-serif; font-size: 11px; color: #BFBFBF;text-transform:uppercase;display:block;z-index:8;padding-left:42px; padding-top:8px; padding-bottom:8px;background-color:rgba(255,29,34,0.25);}
+
+.authors_container {position:absolute; top:183px; left:110px; width:290px; font-family:"futura-pt", Helvetica, sans-serif; font-size: 13px; color: #808080; font-weight:400;display:block;z-index:7;padding:6px 0; border-top:1px dotted #808080; border-bottom:1px dotted #808080;line-height:14px;}
+
+.lead_container {position:absolute; top:233px; left:110px; width:290px; font-family:"futura-pt", Helvetica, sans-serif; font-size: 16px; color: #BFBFBF; font-weight:400;display:block;z-index:7;padding:6px 0; line-height:17px;}
+
+.show_container {position:absolute; top:341px; left:213px; font-family:"futura-pt", Helvetica, sans-serif; font-size: 22px; color: #eaeaea;font-weight:400;display:block;z-index:8;padding:13px 26px; text-align:center;background-color:rgba(255,29,34,0.50);border:1px dotted #eaeaea;}
+
+.show_container:hover {background-color:rgba(255,29,34,0.25);cursor:pointer;}
+
+.armenia_locator {position:absolute; top:-50px; right:20px;-webkit-box-shadow:inset 5px 0px 0px 5px #666;
+
+    -moz-box-shadow:inset 5px 0px 0px 5px #666;
+
+    box-shadow:inset 5px 0px 0px 5px #666;}
+
+</style>
+
+

@@ -3,13 +3,15 @@
 .well,
 .admin-extras{
     text-align: right;
-    border: 1px solid #ddd;
     border-radius: 0px 0px 3px 3px;
-    padding: 20px;
-    /*margin: 0px 7px 20px 7px;*/
+    padding: 20px 0px;
     margin-bottom: 20px;
-    background: rgba(210,210,210,0.3);
-    box-shadow: 2px 1px 4px rgba(255,255,255,0.5);
+    background: #e7e8f1;
+
+  /*  display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;*/
 }
     .admin-extra{
         text-align: left;

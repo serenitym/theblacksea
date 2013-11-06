@@ -17,6 +17,7 @@ posts_updateRecord:
   idRecord:
     postName: "BLOCK_id"
   idCat: []
+  scripts: []
 
   #blogRecords_stats
   publishDate: []
