@@ -48,6 +48,10 @@ assetsInc_blogRecord:
     js:
       - "/assets/addthis/addthis.js"
 
+assetsInc_blog:
+    js:
+      - "/assets/jQuery-exif/jquery.exif.js"
+
 assetsInc_archiveRecord:
     js:
       - "/assets/addthis/addthis.js"

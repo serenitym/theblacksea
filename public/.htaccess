@@ -30,21 +30,7 @@ RewriteEngine On
 
 #RewriteBase /
 
-RewriteRule ^.*local\.blacksea\.eu/(.*)$ http://2013.theblacksea.eu/$1 [L,QSA,NC]
-
-RewriteRule ^myProfile$      /index.php?idT=89&idC=89 [L,NC]
-RewriteRule ^Partners$     /index.php?idT=2&idC=2 [L,NC]
-RewriteRule ^About$     /index.php?idT=3&idC=3 [L,NC]
-RewriteRule ^Contact$      /index.php?idT=4&idC=4 [L,NC]
-RewriteRule ^Home$       /index.php?idT=85&idC=85 [L,NC]
+RewriteRule ^feed$       index.php?idT=103&idC=103 [L,NC]
 
 #==============================================================================
-
-# Anularea modulului rewrite pentru anumite tipuri de fisiere
-#RewriteRule ^(.+)\.php$ $1.php [L,NC]
-#RewriteRule ^(fw|GENERAL|MODULES|MODELS)/(.*) $1/$2 [L,NC]
-#RewriteRule ^(GENERAL|css|cms|js|lib|produse_img|img|images) - [L,NC]
-
-# Rescriere pentru pagini simple (idT + idC)
-RewriteRule ^([0-9]+)-([0-9]+) index.php?idT=$1&idC=$2 [L,NC]
 

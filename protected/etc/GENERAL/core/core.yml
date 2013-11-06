@@ -15,7 +15,7 @@ mainTemplate: bsea
 modTypes: [PLUGINS, MODELS, GENERAL, LOCALS]
 
 
-MODELS: [contact, single, gallery, blog, profile]
+MODELS: [contact, single, gallery, blog, profile, feed]
 
 PLUGINS: [toolbar, ivyMenu, feedback, TOOLbar]
 
