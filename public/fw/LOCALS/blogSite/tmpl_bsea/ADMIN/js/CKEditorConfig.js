@@ -10,6 +10,8 @@ CKEDITOR.editorConfig = function( config )
 	// config.uiColor = '#AADC6E';
 
 	//config.extraPlugins = 'tableresize';
+	//config.allowedContent = true;
+	//config.extraAllowedContent = 'script[*]'
 	config.extraPlugins = 'image';
 	config.extraPlugins = 'dialog';
 	config.extraPlugins = 'link';
@@ -24,10 +26,11 @@ CKEDITOR.editorConfig = function( config )
 	config.language = 'en';
 	config.skin = 'moono';
    // config.extraPlugins = 'slideshow';
+	//	config.extraPlugins = 'stat';
+
    config.extraPlugins = 'oembed';
    config.allowedContent = true;
 
-	config.extraPlugins = 'stat';
 
 
 	//config.extraPlugins = 'sourcedialog';
