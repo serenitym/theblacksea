@@ -223,7 +223,16 @@ CKEDITOR.stylesSet.add( 'bsea_styles', [
 		attributes: {
 			'class' : 'pullQuotes'
 		}
+	},
+	{
+		name: 'previewImg',
+		element: 'div',
+		styles: {},
+		attributes: {
+			'class' : 'previewImg'
+		}
 	}
+
 
 ]);
 /*

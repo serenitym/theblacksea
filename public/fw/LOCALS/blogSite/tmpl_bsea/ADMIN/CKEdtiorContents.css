@@ -110,7 +110,6 @@ pre
 
 
 /*galleria*/
-
 .gallery img {width: 30% !important; height: initial !important;}
 .gallery {
     padding: 5px 10px;
@@ -133,4 +132,12 @@ img{max-width: 100% !important; height: initial !important;}
     width: 75%;
     margin: 0px !important;
     display: block;
+}
+.previewImg{
+   padding: 5px 10px;
+    background: #eee;
+    border: 1px solid red;
+}
+.previewImg img{
+    width: 30% !important; height: initial !important;
 }

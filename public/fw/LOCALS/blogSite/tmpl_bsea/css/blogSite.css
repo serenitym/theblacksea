@@ -122,3 +122,6 @@ button.bsea:hover { color:#c33;cursor:pointer;}
     z-index: 1;
 }
 
+.previewImg{
+    display: none;
+}

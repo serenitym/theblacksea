@@ -1,12 +1,6 @@
 
-<!--testting-->
-        <script type="text/javascript">console.log('in script article');</script>
-<!--testting-->
-<script type="text/javascript" src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
-
-<script>
- (function() {
-$(document).ready(function() {
+head.js("http://libs.cartocdn.com/cartodb.js/v3/cartodb.js");
+head.ready(function() {
 
 var map;
 
@@ -17,39 +11,24 @@ $(".armenia_locator").hide();
 function init(){	
 
       // initiate leaflet map
-
       map = new L.Map("cartodb-map-fishy", {scrollWheelZoom:false,
-
               center: [40.070584,44.325859],
+              zoom: 12
+      });
 
-        zoom: 12
-
-      })
-
-       L.tileLayer("https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-4xtxp73f/{z}/{x}/{y}.png", {opacity:0.75}).addTo(map);
+      L.tileLayer("https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-4xtxp73f/{z}/{x}/{y}.png", {opacity:0.75}).addTo(map);
 
       var layerUrl = "http://ulmonica.cartodb.com/api/v2/viz/9e885136-45a9-11e3-a07b-3085a9a956e8/viz.json";
 
-      
-
-      cartodb.createLayer(map, layerUrl)
-
-       .addTo(map)
-
-       .on("done", function(layer) {
-
-        // change the query for the first layer
-
-   
-
+      cartodb
+          .createLayer(map, layerUrl)
+          .addTo(map)
+          .on("done", function(layer) {
+                // change the query for the first layer
       }).on("error", function() {
-
         //log the error
-
       });
-
     }
-
 
   $(".show_container").click(function() {
 
@@ -73,15 +52,19 @@ function init(){
 
 });
 
-})();
 
-</script>
+
+
 
 <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
 
 <style>
 
-
+#art-container-map {
+    width: 100%;
+    display: block;
+    position: relative;
+}
 #cartodb-map-fishy { width: 100%; height:450px; background: #333;}
 
 div.leaflet-control-attribution.leaflet-control {background-color: #333;color: #999;opacity: 1;border: 0px solid #333;-moz-box-shadow: 0 0 0 #000000;-webkit-box-shadow: 0 0 0 #000000;box-shadow: 0 0 0 #000000;}
@@ -126,3 +109,18 @@ div.cartodb-popup.dark a.cartodb-popup-close-button {background: url("foto/close
 </style>
 
 
+<div class="divider"></div>
+<div class="fullwidth"> <!-- begin map -->
+
+    <div id="cartodb-map-fishy"></div>
+    <div id="intro">
+    <div class="black_container"></div>
+    <div class="intro_container"></div>
+    <div class="title_container">Armenias Parliament tightens grips on fish-farming</div>
+    <div class="place_container">Zorak, Armenia</div>
+    <div class="authors_container">By Monica Ulmanu, Kristine Aghalaryan and Grisha Balasanyan</div>
+    <div class="lead_container">Members of Armenias Parliament and local Government officials have dived into the fish-farm business in hope of quick profits - as this map reveals.</div>
+    <div class="show_container">Show the map</div>
+    </div>
+    <div class="armenia_locator"><img src="foto/locator_armenia.png"/></div>
+</div>

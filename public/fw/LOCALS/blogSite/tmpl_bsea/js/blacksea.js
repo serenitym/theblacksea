@@ -24,7 +24,7 @@ ivyMods.blogSite = {
 
     sel: {
        records: "*[class$=SGrecord] , *[class$=record]",
-       recordArchive_content: "*[class~=SGrecord-archive] *[class$=content]",
+       recordArchive_content: "*[class~=SGrecord-archive] *[class$=content]:not(.ELMcontent)",
 	    selectedFilters : 'filters-selected',
 	    hoverFilters : 'filters-hover',
 	    filtersPanel: function(filterId) {return "#" + filterId + "_panel"; }
