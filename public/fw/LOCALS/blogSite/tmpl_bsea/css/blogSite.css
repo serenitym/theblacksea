@@ -49,6 +49,10 @@ button.bsea:hover { color:#c33;cursor:pointer;}
 .addthis_button_twitter { /**/ }
 .addthis_button_vk { /**/ }
 
+.bsea-fblike{
+    display: inline-block !important;
+    float: right;
+}
 
 
 /*sticky stuff*/

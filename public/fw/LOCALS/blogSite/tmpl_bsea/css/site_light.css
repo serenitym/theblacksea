@@ -44,7 +44,7 @@ li.shareText {list-style: none; display: inline-block;}
 #social-connect-twitter:hover {background: url("img/social-connect-twitter-over.png"); background-repeat:no-repeat;height:21px;width:21px;cursor:pointer;}
 #social-connect-facebook {background: url("img/social-connect-facebook.png"); background-repeat:no-repeat;height:21px;width:21px;}
 #social-connect-facebook:hover {background: url("img/social-connect-facebook-over.png"); background-repeat:no-repeat;height:21px;width:21px;cursor:pointer;}
-#sharepanel {position:relative;float:left;}
+#sharepanel {position:relative;float:left; width: 100%;}
 #shareicons {float:left;display:inline;margin-top:-3px;position:relative;margin-left:5px;}
 #share {display:inline;float:left;position: relative;z-index:10;}
 .textColumnBig {width: 65%; float:left; position:relative;font-family: "futura-pt", Arial, sans-serif; font-size: 17px; line-height: 20px !important;color:#333;font-weight:200;}

@@ -17,6 +17,23 @@
 <!-- end footer -->
 
 <!-- end mainContainer -->
+<script>
+    head.ready(function() {
+       var d = document;
+       var s = 'script';
+       var id = 'facebook-jssdk';
+       // alert("Statusul lui liveEdit este " + fmw.liveEdit);
+       if(fmw.liveEdit){
+           return;
+       }
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) return;
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=638120366217007";
+       fjs.parentNode.insertBefore(js, fjs);
+     }
+  );
+</script>
 
 <?php if(defined('ENV') && ENV == 'production'): ?>
 
@@ -32,6 +49,8 @@
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
         g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
       })();
+
+
 
     </script>
     <noscript><p><img src="http://piwik.theblacksea.eu/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
