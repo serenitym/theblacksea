@@ -104,11 +104,8 @@ button.bsea:hover { color:#c33;cursor:pointer;}
 /*===================CKEditor styles=======================*/
 
 
-.SGrecord-archive *[id^="gallery-container"] {
-    float: right;
+.SGrecord-archive *[id^="gallery-container"] { float: right; }
 
-    /*width: 700px; height: 500px;*/
-}
 /*
 - imaginile din gallery nu trebuie vazute
 */
