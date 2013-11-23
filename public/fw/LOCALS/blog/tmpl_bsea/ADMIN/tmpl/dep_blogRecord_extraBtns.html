@@ -1,0 +1,19 @@
+
+<form action='' method='post' id='publishRecord'>
+    <input type='hidden' name='idRecord' value='{$co->idRecord}'>
+    <input type='hidden' name='modName' value='blog, handler'>
+</form>
+
+ <div class='addTOOLSbtn'>
+
+     ".(!$o->user->rights['article_pub'] ? '' :
+         $co->publishDate
+             ? "<input type='submit'  class='ATmpl'
+                       name='methName' value='unpublish'
+                       form='publishRecord'  />"
+
+             : "<input type='submit'  class='ATmpl'
+                       name='methName' value='publish'
+                       form='publishRecord' />"
+     )."
+ </div>

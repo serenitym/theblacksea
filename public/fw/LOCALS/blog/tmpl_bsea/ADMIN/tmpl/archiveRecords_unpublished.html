@@ -1,0 +1,13 @@
+<!--Unpublished articles-->
+<button class='bsea pull-right margin-b10' onclick='fmw.toggle(\"div[class^=blogSet_unpublished]\");'>
+     ".count($co->recordsUnpublished)." articles Unpublished
+</button>
+<div class='clearfix'></div>
+
+<div class='blogSet_unpublished hidden'>
+    <div class='divider'></div>
+    <div class='block space overflow'></div>
+    ".$this->Render_itemsFromPath($co->recordsUnpublished, $o,
+            $o->modDirPub."tmpl_bsea/tmpl/archivePrevRecord.html")."
+    <div class='clearfix'></div>
+</div>

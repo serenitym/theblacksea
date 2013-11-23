@@ -1,0 +1,14 @@
+ <div class='blogmain_item'>
+    <div class='blog_id'>
+        <span class='circle' id='innovation'></span>
+            {$ao->catName}
+        <span class='arrow red '> &nbsp;>> </span>
+    </div>
+    ".$this->Render_ItemsFromStr($ao->records, '', "
+
+         <div class='blogmain_head'>
+             <a href='{~ao->record_href}'>{~ao->title}</a>
+         </div>
+     ")."
+
+</div>
