@@ -6,7 +6,5 @@ mail.log
 protected/var/trees
 bsea.xml
 testRev.xml
-public/RES/*
-public/RES
-**/RES*/uploads
+**/RES2
 **/RES/uploads
