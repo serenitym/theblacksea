@@ -1,0 +1,87 @@
+
+".$this->Render_objectFromPath($o,"{$o->modDirPub}tmpl_bsea/tmpl/homeMap.html")."
+
+<div class='fullwidth lightgrey shadow space'>
+    <div class='block'>
+		<div class='blogmain'>
+
+			<div class='blogmainContainer'>
+
+
+                <div class='smallUpper red home-latestIn'>
+                    latest in:
+                </div>
+                ".$this->Render_ItemsFromPath($co->homeBlogRecords, $o,
+                    "{$o->modDirPub}tmpl_bsea/tmpl/homeLatestInCat.html")."
+
+			</div>
+		</div><!-- end blogmain -->
+	</div>
+</div>
+
+
+<div class='block overflow'>
+	<div class='archivemain'>
+        <div class='NameCentered'>
+            Explore the stories
+        </div>
+        <div class='fullwidth space'>
+            <div class='formatIcons'>
+
+                ".$this->Render_itemsFromStr($co->filterRecTypes, '', "
+                    <div class='recType-container'>
+                        <a href='{~ao->href}' class='recTypeIcon {~ao->value}Icon'>
+
+                        </a>
+                        <span class='recTypeDesc'>
+                            <span class='arrow red'> &nbsp;&gt;&gt;&nbsp; </span>
+                            {~ao->desc}
+                        </span>
+
+                    </div>
+
+                ")."
+               <!-- <div class='recType-container'>
+                    <div class='recTypeIcon videoIcon'></div>
+                    <span class='recTypeDesc'>
+                        <span class='arrow red'> &nbsp;&gt;&gt;&nbsp; </span>
+                        video
+                    </span>
+
+                </div>-->
+
+            </div>
+        </div>
+	</div>
+	<div class='divider'></div>
+</div><!-- end archivemain -->
+
+ <div class='block space' >
+    ".$this->Render_itemsFromPath($co->records, $o,
+     "{$o->modDirPub}tmpl_bsea/tmpl/archivePrevRecord.html"
+    )."
+ </div>
+
+<div class='block space overflow' id='followpanel'>
+    <div class='divider'></div>
+    <!-- AddThis Follow BEGIN -->
+    <div class='NameCentered'>
+      Follow us
+   </div>
+    <div id='followpanel-buttons'>
+        <div class='addthis_toolbox addthis_32x32_style addthis_default_style'>
+            <a class='addthis_button_facebook_follow' addthis:userid='TheBlackSeaEU'></a>
+            <a class='addthis_button_twitter_follow' addthis:userid='TheBlackSeaEU'></a>
+            <a class='at300bs at15nc at15t_diaspora' 
+                    addthis:userid='TheBlackSeaEU'
+                    href='http://joindiaspora.com/u/theblacksea'
+                    target='_blank'></a>
+            <a class='subscribeButton' id='subscribeBsea'></a>
+            <a class='rssButton' id='black_sea_rss' href='/feed'></a>
+        </div>
+    </div>
+
+    <!-- AddThis Follow END -->
+</div>
+
+

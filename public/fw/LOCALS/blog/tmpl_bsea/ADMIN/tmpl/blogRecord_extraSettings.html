@@ -1,0 +1,113 @@
+<!-- Extra fields:
+leadSec
+tags
+country
+city
+category - poate daca vrei sa il muti in alta categorie
+-->
+<div class='ATmpl  '>
+    <div class='hidden admin-extras admin-extraFields'>
+
+       <div class='admin-extra admin-authors-container'>
+
+               <button class='ivy btt-authors' onclick='fmw.toggle(\"form[id^=EDITform] .admin-authors\"); return false;'>
+                   Other Authors
+               </button>
+               <div class='hidden admin-authors'>
+
+                   <input name='authors' id='adminAuthors' >
+               </div>
+
+       </div>
+
+        <div class='admin-extra'   id='admin-leadSec'>
+
+               <button class='ivy btt-leadSec' onclick='fmw.toggle(\"form[id^=EDITform] .admin-leadSec\"); return false;'>
+                   Preview Lead
+               </button>
+               <div class='EDtxa  hidden admin-leadSec leadSec'>
+                   {$co->leadSec}
+               </div>
+
+       </div>
+
+
+        <div class='admin-extra' >
+            <div> Tags </div>
+            <div class='EDtxtauto  recordTags'
+                 data-iedit-path = $o->modDirPub.'ADMIN/getTags.php'
+                 data-iedit-minln = '2'
+                 data-iedit-select = 'multiple'
+                    >
+                {$co->tagsName}
+            </div>
+        </div>
+        <div class='admin-extra' >
+            <div> Country </div>
+            <div class='EDtxt  country'>
+                {$co->country}
+            </div>
+        </div>
+        <div class='admin-extra' >
+            <div> City </div>
+            <div class='EDtxt  city'>
+                {$co->city}
+            </div>
+        </div>
+
+        ".(!$co->publishDate || !$o->user->rights['article_edit'] ? '' : "
+            <div class='admin-extra' >
+                <div> Publish Date </div>
+                <div class='EDdate  publishDate'>
+                    {$co->publishDate}
+                </div>
+            </div>
+        ")."
+
+        ".(!$o->user->rights['article_edit'] ? '' : "
+            <div class='admin-extra' >
+               <div> Scripts </div>
+               <textarea name='scripts' class='scripts' >{$co->scripts}</textarea>
+            </div>
+        ")."
+
+
+
+
+    </div>
+
+</div>
+<!-- Extra settings
+    format
+    idCat
+-->
+<div class='ATmpl  '>
+    <div class='hidden admin-extras admin-extraSettings'>
+            ".(  !$o->user->rights['article_edit'] || !$co->blogCategories ? '' : "
+                <!--Doar moderatorii pot schimba categoria unui articol-->
+                <div class='admin-extra' >
+                      <div> Category </div>
+                      <select name='idCat'>
+                          ".$this->Render_itemsFromStr($co->blogCategories, $o, "
+                                <option value='{~ao->idCat}'
+                                        `.(~ao->idCat != ~co->idCat ? '' :  'selected' ).`>
+                                    {~ao->catName}
+                                </option>
+                          ")."
+                      </select>
+                </div>
+            ")."
+        <div class='admin-extra' >
+              <div> Article Type </div>
+              <select name='idFormat'>
+                  ".$this->Render_itemsFromStr($o->formats, $o, "
+                        <option value='{~ao->idFormat}'
+                            `.(~ao->format != ~co->format ? '' :  'selected' ).` >
+                               {~ao->format}
+                        </option>
+                  ")."
+              </select>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class='blogSettings'>
+    <div class = 'ib'>
+        <div class='b'>Formats</div>
+        <div class='allENTS ib margin-b10 formats' id='formats_en'>
+            ".$this->Render_itemsFromStr($o->formats,'',"
+            <div class='ENT padding-3 formatContainer' id='formatContainer_{~ao->idFormat}_en'>
+                <p class='EDtxt width150  format'>{~ao->format} </p>
+            </div>
+            ")."
+        </div>
+    </div>
+
+    <div class = 'ib'>
+        <div class='b'>Folders</div>
+        <div class='allENTS ib margin-b10 folders' id='folders_en'>
+            ".$this->Render_itemsFromStr($o->folders,'',"
+            <div class='ENT padding-3 folder' id='folder_{~ao->idFolder}_en'>
+                <p class='EDtxt width150  folderName'>{~ao->folderName} </p>
+            </div>
+            ")."
+        </div>
+    </div>
+
+
+</div>
+
