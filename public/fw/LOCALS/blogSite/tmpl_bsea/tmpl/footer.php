@@ -26,11 +26,11 @@
        if(fmw.liveEdit){
            return;
        }
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) return;
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=638120366217007";
-       fjs.parentNode.insertBefore(js, fjs);
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=482365648543340";
+        fjs.parentNode.insertBefore(js, fjs);
      }
   );
 </script>
