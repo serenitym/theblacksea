@@ -8,5 +8,5 @@ bsea.xml
 testRev.xml
 public/RES/*
 public/RES
-**/RES*
-**/RES
+**/RES*/uploads
+**/RES/uploads
