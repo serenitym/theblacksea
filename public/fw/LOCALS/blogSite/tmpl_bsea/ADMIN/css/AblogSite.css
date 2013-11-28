@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+.well,
+.admin-extras{
+    text-align: right;
+    border-radius: 0px 0px 3px 3px;
+    padding: 20px 0px;
+    margin-bottom: 20px;
+    background: #e7e8f1;
+
+  /*  display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;*/
+}
+    .admin-extra{
+        text-align: left;
+        vertical-align: top;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+/*=================[profile.html]===================*/
+.ELMcontent .bio{ min-height: 220px;}
+
+.ELMcontent .first_name,
+.ELMcontent .last_name,
+.ELMcontent .site,
+.ELMcontent .email,
+.ELMcontent .phone
+/*, .ELMcontent .title*/
+{   width: 250px;
+    text-transform: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.aboutDesc,
+.archiveDesc,
+.blogDesc
+{ width: 99%; }
+
+.aboutDesc .ELMcontent,
+.archiveDesc .ELMcontent,
+.blogDesc .ELMcontent,
+.awardsDesc .ELMcontent,
+.sponsorsDesc .ELMcontent
+{ min-height: 20px; }
+
+
+form.aboutDesc,
+form.archiveDesc,
+form.blogDesc
+{ margin-top: 20px; }
+
+form.aboutDesc .desc,
+form.archiveDesc .desc,
+form.blogDesc .desc,
+form.awardsDesc .desc,
+form.sponsorsDesc .desc
+{ min-height: 100px; }
+
+
+
+

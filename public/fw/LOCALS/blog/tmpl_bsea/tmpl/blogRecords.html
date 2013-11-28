@@ -1,0 +1,16 @@
+<div class='blogSet_{$co->limitStart}'>
+    <div class='divider'></div>
+    <div class='block space overflow'></div>
+    ".(count($co->records) == 0 ?
+       "<b>Coming soon</b>" :
+        $this->Render_itemsFromPath($co->records, $o,
+        "{$o->modDirPub}tmpl_bsea/tmpl/blogPrevRecord.html")
+    )."
+
+    ".( $co->totalRecords <= 10 ? "" : "
+        <div class='blog-articlesNo'>
+            {$co->noRecords} out of  {$co->totalRecords}
+        </div>
+    ")."
+
+</div>

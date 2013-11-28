@@ -15,11 +15,11 @@ mainTemplate: bsea
 modTypes: [PLUGINS, MODELS, GENERAL, LOCALS]
 
 
-MODELS: [contact, single, gallery, blog]
+MODELS: [contact, single, gallery, blog, profile, feed]
 
-PLUGINS: [toolbar, ivyMenu, feedback]
+PLUGINS: [toolbar, ivyMenu, feedback, TOOLbar]
 
-GENERAL: [TOOLbar, GEN_edit, EDITmode]
+GENERAL: [GEN_edit, EDITmode]
 
 LOCALS: [blogSite ]
 
@@ -27,7 +27,7 @@ LOCALS: [blogSite ]
 # modulele instantiate automat
 #========================================
 
-default_LOCALS: []
+default_LOCALS: [blogSite]
 
 default_GENERAL: []
   #- authManager
@@ -73,12 +73,24 @@ mgrType: MODELS
 
 
 #========================================
-# other settings
+# setting from modules
 #========================================
 
 cssInc: ''
 jsInc: ''
+# it is about scripts that written by the module
+# comunica js-ul aferent diverse setari in functie de php
+# ex: ivyMods.profileConf = {};
+jsTalk: ''
+
+toolbarBtts: []
+
+#========================================
+# other settings
+#========================================
+
 admin: false
+
 # DB: pointer la baza de date
 
 
@@ -106,3 +118,7 @@ history: []
 history_HREF: ''
 history_TITLE: ''
 history_TITLE_keywords: ''
+
+social:
+  facebook: 'http://facebook.com'
+  twitter:  'http://twitter.com'

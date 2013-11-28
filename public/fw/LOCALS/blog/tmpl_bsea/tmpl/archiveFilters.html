@@ -1,0 +1,78 @@
+<div class='fullwidth overflow'> <!-- begin filter selections -->
+		<div class='imageColumn thickBorder filter ".$co->filtersSets_selectedStat['idFolder']." '  id='filter1'>
+            <div class='byFilter' id='filter1_name'>Dossier</div>
+            <div class='arrowDown'></div>
+		</div>
+
+		<div class='imageColumn thickBorder filter ".$co->filtersSets_selectedStat['format']."' id='filter2'>
+            <div class='byFilter' id='filter2_name'>
+                Media Format
+            </div>
+            <div class='arrowDown'></div>
+		</div>
+		<div class='imageColumn thickBorder filter ".$co->filtersSets_selectedStat['tag']."' id='filter3'>
+            <div class='byFilter' id='filter3_name'>Tag</div>
+            <div class='arrowDown'></div>
+		</div>
+		<div class='imageColumn thickBorder filter ".$co->filtersSets_selectedStat['country']."' id='filter4'>
+            <div class='byFilter' id='filter4_name'>Region</div>
+            <div class='arrowDown'></div>
+		</div>
+	</div> <!-- end filter selections -->
+
+	<div class='fullwidth overflow'><!-- begin filter panels -->
+
+		<div class='fullwidth filter_panel space' id='filter1_panel'>
+			<ul>
+                ".$this->Render_itemsFromStr($co->idFolderFilters, $co, "
+                    <li>
+                        <a href='{~ao->href}' class='filter_label `.~o->cls_selectedFilter[~ao->selected].` '>
+                            {~ao->desc}
+                        </a>
+                    </li>
+                ")."
+				<!--<li><div class='filter_label'>Video stories</div></li>-->
+			</ul>
+		</div>
+
+
+		<div class='fullwidth filter_panel space hidden' id='filter2_panel'>
+			<ul>
+                ".$this->Render_itemsFromStr($co->formatFilters, $co, "
+                    <li>
+                        <a href='{~ao->href}' class='filter_label  `.~o->cls_selectedFilter[~ao->selected].`'>
+                            {~ao->desc}
+                        </a>
+                    </li>
+                ")."
+				<!--<li><div class='filter_label'>Video stories</div></li>-->
+			</ul>
+		</div>
+
+		<div class='fullwidth filter_panel space hidden' id='filter3_panel'>
+            <ul>
+                 ".$this->Render_itemsFromStr($co->tagFilters, $co, "
+                     <li>
+                         <a href='{~ao->href}' class='filter_label  `.~o->cls_selectedFilter[~ao->selected].`'>
+                             {~ao->desc}
+                         </a>
+                     </li>
+                 ")."
+                <!--<li><div class='filter_label'>Issue 1</div></li>-->
+
+            </ul>
+		</div>
+
+		<div class='fullwidth filter_panel space hidden' id='filter4_panel'>
+			<ul>
+                ".$this->Render_itemsFromStr($co->countryFilters, $co, "
+                     <li>
+                         <a href='{~ao->href}' class='filter_label  `.~o->cls_selectedFilter[~ao->selected].`'>
+                             {~ao->desc}
+                         </a>
+                     </li>
+                 ")."
+				<!--<li><div class='filter_label'>Abkhazia</div></li>-->
+			</ul>
+		</div>
+	</div><!-- end filter panels -->

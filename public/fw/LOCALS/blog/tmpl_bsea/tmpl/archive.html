@@ -1,0 +1,55 @@
+<div class='block overflow'>
+
+	 <div class='textColumnBig right ' >
+        <!--<p>Our archive contains Lorem Ipsum is simply dummy text of the
+            printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an
+            unknown printer took a galley of type and scrambled it to make
+            a type specimen book.
+        </p>-->
+        <div class='SING archiveDesc' id='archiveDesc_archive_en'>
+           <div class='EDtxa textDesc desc'>
+                ".$this->Render_ModulefromRes($this->blogSite, 'archiveDescription')."
+            </div>
+        </div>
+     </div> <!-- end description -->
+    <div class='LeftColumnSmall blogsHead space'>Story archive</div>
+
+   <div class='clearfix'></div>
+   <div class='space'  id='sticky-container'>
+        <div  id='sticky-archive'>
+             <div  class='textColumnBig right margin-t20'>
+                 <!-- archive Filters -->
+                 ".$this->Render_objectFromPath($o,
+                      $o->modDirPub.'tmpl_bsea/tmpl/archiveFilters.html')."
+
+             </div>
+        </div>
+   </div>
+
+
+
+</div>
+
+<div class='allENTS block space overflow allrecords'  id='allrecords_{$o->lang}'>
+    <div class='ENT  archivePrevRec record'  id='record_0_en' style='display: none;' >
+    </div>
+    ".(!$this->admin ? "" :
+         $this->Render_object($o,'',
+            $o->modDirPub."tmpl_bsea/ADMIN/tmpl/blogRecord_addForm.html")
+
+        .(count($co->recordsUnpublished) == 0 ? "" :
+            $this->Render_object($o,'',
+            $o->modDirPub."tmpl_bsea/ADMIN/tmpl/archiveRecords_unpublished.html")
+        )
+    )."
+
+
+
+   ".(count($co->records) == 0 ? "<b>Coming soon</b>" :
+         $this->Render_itemsFromPath($co->records, $o,
+         $o->modDirPub."tmpl_bsea/tmpl/archivePrevRecord.html")
+   )."
+
+</div>
+    <!-- end archivemain -->

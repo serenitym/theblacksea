@@ -3,3 +3,8 @@ sercore.txt
 ClassLoader.save.php
 en_superfish.html
 mail.log
+protected/var/trees
+bsea.xml
+testRev.xml
+**/RES*
+**/RES/uploads

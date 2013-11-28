@@ -1,0 +1,153 @@
+<div class='{$o->ED}SING block SGrecord-blog SGrecord' id='SGrecord_{$co->idRecord}_{$o->lang}' >
+    ".(!$this->admin ? '' :
+         $this->Render_object($this->blog,'',
+            "{$o->modDirPub}tmpl_bsea/ADMIN/tmpl/blogRecord_extraSettings.html")
+    )."
+    <!-- start story -->
+	<div class='textColumnBig right'>
+        <div class=' fullwidth'>
+               <span class='EDtxt noBorder {$co->catResFile} Name {$co->statusPublish} title'>
+                   {$co->title}
+               </span>
+        </div>
+        <div class='imageColumnHead'>
+               <a href='$co->authorHref' class='ib'>{$co->fullName}</a>
+             ".(count($co->authors) == 0 ? '' :
+                $this->Render_itemsFromStr($co->authors,'', "
+             , <a href='~ao->authorHref'  class='ib'>{~ao->fullName}</a>
+             "))."
+
+             ".($co->publishDate
+                   ? "<span class='ib'>/ {$co->publishDate}</span>"
+                   : "<p class='notPublished'>not yet published</p>"
+             )."
+       </div>
+
+	    <!-- <div class='theStory'>  -->
+        <div class='EDeditor space lead'>
+            {$co->lead}
+        </div>
+        <div class='widthFull '>
+
+            <div id='sharepanel'>
+                <div class='shareText' id='share'>Share this story</div>
+                <!--
+                   <ul id='shareicons'>
+                       <li class='shareText' id='social-connect-facebook'></li>
+                       <li class='shareText' id='social-connect-twitter'></li>
+                       <li class='shareText' id='social-connect-vkontakte'></li>
+                   </ul>
+                -->
+                <div class='addthis_toolbox addthis_default_style addthis_32x32_style' style='display: inline-block; float: left;'>
+                    <a class='addthis_button_facebook'></a>
+                    <a class='addthis_button_twitter'></a>
+                    <a class='addthis_button_vk'></a>
+                </div>
+                <div class='bsea-fblike'>
+                    <div id='fb-root'></div>
+                    <div class = 'fb-like'
+                         data-href = 'http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."
+                         data-width = '20' data-layout = 'button_count'
+                         data-action = 'like' data-show-faces = 'false'
+                         data-share = 'false'>
+                    </div>
+                </div>
+
+            </div>
+
+           <!-- <a href='".Toolbox::curURL()."' class='shareText' id='geturl'>get permalink</a>
+            <div class='geturl'></div>-->
+        </div>
+        <div class='clearfix'></div>
+
+	    <div class='EDeditor space  content'
+             data-iedit-cketoolbar ='".(!$this->user->rights['article_tmpl'] ?  'embedVideo' :  'admin' )."'
+        >
+            {$co->content}
+	    </div>
+
+        <div id='disqus_thread'></div>
+        <noscript>
+            Please enable JavaScript to view the
+            <a href='http://disqus.com/?ref_noscript'>comments powered by Disqus.</a>
+        </noscript>
+        <a href='http://disqus.com' class='dsq-brlink'>
+            comments powered by <span class='logo-disqus'>Disqus</span>
+        </a>
+	</div>
+    <!-- end story -->
+
+    <!-- begin left -->
+	<div class='LeftColumnSmall {$co->catResFile}leftborder'>
+
+	    <div class='imageColumnHead'>
+            ".(!$co->tagsName ? '' :
+               "
+                    Filed under:&nbsp;
+                    <span class='ib space {$co->catResFile}'>
+                         <!--<a href=''>tag1</a>,
+                         <a href=''>tag2</a>,
+                         <a href=''>tag3</a>-->
+                        <!--{$o->tagsName}-->
+                        ".substr(
+                        $this->Render_arrayFromStr($co->tags, $o,
+                            "<a href='?idT={~o->idTree}&idC={~o->idNode}&filterName=tag&filterValue={~i}'>
+                                {~i}
+                            </a>, "
+                        ), 0, -2)."
+                    </span>
+               "
+            )."
+
+        </div>
+        <div class='fullwidth thumbRecordPics'  id='recordThumbs_{$co->idRecord}' >
+            <!--<img class='photoGalleryThumbs' src='foto/16.jpg'/>
+            <img class='photoGalleryThumbs' src='foto/16.jpg'/>
+            <img class='photoGalleryThumbs' src='foto/21.jpg'/>-->
+        </div>
+
+        <!--Related stories-->
+        <div class='fullwidth'>
+            <div class='imageColumnHead'>Related Stories</div>
+            <ul>
+
+                ".(!$co->recordRelated
+                    ? "<li class = 'relatedContent ATmpl' >
+                          <span class='ATmpl it'>Editor's pic</span>
+                          <a href='#'
+                             class='EDtxtauto relatedStory'
+                             data-iedit-path = '".$o->modDirPub."ADMIN/getRecords.php'
+                             data-iedit-minln = '2'
+                             data-iedit-select = 'key'
+                          >
+
+                          </a>
+                       </li>"
+
+                    : "<li class = 'relatedContent ' >
+                          <span class='ATmpl it'>Editor's pic</span>
+                          <a href='".$co->recordRelated['record_href']."'
+                             class='EDtxtauto relatedStory'
+                             data-iedit-path = '".$o->modDirPub."ADMIN/getRecords.php'
+                             data-iedit-minln = '2'
+                             data-iedit-select = 'key'
+                          >
+                              ".$co->recordRelated['title']."
+                          </a>
+                       </li>"
+
+                )."
+
+                ".$this->Render_itemsFromStr($co->recordsRelated, '', "
+                    <li class = 'relatedContent' >
+                        <a href='{~ao->record_href}'>{~ao->title}</a>
+                    </li>
+                ")."
+
+            </ul>
+        </div>
+
+
+    </div><!-- end left-->
+</div>
+
