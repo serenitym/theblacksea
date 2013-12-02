@@ -37,6 +37,7 @@ class ACblogSite extends CblogSite
 {
     var $contentRights = 'no';
     var $post;
+    var $user;
 
     function _hook_save_descPage()
     {
@@ -70,7 +71,7 @@ class ACblogSite extends CblogSite
 
     function set_contentRights()
     {
-        if($this->user-cid <= 2) {
+        if($this->user->cid <= 2) {
 
             $this->contentRights = '';
         }
@@ -78,6 +79,7 @@ class ACblogSite extends CblogSite
 
     function _init_()
     {
+        $this->user = &$this->C->user;
         $this->set_contentRights();
     }
 }

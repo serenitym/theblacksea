@@ -8,3 +8,12 @@ bsea.xml
 testRev.xml
 **/RES2
 **/RES/uploads
+
+
+## File-based project format
+*.ipr
+*.iws
+*.iml
+
+## Additional for IntelliJ
+out/

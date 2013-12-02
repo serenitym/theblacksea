@@ -122,11 +122,6 @@ ivyMods.blogSite = {
          .find('*[class$=content], *[class$=lead], *[class$=blogPrev-lead], *[class$=blogPrev-content]')
          .find('*').not('div').attr("style",'');
 	 },
-	 writeLoginLink: function (){
-	     var el = $("div.footerText");
-	     el.html(el.html() + "<a href='/?login'>Login</a>");
-	 },
-
 
 
 	 // i think this shoul be moved in blogRecord.js
@@ -173,7 +168,6 @@ ivyMods.blogSite = {
 		  }
 
         this.resizeImgs_profile();
-        this.writeLoginLink();
 
 
 
