@@ -322,8 +322,19 @@ ivyMods.blogArticle = function(jqContainer){
        var proportion =   height/width;
 
        iframes.map(function(){
+	        var ifrmWidth = $(this).attr('width');
+	        var ifrmHeight = $(this).attr('height');
+
+	        var ifrmProportion = (
+		        typeof ifrmWidth != 'undefined' && ifrmWidth &&
+		        typeof ifrmHeight != 'undefined' && ifrmHeight
+
+		        ? ifrmHeight / ifrmWidth
+			     : proportion
+		        );
+
 	        $(this).width(containerWidth);
-           $(this).height(containerWidth * proportion);
+           $(this).height(containerWidth * ifrmProportion);
 	        $(this).addClass('pull-right');
            /* console.log(
                   "container = " + containerWidth
