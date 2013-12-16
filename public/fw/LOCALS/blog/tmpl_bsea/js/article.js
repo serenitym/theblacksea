@@ -320,8 +320,11 @@ ivyMods.blogArticle = function(jqContainer){
 	    var width = 560;
        var height = 315;
        var proportion =   height/width;
+	    // excludem iframeurile pe care nu trebuie facut resize
+	    var $iframes= iframes.not('.noresize');
+	    //console.log('iframes = ' + iframes.length + ' $iframes = ' + $iframes.length);
 
-       iframes.map(function(){
+       $iframes.map(function(){
 	        var ifrmWidth = $(this).attr('width');
 	        var ifrmHeight = $(this).attr('height');
 
@@ -345,8 +348,11 @@ ivyMods.blogArticle = function(jqContainer){
     },
       resizeContentPics: function(){
         var containerWidth = jq.width();
+	      // excludem imaginile pe care nu trebuie facut resize
+        var $imgs= imgs.not('.noresize');
+
         //console.log("containerWidth " + containerWidth );
-        imgs.map(function()
+        $imgs.map(function()
         {
             console.log("imagine width " + $(this).attr('src') + ' = ' + $(this).width());
             $(this).css('height','initial');
