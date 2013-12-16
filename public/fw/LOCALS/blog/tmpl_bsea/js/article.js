@@ -329,7 +329,7 @@ ivyMods.blogArticle = function(jqContainer){
 		        typeof ifrmWidth != 'undefined' && ifrmWidth &&
 		        typeof ifrmHeight != 'undefined' && ifrmHeight
 
-		        ? ifrmHeight / ifrmWidth
+		        ? ifrmHeight / (ifrmWidth-1)
 			     : proportion
 		        );
 
