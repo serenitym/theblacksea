@@ -7,18 +7,14 @@ ivyMods.set_iEdit.blogSite = function(){
 			methName: "save_descPage"
 		}
 	};
-
 	iEdit.add_bttsConf( {
 		aboutDesc:  pageDescSettings,
 		blogDesc: pageDescSettings,
 		archiveDesc: pageDescSettings,
 		sponsorsDesc: pageDescSettings,
 		awardsDesc: pageDescSettings
-
-
 	});
 }
-
 
 ivyMods.blogSite = {
 
@@ -87,15 +83,13 @@ ivyMods.blogSite = {
 	 */
 	 resizeImg: function(jqImg, imgMC, proportion) {
 
-		console.log("blacksea.js - resizeImg :poze gasite "+ jqImg.attr('src') );
+ 		 //console.log("blacksea.js - resizeImg :poze gasite "+ jqImg.attr('src') );
+		 jqImg.parent().css('height', imgMC.newH + 'px');
 
-		jqImg.parent().css('height', imgMC.newH + 'px');
-
-		var imgProportion = jqImg.width() / jqImg.height();
-		if(imgProportion > proportion) {
-		    jqImg.css('height', imgMC.newH + 'px');
+		 var imgProportion = jqImg.width() / jqImg.height();
+		 if(imgProportion > proportion) {
+		     jqImg.css('height', imgMC.newH + 'px');
 	    }
-
 	},
 	 resizeImgContainer: function(selector,  proportion){
 		//alert("resizeImgContainer cu "+proportion);
@@ -122,7 +116,6 @@ ivyMods.blogSite = {
          .find('*[class$=content], *[class$=lead], *[class$=blogPrev-lead], *[class$=blogPrev-content]')
          .find('*').not('div').attr("style",'');
 	 },
-
 
 	 // i think this shoul be moved in blogRecord.js
 	 /**
@@ -210,27 +203,25 @@ $(document).ready(function() {
 
     });
 
-  	$(".onTheMap").hover(
-  		function(){
-  		    var place = $(this).attr('id');
-  		    $("#"+place+"_place").show();
-  		},
-  		function () {
-            var place = $(this).attr('id');
-  		    $("#"+place+"_place").hide();
-  		}
-  	);
-
-  $(".mainFeaturedImg").hover(
-     function(){
-        var number=$(this).attr('id');
-        $("#"+number+"_Thumb").show();
-      },
-  	  function () {
-  	 	var number = $(this).attr('id');
-  		$("#"+number+"_Thumb").hide();
-  }
-  );
-
+  	 $(".onTheMap").hover(
+  	 	function(){
+  	 	    var place = $(this).attr('id');
+  	 	    $("#"+place+"_place").show();
+  	 	},
+  	 	function () {
+             var place = $(this).attr('id');
+  	 	    $("#"+place+"_place").hide();
+  	 	}
+  	 );
+    $(".mainFeaturedImg").hover(
+       function(){
+          var number=$(this).attr('id');
+          $("#"+number+"_Thumb").show();
+        },
+    	  function () {
+    	 	var number = $(this).attr('id');
+    		$("#"+number+"_Thumb").hide();
+       }
+    );
 });
 
