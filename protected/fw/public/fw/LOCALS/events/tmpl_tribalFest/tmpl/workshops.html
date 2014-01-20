@@ -1,0 +1,54 @@
+<div class='allENTS membrs allmembrs' id='allmembrs_en'>
+
+    <!--
+       mbr_name
+       mbr_picUrl
+       mbr_description
+       mbr_websiteLink
+   -->
+    ".($this->admin
+        ? $this->Render_object($this, '',
+            $o->modType.'/events/tmpl_'.$o->template.'/tmpl/ADMIN/addMember.html')
+        :""
+    )."
+
+    <!--<div class='ENT membr' id='membr_1_en'>-->
+
+    ".$this->Render_items($o->members, $o, '',
+       "
+        <div class='ENT membr' id='membr_{~ao->idM}_en'>
+
+            <div class='mbr-container'>
+                    <div class='img-medPic left'>
+                        <img  class='mbr_picUrl' src='{~ao->mbr_picUrl}'>
+                    </div>
+
+                    <div class='right'>
+                        <div class='title title3 mbr_name'>
+                            <a href='{~ao->mbr_href} '>
+                                {~ao->mbr_name}
+                            </a>
+                        </div>
+
+                        <!--  LOCALS/events/tmpl_tribalFest/tmpl/listEvents1.html -->
+                        `.~this->Render_object(~o->events[~ao->idM],'',
+                            ~o->modType.'/events/tmpl_'.~o->template.'/tmpl/listEvents1.html').`
+
+                    </div>
+            </div>
+
+
+
+
+        </div>
+
+       "
+    )."
+
+</div>
+
+".$o->get_events(0,6,'')."
+
+".$this->Render_object($o, '',
+       $o->modType.'/events/tmpl_'.$o->template.'/tmpl/exception_events.html')."
+

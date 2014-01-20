@@ -1,0 +1,15 @@
+<div class='signup-ws'>
+
+     <div class='title title3 mbr_name'>
+        <a>
+            {$o->mbr_name}
+        </a>
+     </div>
+    ".$this->Render_object($o->events[$o->idM], 'path',
+        $o->modType.'/events/tmpl_'.$o->template.'/tmpl/listEvents1.html')."
+
+    ".$this->Render_object($o, 'path',
+        $o->modType.'/events/tmpl_'.$o->template.'/tmpl/signup_workshops.html'
+    )."
+
+</div>

@@ -1,0 +1,38 @@
+<div id='homegallery'>
+
+    <div id='home-gallery'>
+        <div id='container-gallery'>
+            ".$this->Render_Module($this->gallery)."
+        </div>
+    </div>
+</div>
+<div class='container-home'>
+    <div class = 'SING row1 festDetails'  id='festDetails_0_en'>
+        <div class='EDeditor details'>
+            ".$this->Render_ModulefromRes($o, 'festDetails')."
+        </div>
+    </div>
+
+    <div class = 'row2'>
+
+        ".$this->Render_items($o->members,'','',
+            "
+                <div class='instructorPrev'>
+                    <div class='img-med2Pic img-container'>
+                        <img src='{~ao->mbr_picUrl}'>
+                    </div>
+                    <div class='ins-details'>
+                        <div class='ins-name title title2 '> {~ao->mbr_name} </div>
+                        <div class='bio'>
+
+                            {~ao->mbr_description}
+
+                        </div>
+                    </div>
+
+                </div>
+            "
+        )."
+
+    </div>
+</div>

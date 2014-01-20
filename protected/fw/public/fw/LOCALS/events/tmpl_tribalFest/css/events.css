@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+
+.membrs{
+    /*margin: 0px auto;
+    width: 840px;*/
+}
+.membrs .well{
+    background: rgb(33, 25, 15);
+}
+
+ .membr{
+
+    margin-bottom: 40px;
+    position: relative;
+     padding: 30px 0px;
+ }
+
+ .cont-instructor .membr{ margin-bottom: 0px; padding-bottom: 0px;}
+
+.mbr-container {
+    width: 840px;
+    margin: 0px auto;
+
+}
+
+
+
+ /*.mbr-container {z-index: 3;}
+ .mbr-container:hover + .overlayMember{display: block;}
+ .overlayMember{
+     display: none;
+     position: absolute;
+     top: 0px;
+     left: -60px;
+     width: 960px;
+     height: 205px;
+     background: rgba(255,255,255,0.1);
+     cursor: pointer;
+     z-index: 2;
+ }*/
+
+
+
+ .membr:last-child {
+     margin-bottom: 50px;
+
+ }
+ .admMembr{
+     margin-bottom: 0px !important;
+ }
+
+     .membr .left{
+        width: 200px;
+        display: inline-block;
+        margin-right: 30px;
+
+    }
+
+    .cont-instructor .membr .left{ margin-right: 10px; width: 220px;}
+    .cont-instructor .membr .left img {width: 220px; }
+
+    .membr .right{
+        display: inline-block;
+        vertical-align: top;
+
+    }
+    .mbr_description {margin-bottom: 30px; float: right; width: 590px;}
+    .ELMcontent .mbr_description{  min-height: 90px;  }
+
+    .membr .mbr_name{ padding-left: 10px;}
+    .img-bigPic{ float: left;}
+
+/*==========================================[Workshops]======================================*/
+
+.membr .right,
+.evs_ws,
+.evs_ws .ew,
+.evs_ws .ev,
+
+.evs-exception,
+.evs-exception .ev
+
+{
+    width: 600px !important;
+
+}
+
+
+
+.evs_ws,
+.evs-exception{    float: right;    }
+.evs-exception{
+    margin-top: -45px;
+}
+
+    .ev {  margin-bottom: 45px; clear: both;  }
+    .evs .ev {  margin-bottom: 70px; clear: both;  }
+    .ws { margin-bottom: 20px; clear: both;}
+
+         .well{   padding-bottom: 25px;   }
+
+         .evs-exception .well{ padding-bottom: 5px;}
+
+         .well-light{
+             margin-bottom: -5px;
+             width: 580px;
+             font-weight: bold;
+             z-index: 27;
+             position: relative;
+        }
+        .well-light{cursor: pointer;}
+        .well-light:hover{ background: rgb(133, 121, 101); }
+
+        .ws .price-container,
+        .ev .price-container
+        {
+            float: right;
+
+        }
+
+
+.usrView-evs_ws .ev-fullDescription{     display: none; }
+
+.ev_name{
+    width: 400px;
+}
+.ev_price{
+    width: 40px;
+
+}
+
+.var_name{
+    margin-right: 4px;
+}
+.var_price {
+    font-size: 15px;
+}
+
+.ev_description{
+    clear: both;
+    width: 580px;
+   /* min-height: 50px;*/
+    margin-bottom: 10px;
+}
+
+.evs .ELMcontent .ev_description{
+    min-height: 70px;
+}
+
+.evs_ws .ELMcontent .ev_description{
+    min-height: 30px;
+}
+
+.evs .addForm .ev_description{height: 200px;}
+
+.evs-exception .ev_description{
+    width: 580px !important;
+}
+
+.ev-details{ height: 25px;}
+.ev-details > *{
+    float: left;
+    margin-right: 20px;
+}
+    .ev-details input[type="text"]{
+        width: 80px;
+    }
+    .ev-details .cont-signUp{
+        float: right;
+    }
+
+
+.cont-managers{
+    margin: 10px 0px;
+}
+
+    .ev_managersEmails {
+        width: 250px;
+        min-height: 25px !important;
+        vertical-align: top;
+
+    }
+
+
+/*==========================[events]=========================*/
+
+.evs,
+.evs .ev_description{
+    width: 840px;
+}
+
+.ev_location {
+    width: 150px !important;
+}
+
+.varPrices{
+    height:30px;
+    display: inline-block;
+}
+
+    .vprice{ margin-right: 10px; display: inline-block; font-weight: bold;}
+        .v_name {font-size: 13px;}
+
+.cont-var-prices {   height: 30px; }
+    .var_prices{   width: 200px; }
+
+
+/*==========================[workshop-signUp]=========================*/
+
+.signup-ws
+{
+    width: 600px;
+    margin: 0px auto;
+}
+
+.signup-ev {width: 600px; float: right; margin-bottom: 40px; display: none; }
+
+    .sg-close{
+        position: relative;
+        height: 12px;
+    }
+        .signup-ev  .sg-close button{
+            padding: 3px 9px;
+            border-radius: 6px;
+            background: #21190e;
+            font-weight: bold;
+            border: 0px;
+            cursor: pointer;
+            position: absolute;
+            right: -17px;
+            top: -31px;
+            color: rgb(7, 4, 1);
+            font-size: 12px;
+        }
+        .signup-ev  .sg-close button:hover{
+            color: #6a5d4c;
+        }
+
+
+    .cont-frm .cont-signUp{
+        visibility: hidden;
+    }
+
+
+
+ .cont-frm{
+    clear: both;
+
+}
+
+    .cont-frm .frm-left,
+    .cont-frm .frm-right{
+        display: inline-block;
+    }
+
+    .cont-frm .frm-left input[type="text"] ,
+    .cont-frm .frm-left textarea
+    {
+        margin-bottom: 13px;
+        display: block;
+        width: 280px;
+    }
+
+    .cont-frm .frm-right input[type="text"]{
+         margin-bottom: 13px;
+         display: inline-block;
+
+         background: rgb(170, 159, 144);
+         padding: 4px 10px;
+         border-radius: 8px;
+         width: 120px;
+    }
+
+    .cont-frm .frm-left textarea{ height: 70px;}
+
+
+
+    .cont-frm .frm-left input[type="text"]:last-child,
+    .cont-frm .frm-right input[type="text"]:last-child{
+        margin-bottom: 0px;
+    }
+
+
+    .cont-frm .frm-left { width: 350px; vertical-align: top;}
+    .cont-frm .frm-right {
+        width: 210px;
+        text-align: right;
+    }
+
+
+
+.ELMcontent input[type="text"],
+.ELMcontent textarea{
+    border-radius: 2px;
+    border: 0px;
+    outline: 0px;
+}
+
+.ELMcontent input[type="text"]:hover,
+.ELMcontent textarea:hover {
+    outline: 0px;
+}
+
+.radio-varPrices{
+    width: 212px;
+    text-align: left;
+}
+
+
+
+/*=======================[ ADMIN - addForm]=======================================*/
+
+.cont-addMember{
+
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+
+
+
+
+/*signup - feedback*/
+.signup-fbk{
+    margin: 0px auto;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 100px;
+}

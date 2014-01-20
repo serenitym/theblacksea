@@ -1,0 +1,65 @@
+<!-- =============================[Worklshops ]====================-->
+<!--
+    ev_name
+    ev_description
+    ev_date
+    ev_hour
+    ev_price
+    ev_managers_emails
+    ev_formType
+-->
+
+   <!--<div class='allENTS evs' id='ev_en'>-->
+
+   <div class='evs_ws usrView-evs_ws' id='ev_{$this->lang}'>
+       <!--<div class='ENT ev' id='ev_1_en'>-->
+       ".$this->Render_items( $o->listEvents, $o, '',
+            "
+                <div class='ws' id='ws_{~ao->idEv}_en'  style='{~ao->style}' >
+
+                        <div class='ev-title well-light'>
+                            <span class='ev_name'>  {~ao->ev_name}   </span>
+                            <div class='price-container'>
+                                price   <span class='ev_price'> {~ao->ev_price} </span>  €
+                            </div>
+                        </div>
+
+
+                        <div class='ev-fullDescription well'>
+
+                            <div class='ev_description'> {~ao->ev_description}</div>
+
+                            <div class='ev-details'>
+
+                                <div class='detail {~ao->ev_date_atmpl}'>
+                                    <span class='title'> date</span>
+                                    <span class='ev_date'> {~ao->ev_date} </span>
+                                </div>
+                                <div class='detail {~ao->ev_hour_atmpl}'>
+                                    <span class='title'> hour</span>
+                                    <span class='ev_hour'> {~ao->ev_hour} </span>
+
+                                </div>
+                                <div class='detail  {~ao->ev_location_atmpl}'>
+                                    <span class='title'> location</span>
+                                    <span class='ev_location'> {~ao->ev_location} </span>
+
+                                </div>
+                                <div class='detail cont-signUp'>
+                                    <form action='' method='post'>
+                                        <input type='hidden' name='idEv' value='{~ao->idEv}'>
+                                        <input type='hidden' name='idM' value='{~o->idM}'>
+                                        <input type='submit' name='go_signup_ws' value='signUp'  class='signUp' >
+                                    </form>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                </div>
+            "
+       )."
+
+   </div>

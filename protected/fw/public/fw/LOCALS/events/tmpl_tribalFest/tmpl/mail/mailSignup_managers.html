@@ -1,0 +1,21 @@
+<b>
+    TFB ::
+    <a href='http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']."'>
+        {$o->psts->ev_name}
+    </a>
+    subscription
+</b>
+<br />
+
+<b>From: {$o->psts->usr_name}</b> ( {$o->psts->usr_email} )
+<br />
+
+
+<b>Address: </b>{$o->psts->usr_address}
+<br />
+
+
+".(isset($o->psts->usr_more) && $o->psts->usr_more
+    ? "Message:{$o->psts->usr_more}"
+    : ""
+)."

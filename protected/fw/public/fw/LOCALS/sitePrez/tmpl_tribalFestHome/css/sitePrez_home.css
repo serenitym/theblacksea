@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+#mainPage{
+    padding: 0px !important;
+}
+
+
+#homegallery{
+    height: 300px;
+
+}
+
+#home-gallery{
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    background-color: #070803;
+}
+
+    #container-gallery{
+        margin: 0px auto;
+        width: 960px;
+    }
+
+.container-home{
+    padding: 35px 30px;
+
+}
+.row1{
+    padding-bottom: 35px;
+    border-bottom: 1px solid #21170d;
+    color: #6f6450;
+}
+
+.row2{
+    margin-top: 25px;
+}
+
+    .festDetails .details{
+        min-height: 50px;
+        width: 840px;
+        font-size: 13px;
+    }
+
+    .festDetails .details a{
+        color: inherit;
+    }
+
+
+
+.container-home .instructorPrev{
+    margin-bottom: 55px;
+}
+
+.container-home .instructorPrev .img-container{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.container-home .instructorPrev .ins-details{
+    display: inline-block;
+    vertical-align: top;
+    width: 650px;
+}
+
+

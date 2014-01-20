@@ -1,0 +1,36 @@
+
+# O incercare de a opri cachingul paginii pentru fisierele
+#   care se pot schimba relativ des
+#
+# Intai descriem fisierele tinta:
+#<filesMatch "\.(html|htm|js|css)$">
+#    FileETag None
+#
+#    # exista modulul headers?
+#    <ifModule mod_headers.c>
+#        Header unset ETag
+#        # acum anuleaza cache pe cat posibil
+#        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+#        Header set Pragma "no-cache"
+#        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+#    </ifModule>
+#</filesMatch>
+
+AddDefaultCharset UTF-8
+
+# NOTE: This is doomed to fail if mod_rewrite not installed and active
+# After rewrite module's installation, type as root:
+# a2enmod rewrite
+# service apache2 reload
+# English section over :-)
+
+# Activam citirea de URL-uri dubioase
+
+RewriteEngine On
+
+#RewriteBase /
+
+RewriteRule ^feed$       index.php?idT=103&idC=103 [L,NC]
+
+#==============================================================================
+

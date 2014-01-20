@@ -1,0 +1,78 @@
+<!-- =============================[Worklshops ]====================-->
+<!--
+    ev_name
+    ev_description
+    ev_date
+    ev_hour
+    ev_price
+    ev_managers_emails
+    ev_formType
+-->
+
+   <!--<div class='allENTS evs' id='ev_en'>-->
+   <div class='allENTS evs_ws' id='ev_{$this->lang}' >
+       <!--<div class='ENT ev' id='ev_1_en'>-->
+
+
+       ".$this->Render_items( $o->listEvents, $o, '',
+            "
+                <div class='ENT ev' id='ev_{~ao->idEv}_en'  style='{~ao->style}' >
+
+                        ".(!$this->admin ? "" : "<input type='hidden' name='idExt' value='{$o->idM}'>")."
+
+                        <div class='well-light'>
+                            <span class='EDtxt ev_name'>  {~ao->ev_name}   </span>
+                            <div class='price-container'>
+                                price   <span class='EDtxt ev_price'> {~ao->ev_price} </span>  €
+                            </div>
+                        </div>
+
+
+                        <div class='well ev-fullDescription'>
+
+                            <div class='ATmpl'> description </div>
+                            <div class='EDtxa ev_description'> {~ao->ev_description}</div>
+
+                            `.(!~this->admin ? '' :
+                                `<div class='ATmpl cont-managers'>
+                                    <span><b>Managers</b></span>
+                                    <div class='EDtxa ev_managersEmails'> {~ao->ev_managersEmails}</div>
+                                    <span><i> ex: manager1@domain.ro , manager2@domain.ro </i></span>
+                                </div>
+                                `
+                             ).`
+
+                            <div class='ev-details'>
+
+                                <div class='detail {~ao->ev_date_atmpl}'>
+                                    <span class='title'> date</span>
+                                    <span class='EDtxt ev_date'> {~ao->ev_date} </span>
+                                </div>
+                                <div class='detail {~ao->ev_hour_atmpl}'>
+                                    <span class='title'> hour</span>
+                                    <span class='EDtxt ev_hour'> {~ao->ev_hour} </span>
+
+                                </div>
+                                <div class='detail  {~ao->ev_location_atmpl}'>
+                                    <span class='title'> location</span>
+                                    <span class='EDtxt ev_location'> {~ao->ev_location} </span>
+
+                                </div>
+                                <div class='detail cont-signUp'>
+                                    <form action='' method='post'>
+                                        <input type='hidden' name='idEv' value='{~ao->idEv}'>
+                                        <input type='hidden' name='idM' value='{~o->idM}'>
+                                        <input type='submit' name='go_signup_ws' value='signUp'  class='signUp' >
+                                    </form>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                </div>
+                "
+       )."
+
+   </div>

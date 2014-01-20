@@ -1,0 +1,58 @@
+<div class='cont-mainPage'>
+
+        <div class='signup-fbk highligth-color b'>
+          The payment was confirmed!!!
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <p class='b title title3'> Statistics </p>
+
+        <p class='b  title2'> Total Subscriptions : {$o->totalSubs} </p>
+        <table class='table-subs-th well-light'>
+            <tr>
+                <td>Event</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Address</td>
+                <td>Date</td>
+            </tr>
+        </table>
+
+        <!--  Unconfirmed subscriptions  -->
+        <p class='b title2'> Total Subscriptions unconfirmed: {$o->totalSubs_unconf} </p>
+        <table class='table-subs well'>
+            ".$this->Render_items($o->subEvents_unconf, '','',
+                "<tr>
+                    <td> {~ao->ev_name} </td>
+                    <td> {~ao->usr_name} </td>
+                    <td> {~ao->usr_email} </td>
+                    <td> {~ao->usr_address} </td>
+                    <td> {~ao->sub_date} </td>
+                </tr>
+            "
+            )."
+
+        </table>
+
+
+        <!--  Confirmed subscriptions  -->
+        <p class='b title2'> Total Subscriptions confirmed: {$o->totalSubs_conf} </p>
+        <table class='table-subs well'>
+            ".$this->Render_items( $o->subEvents_conf,'','',
+                "<tr>
+                    <td> {~ao->ev_name} </td>
+                    <td> {~ao->usr_name} </td>
+                    <td> {~ao->usr_email} </td>
+                    <td> {~ao->usr_address} </td>
+                    <td> {~ao->sub_date} </td>
+                </tr>
+            "
+            )."
+
+        </table>
+
+</div>

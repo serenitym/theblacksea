@@ -1,0 +1,27 @@
+<b>
+    TFB ::
+    <a href='http://".$_SERVER['SERVER_NAME'].'/?idC='.$this->idNode.'&idT='.$this->idTree."'>
+        {$o->subEvent->ev_name}
+    </a>
+    payment confirmation
+</b>
+<br />
+
+<b>From: {$o->subEvent->usr_name}</b> ( {$o->subEvent->usr_email} )
+<br />
+
+
+{$o->subEvent->usr_address}
+{$o->subEvent->ev_price}
+<br />
+
+
+<a href='http://".$_SERVER['SERVER_NAME'].'/admin.php?'.$_SERVER['QUERY_STRING']."&confirm=true'>
+        <b>confirm payment</b>
+</a>
+
+<br />
+if there were problems with the confirmation write to
+<a href='mailto:{$o->subEvent->usr_email}'>
+        {$o->subEvent->usr_name}
+</a>

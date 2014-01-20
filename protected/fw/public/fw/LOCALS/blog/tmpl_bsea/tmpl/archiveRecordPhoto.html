@@ -1,0 +1,152 @@
+<!--<h6>Photo story</h6>-->
+<div class='{$co->ED}SING block space SGrecord-archivePhoto SGrecord-archive SGrecord' id='SGrecord_{$co->idRecord}_{$o->lang}' >
+        ".(!$this->admin ? '' :
+             $this->Render_object($this->blog,'',
+                "{$o->modDirPub}tmpl_bsea/ADMIN/tmpl/blogRecord_extraSettings.html")
+        )."
+    <div class='block-full'>
+        {$co->HTMLmessage_record}
+        <!-- start story -->
+        <div class='textColumnBig right'>
+            <div class='EDtxt Name blue title'>
+                {$co->title}
+            </div>
+            <div class='imageColumnHead orange space authName'>
+                <a href='$co->authorHref'  class='ib'>{$co->fullName}</a>
+                ".(count($co->authors) == 0 ? '' :
+                 $this->Render_itemsFromStr($co->authors,'', "
+                    , <a href='~ao->authorHref' class='ib'>{~ao->fullName}</a>
+
+               "))."
+
+                ".($co->publishDate
+                    ? "<span class='ib'>/ {$co->publishDate}</span>"
+                    : "<p class='notPublished'>not yet published</p>")."
+
+            </div>
+
+
+            <!-- <div class='theStory'>  -->
+            <div class='ATmpl'> Lead </div>
+            <div class='EDeditor lead'>
+               {$co->lead}
+            </div>
+
+
+            <div class='fullwidth'>
+                <!--<div class='showMore'>More</div>-->
+                <div id='sharepanel'>
+                    <div class='shareText' id='share'>Share this story</div>
+                    <!--
+                    <ul id='shareicons'>
+						<li class='addthis_button_facebook'></li>
+						<li class='addthis_button_twitter'></li>
+						<li class='addthis_button_vk'></li>
+                        <li class='shareText' id='social-connect-facebook'></li>
+                        <li class='shareText' id='social-connect-twitter'></li>
+                        <li class='shareText' id='social-connect-vkontakte'></li>
+                    </ul>
+                    -->
+                    <!-- AddThis Button BEGIN -->
+					<div class='addthis_toolbox addthis_default_style addthis_32x32_style' style='display: inline-block;'>
+						<a class='addthis_button_facebook'></a>
+						<a class='addthis_button_twitter'></a>
+						<a class='addthis_button_vk'></a>
+					</div>
+					<!-- AddThis Button END -->
+                </div>
+            </div>
+
+        </div>
+    <!-- end story -->
+        <div class='LeftColumnSmall greyleftborder'> <!-- begin left -->
+
+        ".( $co->folderName!=''
+         ? " <div  class='imageColumnHead orange space'>
+                    FOLDER: "
+         : " <div  class='imageColumnHead orange'>
+                    <span class='ATmpl-inline space'>FOLDER</span> "
+        )."
+
+                <a href='{$co->hrefFolderFilter}' class='EDsel idFolder' data-iedit-options = '{$o->jsonFolders}'  >
+                    {$co->folderName}
+                </a>
+
+            </div>
+            <!-- <div class='textContainer orange'>@bradutz</div> -->
+            <div class='fullwidth thumbRecordPics' id='recordThumbs_{$co->idRecord}'>
+                <!--<img class='photoGalleryThumbs' src='foto/16.jpg'/>
+                <img class='photoGalleryThumbs' src='foto/16.jpg'/>
+                <img class='photoGalleryThumbs' src='foto/21.jpg'/>-->
+            </div>
+
+            <div class='fullwidth'>
+                <div class='imageColumnHead'>Related Stories</div>
+                <ul>
+                    ".(!$co->recordRelated
+                        ? "<li class = 'relatedContent ATmpl' >
+                             <span class='ATmpl it'>Editor's pic</span>
+                              <a href='#'
+                                 class='EDtxtauto relatedStory'
+                                 data-iedit-path = '{$o->modDirPub}ADMIN/getRecords.php'
+                                 data-iedit-minln = '2'
+                                 data-iedit-select = 'key'
+                              >
+
+                              </a>
+                           </li>"
+
+                        : "<li class = 'relatedContent ' >
+                              <span class='ATmpl it'>Editor's pic</span>
+                              <a href='".$co->recordRelated['record_href']."'
+                                 class='EDtxtauto relatedStory'
+                                 data-iedit-path = '{$o->modDirPub}ADMIN/getRecords.php'
+                                 data-iedit-minln = '2'
+                                 data-iedit-select = 'key'
+                              >
+                                  ".$co->recordRelated['title']."
+                              </a>
+                           </li>"
+
+                    )."
+
+                    ".$this->Render_itemsFromStr($co->recordsRelated, '', "
+                        <li class = 'relatedContent' >
+                            <a href='{~ao->record_href}'>{~ao->title}</a>
+                        </li>
+                    ")."
+
+                </ul>
+            </div>
+
+        </div><!-- end left-->
+    </div>
+    <div class='space overflow'>
+
+    </div>
+
+
+    <div class='block-full'>
+        <div class='divider'></div>
+       <!-- <p class='ATmpl b t10'>Continut Articol</p>-->
+        <div class='clearfix'></div>
+
+        <div class='EDeditor pull-left sideContent'>
+            {$co->sideContent}
+        </div>
+
+        <div class='EDeditor pull-right content'
+             data-iedit-cketoolbar ='".(!$this->user->rights['article_tmpl'] ?  'embedVideo' :  'admin' )."'
+        >
+            {$co->content}
+        </div>
+
+        <div id='disqus_thread'></div>
+        <noscript>Please enable JavaScript to view the <a
+                href='http://disqus.com/?ref_noscript'>comments powered by
+                Disqus.</a></noscript>
+        <a href='http://disqus.com' class='dsq-brlink'>comments powered by <span class='logo-disqus'>Disqus</span></a>
+    
+
+    </div><!-- end block -->
+</div>

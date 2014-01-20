@@ -1,0 +1,81 @@
+<div class='{$ao->EDrecord}notENT space blogPrevRec record'   id='record_{$ao->idRecord}_{$o->lang}' >
+    <!-- start story -->
+	<div class='textColumnBig right'>
+	    <!-- <div class='theStory'>  -->
+        <div class='blogPrev-lead'>
+            {$ao->leadPrev}
+        </div>
+	    <div class='moreText blogPrev-content' id='more{$ao->idRecord}_id_text'>
+            {$ao->contentPrev}
+	    </div>
+
+	    <div class='fullwidth'>
+	        <div class='showMore' id='more{$ao->idRecord}_id'>More</div>
+
+            <!--
+		    <div id='sharepanel'>
+	            <div class='shareText' id='share'>Share this story</div>
+                <ul id='shareicons'>
+                    <li class='shareText' id='social-connect-facebook'></li>
+                    <li class='shareText' id='social-connect-twitter'></li>
+                    <li class='shareText' id='social-connect-vkontakte'></li>
+                </ul>
+	        </div>
+            <div class='shareText' id='geturl'>get permalink</div>
+            <div class='geturl'></div>-->
+	     </div>
+
+	</div>
+    <!-- end story -->
+
+    <!-- begin left -->
+	<div class='LeftColumnSmall {$ao->catResFile}leftborder'>
+	    <div class='Name {$ao->catResFile} fullwidth'>
+            <a href='{$ao->record_href}' target='_blank' class='noBorder {$ao->statusPublish}'>
+                {$ao->title}
+            </a>
+        </div>
+	    <div class='imageColumnHead'>
+            <a href='$ao->authorHref'>{$ao->fullName}</a>
+            ".(count($ao->authors) == 0 ? '' :
+              $this->Render_itemsFromStr($ao->authors,'', "
+                 , <a href='~ao->authorHref'>{~ao->fullName}</a>
+
+            "))."
+            <span class='ib'>
+                / ".($ao->publishDate ?: 'not yet published')."
+            </span>
+
+        </div>
+	    <div class='imageColumnHead'>
+            ".(!$ao->tagsName || count($ao->tags) == 0 ? "" : "
+                Filed under:&nbsp;
+                <span class='{$ao->catResFile}'>
+                     <!--<a href=''>tag1</a>,
+                     <a href=''>tag2</a>,
+                     <a href=''>tag3</a>-->
+                    <!--{$ao->tagsName}-->
+                    ".substr($this->Render_arrayFromStr($ao->tags, $o,
+                                "<a href='?idT={~o->idTree}&idC={~o->idNode}&filterName=tag&filterValue={~i}'>
+                                    {~i}
+                                </a>, ")
+                                , 0, -2
+                    )."
+                </span>
+           ")."
+
+        </div>
+        <div class='fullwidth thumbRecordPics'  id='recordThumbs_{$ao->idRecord}'>
+            <!--<img class='photoGalleryThumbs' src='foto/16.jpg'/>
+            <img class='photoGalleryThumbs' src='foto/21.jpg'/>
+            <img class='photoGalleryThumbs' src='foto/28.jpg'/>
+            <img class='photoGalleryThumbs' src='foto/16.jpg'/>
+            <img class='photoGalleryThumbs' src='foto/21.jpg'/>-->
+        </div>
+    </div><!-- end left-->
+
+</div> <!-- end blog post -->
+
+<div class='block space'>
+    <!-- pentru spatiere-->
+</div>

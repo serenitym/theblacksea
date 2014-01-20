@@ -1,0 +1,174 @@
+<style>
+    #popup-footer-subscribe{
+        margin-left: -1px;
+        height: 66px;
+        margin-bottom: -10px;
+        width: 101%;
+        margin-top: 25px;
+        border-radius: 0px 0px 5px 5px;
+        background-color: #333333;
+    }
+    #popup-footer-subscribe p{
+        color: #dddddd;
+        padding: 10px;
+        font-size: .8em;
+        text-align: center;
+    }
+    input[name='subscribe']{
+        margin: 0px auto;
+        display: block;
+        margin-top: 25px;
+    }
+    .goodMess{
+        color: rgb(116, 192, 226);
+        text-align: center;
+    }
+</style>
+<script language="Javascript" type="text/javascript">
+
+function checkform()
+{
+  for (i=0;i<fieldstocheck.length;i++) {
+    if (eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].type") == "checkbox") {
+      if (document.subscribeform.elements[fieldstocheck[i]].checked) {
+      } else {
+        alert("Please enter your "+fieldnames[i]);
+        eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].focus()");
+
+        return false;
+      }
+    } else {
+      if (eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].value") == "") {
+        alert("Please enter your "+fieldnames[i]);
+        eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].focus()");
+
+        return false;
+      }
+    }
+  }
+  for (i=0;i<groupstocheck.length;i++) {
+    if (!checkGroup(groupstocheck[i],groupnames[i])) {
+      return false;
+    }
+  }
+
+  if (! compareEmail()) {
+    alert("Email addresses you entered do not match");
+
+    return false;
+  }
+
+  return true;
+}
+
+var fieldstocheck = new Array();
+var fieldnames = new Array();
+function addFieldToCheck(value,name)
+{
+  fieldstocheck[fieldstocheck.length] = value;
+  fieldnames[fieldnames.length] = name;
+}
+var groupstocheck = new Array();
+var groupnames = new Array();
+function addGroupToCheck(value,name)
+{
+  groupstocheck[groupstocheck.length] = value;
+  groupnames[groupnames.length] = name;
+}
+
+function compareEmail()
+{
+  return (document.subscribeform.elements["email"].value == document.subscribeform.elements["emailconfirm"].value);
+}
+function checkGroup(name,value)
+{
+  option = -1;
+  for (i=0;i<document.subscribeform.elements[name].length;i++) {
+    if (document.subscribeform.elements[name][i].checked) {
+      option = i;
+    }
+  }
+  if (option == -1) {
+    alert ("Please enter your "+value);
+
+    return false;
+  }
+
+  return true;
+}
+function sendSubscribeForm(){
+    if(checkform()){
+        var jqForm = $('form[name=subscribeform]');
+        var postData = jqForm.collectData();
+        $.post("http://theblacksea.eu/lists/?p=subscribe&id=1", postData);
+        setTimeout(function(){
+            jqForm.remove();
+            $('#popup-footer-subscribe').before(
+                    "<p  class='goodMess'>" +
+                            "You have successfully subscribed to our newsletter!" +
+                    "</p>"
+            );
+           /* setTimeout(function(){fmw.popUp.popUp_remove();},4000);*/
+        },
+        250);
+
+    } else {
+       // alert('There were some problems with your submision');
+
+    }
+}
+
+</script>
+<form method = "post" action = "http://theblacksea.eu/lists/?p=subscribe&id=1" name = "subscribeform">
+    <table border = "0">
+        <tbody>
+        <tr>
+            <td>
+                <div class = "required">Email address</div>
+            </td>
+            <td class = "attributeinput">
+                <input type = "text" name = "email" value = "" size = "30" class="ivy-light">
+                <script language = "Javascript" type = "text/javascript">
+                    addFieldToCheck("email", "Email address");
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class = "required">Confirm your email address</div>
+            </td>
+            <td class = "attributeinput">
+                <input type = "text" name = "emailconfirm" value = "" size = "30"  class="ivy-light">
+                <script language = "Javascript" type = "text/javascript">
+                    addFieldToCheck("emailconfirm", "Confirm your email address");
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td colspan = "2">
+                <span class = "attributeinput">
+                    <input type = "checkbox" name = "htmlemail" value = "1">
+                </span>
+                <span class = "attributename">I prefer to receive emails in HTML format</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <input type = "hidden" name = "list[2]" value = "signup">
+    <input type = "hidden" name = "listname[2]" value = "newsletter">
+
+    <div style = "display:none">
+        <input type = "text" name = "VerificationCodeX" value = "" size = "20">
+    </div>
+    <p>
+        <input type = "submit" name = "subscribe" value = "Subscribe"
+              onclick = "sendSubscribeForm(); return false;"  class="ivy">
+    </p>
+</form>
+    <div class="clearfix"></div>
+     <div id="popup-footer-subscribe">
+         <p>
+             Ready to find stories you won't see in the mainstream media? If you want to receive The Black Sea's monthly newsletter with all the latest
+             multimedia reports and investigations, please send us your email.
+         </p>
+     </div>

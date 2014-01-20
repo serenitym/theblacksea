@@ -1,0 +1,40 @@
+<div class='cont-frm well'>
+        <form action='' method='post' class='form-ev_signup'>
+            <div class='frm-left'>
+                <input type='text' name='usr_name' value=''  placeholder='Name' />
+                <input type='text' name='usr_email' value=''  placeholder='E-mail' />
+                <input type='text' name='usr_address' value=''  placeholder='Adress' />
+
+            </div>
+            <div class='frm-right'>
+
+                <!-- Captcha secure code -->
+                <div class='cont-captcha'>
+                    <img class='captcha' src='assets/securimage/securimage_show.php' alt='CAPTCHA Image' />
+                    <br />
+                    <input type='text' name='captcha_code' size='10' maxlength='6' tabindex='4' />
+                    <a href='#' title=' Regenerate' class='captcha_reset' onclick='ivyMods.events.regenerateCaptcha(); return false;'>
+                        Regenerate
+                    </a>
+                 </div>
+
+                  <!-- Details about the event -->
+                <input type='submit' name='signup_ws' value='signUp'  class='signUp' >
+                <input type='hidden' name='idEv' value='{$o->idEv}'>
+
+                <input type='hidden' name='ev_price' value='{$o->ev_price}'>
+                <input type='hidden' name='ev_name' value='{$o->ev_name}'>
+                <input type='hidden' name='ev_description' value='{$o->ev_description}'>
+                <input type='hidden' name='ev_location' value='{$o->ev_location}'>
+                <input type='hidden' name='ev_date' value='{$o->ev_date}'>
+                <input type='hidden' name='ev_hour' value='{$o->ev_hour}'>
+                <input type='hidden' name='ev_managersEmails' value='{$o->ev_managersEmails}'>
+
+                <input type='hidden' name='evType' value='workshop'>
+                <input type='hidden' name='modName' value='events'>
+                <input type='hidden' name='methName' value='eventSignup'>
+                <input type='hidden' name='relocate' value='0'>
+
+            </div>
+        </form>
+    </div>

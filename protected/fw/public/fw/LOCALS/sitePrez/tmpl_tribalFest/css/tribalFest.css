@@ -1,0 +1,279 @@
+@charset "UTF-8";
+.infoHidden {display: none;}
+.showHidden:hover + div.infoHidden {display: block;}
+
+
+.clearfix  {clear: both;}
+
+a, a:hover{
+    text-decoration: none;
+    color: #6f6450;
+
+}
+a:hover{
+    color: #72633b;
+    text-decoration: underline;
+
+}
+
+html {
+     /*background-image: url("img/content-bg3.png") ;*/
+    /*background-color: #140d07;*/
+    background-color:rgb(15, 8, 5);
+    color: #544434;
+    font-size: 12px;
+    font-family: "Helvetica","Open Sans";
+    /*position: relative;*/
+}
+
+body{
+
+    margin: 0px ;
+  /*  position: relative;*/
+}
+
+.highligth-color {color : #8E5F1F !important;}
+
+#header {
+    background-color: #f5a62d;
+   /* background-image: url("img/logoTribal.png") no-repeat;*/
+    height: 75px;
+
+    border-bottom: 2px solid #ffe2a6;
+    box-shadow: inset 0px 2px 5px #e9b84f, 0px 2px 20px #000;
+
+}
+
+    #navBar {
+        width: 1000px;
+        margin: 0px auto;
+    }
+        #navbar-menu{
+            background: url("img/tribalFest-logo22.png");
+            background-repeat: no-repeat;
+            height: 65px;
+          /*  background-position: -30px -4px;*/
+            background-position: -7px -13px;
+        }
+
+        #navBar ul li  a{
+            line-height: 67px;
+            color: #3d2c12;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: "Helvetica","Open Sans";
+            padding: 0px 20px;
+            margin-top: 10px;
+        }
+        #navBar ul li  a:hover{
+
+            text-shadow: 0px 0px 0px black !important;
+            color: #6b511b;
+        }
+
+
+.containerMain{
+
+    background-image: url("img/img-noise-200x200.png");
+
+}
+    #mainPage{
+       min-height: 600px;
+       width: 960px;
+       margin: 0px auto;
+       padding-top: 30px;
+       box-shadow: 1px 80px 40px rgba(0,0,0,0.7);
+       height: 100%;
+     /*  position: relative;*/
+    }
+
+        #cont-mainPage,
+        .cont-mainPage{
+            width: 840px;
+            margin: 0px auto;
+            height: 100%;
+            padding-bottom: 50px;
+        }
+
+        .single{
+            width: 840px !important;
+            margin: 0px auto;
+            padding-bottom: 50px;
+            height: 100%;
+        }
+
+footer {
+    background-color: rgb(15, 8, 5);
+    height: 75px;
+    border-top: 2px solid rgb(22, 13, 10);
+    box-shadow: 0px -1px 1px rgba(0,0,0,0.1);
+    color: #2d261e;
+    font-weight : bold;
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+    #footer-content{
+        width: 960px;
+        margin: 0px auto;
+    }
+
+    #footer-content ul{
+        list-style: none;
+        padding-bottom: 31px;
+        height: 52px;
+    }
+
+    #footer-content ul li{
+        float: left;
+        margin: 0px 35px 0px 0px;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    #footer-content ul li img{
+        height: 40px;
+        float: left;
+    }
+
+
+/* ===========================[images]==================================================*/
+.img-smallPic{
+    width: 120px;
+    height: 130px;
+    overflow-y: hidden;
+    border-radius: 3px;
+}
+
+    .img-smallPic img{
+        width: 120px;
+    }
+
+/* medium pic*/
+.img-medPic{
+    width: 200px;
+    height: 200px;
+    overflow-y: hidden;
+    border-radius: 3px;
+}
+
+    .img-medPic img{
+        width: 200px;
+    }
+.img-med2Pic{
+    width: 200px;
+    height: 200px;
+    overflow-y: hidden;
+    border-radius: 3px;
+}
+
+    .img-med2Pic img{
+        width: 200px;
+    }
+
+/* big pic*/
+.img-bigPic{
+    width: 200px;
+    height: 300px;
+    overflow-y: hidden;
+    border-radius: 3px;
+}
+
+    .img-bigPic img{
+        width: 200px;
+    }
+
+
+/*==================[titles]============================*/
+
+.title{
+    color: #6f6450;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.title1{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.title2{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.title3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+/*=======================[ inputs ]==============================*/
+
+
+input[type="text"],
+textarea{
+    background: #6a5d4c;
+    border: 0px;
+    border-radius: 10px;
+    padding: 6px 10px;
+    color: #21190e;
+}
+
+
+input[type="text"]:focus,
+textarea:focus{
+    border: 0px;
+    outline: 0px;
+
+}
+
+
+
+.signUp{
+    color: #a46a00;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    background: none;
+}
+.signUp:hover{
+    color: #c98a00;
+}
+
+/*=======================[ inputs ]==============================*/
+
+.well{
+    border-radius: 7px;
+   /* background: #21190e;*/
+    background: rgb(37, 28, 19);;
+    padding: 15px;
+}
+
+.well-light{
+    /*background: #6f6450;*/
+    /*background: rgb(97, 85, 63);*/
+   /* background: rgb(80, 68, 46);*/
+   /* background: #21190e;*/
+    background: rgb(29, 21, 12);
+   /* color: #21190e ;*/
+    color: #6f6450;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.well-light:hover{
+    color: #21190e;
+}
+
+
+
+
+
+
+
+
+

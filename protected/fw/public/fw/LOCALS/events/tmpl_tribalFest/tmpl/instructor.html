@@ -1,0 +1,47 @@
+<div class='cont-mainPage cont-instructor'>
+
+    <div class='admMembr membr sgMbr' >
+
+        <div class='img-bigPic left'>
+            ".( $o->mbr_picUrl
+                ?  "<img  class='EDpic mbr_picUrl' src='{$o->mbr_picUrl}'>"
+                :  "<img  class='EDpic mbr_picUrl' src='http://placehold.it/200x200'>"
+
+            )."
+        </div>
+
+        <div class='right'>
+                <!--
+                    mbr_name
+                    mbr_picUrl
+                    mbr_description
+                    mbr_websiteLink
+
+
+                    ev_name
+                    ev_description
+                    ev_date
+                    ev_hour
+                    ev_price
+                    ev_managers_emails
+                    ev_formType
+                -->
+
+                <div class='EDtxt title title3 mbr_name'>
+                    <a>
+                        {$o->mbr_name}
+                    </a>
+                </div>
+
+
+        </div>
+    </div>
+
+
+    ". $this->Render_object($o->events[$o->idM], 'path',
+            $o->modType.'/events/tmpl_'.$o->template.'/tmpl/AlistEvents1.html')."
+
+    <div class='clearfix'></div>
+
+</div>
+

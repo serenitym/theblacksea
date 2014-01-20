@@ -1,0 +1,59 @@
+<div class='cont-mainPage'>
+
+    <div class='SING admMembr membr sgMbr' id='sgMbr_{$o->idM}_{$this->lang}'>
+
+        <div class='img-bigPic left'>
+            ".( $o->mbr_picUrl
+                ?  "<img  class='EDpic mbr_picUrl' src='{$o->mbr_picUrl}'>"
+                :  "<img  class='EDpic mbr_picUrl' src='http://placehold.it/200x200'>"
+
+            )."
+        </div>
+
+        <div class='right'>
+                <!--
+                    mbr_name
+                    mbr_picUrl
+                    mbr_description
+                    mbr_websiteLink
+
+
+                    ev_name
+                    ev_description
+                    ev_date
+                    ev_hour
+                    ev_price
+                    ev_managers_emails
+                    ev_formType
+                -->
+
+                <div class='EDtxt title title3 mbr_name'>
+                    <a>
+                        {$o->mbr_name}
+                    </a>
+                </div>
+                <div class='EDeditor mbr_description'>
+                    {$o->mbr_description}
+                </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- =============================[Worklshops ]====================-->
+
+    ".(count($o->events[$o->idM]->listEvents) == 0
+
+        ?   $this->Render_object($o,'path',
+                $o->modType.'/events/tmpl_'.$o->template.'/tmpl/ADMIN/add_wsEvent.html')
+
+
+        :   $this->Render_object($o->events[$o->idM],'path',
+                $o->modType.'/events/tmpl_'.$o->template.'/tmpl/AlistEvents1.html')
+    )."
+
+    <div class='clearfix'></div>
+
+</div>
+

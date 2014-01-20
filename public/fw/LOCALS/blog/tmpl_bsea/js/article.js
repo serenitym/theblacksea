@@ -17,11 +17,11 @@ ivyMods.blogArticle = function(jqContainer){
 		       srcBig = $(this).attr('src');
              src    = srcBig.replace(sel.basePathPic, sel.thumbPathPic);
              alt    = $(this).attr('alt');
-		       console.log(" 1img = "+ $(this).attr('src')
+		      /* console.log(" 1img = "+ $(this).attr('src')
               +  ' '
               + ' sel.basePathPic = '
               + sel.basePathPic
-             );
+             );*/
 
              recordPics.push( {srcBig: srcBig, src: src, alt: alt} );
 

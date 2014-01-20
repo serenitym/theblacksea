@@ -1,0 +1,37 @@
+<b>
+    TFB ::
+    <a href='".PUBLIC_URL."?".$_SERVER['QUERY_STRING']."'>
+        {$o->psts->ev_name}
+    </a>
+    subscription
+</b>
+<br />
+
+<b>From: Tribal Fest Bucharest</b>
+<br />
+
+Hello {$o->psts->usr_name},
+<br />
+
+Thanks for signingup to <b>{$o->psts->ev_name}.</b>
+<br />
+<b>Payment details:</b>
+<br />
+
+Book your space by wiring money to the following EUR Bank Account
+<br />Recipient: Bonea Andreea Olivia
+<br />Bank: Banca Transilvania
+<br />IBAN: RO33BTRLEURCRT0217778101
+<br />SWIFT: BTRLRO22
+<br />
+<br />
+
+Once you sent us payment, please  confirm  your payment of {$o->psts->ev_price} €
+<a href='".PUBLIC_URL."?".$_SERVER['QUERY_STRING']."&idEv={$o->psts->idEv}&idSub={$o->psts->idSub}'>
+    here.
+</a>
+
+
+
+<br />
+

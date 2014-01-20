@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+
+
+
+
+/*===================[ blogRecord.html ]===================*/
+#admin-leadSec{
+    width: 190px;
+}
+    .btt-leadSec{ width: 180px;}
+    .leadSec{ height: 70px; width: 180px;}
+
+.SGrecord {/*width: 1000px;*/ position: relative;}
+.SGrecord .title{width: 99%;}
+.SGrecord .lead{min-height: 90px;}
+.SGrecord .content{min-height: 500px;}
+.SGrecord .recordTags{width: 220px;}
+.SGrecord .scripts{width: 600px; height: 300px; white-space: nowrap;overflow-y: scroll !important;}
+
+
+/*==================[ archive ]===========================*/
+.addRec-title {width: 250px;}
+.addRec {text-align: right;}
+input.addArticle {width: 350px;}
+
+
+form.SGrecord .admin-authors-container {width: 220px}
+form.SGrecord .btt-authors {width: 220px}
+
+form.SGrecord input.country,
+form.SGrecord input.city,
+form.SGrecord input.publishDate {width: 100px;}
+
+/*=====================[ blog_settings.html]==================*/
+.blogSettings{
+    margin-left: 33px !important;
+}
+.blogSettings .formats,
+.blogSettings .folders {
+
+}
+
+.blogSettings .formats .format,
+.blogSettings .folders .folderName{
+    margin: 0px;
+}

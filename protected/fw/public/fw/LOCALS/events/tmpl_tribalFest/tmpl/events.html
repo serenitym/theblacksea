@@ -1,0 +1,84 @@
+<div class='cont-mainPage'>
+
+    <!-- =============================[Worklshops ]====================-->
+    <!--
+        ev_name
+        ev_description
+        ev_date
+        ev_hour
+        ev_price
+        ev_managers_emails
+        ev_formType
+    -->
+
+       <!--<div class='allENTS evs' id='ev_en'>-->
+       <div class='allENTS evs' id='ev_{$this->lang}'>
+           <!--<div class='ENT ev' id='ev_1_en'>-->
+           ".$this->Render_items( $o->events[0]->listEvents, $o, '',
+                "
+                    <div class='ENT ev' id='ev_{~ao->idEv}_en'>
+
+                           <div class='EDtxt title title3 ev_name'>  {~ao->ev_name}   </div>
+
+                            <div class='EDeditor ev_description'> {~ao->ev_description}</div>
+
+                            `.(!~this->admin ? '' :
+                                `<div class='ATmpl cont-managers'>
+                                    <span><b>Managers</b></span>
+                                    <div class='EDtxa ev_managersEmails'> {~ao->ev_managersEmails}</div>
+                                    <span><i> ex: manager1@domain.ro , manager2@domain.ro </i></span>
+                                </div>
+                                `
+                             ).`
+
+
+                            <div class='pricesContainer  {~ao->ev_prices_atmpl}'>
+                                `.  ~this->Render_object(~ao ,'path',
+                                        ~o->modType.'/events/tmpl_'.~o->template.'/tmpl/varPrices.html').`
+
+                            </div>
+
+                            <div class='priceContainer {~ao->ev_price_atmpl}'>
+                                  <span class='title'>  price </span> &nbsp;&nbsp;
+                                  <span class='EDtxt title title2 ev_price'> {~ao->ev_price} </span>  €
+                             </div>
+
+                            <!--============================[END - trial]=========================-->
+
+                            <div class='ev-details'>
+
+                                <div class='detail {~ao->ev_date_atmpl}'>
+                                    <span class='title'> date</span>
+                                    <span class='EDtxt ev_date'> {~ao->ev_date} </span>
+                                </div>
+                                <div class='detail  {~ao->ev_hour_atmpl}'>
+                                    <span class='title'> hour</span>
+                                    <span class='EDtxt ev_hour'> {~ao->ev_hour} </span>
+
+                                </div>
+                                <div class='detail  {~ao->ev_location_atmpl}'>
+                                    <span class='title'> location</span>
+                                    <span class='EDtxt ev_location'> {~ao->ev_location} </span>
+
+                                </div>
+                                <div class='detail cont-signUp'>
+                                    <input type='button' name='go_signup_ev' value='signUp'  class='signUp'
+                                            onclick=\`ivyMods.events.show_sgup('ev_{~ao->idEv}_en');  \`>
+
+                                </div>
+
+                            </div>
+
+
+
+                    </div>
+                    `.~this->Render_object(~ao, 'path',
+                        ~o->modType.'/events/tmpl_'.~o->template.'/tmpl/signup_events.html').`
+                "
+
+           )."
+
+       </div>
+    <div class='clearfix'></div>
+
+</div>
