@@ -17,11 +17,11 @@ ivyMods.blogArticle = function(jqContainer){
 		       srcBig = $(this).attr('src');
              src    = srcBig.replace(sel.basePathPic, sel.thumbPathPic);
              alt    = $(this).attr('alt');
-		      /* console.log(" 1img = "+ $(this).attr('src')
+		       console.log(" 1img = "+ $(this).attr('src')
               +  ' '
               + ' sel.basePathPic = '
               + sel.basePathPic
-             );*/
+             );
 
              recordPics.push( {srcBig: srcBig, src: src, alt: alt} );
 
@@ -288,7 +288,9 @@ ivyMods.blogArticle = function(jqContainer){
 						obj.refreshMetrics(jqContent);
 					});
 					 //run gallery
-					Galleria.run('#'+idGallerySub);
+					Galleria.run('#'+idGallerySub, {
+                        imageCrop = false
+                    });
 					counter++;
 				});
 		   }
@@ -320,24 +322,10 @@ ivyMods.blogArticle = function(jqContainer){
 	    var width = 560;
        var height = 315;
        var proportion =   height/width;
-	    // excludem iframeurile pe care nu trebuie facut resize
-	    var $iframes= iframes.not('.noresize');
-	    //console.log('iframes = ' + iframes.length + ' $iframes = ' + $iframes.length);
 
-       $iframes.map(function(){
-	        var ifrmWidth = $(this).attr('width');
-	        var ifrmHeight = $(this).attr('height');
-
-	        var ifrmProportion = (
-		        typeof ifrmWidth != 'undefined' && ifrmWidth &&
-		        typeof ifrmHeight != 'undefined' && ifrmHeight
-
-		        ? ifrmHeight / (ifrmWidth-1)
-			     : proportion
-		        );
-
+       iframes.map(function(){
 	        $(this).width(containerWidth);
-           $(this).height(containerWidth * ifrmProportion);
+           $(this).height(containerWidth * proportion);
 	        $(this).addClass('pull-right');
            /* console.log(
                   "container = " + containerWidth
@@ -348,11 +336,8 @@ ivyMods.blogArticle = function(jqContainer){
     },
       resizeContentPics: function(){
         var containerWidth = jq.width();
-	      // excludem imaginile pe care nu trebuie facut resize
-        var $imgs= imgs.not('.noresize');
-
         //console.log("containerWidth " + containerWidth );
-        $imgs.map(function()
+        imgs.map(function()
         {
             console.log("imagine width " + $(this).attr('src') + ' = ' + $(this).width());
             $(this).css('height','initial');
