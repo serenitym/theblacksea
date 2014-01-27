@@ -33,7 +33,7 @@ assetsInc:
   js:
     - "/assets/fancybox/source/jquery.fancybox.js"
     - "/assets/garand-sticky/jquery.sticky.js"
-    - "/assets/galleria/galleria-1.2.9.min.js"
+    - "/assets/galleria/galleria-1.3.3.min.js"
 
   css:
     - "/assets/fancybox/source/jquery.fancybox.css"
