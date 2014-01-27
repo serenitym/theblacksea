@@ -289,7 +289,7 @@ ivyMods.blogArticle = function(jqContainer){
 					});
 					 //run gallery
 					Galleria.run('#'+idGallerySub, {
-                        imageCrop = false
+                        imageCrop: false
                     });
 					counter++;
 				});
