@@ -9,8 +9,8 @@
         if not otherwise stated. Based on a work at
         <a href="http://creativecommons.org/choose/theblacksea.eu" target="_blank">theblacksea.eu</a>.
         This web application is Free Software (<a href="http://www.gnu.org/licenses/agpl-3.0.html" target="_blank">AGPLv3+</a>),
-        the source code will soon be
-        <a href="https://gitorious.org/blacksea/www">available on Gitorious</a>
+        the source code is
+        <a href="https://github.com/serenitym/theblacksea">available on GitHub</a>
         and waiting for contributions.
     </div>
 </div>

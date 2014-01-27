@@ -1,5 +1,8 @@
 .idea
 sercore.txt
+config.production.php
+config.development.php
+config.testing.php
 ClassLoader.save.php
 en_superfish.html
 mail.log

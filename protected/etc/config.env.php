@@ -31,12 +31,12 @@ define('INC_PATH', BASE_PATH.'protected/');
 
 //define('DB_HOST', 'dev.linuxd.net');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'theblack_production');
-define('DB_USER', 'theblack_dev');
-define('DB_PASS', 'XTfUyJ7DsvWfjcDy');
+define('DB_NAME', '');
+define('DB_USER', '');
+define('DB_PASS', '');
 
-define('DB_RO_USER', 'theblack_dev');
-define('DB_RO_PASS', 'XTfUyJ7DsvWfjcDy');
+define('DB_RO_USER', '');
+define('DB_RO_PASS', '');
 
 
 define('DSN', 'mysqli://'.DB_USER.':'.DB_PASS.'@'.DB_HOST.'/'.DB_NAME);
@@ -47,9 +47,9 @@ define('DSN_RO', 'mysqli://'.DB_RO_USER.':'.DB_RO_PASS.'@'.DB_HOST.'/'.DB_NAME);
 //define('SMTP_USER', 'noreply@serenitymedia.ro');
 //define('SMTP_PASS', 'donotreply');
 //define('SMTP_PORT', 587);
-define('SMTP_SERVER', 'ssl://smtp.theblacksea.eu');
-define('SMTP_USER', 'noreply@theblacksea.eu');
-define('SMTP_PASS', 'busDohab6');
+define('SMTP_SERVER', '');
+define('SMTP_USER', '');
+define('SMTP_PASS', '');
 define('SMTP_PORT', 587);
 
 

@@ -15,6 +15,7 @@ define('ENV', 'development');
 
 require_once 'config.' . ENV . '.php';
 
+//TODO: Move this line to environmental configuration files!
 define('SITE_NAME', 'The Black Sea');
 
 //========================[ Locations ]=========================================
